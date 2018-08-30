@@ -1,0 +1,60 @@
+@import '../scss/_mixins';
+
+// .a{
+//     @include bg-variant(red,white);
+//     // @include calc(width,'10px - 2px');
+//     // @include caret(absolute,40px,1px,left,red,transparent);
+// }
+.main_container {
+    .top_nav{
+        margin: 0;
+        .user-profile img{
+            margin: 0;
+        }
+        .dropdown-menu li a{
+            padding: 2px 20px;
+            color: #8c8c8c;
+        }
+    }
+    .nav_menu{
+        background-color: white;
+        box-shadow: 0 0 20px #d9dadb;
+        height: 80px;
+    }
+    nav{
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: (80px - 57px) / 2;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .logo-left{
+        a{
+            margin: 0 16px;
+            color: #878787;
+            &:hover{
+                color: #00adc7;
+            }
+        }
+    }
+    .navbar-nav{
+        .download{
+            a{
+                color: #909090;
+            }
+        }
+
+    }
+    .user-profile img{
+        transform: scale(1.5);
+    }
+    .role{
+        cursor: default;
+        &:hover{
+            color: #5A738E;
+            background-color : transparent;
+        }
+    }
+}
+
+

@@ -1,0 +1,13 @@
+<div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+      <li role="presentation" class="active"><a href="@@index.link" role="tab" data-toggle="tab">@@index.title</a>
+      </li>
+      @@for(var list of nav){
+        <li role="presentation" class=""><a href="` + list.link + `" role="tab"  data-toggle="tab">`+ list.title +`</a>
+      }
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      @@include('@@template')
+    </div>
+  </div>
