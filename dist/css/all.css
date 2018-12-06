@@ -11595,6 +11595,10 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     width: 60px; }
   .wx .subject-tab td {
     vertical-align: top; }
+  .wx .w100 {
+    width: 100%; }
+  .wx .bgwhite {
+    background-color: #fff !important; }
   .wx .nav-pills > li.active > a, .wx .nav-pills > li > a {
     padding: 0 15px;
     line-height: 30px; }

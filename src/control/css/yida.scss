@@ -1528,7 +1528,12 @@
               vertical-align: top;
             }
           }
-
+          .w100{
+            width: 100%;
+          }
+          .bgwhite{
+            background-color: #fff!important;
+          }
           .nav-pills > li.active > a,.nav-pills > li > a{
             padding: 0 15px;
             line-height: 30px;

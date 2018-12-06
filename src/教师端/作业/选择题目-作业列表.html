@@ -1,91 +1,69 @@
+<div class="central-1 wx" id="app">
+    <!-- 导航 -->
+    <div class="bwizard clearfix text-center">
+        <ol class="bwizard-steps clearfix clickable">
+            <li style="width: 150px;">
+                <a href="#step1" class="hidden-phone">选择课程</a>
+            </li>
+            <li style="width: 150px;" class="active">
+                <a href="#step2" class="hidden-phone">选择题目</a>
+            </li>
+            <li style="width: 150px;">
+                <a href="#step3" class="hidden-phone">设置班级</a>
+            </li>
+        </ol>
+    </div>
 
-         <div class="central-1 wx">
-                <div class="bwizard clearfix text-center">
-                        <ol class="bwizard-steps clearfix clickable">
-                            <li style="width: 150px;" >
-                                <a href="#step1" class="hidden-phone">选择课程</a>
-                            </li>
-                            <li style="width: 150px;" class="active">
-                                <a href="#step2" class="hidden-phone">选择题目</a>
-                            </li>
-                            <li style="width: 150px;">
-                                <a href="#step3" class="hidden-phone">设置班级</a>
-                            </li>
-                        </ol>
-                    </div>
-                <div class="input-1">
-                        <b>题目选择：</b><button id="bu" style="color:white">题库选题</button>
-                        <span class="right" style="margin-right:60px"><b>作业总分：0</b></span>
+    <div class="input-1">
+        <b>题目选择：</b>
+
+        <a href="taskCenterSelect2-1.html"><button class="bu" style="color:white;margin: 0">题库选题</button></a>
+
+        <span class="right" style="margin-right:60px">
+            <b>作业总分：<span class="red">{{totalNum}}</span></b>
+        </span>
+    </div>
+    <form>
+        <template v-for="item in list">
+            
+            <div class="table-list"  >
+                <table class="picture-one w100">
+                    <th>{{item.text}}</th>
+                    <th>题目数量：<input type="number" :value="item.subNum.length" disabled="disabled" placeholder="2"></th>
+                    <th>批量设置：<input class="bgwhite" @keyup="allNum(item.num,item.subNum,item)" v-model="item.num" type="number"> 分</th>
+                    <th>题目总分  <span class="red">{{item.totalNum}}</span>分</th>
+                    <th><a @click="item.toggle = !item.toggle" href="javascript:void(0);">{{item.toggle?'收起':'展开'}}</a></th>
+                </table>
+                <div  :class="{'hide':!item.toggle}" role="tabpanel">
+                    <table class="picture-two "   >
+                        <tr v-if="item.subNum.length!==0">
+                            <th>序号</th>
+                            <th>题干</th>
+                            <th>分值</th>
+                            <th>难易度</th>
+                            <th>操作</th>
+                        </tr>
+
+                        <template v-for="(sub,index) in item.subNum">
+                            <tr>
+                                <td>{{index+1}}</td>
+                                <td>{{sub.text}}</td>
+                                <td><input @keyup="computedTotal(item,item.subNum)" v-model="sub.num" class="bgwhite" type="number"></td>
+                                <td>{{sub.rank}}</td>
+                                <td><a @click="item.subNum.splice(index,1),computedTotal(item,item.subNum)" href="javascript:void(0);">移除</a></td>
+                            </tr>
+                        </template>
+                    </table>
                 </div>
-                <table class="picture-one">
-                    <th>单选题</th>
-                    <th>题目数量：<input type="text" placeholder="2"></th>
-                    <th>批量设置：<input type="text">分</th>
-                    <th>题目总分10分</th>
-                    <th>收起</th>
-                </table>
-                <table class="picture-two">
-                    <th>序号</th>
-                    <th>题干</th>
-                    <th>分值</th>
-                    <th>难易度</th>
-                    <th>操作</th>
-                    <tr>
-                        <td>1</td>
-                        <td>仓储管理系统中存货管理模块不包括以下哪项（ ）。</td>
-                        <td><input type="text"></td>
-                        <td>5</td>
-                        <td>移除</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>仓储管理系统中存货管理模块不包括以下哪项（ ）。</td>
-                        <td><input type="text"></td>
-                        <td>5</td>
-                        <td>移除</td>
-                    </tr>
-                </table>
-                <table class="picture-three">
-                            <th>单选题</th>
-                            <th>题目数量：<input type="text" placeholder="2"></th>
-                            <th>批量设置：<input type="text">分</th>
-                            <th>题目总分10分</th>
-                            <th>展开</th>
-                            <tr style="height:20px;"></tr>
-                        <tr>
-                            <td>单选题</td>
-                            <td>题目数量：<input type="text" placeholder="2"></td>
-                            <td>批量设置：<input type="text">分</td>
-                            <td>题目总分10分</td>
-                            <td>展开</td>
-                        </tr>
-                        <tr style="height:20px;"></tr>
-                         <tr>
-                            <td>单选题</td>
-                            <td>题目数量：<input type="text" placeholder="2"></td>
-                            <td>批量设置：<input type="text">分</td>
-                            <td>题目总分10分</td>
-                            <td>展开</td>
-                        </tr>
-                        <tr style="height:20px;"></tr>
-                         <tr>
-                            <td>单选题</td>
-                            <td>题目数量：<input type="text" placeholder="2"></td>
-                            <td>批量设置：<input type="text">分</td>
-                            <td>题目总分10分</td>
-                            <td>展开</td>
-                        </tr>
-                        <tr style="height:20px;"></tr>
-                         <tr>
-                            <td>单选题</td>
-                            <td>题目数量：<input type="text" placeholder="2"></td>
-                            <td>批量设置：<input type="text">分</td>
-                            <td>题目总分10分</td>
-                            <td>展开</td>
-                        </tr>
-                </table>
-                <div class="picturep-bu">
-                    <a href="taskCenterSelect.html"><button style="color:white" class="left">上一步</button></a> 
-                    <a href="taskCenterSelect3.html"><button style="color:white" class="right">保存，下一步</button></a> 
-                </div>
-         </div>
+            </div>
+
+        </template>
+
+            
+        <!-- taskCenterSelect3.html -->
+        <div class="picturep-bu">
+            <a href="javascript:;history.back()"><button type="button" style="color:white" class="left">上一步</button></a>
+            <a @click="submitNum($event)" href="#"><button type="button" style="color:white" class="right">保存，下一步</button></a>
+        </div>
+    </form>
+</div>
