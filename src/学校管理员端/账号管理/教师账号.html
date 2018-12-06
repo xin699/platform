@@ -1,0 +1,264 @@
+<div class="x_content">
+
+    <div class="col-xs-2">
+        <!-- required for floating -->
+        <!-- Nav tabs -->
+        @@include('include/layout/sidebar.html',{
+            "item":[
+                {
+                    "title":"学生账号",
+                    "link":"userStudent.html"
+                },
+                {
+                    "title":"教师账号",
+                    "link":"#",
+                    "active":"active"
+                }
+            ]
+        })
+    </div>
+
+    <div class="col-xs-10">
+        <div class="central-one xs">
+            <div class="input-one">
+                教师：<input type="text">
+                状态：<select name="city">
+                    <option value="">全部</option>
+                    <option value="">冻结</option>
+                    <option value="">激活</option>
+                </select>
+                <button style="color:white" id="bu">搜索</button>
+                <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">新增教师</button>
+                <button style="width:70px;"  data-toggle="modal" data-target="#filebox" >导入</button>
+                <button style="width:70px;">导出</button>
+            </div>
+            <table class="form-one">
+                <th></th>
+                <th>序号</th>
+                <th>账号</th>
+                <th>教师</th>
+                <th>在授数量</th>
+                <th>实习管理权限</th>
+                <th>状态</th>
+                <th>操作</th>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>369900001</td>
+                    <td>张老师</td>
+                    <td><a href="#" data-toggle="modal" data-target="#myModal_two" >10</a></td>
+                    <td>否</td>
+                    <td>激活</td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                        <a href="">重置密码</a> &nbsp;&nbsp;
+                        <a href="">冻结</a> &nbsp;&nbsp;
+                        <a href="#" data-toggle="modal" data-target="#myModal_one" >手机邮箱重置</a>
+                        <a href="#" data-toggle="modal" data-target="#mystery">权限管理</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>2</td>
+                    <td>369900001</td>
+                    <td>张老师</td>
+                    <td><a href="#" data-toggle="modal" data-target="#myModal_two" >10</a></td>
+                    <td>是</td>
+                    <td>激活</td>
+                    <td>
+                        <a href="#">修改</a> &nbsp;&nbsp;
+                        <a href="">重置密码</a> &nbsp;&nbsp;
+                        <a href="">冻结</a> &nbsp;&nbsp;
+                        <a href="#">手机邮箱重置</a>
+                        <a href="">权限管理</a>
+                    </td>
+                </tr>
+                <tr>
+            </table>
+
+            <div class="input-two">
+                <input type="checkbox"> 全选&nbsp;&nbsp;
+                <button>冻结选中</button>
+                <button>权限管理</button>
+                <div>
+                    @@include('include/page/paging.html')
+                </div>
+            </div>
+
+            <!-- 弹框 -->
+
+            <div class="update_modal">
+                <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+                    <div class="analog">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>新增学生账号</b>
+                        </div>
+                        <div class="analog-three-in">
+                            <span style="font-size:20px; margin-left: 150px">批量添加</span><br>
+                            起始账号：369012347 <br>
+                            数量：<input type="text" placeholder="1">
+                            <button>生成账号</button> <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="update_modal">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="analog">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>修改学生账号</b>
+                        </div>
+                        <div class="analog-three-in">
+                            账号：369012347 <br>
+                            教师：<input type="text" placeholder="369012347">
+                            <button>确定</button> <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="update_modal">
+                <div class="modal fade" id="mystery" tabindex="-1" role="dialog" aria-labelledby="mystery">
+                    <div class="analog">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>权限管理</b>
+                        </div>
+                        <div class="analog-three-in">
+                            实习管理权限： &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="1" id="male"
+                                / style="width:14px;height:14px;">
+                            <label for="male">&nbsp;&nbsp;是</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="0" id="female" /
+                                style="width:14px;height:14px;">
+                            <label for="female">&nbsp;&nbsp;否</label>
+                            <br>
+                            <button>确定</button> <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- 导入 -->
+        <div class="update_modal">
+                <div class="modal fade" id="filebox" tabindex="-1" role="dialog" aria-labelledby="filebox">
+                    <div class="analog-three">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>导入</b>
+                        </div>
+                        <div class="analog-three-in">
+                            <div class="text-center" style="margin-bottom:20px;">
+                                <input style="border:none;line-height: 0;" type="file" name="file" id="file">
+                                <a href="">下载模板</a>
+                            </div>
+                            
+                            <button>确认</button> <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="update_modal">
+                <div class="modal fade" id="myModal_two" tabindex="-1" role="dialog" aria-labelledby="myModal_two">
+                    <div class="analog-three" style="width:840px;">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>授课课程</b>
+                        </div>
+                        <div class="analog-three-in" style="width:100%;" >
+                            <table class="table table-bordered text-center" style="width:80%;margin: 0 auto" >
+                                <tbody>
+                                    <tr>
+                                        <td>序号</td>
+                                        <td>授课课程</td>
+                                        <td>授课班级</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>地理大一</td>
+                                        <td>2018届市场营销1班、2018届市场营销2班、2018届市场营销3班</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center">   
+                                    <div id="pagination2" class="pagination2"></div>
+                                    <button>确认</button> <button>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="update_modal">
+                    <div class="modal fade" id="myModal_one" tabindex="-1" role="dialog" aria-labelledby="myModal_one">
+                      <div class="analog" style="width:500px">         
+                              <div class="analog-one">
+                                  <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                                  <b>重置成功</b>
+                              </div>
+                                <div class="analog-three-in">
+                                    <div style="font-size:20px;margin-left:140px;">
+                                      <span class="glyphicon glyphicon-ok" style="background: #52a4b7">
+                                      </span>&nbsp;&nbsp;重置成功
+                                     </div>  
+                                  <button style="margin-left:140px;">关闭</button>
+                              </div>
+                     </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+
+</div>

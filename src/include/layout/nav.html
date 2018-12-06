@@ -13,12 +13,12 @@
             }
         </ul>
     </div>
-    <ul class="nav nav-pills">
-        <li role="presentation" class="active">
+    <ul class="nav nav-pills dropdown">
+        <li role="presentation" class="@@index.active">
             <a href="@@index.link">@@index.title</a>
         </li>
         @@for(var list of nav){
-            <li role="presentation" >
+            <li role="presentation" class="`+ list.active +`"  >
                 <a href="`+ list.link +`">`+ list.title + `</a>
             </li>
         }

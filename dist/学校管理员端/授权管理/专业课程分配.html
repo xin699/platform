@@ -1,0 +1,226 @@
+<div class="x_content" style="float: none;">
+
+    <div class="col-xs-2">
+        <!-- required for floating -->
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs tabs-left biger-x-nav">
+    
+        <li class="active" ><a href="#">专业课程分配</a>
+        </li>
+    
+        <li class="undefined" ><a href="LectureTeach.html">任教分配</a>
+        </li>
+    
+        <li class="undefined" ><a href="LectureSemester.html">学期管理</a>
+        </li>
+    
+</ul>
+    </div>
+
+    <div class="col-xs-10">
+        <div class="central-one xs">
+            <div class="input-one">
+                专业：<select name="city" style="width: 120px">
+                    <option value="">全部</option>
+                    <option value="">电子商务</option>
+                    <option value="">货代与报关</option>
+                </select>
+                学期：<select name="city" style="width: 120px">
+                    <option value="">全部</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                </select>
+                课程类别：<select name="city" style="width: 120px">
+                    <option value="">全部</option>
+                    <option value="">理论课程</option>
+                    <option value="">实训课程</option>
+                </select>
+                <button style="color:white" id="bu">搜索</button>
+                <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">关联课程</button>
+            </div>
+            <table class="form-two">
+                <th>序号</th>
+                <th>课程名</th>
+                <th>课程类别</th>
+                <th>学期</th>
+                <th>学分</th>
+                <th>操作</th>
+                <tr>
+                    <td>1</td>
+                    <td>地理</td>
+                    <td>理论课程</td>
+                    <td>第一学期</td>
+                    <td>3</td>
+                    <td>
+                        <a href="#" >删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>历史</td>
+                    <td>理论课程</td>
+                    <td>第二学期</td>
+                    <td>3</td>
+                    <td>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>wish电商岗位课程</td>
+                    <td>企业课程</td>
+                    <td>第一学期</td>
+                    <td>3</td>
+                    <td>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>华为电商课程</td>
+                    <td>企业课程</td>
+                    <td>第四学期</td>
+                    <td>3</td>
+                    <td>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>物流系统实训</td>
+                    <td>理论课程</td>
+                    <td>第一学期</td>
+                    <td>3</td>
+                    <td>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+            </table>
+
+            <div>
+                <div id="pagination" class="pagination2"></div>
+            </div>
+            <!-- 弹框 -->
+
+            <div class="update_modal">
+                <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+                    <div class="analog-four" style="width:1000px;">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>关联课程</b>
+                        </div>
+                        <div class="analog-four-in" style="width:100%;">
+                            <table cellpadding="5" cellspacing="5" style="margin: 0 auto;">
+                                <tbody>
+                                        <tr>
+                                                <td>　　专业：
+                                                        <select name="select" id="">
+                                                            <option value="1">市场营销</option>
+                                                        </select>
+                                                </td> 
+                                                <td> 选择学期：
+                                                        <select name="select" id="">
+                                                            <option value="1">第一学期</option>
+                                                        </select>
+                                                </td>
+                                                <td> 课程类型：
+                                                        <select name="select" id="">
+                                                            <option value="1">全部课程</option>
+                                                        </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 排序显示：
+                                                        <select name="select" id="">
+                                                            <option value="1">显示全部</option>
+                                                            <option value="1">只显示已选课程</option>
+                                                            <option value="1">只显示未选课程</option>
+                                                        </select>
+                                                </td>
+                                                <td> 选择学期：<input type="text">
+                                                </td>
+                                                <td> <button>选择</button>
+                                                </td>
+                                            </tr>   
+                                </tbody>
+
+                            </table>
+
+                            <table class="form-two">
+                                <tbody>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>课程名</th>
+                                    <th>课程类别</th>
+                                    <th>学分</th>
+                                    <th>选中</th>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>地理</td>
+                                    <td>理论课程</td>
+                                    <td>3</td>
+                                    <td>
+                                      
+                                        <input class="checkbox" type="checkbox">
+                                        
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>历史</td>
+                                    <td>理论课程</td>
+                                    <td>3</td>
+                                    <td>
+                                        <input class="checkbox" type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>wish电商岗位课程</td>
+                                    <td>企业课程</td>
+                                    <td>3</td>
+                                    <td>
+                                        <input class="checkbox" type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>华为电商课程</td>
+                                    <td>企业课程</td>
+                                    <td>3</td>
+                                    <td>
+                                        <input class="checkbox" type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>物流系统实训</td>
+                                    <td>理论课程</td>
+                                    <td>3</td>
+                                    <td>
+                                        <input class="checkbox" type="checkbox">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                           
+                            <div id="pagination2" class="pagination2"></div>
+                            <div class="text-center">
+                                    <button style="margin-left:0px">确定</button> 
+                                    <button style="margin-left:38px">取消</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+</div>

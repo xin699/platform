@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>课程详情页</title>
+</head>
+
+<body class="nav-md qq">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{           "index":{             "title":"张志峰 老师"           },           "menu":[             {"title":"简历中心","link":"#"},             {"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+        
+    </div>
+    <div class="central-1-g shadow">
+        <div class="details-1">
+            <div class="details-2">
+                    <img src="/images/q3.png" alt="">
+            </div>
+            <div class="zt">
+                <span class="right"  style="margin-right:70px;">
+                    <a href="#" data-toggle="modal" data-target="#myModal"><input type="checkbox">&nbsp;&nbsp;共享到益达云库</a>
+                </span>
+                <b style="font-size: 17px">市场营销实务</b><br><br>
+                <b>课程类型:</b>理论课程   <b style="margin-left:10px">学校名称：益达大学</b>    <b style="margin-left:10px">共享者：张老师</b><br><br>
+                <b>课程简介:</b>在数字和社交时代创造顾客价值和顾客关系增加全新内容“数字时代:网络、移动、社<br>
+                交媒体营销”。探讨了顾客参与营销的新兴趋势。新増整合营销沟通的前沿内容,指导营销者如何<br>
+                融合传统媒体与新型工具,建立和创造更加精准、个性化和互动的客户关系。<br><br>
+                <b>延伸阅读:</b>消费品工业是我国重要民生产业和传统优势产业。改革开放以来,我国形成了覆盖面广<br>
+                结构相对完整的消费品工业体系,对稳增长、促改革、调结构、惠民生发挥了重要作用。但是我国<br>
+                消费品品种、品质、品牌与国际先进水平相比尚有较大差距有效供给能力和水平难以适应消费升级<br>
+                的需要。通过开展消费品工业“三品”专项行动,营造良好市场环境更好满足和创造消费需求不断<br>    
+                增强消费拉动经济的基础作用,促进消费品工业迈向中高端水平
+            </div>
+        </div>
+        <div class="details-3">
+            <div class="details-4"><img src="/images/q6.png" alt=""><br><b style="color:green">2</b><br><b style="font-size: 18px"><b>班级</b></div>
+            <div class="details-4"><img src="/images/q7.png" alt=""><br><b style="color:orange">0</b><br><b style="font-size: 18px"><b>作业</b></div>
+            <div class="details-4"><img src="/images/q8.png" alt=""><br><b style="color:red">0</b><br><b style="font-size: 18px"><b>问答</b></div>
+        </div>    
+            
+    </div>
+
+    <!-- 弹框 -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="analog">
+        <table style="font-size: 12px">
+            <div class="analog-one">
+                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                <b>设置通过</b>
+            </div>
+            <table class="analog-three">
+                <th>序号</th>
+                <th>学届</th>
+                <th>专业</th>
+                <th>班级</th>
+                <th>单元</th>
+                <th>资源</th>
+                <th>操作</th>
+                <tr>
+                    <td>1</td>
+                    <td>2018</td>
+                    <td>电子商务</td>
+                    <td>1班</td>
+                    <td>10</td>
+                    <td>25</td>
+                    <td><button style="color:white">共享</button></td>
+                </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2018</td>
+                    <td>货代与报关</td>
+                    <td>2班</td>
+                    <td>10</td>
+                    <td>25</td>
+                    <td><button style="color:white">共享</button></td>
+                </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2018</td>
+                    <td>仓储配送</td>
+                    <td>3班</td>
+                    <td>10</td>
+                    <td>25</td>
+                    <td><button style="color:white">共享</button></td>
+                </tr>
+            </table>
+    </div>
+</div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+</html>

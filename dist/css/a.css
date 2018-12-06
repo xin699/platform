@@ -1,0 +1,8 @@
+.a .b, .a .c .d {
+  border: 1px solid blue; }
+
+.a .c {
+  color: blue; }
+
+.a .y {
+  color: blue; }

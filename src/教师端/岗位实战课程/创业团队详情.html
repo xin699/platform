@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>分配学校团队</title>
+</head>
+
+<body class="nav-md qq">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{"index":{"title":"张志峰 老师"},"menu":[{"title":"简历中心","link":"#"},{"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+
+    </div>
+    <div class="central-1 shadow">
+            <div class="input-1">
+                            团队名称：<input type="text" placeholder="输入团队名称">
+                            <button style="color:white" id="bu">提交保存</button>
+                            <button style="color:white" id="bu">取消</button>
+            </div>
+              <div class="input-1">
+                        成员分配：
+            </div>
+                    <div class="rim">
+                        <div class="input-3">
+                                学届/专业/班级：<select name="city">
+                                <option value="">选择学届</option>
+                                <option value="">2016届</option>
+                                <option value="">2017届</option>					
+                            </select>
+                            <select name="city">
+                                <option value="">选择专业</option>
+                                <option value="">市场营销</option>
+                                <option value="">电子商务</option>					
+                            </select>
+                            <select name="city">
+                                <option value="">选择班级</option>
+                                <option value="">2016届市场营销1班</option>
+                                <option value="">2017届电子商务1班</option>					
+                            </select>
+                            <button style="color:white" id="bu"><img src="/images/q9.png" alt=""></button>
+                            <button style="color:white" id="bu">全选</button>
+                        </div>
+                            <table>
+                                <th><input type="checkbox"></th>
+                                <th>序号</th>
+                                <th>学生姓名</th>
+                                <th>学届</th>
+                                <th>专业</th>
+                                <th>班级</th>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>1</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>2</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>3</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>4</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>5</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr><tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>6</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>7</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>8</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr><tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>9</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>10</td>
+                                    <td>张同学</td>
+                                    <td>2016届</td>
+                                    <td>市场营销</td>
+                                    <td>2016届市场营销1班</td>
+                                </tr>
+                            </table>
+                    </div>
+              <div class="main ">
+                        @@include('include/page/paging.html')
+                    </div>
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+</html>

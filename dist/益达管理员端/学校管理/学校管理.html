@@ -1,0 +1,136 @@
+<!-- Tab panes -->
+<div class="xs">
+    <div class="input-one">
+        学校：
+        <input type="text" name="school" id="school" style="border:1px solid #a9a9a9;width:220px;" placeholder="请输入学校名称">
+        类别：<select name="city">
+            <option value="">全部</option>
+            <option value="">普通高等学校</option>
+            <option value="">高等专科学院</option>
+        </select>
+        状态：<select name="city">
+            <option value="">全部</option>
+            <option value="">激活</option>
+            <option value="">冻结</option>
+        </select>
+
+        <button style="color:white" id="bu">搜索</button>
+        <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">创建学校</button>
+    </div>
+    <table class="form-one">
+        <th>序号</th>
+        <th>编号</th>
+        <th>学校</th>
+        <th>类别</th>
+        <th>地址</th>
+        <th>学校管理员</th>
+        <th>状态</th>
+        <th>创建时间</th>
+        <th>操作</th>
+        <tr>
+            <td>1</td>
+            <td>111</td>
+            <td>益达大学</td>
+            <td>高等专科学院</td>
+            <td>广东广州...</td>
+            <td>1</td>
+            <td>激活</td>
+            <td>2018-06-07</td>
+            <td>
+                <a href="#" data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                <a href="schoolAdmin.html">学校管理</a> &nbsp;&nbsp;
+                <a href="#">冻结</a> &nbsp;&nbsp;
+                <a href="trainingSystem.html">课程/实训关联</a>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>222</td>
+            <td>广州大学</td>
+            <td>高等专科学院</td>
+            <td>广东广州...</td>
+            <td>1</td>
+            <td>冻结</td>
+            <td>2018-06-07</td>
+            <td>
+                <a href="#" data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                <a href="#">学校管理</a> &nbsp;&nbsp;
+                <a href="#">冻结</a> &nbsp;&nbsp;
+                <a href="trainingSystem.html">课程/实训关联</a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <div id="pagination" class="pagination2"></div>
+    </div>
+    <!-- 弹框 -->
+
+    <div class="update_modal">
+        <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+            <div class="analog-three">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>新增专业</b>
+                </div>
+                <div class="analog-three-in">
+                    学校名称：<input type="text" placeholder="学校名称"><br>
+                    学校编号：<input type="text" maxlength="3" placeholder="学校编号" style="width:130px;">&nbsp;&nbsp;限3位字母（不区分大小写）或数字<br>
+                    <span style="margin-left:20px">类别：</span> <select name="city" style="width:130px;">
+                        <option value="">请选择</option>
+                        <option value="">中专</option>
+                        <option value="">大专</option>
+                    </select><br>
+                    <span style="margin-left:20px">地址：</span>
+                    <select name="city" style="width:80px;">
+                        <option value="">请选择</option>
+                        <option value="">广东</option>
+                        <option value="">四川</option>
+                    </select>
+                    <select name="city" style="width:80px;">
+                        <option value="">请选择</option>
+                        <option value="">广州</option>
+                        <option value="">佛山</option>
+                    </select>
+                    <input type="text" style="width:180px;"> <br>
+                    管理员账号：自动生成<br>
+                    <button>确定</button> <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="update_modal">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="analog-four">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>修改学校</b>
+                </div>
+                <div class="analog-three-in">
+                    学校名称：<input type="text" placeholder="益达大学"><br>
+                    学校编号：<input type="text" maxlength="3" placeholder="111" style="width:130px;">&nbsp;&nbsp;限3位字母（不区分大小写）或数字<br>
+                    <span style="margin-left:20px">类别：</span> <select name="city" style="width:130px;">
+                        <option value="">请选择</option>
+                        <option value="">中专</option>
+                        <option value="">大专</option>
+                    </select><br>
+                    <span style="margin-left:20px">地址：</span>
+                    <select name="city" style="width:80px;">
+                        <option value="">请选择</option>
+                        <option value="">广东</option>
+                        <option value="">四川</option>
+                    </select>
+                    <select name="city" style="width:80px;">
+                        <option value="">请选择</option>
+                        <option value="">广州</option>
+                        <option value="">佛山</option>
+                    </select>
+                    <input type="text" style="width:180px;" placeholder="天河区"> <br>
+                    <button>确定</button> <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

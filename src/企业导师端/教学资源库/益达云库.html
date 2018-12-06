@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>益达云库</title>
+</head>
+
+<body class="nav-md qq">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{           "index":{             "title":"张志峰 老师"           },           "menu":[             {"title":"简历中心","link":"#"},             {"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+
+    </div>
+    <div class="central-1 shadow">
+        <div class="input-1">
+            课程类别：<select name="city">
+                <option value="">全部</option>
+                <option value="">理论课程</option>
+                <option value="">实训课程</option>
+            </select>
+            <input type="text">
+            <button style="color:white">搜索</button>
+        </div>
+        <div class="main ">
+            @@include('include/page/nav.html')
+        </div>
+        <table>
+            <th><input type="checkbox"></th>
+            <th>序号</th>
+            <th>课程类别</th>
+            <th>课程名</th>
+            <th>单元</th>
+            <th>名称</th>
+            <th>上传者</th>
+            <th>上传时间</th>
+            <th>操作</th>
+            <tr class="trc">
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>理论课程</td>
+                <td>地理</td>
+                <td>第1单元</td>
+                <td>项目1 市场营销.jpg</td>
+                <td>张某某</td>
+                <td>2018-06-07</td>
+                <td>
+                    <a href="">下载</a>
+                    <a href="">预览</a>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+                <td>理论课程</td>
+                <td>地理</td>
+                <td>第1单元</td>
+                <td>项目1 市场营销.jpg</td>
+                <td>张某某</td>
+                <td>2018-06-07</td>
+                <td>
+                    <a href="">下载</a>
+                    <a href="">预览</a>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>全选</td>
+            </tr>
+        </table>
+            <div class="input-1">
+                <button style="color:white" id="bu">下载</button>
+                <button style="color:white" id="bu">共享到本地</button>
+                <button style="color:white" id="bu">删除</button>
+            </div>
+        <div class="main ">
+            @@include('include/page/paging.html')
+        </div>
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+</html>

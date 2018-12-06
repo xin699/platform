@@ -1,0 +1,17 @@
+
+$color:blue;
+
+.a{
+    .b{
+        border: 1px solid $color;
+    }
+    .c{
+        color: $color;
+        .d {
+            @extend .b
+        }
+    }
+    .y{
+        color: $color;
+    }
+}

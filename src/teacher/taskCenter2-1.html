@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"作业中心",
+            "link":"taskCenter.html",
+            "active":false
+          },
+          "nav":[
+            {
+                "title":"掌上练习",
+                "link":"#",
+                "active":"active"
+            },
+            {
+                "title":"考试中心",
+                "link":"taskCenter3.html"
+            },
+            {
+                "title":"题库",
+                "link":"taskCenter4.html"
+            }
+          ],
+          "template": "教师端/课堂练习/评分列表.html"
+        })
+
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    require(['jquery','/js/jquery.knob.js'],function($){
+      $(function() {
+        $(".dial").knob();
+        
+      });
+    })
+  </script>
+</body>
+</html>

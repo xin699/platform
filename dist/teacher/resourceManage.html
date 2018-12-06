@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+      <meta charset="UTF-8" />
+    <!-- Render engine selection -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Friendly view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <!-- Disable chrome translation prompt -->
+    <meta name="google" value="notranslate">
+    <!-- Ignore identifying phone numbers, email addresses -->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="author" content="biger">
+    <!-- src -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.polyfill.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="/css/all.css">
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        <div class="nav_menu">
+    <nav class="clearfix">
+        <div class="nav pull-left logo-left">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="">
+            </a>
+            <a href="">
+                <i class="icon-教育云平台" style="font-size:20px;"></i>
+                
+                教育云平台
+                </a>
+            |
+            <a href="index.html">
+                <i class="icon-企业服务" style="font-size:20px;"></i>
+                企业服务</a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right">
+            <li class="download">
+                <a href="javascript:;" style="font-weight: bold;margin: 0">下载APP</a>
+            </li>
+            <li style="margin-right: 10px">
+                <a href="javascript:;" class="dropdown-toggle info-number hvr-buzz-out">
+                    <i class="icon-提醒" style="font-size:20px;"></i>
+                    <span class="badge bg-red">6</span>
+                </a>
+            </li>
+            <li class="">
+                <!-- 头像 -->
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../../images/img.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li>
+                        <a class="role" style="padding:12px 20px 0 20px;color: black" href="javascript:;">张志峰 老师</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    
+                        <li>
+                            <a href="#">简历中心</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">我的企业任务</a>
+                        </li>
+                    
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">修改密码</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">安全退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+      
+      <li role="presentation" class="active"><a href="#">资源管理</a>
+      </li>
+      
+      
+      
+
+      
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="central-1 wx">
+    <div style="margin-left:35px;" >
+            <ul class="nav nav-tabs biger-tab1">
+    
+        <li class="active" ><a href="#">个人库</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceSchoolManage.html">学校库</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceYun.html">益达云库</a>
+        </li>
+    
+</ul>
+    </div>
+
+    <div class="input-1 trc" style="margin-top:15px;">
+        <input type="text" placeholder="请输入名称关键字" style="width:250px;">
+        课程类别：<select name="city">
+            <option value="">全部</option>
+            <option value="">理论课程</option>
+            <option value="">实训课程</option>
+        </select>
+        课程名称：<select name="city">
+            <option value="">全部</option>
+            <option value="">地理</option>
+            <option value="">历史</option>
+        </select>
+    </div>
+
+    <div class="input-1 trc">
+        单元：<select name="city">
+            <option value="">全部</option>
+            <option value="">第一单元</option>
+            <option value="">第二单元</option>
+            <option value="">第三单元</option>
+            <option value="">第四单元</option>
+            <option value="">第五单元</option>
+            <option value="">第六单元</option>
+        </select>
+        <button style="color:white" id="bu">搜索</button>
+        <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">添加资源库</button>
+        <button style="color:white" id="bu">刷新</button>
+    </div>
+    <div style="width: 94%;margin: 10px;margin-left:35px;border: 1px solid #eee;padding: 10px" >
+            <ul class="nav nav-tabs biger-tab2">
+    
+        <li class="active" ><a href="#">电子教材</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">PPT</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">图片</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">视频</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">案例</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">Flash</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">文献资料</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceTitie.html">题目</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">其它</a>
+        </li>
+    
+</ul>
+    </div>
+    <table class="picture-2" id="selectTable">
+        <th></th>
+        <th>序号</th>
+        <th>课程类别</th>
+        <th>课程名</th>
+        <th>单元</th>
+        <th>名称</th>
+        <th>上传者</th>
+        <th>上传时间</th>
+        <th>操作</th>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>转换中</td>
+            <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#mygoodview" >预览</a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#share" >共享</a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#mygood" >下载</a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#mygood" >删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>2018-06-07</td>
+            <td>
+                <a href="">预览</a>
+                <a href="">共享</a>
+                <a href="">下载</a>
+                <a href="">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>转换中</td>
+            <td>
+                <a href="">预览</a>
+                <a href="">共享</a>
+                <a href="">下载</a>
+                <a href="">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>2018-06-07</td>
+            <td>
+                <a href="">预览</a>
+                <a href="">共享</a>
+                <a href="">下载</a>
+                <a href="">删除</a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <div class="input-2" style="height:auto">
+    <input type="checkbox" id="selectAll" >全选
+    <button style="color:white" data-toggle="modal" data-target="#share" style="margin-left:5px;">共享</button>
+    <button style="color:white" style="margin-left:5px;">下载到本地</button>
+    <button style="color:white" style="margin-left:5px;">删除</button>
+    <div id="pagination" class="pagination2"></div>
+</div>
+    </div>
+
+    <!-- 弹框 -->
+    <!-- 文件上传 -->
+    <div class="update_modal">
+        <div class="modal fade" id="mygood" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="mygood">
+            <div class="analog-three">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>非题目类上传</b>
+                </div>
+                <div class="analog-three-in">
+                    课程类别：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">理论课程</option>
+                        <option value="">实训课程</option>
+                    </select> <br>
+                    课程名称：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">B2C电商仿真实训</option>
+                        <option value="">B2B分销运营实务</option>
+                    </select> <br>
+                    课程单元：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">第一单元</option>
+                        <option value="">第二单元</option>
+                    </select> <br>
+                    资源类型：<select name="fileType" id="resType" value="0">
+                        <option value="0">电子教材</option>
+                        <option value="1">PPT</option>
+                        <option value="2">图片</option>
+                        <option value="3">视频</option>
+                        <option value="4">案例</option>
+                        <option value="5">Flash</option>
+                        <option value="6">文献资料</option>
+                        <option value="7">其他</option>
+                    </select> <br>
+                        <button id="bu-one" type="button" >批量选择文件</button>
+                        <input type="file" name="files" style="display:none;" multiple="multiple" id="files">
+
+                        
+                    <div class="files-wrap" style="width:350px;max-height: 260px;overflow-y: auto;">
+                        <!-- <div class="flie-list">
+                            <div class="files-title">dfasdfa.jpg <a class="pull-right glyphicon glyphicon-remove validate" href="javascript:void(0);"></a></div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 60%;">
+                                    60%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flie-list">
+                            <div class="files-title">dfasdfa.jpg <a class="pull-right glyphicon glyphicon-remove validate" href="javascript:void(0);"></a></div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;">
+                                    已完成
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                    <button type="button" >确认</button> <button type="button" >取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="update_modal">
+        <div class="modal fade" id="mygoodview" tabindex="-1" role="dialog" aria-labelledby="mygoodview">
+            <div class="analog-three" style="width:1000px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>项目1 市场营销.jpg</b>
+                </div>
+                <div class="analog-three-in" style="width:100%;">
+                    <div class="text-center" id="view">
+                        这里是预览窗口
+                    </div>
+                    
+                    <div class="text-center">
+                        <button style="margin-left:0" data-dismiss="modal" type="button" >关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="update_modal">
+        <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="share">
+            <div class="analog-three" style="width:400px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>共享资源</b>
+                </div>
+                <div class="analog-three-in" style="width:100%;">
+                    <div class="text-center" id="view">
+                        <label for="yun">
+                            <input type="checkbox" id="yun" name="yun" style="font-size:12px;width:auto;height: auto;">
+                            益达云库
+                        </label>
+                    </div>
+                    
+                    <div class="text-center">
+                            <button style="margin-left:0;" type="button" >确认</button> <button type="button" >取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <script  src="../js/require.js"></script>
+  <script>
+    requirejs.config({
+    paths : {
+        "jquery" : "/js/jquery.min",
+        "bootstrap": "/js/bootstrap.min",
+        "cxCalendar": "/js/jquery.cxcalendar.min",
+        "myPagination":"/js/myPagination"
+    },
+    shim: {
+        jquery: {
+            exports: 'jquery'
+        },
+        bootstrap: {
+            deps: ['jquery']
+        },
+        myPagination:{
+            deps: ['jquery']
+        }
+
+    }
+})
+// base
+require(["jquery","bootstrap","myPagination"],function($){
+
+    $(function($){
+        if($('#pagination').length != 0){
+            new myPagination({
+                id: 'pagination',
+                curPage:1, //初始页码
+                pageTotal: 50, //总页数
+                pageAmount: 10,  //每页多少条
+                dataTotal: 500, //总共多少条数据
+                pageSize: 5, //可选,分页个数
+                showPageTotalFlag:true, //是否显示数据统计
+                showSkipInputFlag:true, //是否支持跳转
+                getPage: function (page) {
+                    //获取当前页数
+                    console.log(page);
+                }
+            })
+        }
+
+    })
+
+ 
+})
+    require(['jquery'],function($){
+
+      $('#selectAll').click(function(e) {
+        var checked = this.checked;
+        $('#selectTable').find('input:checkbox').each(function(i,e) {
+          e.checked = checked
+        })
+      })
+
+
+      // 文件上传按钮绑定
+      $('#bu-one').click(function(e) {
+        $('#files')[0].click()
+      })
+
+
+      // 分组支持
+      var fileTypeGroup = [
+        // 电子教材
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf"],
+        // ppt
+        ["ppt", "pptx"],
+        // 图片
+        ["jpg", "jpeg", "png", "gif"],
+        // 视频
+        ["mp4", "avi", "flv", "wmv"],
+        // 案例
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf","swf"],
+        // Flash
+        ["swf"],
+        // 文献资料
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf"],
+        // 其它
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg", "jpeg", "png", "gif","rar", "zip","pdf", "swf","mp4", "avi", "flv", "wmv"]
+      ]
+
+      // 类型大小支持分组
+      var fileTypeSize = [
+        // 100M  104857600  b
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg", "jpeg", "png", "gif"],
+        // 500M  524288000  b
+        ["rar", "zip"],
+        // 1024M  1073741824 b
+        ["pdf", "swf"],
+        // 1500M  1572864000  b
+        ["mp4", "avi", "flv", "wmv"]
+      ]
+
+      var fileTypeSizeNum = [104857600,524288000,1073741824,1572864000]
+
+      // 添加文件变动绑定
+      $('#files').change(function(e){
+        var files = e.target.files;
+        var wrap = $('.files-wrap');
+        var resType = $('#resType').val();
+
+        // 计算加入列表和正在选中的文件
+
+        if(files.length + wrap.children('.flie-list').length > 20){
+          alert('当前操作不能超过20个文件')
+          return false
+        }
+
+        // 多个文件遍历
+        $.each(files,function(i,f){
+
+          var suffix = f.name.split('.').pop().toLowerCase();
+          var fileName = f.name.split('.')[0];
+          var fileSize = f.size;
+
+          // 分组文件支持检测
+         if(fileTypeGroup[resType].indexOf(suffix) === -1){
+           alert('当前分组不支持该类型！')
+           return false
+         }
+
+          // 遍历大小
+          $.each(fileTypeSize,function(i,f){
+             if(f.indexOf(suffix)!= -1){
+
+               if(fileSize <= fileTypeSizeNum[i] ){
+
+                var list = "";
+                    list += "<div class=\"flie-list\">\n";
+                    list += "	<div class=\"files-title\">\n";
+                    list += "	"+fileName.substr(0,30)+'......'+ suffix +" <a class=\"pull-right glyphicon glyphicon-remove validate\" href=\"javascript:void(0);\"><\/a>\n";
+                    list += "	<\/div>\n";
+                    list += "	<div class=\"progress\">\n";
+                    list += "		<div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" style=\"width: 0%;\">\n";
+                    list += "                                   0%\n";
+                    list += "		<\/div>\n";
+                    list += "	<\/div>\n";
+                    list += "<\/div>\n";
+                
+                wrap.append(list)
+
+                // 这里通过文件检测可以写ajax
+
+                // ajax添加进度条
+
+               }else{
+                 alert('不能超过'+ fileTypeSizeNum[i]/ 2**20 +"MB 大小")
+               }
+
+              return false
+
+             }
+          })
+
+
+        })
+
+      })
+      
+      // 删除添加文件
+      $('.files-wrap').on('click','a',function(e){
+        // 删除文件ajax
+
+        // 可以在这里写成功然后执行下面代码
+        $('#files').val('');
+        $(this).parents('.flie-list').remove();
+      })
+      // 文件模态窗口关闭的时候清楚列表
+      $('#mygood').on('hidden.bs.modal', function () {
+        $('.files-wrap').children('.flie-list').remove()
+      })
+
+      
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+    <script src=""></script>
+    <title>益达云库</title>
+</head>
+
+<body class="nav-md qq">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{           "index":{             "title":"张志峰 老师"           },           "menu":[             {"title":"简历中心","link":"#"},             {"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+
+    </div>
+    <div class="central shadow">
+        <div class="drop-down" style="margin-top:20px;">
+                <div class="drop-down-one">
+                     <span style="font-size:16px;"> <span class="glyphicon glyphicon-chevron-down"></span> 第一单元 </span> 
+                </div>
+                <div class="drop-down-two">
+                        <span class="glyphicon glyphicon-chevron-down"></span> 1、第1课时  
+                        <div class="right" style="width:100px;margin-top:4px;">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                        60%
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="drop-down-two" style="width:80%">
+                      <span class="mage">PPT</span>  课程PPT
+                        <span class="glyphicon glyphicon-trash" style="float:right;margin-top:7px;margin-left:15px"></span>
+                        <span class="glyphicon glyphicon-eye-open" style="float:right;margin-top:7px"></span>
+                        
+                </div>
+                <div class="drop-down-two" style="width:80%">
+                        <span class="mage">图文</span>  图片
+                        <span class="glyphicon glyphicon-trash" style="float:right;margin-top:7px;margin-left:15px"></span>
+                        <span class="glyphicon glyphicon-eye-open" style="float:right;margin-top:7px"></span>
+                </div>
+                <div class="drop-down-two" style="text-align:center">
+                           <a href="">+添加课时</a>     
+                    </div>
+        </div>
+        <div class="drop-down" style="margin-top:20px;">
+                <div class="drop-down-one">
+                     <span style="font-size:16px;"> <span class="glyphicon glyphicon-chevron-down"></span> 第二单元 </span> 
+                </div>
+                <div class="drop-down-two">
+                        <span class="glyphicon glyphicon-chevron-down"></span> 1、第1课时 
+                        <div class="right" style="width:100px;margin-top:4px;">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                        60%
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="drop-down-two" style="width:80%">
+                      <span class="mage">PPT</span>  课程PPT
+                        <span class="glyphicon glyphicon-trash" style="float:right;margin-top:7px;margin-left:15px"></span>
+                        <span class="glyphicon glyphicon-eye-open" style="float:right;margin-top:7px"></span>
+                </div>
+                <div class="drop-down-two" style="width:80%">
+                     <span class="mage">图文</span>   图文
+                        <span class="glyphicon glyphicon-trash" style="float:right;margin-top:7px;margin-left:15px"></span>
+                        <span class="glyphicon glyphicon-eye-open" style="float:right;margin-top:7px"></span>
+                </div>
+                <div class="drop-down-two" style="text-align:center">
+                           <a href="">+添加课时</a>     
+                    </div>
+        </div>
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths : {
+                "jquery" : "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"],function($){
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+</html>

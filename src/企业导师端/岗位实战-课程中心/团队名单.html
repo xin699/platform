@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>团队名单</title>
+</head>
+
+<body class="nav-md texu">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{"index":{"title":"张志峰 老师"},"menu":[{"title":"简历中心","link":"#"},{"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+
+    </div>
+    <div class="central shadow">
+            <div class="input-one">
+                            <b>学届/专业/班级</b> ：<select name="city" class="select-one">
+                                            <option value="">全部</option>
+                                            <option value="">2016届市场营销1班</option>
+                                            <option value="">2016届市场营销2班</option>					
+                                      </select>
+                                      <select name="city" class="select-one">
+                                            <option value="">全部</option>
+                                            <option value="">2016届市场营销1班</option>
+                                            <option value="">2016届市场营销2班</option>					
+                                      </select>
+                                      <select name="city" class="select-one" style="margin-right:40px;">
+                                            <option value="">全部</option>
+                                            <option value="">2016届市场营销1班</option>
+                                            <option value="">2016届市场营销2班</option>					
+                                      </select>
+                            学校名称：<input type="text" placeholder="输入学校名称">
+                            团队名称：<input type="text" placeholder="输入团队名称">
+                            <button style="color:white" id="bu">搜索</button>
+            </div>
+            <table class="form-one">
+                <th>序号</th>
+                <th>学校名称</th>
+                <th>学届</th>
+                <th>专业</th>
+                <th>班级</th>
+                <th>团队名称</th>
+                <th>团队成员</th>
+                <tr>    
+                    <td>1</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href="#" data-toggle="modal" data-target="#myModal"><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>2</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>3</td>
+                    <td>益达学院</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>4</td>
+                    <td>中山大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>5</td>
+                    <td>益达学院</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>6</td>
+                    <td>中山大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>7</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>8</td>
+                    <td>中山大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>9</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+                  <tr>    
+                    <td>10</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td><a href=""><b>查看成员</b></a></td>
+                </tr>
+            </table>
+              <div class="main ">
+                        @@include('include/page/paging.html')
+                    </div>
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+          <!-- 模拟框 -->
+             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="analog">        
+            <div class="analog-one">
+                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                <b>查看名单</b>
+            </div>
+            <div class="analog-two">
+                    学生姓名：<input type="text" placeholder="请输入学生ID/姓名">
+                                <button>搜索</button>
+            </div>
+     <table class="form-one"> 
+            <th>序号</th>
+            <th>学生姓名</th>
+            <th>学校名称</th>
+            <th>学届</th>
+            <th>专业</th>
+            <th>班级</th>
+            <tr>
+                <td>1</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>张同学</td>
+                <td>广州大学</td>
+                <td>2016届</td>
+                <td>市场营销</td>
+                <td>2016届市场营销一班</td>
+            </tr>
+     </table>
+            
+   </div>
+</div>
+</html>

@@ -1,0 +1,31 @@
+
+<div class="central qq">
+
+        <div class="input-1">
+        <div class="input-2">
+            课程类型：<select name="city">
+                <option value="">全部</option>
+                <option value="">理论课程</option>
+                <option value="">实习课程</option>
+                <option value="">企业课程</option>						
+            </select>
+            课程名称：<input type="text" placeholder="请输入课程名称">
+            <button style="color:white">搜索</button>
+        </div>    
+        </div>
+        
+    <div class="main ">
+        @@include('include/page/gallery.html',{
+            "link":"taskYunInfo.html"
+        })
+    </div>
+    <div class="main ">
+        @@include('include/page/gallery-2.html')
+    </div>
+    <div class="main ">
+        @@include('include/page/gallery-2.html')
+    </div>
+        <div >
+        @@include('include/page/paging.html')
+    </div>
+</div>

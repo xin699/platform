@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>课程首页</title>
+</head>
+
+<body class="nav-md qq">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{           "index":{             "title":"张志峰 老师"           },           "menu":[             {"title":"简历中心","link":"#"},             {"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+
+    </div>
+    <div class="central-1-g shadow">
+        <div class="details-1">
+            <div class="details-2">
+                    <img src="/images/q3.png" alt="">
+            </div>
+            <div class="zt">
+                <b style="font-size: 17px">市场营销实训</b><br><br>
+                <b>课程类型:</b>理论课程 &nbsp;&nbsp; <b>学校名称:</b>益达大学 &nbsp;&nbsp; <b>共享者:</b>张老师   <br><br>
+                <b>课程简介:</b>在数字和社交时代创造顾客价值和顾客关系增加全新内容“数字时代:网络、移动、社<br>
+                交媒体营销”。探讨了顾客参与营销的新兴趋势。新増整合营销沟通的前沿内容,指导营销者如何<br>
+                融合传统媒体与新型工具,建立和创造更加精准、个性化和互动的客户关系。<br><br>
+                <b>延伸阅读:</b>消费品工业是我国重要民生产业和传统优势产业。改革开放以来,我国形成了覆盖面广<br>
+                结构相对完整的消费品工业体系,对稳增长、促改革、调结构、惠民生发挥了重要作用。但是我国<br>
+                消费品品种、品质、品牌与国际先进水平相比尚有较大差距有效供给能力和水平难以适应消费升级<br>
+                的需要。通过开展消费品工业“三品”专项行动,营造良好市场环境更好满足和创造消费需求不断<br>    
+                增强消费拉动经济的基础作用,促进消费品工业迈向中高端水平
+            </div>
+        </div>
+        <div class="details-3">
+            <div class="details-4"><img src="/images/q6.png" alt=""><br><b style="color:green">2</b><br><b style="font-size: 18px"><b>班级</b></div>
+            <div class="details-4"><img src="/images/q7.png" alt=""><br><b style="color:orange">0</b><br><b style="font-size: 18px"><b>实训系统</b></div>
+            <div class="details-4"><img src="/images/q8.png" alt=""><br><b style="color:red">0</b><br><b style="font-size: 18px"><b>问答</b></div>
+        </div>    
+            
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<div class="central-1 wx">
+    <div style="margin-left:35px;" >
+            <ul class="nav nav-tabs biger-tab1">
+    
+        <li class="undefined" ><a href="resourceManage.html">学校库</a>
+        </li>
+    
+        <li class="active" ><a href="#">益达云库</a>
+        </li>
+    
+</ul>
+    </div>
+    <div class="input-1 trc" style="margin-top:15px;">
+        <input type="text" placeholder="请输入名称关键字" style="width:250px;">
+        课程类别：<select name="city">
+            <option value="">全部</option>
+            <option value="">理论课程</option>
+            <option value="">实训课程</option>
+        </select>
+        <button style="color:white" id="bu">搜索</button>
+    </div>
+    <div style="width: 94%;margin: 10px;margin-left:35px;border: 1px solid #eee;padding: 10px" >
+            <ul class="nav nav-tabs biger-tab2">
+    
+        <li class="active" ><a href="#">电子教材</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">PPT</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">图片</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">视频</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">案例</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">Flash</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">文献资料</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceYunTitie.html">题目</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">其它</a>
+        </li>
+    
+</ul>
+    </div>
+    <table class="picture-2" id="selectTable">
+        <th></th>
+        <th>序号</th>
+        <th>课程类别</th>
+        <th>课程名</th>
+        <th>单元</th>
+        <th>名称</th>
+        <th>上传者</th>
+        <th>上传时间</th>
+        <th>操作</th>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>转换中</td>
+            <td>
+                <a href="">下载</a>&nbsp;&nbsp;&nbsp;
+                <a data-toggle="modal" data-target="#mygoodview" href="javascript:void(0);">预览</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>2018-06-07</td>
+            <td>
+                <a href="">下载</a>&nbsp;&nbsp;&nbsp;
+                <a data-toggle="modal" data-target="#mygoodview" href="javascript:void(0);">预览</a>
+            </td>
+        </tr>
+    </table>
+    <div class="input-2" style="height:auto;">
+        <input type="checkbox" id="selectAll">全选
+
+        <button style="color:white">下载到本地</button>
+        <div>
+            <div id="pagination" class="pagination2"></div>
+        </div>
+    </div>
+    <!-- 预览 -->
+    <div class="update_modal">
+        <div class="modal fade" id="mygoodview" tabindex="-1" role="dialog" aria-labelledby="mygoodview">
+            <div class="analog-three" style="width:1000px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>项目1 市场营销.jpg</b>
+                </div>
+                <div class="analog-three-in" style="width:100%;">
+                    <div class="text-center" id="view">
+                        这里是预览窗口
+                    </div>
+                    
+                    <div class="text-center">
+                        <button style="margin-left:0" data-dismiss="modal" type="button" >关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

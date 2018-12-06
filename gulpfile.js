@@ -8,7 +8,7 @@ gulp.task('html',function(){
     return gulp.src(['src/**/*.html','!src/include/**/*.html'])
     .pipe(plugins.fileInclude({
         prefix: '@@',
-        basepath: '@file',
+        basepath: process.cwd() + '/src/',
         content:{
             template:''
         }

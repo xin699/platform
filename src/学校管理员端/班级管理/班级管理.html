@@ -1,0 +1,131 @@
+<div class="xs">
+    <div class="input-one">
+        学届：<select name="city">
+            <option value="">全部</option>
+            <option value="">2013届</option>
+            <option value="">2014届</option>
+        </select>
+        专业：<select name="city">
+            <option value="">全部</option>
+            <option value="">电子商务</option>
+            <option value="">货代与报关</option>
+        </select>
+        状态：<select name="city">
+            <option value="">全部</option>
+            <option value="">激活</option>
+            <option value="">冻结</option>
+        </select>
+        <button style="color:white" id="bu">搜索</button>
+        <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">新增班级</button>
+    </div>
+    <table class="form-one">
+        <th>序号</th>
+        <th>学届</th>
+        <th>专业</th>
+        <th>班级</th>
+        <th>学制</th>
+        <th>人数</th>
+        <th>状态</th>
+        <th>操作</th>
+        <tr>
+            <td>1</td>
+            <td>2018</td>
+            <td>电子商务</td>
+            <td>1班</td>
+            <td>3</td>
+            <td>40</td>
+            <td>激活</td>
+            <td>
+                <a href="profession.html">账号管理</a> &nbsp;&nbsp;
+                <a href="">冻结</a>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2017</td>
+            <td>货代与报关</td>
+            <td>2班</td>
+            <td>4</td>
+            <td>25</td>
+            <td>冻结</td>
+            <td>
+                <a href="">账号管理</a> &nbsp;&nbsp;
+                <a href="">激活</a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        @@include('include/page/paging.html')
+    </div>
+
+    <!-- 弹框 -->
+
+    <div class="update_modal">
+        <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+            <div class="analog-three">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>新增班级</b>
+                </div>
+                <div class="analog-three-in">
+                    学届：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">2013届</option>
+                        <option value="">2014届</option>
+                    </select> <br>
+                    专业：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">电子商务</option>
+                        <option value="">货代与报关</option>
+                    </select> <br>
+                    当前学期：<select name="city" style="width:70px;">
+                        <option value="">请选择</option>
+                        <option value="">第一单元</option>
+                        <option value="">第二单元</option>
+                    </select><span class="color-one">例如该班级是大二第一学期，就选择第三学期。</span><br>
+                    <div class="analog-three-one">
+                        请输入班级：
+                    </div>
+                    <div class="analog-three-two" id="list">
+                    </div>
+                    <div class="analog-three-three">
+                        <div class="analog-three-three-in color-one"><a id="listAdd" href="javascript:void(0);"><b>+</b></a></div>
+                        <div class="analog-three-three-in color-one"><a id="listDel" href="javascript:void(0);"><b>-</b></a></div>
+
+                    </div>
+                    <button>上课</button> <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="update_modal">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="analog">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>修改班级</b>
+                </div>
+                <div class="analog-three-in">
+                    学届：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">2013届</option>
+                        <option value="">2014届</option>
+                    </select> <br>
+                    专业：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">电子商务</option>
+                        <option value="">货代与报关</option>
+                    </select> <br>
+                    当前学期：<select name="city" style="width:70px;">
+                        <option value="">请选择</option>
+                        <option value="">第一单元</option>
+                        <option value="">第二单元</option>
+                    </select><span class="color-one">例如该班级是大二第一学期，就选择第三学期。</span><br>
+                    请输入班级：<input type="text" placeholder="1班" style="width:310px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

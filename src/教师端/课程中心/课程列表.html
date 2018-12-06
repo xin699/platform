@@ -1,0 +1,34 @@
+<div class="central qq" style="position: relative;">
+
+    <div class="input-1">
+        <div class="notice">
+            <b style="font-size: 16px">当前学期：第一学期</b><br>
+            时间：2018.5.22-2018.9.29
+        </div>
+        <div class="input-2">
+            课程类型：<select name="city">
+                <option value="">全部</option>
+                <option value="">理论课程</option>
+                <option value="">实习课程</option>
+                <option value="">企业课程</option>
+            </select>
+            课程名称：<input type="text" placeholder="请输入课程名称">
+            <button style="color:white"><img src="/images/q9.png" alt=""></button>
+        </div>
+    </div>
+
+    <div class="main ">
+        @@include('include/page/gallery.html',{
+            "link":"taskInfo.html"
+        })
+    </div>
+    <div class="main ">
+        @@include('include/page/gallery-2.html')
+    </div>
+    <div class="main ">
+        @@include('include/page/gallery-2.html')
+    </div>
+    <div class="main ">
+        @@include('include/page/paging.html')
+    </div>
+</div>

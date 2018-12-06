@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+      <meta charset="UTF-8" />
+    <!-- Render engine selection -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Friendly view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <!-- Disable chrome translation prompt -->
+    <meta name="google" value="notranslate">
+    <!-- Ignore identifying phone numbers, email addresses -->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="author" content="biger">
+    <!-- src -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.polyfill.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="/css/all.css">
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        <div class="nav_menu">
+    <nav class="clearfix">
+        <div class="nav pull-left logo-left">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="">
+            </a>
+            <a href="">
+                <i class="icon-教育云平台" style="font-size:20px;"></i>
+                
+                教育云平台
+                </a>
+            |
+            <a href="index.html">
+                <i class="icon-企业服务" style="font-size:20px;"></i>
+                企业服务</a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right">
+            <li class="download">
+                <a href="javascript:;" style="font-weight: bold;margin: 0">下载APP</a>
+            </li>
+            <li style="margin-right: 10px">
+                <a href="javascript:;" class="dropdown-toggle info-number hvr-buzz-out">
+                    <i class="icon-提醒" style="font-size:20px;"></i>
+                    <span class="badge bg-red">6</span>
+                </a>
+            </li>
+            <li class="">
+                <!-- 头像 -->
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../../images/img.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li>
+                        <a class="role" style="padding:12px 20px 0 20px;color: black" href="javascript:;">张志峰 老师</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    
+                        <li>
+                            <a href="#">简历中心</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">我的企业任务</a>
+                        </li>
+                    
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">修改密码</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">安全退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+      
+      <li role="presentation" class="active"><a href="#">资源管理</a>
+      </li>
+      
+      
+      
+
+      
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="central-1 wx">
+    <div style="margin-left:35px;" >
+            <ul class="nav nav-tabs biger-tab1">
+    
+        <li class="active" ><a href="#">学校库</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceYun.html">益达云库</a>
+        </li>
+    
+</ul>
+    </div>
+    <div class="input-1 trc" style="margin-top:15px;">
+        <input type="text" placeholder="请输入名称关键字" style="width:250px;">
+        课程类别：<select name="city">
+            <option value="">全部</option>
+            <option value="">理论课程</option>
+            <option value="">实训课程</option>
+        </select>
+        课程名称：<select name="city">
+            <option value="">全部</option>
+            <option value="">地理</option>
+            <option value="">历史</option>
+        </select>
+    </div>
+    <div class="input-1 trc">
+        单元：<select name="city">
+            <option value="">全部</option>
+            <option value="">第一单元</option>
+            <option value="">第二单元</option>
+            <option value="">第三单元</option>
+            <option value="">第四单元</option>
+            <option value="">第五单元</option>
+            <option value="">第六单元</option>
+        </select>
+        <button style="color:white" id="bu">搜索</button>
+        <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">添加资源库</button>
+        <button style="color:white" id="bu">刷新</button>
+    </div>
+    <div style="width: 94%;margin: 10px;margin-left:35px;border: 1px solid #eee;padding: 10px" >
+            <ul class="nav nav-tabs biger-tab2">
+    
+        <li class="undefined" ><a href="resourceManage.html">电子教材</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceManage.html">PPT</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceManage.html">图片</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceManage.html">视频</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceManage.html">案例</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceManage.html">Flash</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceManage.html">文献资料</a>
+        </li>
+    
+        <li class="active" ><a href="resourceManage.html">题目</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceManage.html">其它</a>
+        </li>
+    
+</ul>
+    </div>
+    <div class="input-1">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#">单选</a></li>
+            <li role="presentation"><a href="#">多选</a></li>
+            <li role="presentation"><a href="#">判断</a></li>
+            <li role="presentation"><a href="#">填空</a></li>
+            <li role="presentation"><a href="#">简答</a></li>
+            <li role="presentation"><a href="#">排序</a></li>
+        </ul>
+    </div>
+    <table class="picture-2" id="selectTable">
+        <th>&nbsp;</th>
+        <th>序号</th>
+        <th>课程类别</th>
+        <th>课程名</th>
+        <th>单元</th>
+        <th>名称</th>
+        <th>错误率</th>
+        <th>上传者</th>
+        <th>上传时间</th>
+        <th>操作</th>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>0%</td>
+            <td>张某某</td>
+            <td>转换中</td>
+            <td>
+                <a data-toggle="modal" data-target="#mygoodview" href="javascript:void(0);">预览</a>
+                <a data-toggle="modal" data-target="#share" href="javascript:void(0);">共享</a>
+                <a href="">下载</a>
+                <a href="">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>0%</td>
+            <td>张某某</td>
+            <td>2018-06-07</td>
+            <td>
+                <a data-toggle="modal" data-target="#mygoodview" href="javascript:void(0);">预览</a>
+                <a data-toggle="modal" data-target="#share" href="javascript:void(0);">共享</a>
+                <a href="">下载</a>
+                <a href="">删除</a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <div class="input-2" style="height:auto">
+    <input type="checkbox" id="selectAll" >全选
+    <button style="color:white" data-toggle="modal" data-target="#share" style="margin-left:5px;">共享</button>
+    <button style="color:white" style="margin-left:5px;">下载到本地</button>
+    <button style="color:white" style="margin-left:5px;">删除</button>
+    <div id="pagination" class="pagination2"></div>
+</div>
+    </div>
+    <!-- 弹框 -->
+
+    <div class="update_modal">
+        <div class="modal fade" id="mygood" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="mygood">
+            <div class="analog-three">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>分题目类上传</b>
+                </div>
+                <div class="analog-three-in" style="width:500px;">
+                    <!-- 条件 -->
+                    <div>课程类别：<select name="city">
+                                    <option value="">请选择</option>
+                                    <option value="">理论课程</option>
+                                    <option value="">实训课程</option>
+                                </select>
+                    </div>
+                    <div>课程名称：<select name="city">
+                            <option value="">请选择</option>
+                            <option value="">B2C电商仿真实训</option>
+                            <option value="">B2B分销运营实务</option>
+                            </select>
+                    </div>
+                    <div>课程单元：<select name="city">
+                            <option value="">请选择</option>
+                            <option value="">第一单元</option>
+                            <option value="">第二单元</option>
+                            </select>
+                    </div>
+                    <!-- tab -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">批量上传题目</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">手工录入题目</a>
+                        </li>
+                    </ul>
+
+                    <div style="overflow: hidden;" ><a class="right" href="#">下载模板</a></div>
+
+                    <div class="tab-content">
+                        <!-- tab1 -->
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            题目类型：
+                            <label for="radio1"><input id="radio1" checked="checked" type="radio" name="radio" class="radio"> 多选 &nbsp;&nbsp;</label>
+                            <label for="radio2"><input id="radio2" type="radio" name="radio" class="radio"> 判断 &nbsp;&nbsp;</label>
+                            <label for="radio3"><input id="radio3" type="radio" name="radio" class="radio"> 填空 &nbsp;&nbsp;</label>
+                            <label for="radio4"><input id="radio4" type="radio" name="radio" class="radio"> 单选 &nbsp;&nbsp;</label>
+                            <label for="radio5"><input id="radio5" type="radio" name="radio" class="radio"> 简答 &nbsp;&nbsp;</label>
+                            <label for="radio6"><input id="radio6" type="radio" name="radio" class="radio"> 排序 &nbsp;&nbsp;</label>
+
+                            <br>
+                            <div class="text-center">
+                                <button id="bu-one" style="margin:0;" type="button" >选择文件</button>
+                                <input type="file" name="files" style="display:none;" accept=".xls" id="files">
+                            </div>
+
+                            <div class="files-wrap" style="width:350px;max-height: 260px;overflow-y: auto;">
+                                <!-- <div class="flie-list">
+                                    <div class="files-title">dfasdfa.jpg <a class="pull-right glyphicon glyphicon-remove validate" href="javascript:void(0);"></a></div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 60%;">
+                                            60%
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flie-list">
+                                    <div class="files-title">dfasdfa.jpg <a class="pull-right glyphicon glyphicon-remove validate" href="javascript:void(0);"></a></div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;">
+                                            已完成
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            
+                            <div class="text-center">
+                                <button style="margin: 0;" type="button" >上传</button>
+                                <button type="button">取消</button>
+                            </div>
+                        </div>
+                        <!-- tab2 -->
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <div>
+                                    所属题型：<select name="city" value="1" id="subject" >
+                                            <option value="1" >单选</option>
+                                            <option value="2">多选</option>
+                                            <option value="3">判断</option>
+                                            <option value="4">填空</option>
+                                            <option value="5">简答</option>
+                                            <option value="6">排序</option>
+                                        </select> 
+                            </div>
+                        <!-- subject-tab1 -->
+                        <div class="subject-tab">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>输入题干：</td>
+                                        <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>输入选项：</td>
+                                        <td class="outOption">
+                                            <div><span> A：</span><input type="text"></div>
+                                            <div><span> B：</span><input type="text"></div>
+                                            <div><span> C：</span><input type="text"></div>
+                                            <div><span> D：</span><input type="text"></div>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> </td>
+                                        <td>
+                                            <span><a class="delOption" href="#">-删除选项</a></span>
+                                            <span><a class="addOption" href="#">+添加选项</a></span>   
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>选择答案：</td>
+                                        <td class="selectOption">
+                                            <label for="label1">
+                                                <input type="radio" id="radio1" value="A" name="radio" class="radio">
+                                                <span>A</span>
+                                            </label>
+                                            <label for="label2">
+                                                <input type="radio" id="radio2" value="B" name="radio" class="radio">
+                                                <span>B</span>
+                                            </label>
+                                            <label for="label3">
+                                                <input type="radio" id="radio3" value="C" name="radio" class="radio">
+                                                <span>C</span>
+                                            </label>
+                                            <label for="label4">
+                                                <input type="radio" id="radio4" value="D" name="radio" class="radio">
+                                                <span>D</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>      
+                        </div>
+                        <!-- subject-tab2 -->
+                        <div class="subject-tab" style="display:none;">
+                            <table>
+                                <tbody>
+                    
+                                    <tr>
+                                        <td>输入题干：</td>
+                                        <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>输入选项：</td>
+                                        <td class="outOption">
+                                            <div><span> A：</span><input type="text"></div>
+                                            <div><span> B：</span><input type="text"></div>
+                                            <div><span> C：</span><input type="text"></div>
+                                            <div><span> D：</span><input type="text"></div>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> </td>
+                                        <td>
+                                            <span><a class="delOption" href="#">-删除选项</a></span>
+                                            <span><a class="addOption" href="#">+添加选项</a></span>   
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>选择答案：</td>
+                                        <td class="selectOptionCheckbox">
+                                            <label for="checkbox1">
+                                                <input type="checkbox" id="checkbox1" value="A" name="checkbox" class="radio">
+                                                <span>A</span>
+                                            </label>
+                                            <label for="checkbox2">
+                                                <input type="checkbox" id="checkbox2" value="B" name="checkbox" class="radio">
+                                                <span>B</span>
+                                            </label>
+                                            <label for="checkbox3">
+                                                <input type="checkbox" id="checkbox3" value="C" name="checkbox" class="radio">
+                                                <span>C</span>
+                                            </label>
+                                            <label for="checkbox4">
+                                                <input type="checkbox" id="checkbox4" value="D" name="checkbox" class="radio">
+                                                <span>D</span>
+                                            </label>
+                                            <span style="margin-left: 2rem">可多选答案</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+
+                        </div>
+                        <!-- subject-tab3 -->  
+                        <div class="subject-tab" style="display:none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>输入题干：</td>
+                                        <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>选择答案：</td>
+                                        <td>
+                                            <label for="radioIs"><input type="radio" id="radioIs" value="A" name="radio" class="radio">是</label>
+                                            <label for="radioNo"><input type="radio" id="radioNo" value="B" name="radio" class="radio">否</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                        <!-- subject-tab4 -->  
+                        <div class="subject-tab" style="display:none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>输入题干：</td>
+                                        <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>输入选项：</td>
+                                        <td>
+                                            <div>1. <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"></div>
+                                            <div>2. <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"></div>
+                                            <div>3. <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>  
+                        </div>
+                        <!-- subject-tab5 -->  
+                        <div class="subject-tab" style="display:none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>输入题干：</td>
+                                        <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                        <!-- subject-tab6 -->  
+                        <div class="subject-tab" style="display:none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>输入题干：</td>
+                                        <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>输入选项：</td>
+                                        <td class="outOption">
+                                            <div><span> A：</span><input type="text"></div>
+                                            <div><span> B：</span><input type="text"></div>
+                                            <div><span> C：</span><input type="text"></div>
+                                            <div><span> D：</span><input type="text"></div>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> </td>
+                                        <td>
+                                            <span><a class="delOption" href="#">-删除选项</a></span>
+                                            <span><a class="addOption" href="#">+添加选项</a></span>   
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>标准答案：</td>
+                                        <td>
+                                            <input type="text" style="width: 300px;"> <span>参考格式：BCDA</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>   
+                        </div>
+
+                        <table>
+                            <tbody>
+                                    <tr>
+                                        <td>解题思路：</td>
+                                        <td>
+                                            <div style="margin-top:20px;">
+                                                <textarea style="resize:none;width:350px;"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>题目难度：</td>
+                                        <td>
+                                            <input type="range" name="range_speed" id="range_speed" max="1.0" step="0.1"  min="0.1" value="0.1" oninput="changeSpeed()" />
+                                            <span id="value1">0.1</span>
+                                            (数值越大难度越高)
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="text-center">
+                            <button type="button">上传</button>
+                            <button type="button">取消</button>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 预览窗口 -->
+    <div class="update_modal">
+        <div class="modal fade" id="mygoodview" tabindex="-1" role="dialog" aria-labelledby="mygoodview">
+            <div class="analog-three" style="width:1000px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>项目1 市场营销.jpg</b>
+                </div>
+                <div class="analog-three-in" style="width:80%;">
+                    <div class="text-left" >
+                        <div class="h4"> 1、仓储管理系统中存货管理模块不包括以下哪项（    ）。（5分）</div>
+                        <!-- 单选 -->
+                       <div style="margin-left:20px;line-height:30px;">
+                            <p>A回单清查</p>
+                            <p>B.盘点表</p>
+                            <p>C.库存调整</p>
+                            <p>D.综合考核</p>
+                       </div>
+
+                       <!-- 判断 -->
+
+                       <!-- <div style="margin-left:20px;line-height:30px;">
+                            <p>是</p>
+                            <p>否</p>
+                       </div> -->
+                       
+                    </div>
+                    <div style="padding:5px;border:1px dashed #ccc;background: #f9f9f9;">
+                        <table style="vertical-align: top;" >
+                            <tbody>
+                                <tr>
+                                    <td style="width:75px;">正确答案：</td>
+                                    <td>是</td>
+                                </tr>
+                                <tr>
+                                    <td>解题思路：</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsum modi, quasi aut vitae officia debitis optio blanditiis eum aperiam! Distinctio accusantium minima sint facere dignissimos fugiat inventore recusandae minus.</td>
+                                </tr>
+                                <tr>
+                                    <td>难易度：</td>
+                                    <td>0.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="text-center">
+                        <button style="margin-left:0" data-dismiss="modal" type="button" >关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 共享窗口 -->
+    <div class="update_modal">
+        <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="share">
+            <div class="analog-three" style="width:400px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>共享资源</b>
+                </div>
+                <div class="analog-three-in" style="width:100%;">
+                    <div class="text-center" id="view">
+                        <label for="yun">
+                            <input type="checkbox" id="yun" name="yun" style="font-size:12px;width:auto;height: auto;">
+                            益达云库
+                        </label>
+                    </div>
+                    
+                    <div class="text-center">
+                            <button style="margin-left:0;" type="button" >确认</button> <button type="button" >取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <script  src="../js/require.js"></script>
+  <script>
+    requirejs.config({
+    paths : {
+        "jquery" : "/js/jquery.min",
+        "bootstrap": "/js/bootstrap.min",
+        "cxCalendar": "/js/jquery.cxcalendar.min",
+        "myPagination":"/js/myPagination"
+    },
+    shim: {
+        jquery: {
+            exports: 'jquery'
+        },
+        bootstrap: {
+            deps: ['jquery']
+        },
+        myPagination:{
+            deps: ['jquery']
+        }
+
+    }
+})
+// base
+require(["jquery","bootstrap","myPagination"],function($){
+
+    $(function($){
+        if($('#pagination').length != 0){
+            new myPagination({
+                id: 'pagination',
+                curPage:1, //初始页码
+                pageTotal: 50, //总页数
+                pageAmount: 10,  //每页多少条
+                dataTotal: 500, //总共多少条数据
+                pageSize: 5, //可选,分页个数
+                showPageTotalFlag:true, //是否显示数据统计
+                showSkipInputFlag:true, //是否支持跳转
+                getPage: function (page) {
+                    //获取当前页数
+                    console.log(page);
+                }
+            })
+        }
+
+    })
+
+ 
+})
+   require(['jquery','/js/range.js'],function($,changeSpeed){
+
+      // 文件上传按钮绑定
+      $('#bu-one').click(function(e) {
+        $('#files')[0].click()
+      })
+
+      // 删除添加文件
+      $('.files-wrap').on('click','a',function(e){
+        // 删除文件ajax
+
+        // 可以在这里写成功然后执行下面代码
+        $('#files').val('');
+        $(this).parents('.flie-list').remove();
+      })
+
+
+      $('#files').change(function(e){
+        var files = e.target.files[0];
+        var wrap = $('.files-wrap');
+
+        var suffix = files.name.split('.')[1].toLowerCase();
+        var fileName = files.name.split('.')[0];
+        var fileSize = files.size;
+
+        wrap.children('.flie-list').remove()
+
+        // 后缀检测
+        if(suffix !== 'xls'){
+          alert('不支持当前类型文件')
+          return false
+        }
+        // 文件大小检测
+        if(fileSize > 104857600){
+          alert('当前文件不能超过100MB')
+          return false          
+        }
+
+        var list = "";
+            list += "<div class=\"flie-list\">\n";
+            list += "	<div class=\"files-title\">\n";
+            list += "	"+fileName.substr(0,30)+'......'+ suffix +" <a class=\"pull-right glyphicon glyphicon-remove validate\" href=\"javascript:void(0);\"><\/a>\n";
+            list += "	<\/div>\n";
+            list += "	<div class=\"progress\">\n";
+            list += "		<div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" style=\"width: 0%;\">\n";
+            list += "                                   0%\n";
+            list += "		<\/div>\n";
+            list += "	<\/div>\n";
+            list += "<\/div>\n";
+                
+        wrap.append(list)
+
+
+      })
+      // 模态窗口关闭清理列表
+      $('#mygood').on('hidden.bs.modal', function () {
+        $('.files-wrap').children('.flie-list').remove()
+      })
+
+      // 按钮多选
+      $('#selectAll').click(function(e) {
+        var checked = this.checked;
+        $('#selectTable').find('input:checkbox').each(function(i,e) {
+          e.checked = checked
+        })
+      })
+        // 滑动条事件
+        var value = parseFloat($('#range_speed').val());
+        var valStr = value*100 + "% 100%";
+        $('#value1').html(value.toFixed(1));
+        $('#range_speed').css({
+          "background-size": valStr
+        })
+
+        // 选择框
+
+        $('#subject').change(function(e){
+          $('.subject-tab').hide().eq(this.value - 1).show()
+        })
+
+        // 单选 删除
+        $('.subject-tab').on('click','.delOption',function(e){
+            var $parent = $(e.delegateTarget);
+            var list = function (str) { return $parent.find(str).children()};
+
+          if(list('.outOption').length>2){
+            list('.outOption').last().remove()
+            list('.selectOption').last().remove()
+            list('.selectOptionCheckbox').not('span').last().remove()
+          }
+
+        })
+
+        // 单选 添加
+        $('.subject-tab').on('click','.addOption',function(e){
+          var $parent = $(e.delegateTarget);
+          var list = function (str) { return $parent.find(str).children()};
+          var len = list('.outOption').length + 65
+
+
+          if(list('.outOption').length<7){
+            // 单选
+            var a = list('.outOption').eq(0).clone().children('span').html(" &#"+ len +";：").end()
+
+            list('.outOption').parent().append(a)
+
+            var b = list('.selectOption').eq(0).clone().attr('for','label' + list('.outOption').length)
+            .children('span').html(" &#"+ len +"; ").end().children('input').attr('id','label' + list('.outOption').length).end()
+
+            list('.selectOption').parent().append(b)
+            // 多选
+            var c = list('.selectOptionCheckbox').eq(0).clone()
+            .attr('for','checkbox' + list('.outOption').length)
+            .children('span').html(" &#"+ len +"; ").end()
+            .children('input').attr('id','checkbox' + list('.outOption').length).end()
+
+            list('.selectOptionCheckbox').not('span').last().after(c)
+          }
+            
+        })
+   })
+  </script>
+</body>
+</html>

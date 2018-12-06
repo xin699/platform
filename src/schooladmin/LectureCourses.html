@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"授课管理",
+            "link":"#"
+          },
+          "nav":[
+
+          ],
+          "template": "学校管理员端/授权管理/专业课程分配.html"
+        })
+    </div>
+  </div>
+  <script  src="@@webRoot/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    @@include('include/layout/header.js')
+
+    require(["jquery","myPagination"],function($){
+
+  $(function($){
+      if($('.pagination2').length != 0){
+          new myPagination({
+              id: 'pagination2',
+              curPage:1, //初始页码
+              pageTotal: 50, //总页数
+              pageAmount: 10,  //每页多少条
+              dataTotal: 500, //总共多少条数据
+              pageSize: 5, //可选,分页个数
+              showPageTotalFlag:false, //是否显示数据统计
+              showSkipInputFlag:false, //是否支持跳转
+              getPage: function (page) {
+                  //获取当前页数
+                  console.log(page);
+              }
+          })
+      }
+
+  })
+
+
+})
+  </script>
+</body>
+</html>

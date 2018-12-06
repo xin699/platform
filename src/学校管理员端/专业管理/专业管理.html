@@ -1,0 +1,93 @@
+<div class="xs">
+    <div class="input-one">
+        <input type="text" placeholder="请输入专业关键词" style="width:300px;">
+
+        <button style="color:white" id="bu">搜索</button>
+        <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">新增专业</button>
+    </div>
+    <table class="form-one">
+        <th>序号</th>
+
+        <th>专业名称</th>
+        <th>学制</th>
+        <th>类别</th>
+        <th>操作</th>
+        <tr>
+            <td>1</td>
+            
+            <td>电子商务</td>
+            <td>3</td>
+            <td>专科</td>
+            <td>
+                <a href="#" data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                <a href="class.html">班级管理</a>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            
+            <td>货代与报关</td>
+            <td>4</td>
+            <td>本科</td>
+            <td>
+                <a href="">修改</a> &nbsp;&nbsp;
+                <a href="">班级管理</a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        @@include('include/page/paging.html')
+    </div>
+    <!-- 弹框 -->
+
+    <div class="update_modal">
+        <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+            <div class="analog-four">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>新增专业</b>
+                </div>
+                <div class="analog-three-in">
+                    开始时间：<input type="text" placeholder="请输入专业名称"><br>
+                    学制：<select name="city" style="width:162px;">
+                        <option value="">请选择</option>
+                        <option value="">一年</option>
+                        <option value="">两年</option>
+                    </select>&nbsp;&nbsp;
+                    类别：<select name="city" style="width:162px;">
+                        <option value="">请选择</option>
+                        <option value="">中专</option>
+                        <option value="">大专</option>
+                    </select>
+                    <button>确定</button> <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="update_modal">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="analog-four">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>修改专业</b>
+                </div>
+                <div class="analog-three-in">
+                    开始时间：<input type="text" placeholder="请输入专业名称"><br>
+                    学制：<select name="city" style="width:162px;">
+                        <option value="">请选择</option>
+                        <option value="">一年</option>
+                        <option value="">两年</option>
+                    </select>&nbsp;&nbsp;
+                    类别：<select name="city" style="width:162px;">
+                        <option value="">请选择</option>
+                        <option value="">中专</option>
+                        <option value="">大专</option>
+                    </select>
+                    <button>确定</button> <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

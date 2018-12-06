@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"作业详情",
+            "link":"#"
+          },
+          "nav":[
+          ],
+          "back":{
+            "title":"返回列表",
+            "link":"taskCenter.html"
+          },
+          "template": "教师端/作业/查看.html"
+        })
+
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    require(['jquery'],function($){
+      $('.biger-tab-jd button[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var a = e.target // newly activated tab
+        $(a).addClass('btn-primary').parent().siblings().children().removeClass('btn-primary')
+      })
+    })
+  </script>
+</body>
+</html>

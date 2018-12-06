@@ -1,0 +1,136 @@
+<div class="xs">
+    <div class="input-one">
+        课程类别：<select name="city">
+            <option value="">全部</option>
+            <option value="">理论课程</option>
+            <option value="">实训课程</option>
+        </select>
+        课程名：<input type="text" placeholder="请输入课程名称" >
+        <button style="color:white" id="bu">搜索</button>
+        <a href="courseInfo.html"><button style="color:white">创建课程</button></a> 
+        <button style="width:70px;" data-toggle="modal" data-target="#filebox" >导入</button>
+    </div>
+    <table class="form-one">
+        <th>序号</th>
+        <th>课程名</th>
+        <th>课程类别</th>
+        <th>单元数量</th>
+        <th>学分</th>
+        <th>操作</th>
+        <tr>
+            <td>1</td>
+            <td>地理</td>
+            <td>理论课程</td>
+            <td>2</td>
+            <td>10</td>
+            <td>
+                <a href="courseInfo.html">修改</a> &nbsp;&nbsp;
+                <a href="resourceManage.html">资源管理</a> &nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>历史</td>
+            <td>理论课程</td>
+            <td>3</td>
+            <td>10</td>
+            <td>
+                <a href="">修改</a> &nbsp;&nbsp;
+                <a href="">资源管理</a> &nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>物流系统实训</td>
+            <td>实训课程</td>
+            <td>3</td>
+            <td>10</td>
+            <td>
+                <a href="">修改</a> &nbsp;&nbsp;
+                <a href="">资源管理</a> &nbsp;&nbsp;
+                <a href="#" data-toggle="modal" data-target="#mystery">实训软件</a>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>wish电商岗位课程</td>
+            <td>企业课程</td>
+            <td>4</td>
+            <td>-</td>
+            <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#mystery1">修改</a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        @@include('include/page/paging.html')
+    </div>
+    <!-- 弹框 -->
+
+
+<!-- 导入 -->
+    <div class="update_modal">
+        <div class="modal fade" id="filebox" tabindex="-1" role="dialog" aria-labelledby="filebox">
+            <div class="analog-three">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>导入</b>
+                </div>
+                <div class="analog-three-in">
+                    <div class="text-center" style="margin-bottom:20px;">
+                        <input style="border:none;line-height: 0;" type="file" name="file" id="file">
+                        <a href="#">下载模板</a>
+                    </div>
+                    
+                    <button>确认</button> <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="update_modal">
+        <div class="modal fade" id="mystery" tabindex="-1" role="dialog" aria-labelledby="mystery">
+            <div class="analog">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>实训软件-请选中当前软件</b>
+                </div>
+                <div class="analog-three-in" id="toggle">
+                        <span class="btn btn-round btn-default">软件1</span>
+                        <span  class="btn btn-round btn-default btn-primary">软件2</span>
+                        <span  class="btn btn-round btn-default btn-primary">软件3</span>
+
+                        
+                    <div class="text-center">
+                        <button>确认</button>
+                        <button>取消</button>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="update_modal">
+        <div class="modal fade" id="mystery1" tabindex="-1" role="dialog" aria-labelledby="mystery1">
+            <div class="analog">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b> 修改企业课程</b>
+                </div>
+                <div class="analog-three-in" >
+                    <div>课程名：<span>wish电商岗位实战课程</span></div>
+                    <div>课程学分：<span><input type="text" placeholder="输入课程学分"></span></div>
+
+                        
+                    <div class="text-center">
+                        <button>确认</button>
+                        <button>取消</button>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

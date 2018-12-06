@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"资源管理",
+            "link":"#"
+          },
+          "nav":[
+
+          ],
+          "template": "教师端/教学资源库/资源管理-个人库.html"
+        })
+    </div>
+  </div>
+  <script  src="@@webRoot/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    require(['jquery'],function($){
+
+      $('#selectAll').click(function(e) {
+        var checked = this.checked;
+        $('#selectTable').find('input:checkbox').each(function(i,e) {
+          e.checked = checked
+        })
+      })
+
+
+      // 文件上传按钮绑定
+      $('#bu-one').click(function(e) {
+        $('#files')[0].click()
+      })
+
+
+      // 分组支持
+      var fileTypeGroup = [
+        // 电子教材
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf"],
+        // ppt
+        ["ppt", "pptx"],
+        // 图片
+        ["jpg", "jpeg", "png", "gif"],
+        // 视频
+        ["mp4", "avi", "flv", "wmv"],
+        // 案例
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf","swf"],
+        // Flash
+        ["swf"],
+        // 文献资料
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf"],
+        // 其它
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg", "jpeg", "png", "gif","rar", "zip","pdf", "swf","mp4", "avi", "flv", "wmv"]
+      ]
+
+      // 类型大小支持分组
+      var fileTypeSize = [
+        // 100M  104857600  b
+        ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg", "jpeg", "png", "gif"],
+        // 500M  524288000  b
+        ["rar", "zip"],
+        // 1024M  1073741824 b
+        ["pdf", "swf"],
+        // 1500M  1572864000  b
+        ["mp4", "avi", "flv", "wmv"]
+      ]
+
+      var fileTypeSizeNum = [104857600,524288000,1073741824,1572864000]
+
+      // 添加文件变动绑定
+      $('#files').change(function(e){
+        var files = e.target.files;
+        var wrap = $('.files-wrap');
+        var resType = $('#resType').val();
+
+        // 计算加入列表和正在选中的文件
+
+        if(files.length + wrap.children('.flie-list').length > 20){
+          alert('当前操作不能超过20个文件')
+          return false
+        }
+
+        // 多个文件遍历
+        $.each(files,function(i,f){
+
+          var suffix = f.name.split('.').pop().toLowerCase();
+          var fileName = f.name.split('.')[0];
+          var fileSize = f.size;
+
+          // 分组文件支持检测
+         if(fileTypeGroup[resType].indexOf(suffix) === -1){
+           alert('当前分组不支持该类型！')
+           return false
+         }
+
+          // 遍历大小
+          $.each(fileTypeSize,function(i,f){
+             if(f.indexOf(suffix)!= -1){
+
+               if(fileSize <= fileTypeSizeNum[i] ){
+
+                var list = "";
+                    list += "<div class=\"flie-list\">\n";
+                    list += "	<div class=\"files-title\">\n";
+                    list += "	"+fileName.substr(0,30)+'......'+ suffix +" <a class=\"pull-right glyphicon glyphicon-remove validate\" href=\"javascript:void(0);\"><\/a>\n";
+                    list += "	<\/div>\n";
+                    list += "	<div class=\"progress\">\n";
+                    list += "		<div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" style=\"width: 0%;\">\n";
+                    list += "                                   0%\n";
+                    list += "		<\/div>\n";
+                    list += "	<\/div>\n";
+                    list += "<\/div>\n";
+                
+                wrap.append(list)
+
+                // 这里通过文件检测可以写ajax
+
+                // ajax添加进度条
+
+               }else{
+                 alert('不能超过'+ fileTypeSizeNum[i]/ 2**20 +"MB 大小")
+               }
+
+              return false
+
+             }
+          })
+
+
+        })
+
+      })
+      
+      // 删除添加文件
+      $('.files-wrap').on('click','a',function(e){
+        // 删除文件ajax
+
+        // 可以在这里写成功然后执行下面代码
+        $('#files').val('');
+        $(this).parents('.flie-list').remove();
+      })
+      // 文件模态窗口关闭的时候清楚列表
+      $('#mygood').on('hidden.bs.modal', function () {
+        $('.files-wrap').children('.flie-list').remove()
+      })
+
+      
+    })
+  </script>
+</body>
+</html>

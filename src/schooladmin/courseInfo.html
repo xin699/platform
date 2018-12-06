@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"课程管理",
+            "link":"#"
+          },
+          "nav":[
+          ],
+          "back":{
+            "title":"返回列表",
+            "link":"course.html"
+          },
+          "template": "学校管理员端/课程管理/课程详情.html"
+        })
+    </div>
+  </div>
+  <script  src="@@webRoot/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    @@include('include/layout/header.js')
+    require(['jquery'],function($){
+      // 单元添加管理
+      var $list = $('#biger-course-list');
+
+      $('#numsubmit').click(function(e){
+        
+        $list.children().not('#addList').remove()
+        var num = parseInt($('#num').val(),10);
+        if(num<=20&&num>0){
+          for (var index = 1; index <= num; index++) {
+            var strVar = " <div class=\"col-xs-6 col-sm-4\">\n";
+            strVar += "     <input type=\"text\" placeholder=\"请输入单元名称\" value=\"第"+index+"单元\" > <a class=\"del\" href=\"javascript:void(0);\">删除<\/a> \n";
+            strVar += "<\/div>\n";
+            $('#addList').before(strVar);
+          }
+        }else{
+          alert('最大只能20个')
+        }
+      })
+
+      $list.on('click','#addList',function (e) {
+        var strVar = " <div class=\"col-xs-6 col-sm-4\">\n";
+            strVar += "     <input type=\"text\" placeholder=\"请输入单元名称\" > <a class=\"del\" href=\"javascript:void(0);\">删除<\/a> \n";
+            strVar += "<\/div>\n";
+        if($list.children().not('#addList').length <= 20){
+          $(this).before(strVar);
+        }else{
+          alert("最大20个")
+        }
+      })
+      
+      $list.on('click','.del',function(e){
+        $(this).parent().remove()
+      })
+
+    })
+  </script>
+</body>
+</html>

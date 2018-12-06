@@ -1,0 +1,150 @@
+<div class="x_content">
+
+    <div class="col-xs-2">
+        <!-- required for floating -->
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs tabs-left biger-x-nav">
+    
+        <li class="undefined" ><a href="trainingSystem.html">实训系统</a>
+        </li>
+    
+        <li class="active" ><a href="coachCourse.html">企业指导运营课程</a>
+        </li>
+    
+        <li class="undefined" ><a href="fightingCourse.html">岗位实战课程</a>
+        </li>
+    
+</ul>
+    </div>
+
+    <div class="col-xs-10">
+        <div class="xs">
+            <div class="input-one">
+                    <span class="path">当前选择的学校：</span>
+                    <span class="school" >益达大学</span>
+                    <div class="pull-right">
+                            <span >业务系统：</span>    
+                            <select  name="city">
+                                <option value="">全部</option>
+                                <option value="">电商系统</option>
+                                <option value="">供应链系统</option>
+                            </select>
+                            <button  style="color:white;margin-top:10px" id="bu" data-toggle="modal" data-target="#mygood">添加课程</button>
+                    </div>
+               
+            </div>
+            <table class="form-two">
+                <th>系统</th>
+                <th>企业名称</th>
+                <th>企业课程</th>
+                <th>使用时间</th>
+                <th>操作</th>
+                <tr>
+                    <td>电商系统</td>
+                    <td>顺丰速运有限公司</td>
+                    <td>华为电商课程</td>
+                    <td>无限制</td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#myModal">设置使用时间</a> &nbsp;&nbsp;
+                        <a href="">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>生产系统系统</td>
+                    <td>华为公司</td>
+                    <td>小米电商课程</td>
+                    <td>2016.5.6-2017.6.4</td>
+                    <td>
+                        <a href="#">设置使用时间</a> &nbsp;&nbsp;
+                        <a href="">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <div>
+                <div id="pagination" class="pagination2"></div>
+            </div>
+            <!-- 弹框 -->
+
+            <div class="update_modal">
+                <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+                    <div class="analog-three">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>添加课程</b>
+                        </div>
+                        <span style="margin-left:100px;font-weight: bold;font-size:18px">业务系统：</span>
+                        <span style="margin-left:100px;font-weight: bold;font-size:18px">企业名称：</span>
+                        <span style="margin-left:100px;font-weight: bold;font-size:18px">课程名称：</span>
+                        <div class="juxtaposition" style="margin-left:95px;">
+                            <div class="juxtaposition-one">电子商务系统</div>
+                            <div class="juxtaposition-one">生产系统</div>
+                        </div>
+                        <div class="juxtaposition">
+                            <div class="juxtaposition-one">顺丰速运有限公司</div>
+                            <div class="juxtaposition-one">华为有限公司</div>
+                            <div class="juxtaposition-one">益达教育公司</div>
+                        </div>
+                        <div class="juxtaposition">
+                            <div class="juxtaposition-one">小米电商课程</div>
+                            <div class="juxtaposition-one">华为电商课程</div>
+                            <div class="juxtaposition-one">苹果电商课程</div>
+                        </div>
+                        <div class="input-one text-center">
+                                <button>提交</button>
+                                <button data-dismiss="modal" >取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="update_modal">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="analog-three">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>修改关联课程</b>
+                        </div>
+                        <div class="analog-three-in">
+                            是否有时间限制： &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="1" id="male"
+                                / style="width:14px;height:14px;">
+                            <label for="male">&nbsp;&nbsp;无限制</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="0" id="female" /
+                                style="width:14px;height:14px;">
+                            <label for="female">&nbsp;&nbsp;有限制</label>
+                            <br>
+                            使用时间：<input type="text" class="time" value="" style="width:200px;margin-right:0px;"> <br>
+                            结束时间：<input type="text" class="time" value="" style="width:200px;margin-right:0px;"> <br>
+                            <button>提交</button> <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+</div>

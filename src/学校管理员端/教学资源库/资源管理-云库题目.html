@@ -1,0 +1,147 @@
+<div class="central-1 wx">
+        <div style="margin-left:35px;" >
+                @@include('include/layout/tab1.html',{
+                    "item":[
+                            {
+                                "title":"学校库",
+                                "link":"resourceManage.html"
+                            },
+                            {
+                                "title":"益达云库",
+                                "link":"#",
+                                "active":"active"
+                            }
+                        ]
+                })
+        </div>
+        <div class="input-1 trc" style="margin-top:15px;">
+                <input type="text" placeholder="请输入名称关键字" style="width:250px;">
+                课程类别：<select name="city">
+                    <option value="">全部</option>
+                    <option value="">理论课程</option>
+                    <option value="">实训课程</option>
+                </select>
+                <button style="color:white" id="bu">搜索</button>
+        </div>
+        <div style="width: 94%;margin: 10px;margin-left:35px;border: 1px solid #eee;padding: 10px" >
+                @@include('include/layout/tab2.html',{
+                    "item":[
+                            {
+                                "title":"电子教材",
+                                "link":"resourceYun.html"
+                            },
+                            {
+                                "title":"PPT",
+                                "link":"resourceYun.html"
+                            },
+                            {
+                                "title":"图片",
+                                "link":"resourceYun.html"
+                            },
+                            {
+                                "title":"视频",
+                                "link":"resourceYun.html"
+                            },
+                            {
+                                "title":"案例",
+                                "link":"resourceYun.html"
+                            },
+                            {
+                                "title":"Flash",
+                                "link":"resourceYun.html"
+                            },
+                            {
+                                "title":"文献资料",
+                                "link":"resourceYun.html"
+                            },
+                            {
+                                "title":"题目",
+                                "link":"#",
+                                "active":"active"
+                            },
+                            {
+                                "title":"其它",
+                                "link":"resourceYun.html"
+                            }
+                        ]
+                })
+        </div>
+        <div class="input-1">
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#">单选</a></li>
+                <li role="presentation"><a href="#">多选</a></li>
+                <li role="presentation"><a href="#">判断</a></li>
+                <li role="presentation"><a href="#">填空</a></li>
+                <li role="presentation"><a href="#">简答</a></li>
+                <li role="presentation"><a href="#">排序</a></li>
+            </ul>
+        </div>
+        <table class="picture-2" id="selectTable" >
+            <th>&nbsp;</th>
+            <th>序号</th>
+            <th>课程类别</th>
+            <th>课程名</th>
+            <th>单元</th>
+            <th>名称</th>
+            <th>上传者</th>
+            <th>上传时间</th>
+            <th>操作</th>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>理论课程</td>
+                <td>地理</td>
+                <td>第1单元</td>
+                <td>项目1 市场营销.jpg</td>
+                <td>张某某</td>
+                <td>转换中</td>
+                <td>
+                    <a href="">下载</a>&nbsp;&nbsp;&nbsp;
+                    <a data-toggle="modal" data-target="#mygoodview" href="#">预览</a>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+                <td>理论课程</td>
+                <td>地理</td>
+                <td>第1单元</td>
+                <td>项目1 市场营销.jpg</td>
+                <td>张某某</td>
+                <td>2018-06-07</td>
+                <td>
+                    <a href="">下载</a>&nbsp;&nbsp;&nbsp;
+                    <a data-toggle="modal" data-target="#mygoodview" href="#">预览</a>
+                </td>
+            </tr>
+        </table>
+        <div class="input-2" style="height:auto;">
+            <input type="checkbox" id="selectAll">全选
+    
+            <button style="color:white">下载到本地</button>
+            <div>
+                @@include('include/page/paging.html')
+            </div>
+        </div>
+        <!-- 弹框 -->
+        <div class="update_modal">
+            <div class="modal fade" id="mygoodview" tabindex="-1" role="dialog" aria-labelledby="mygoodview">
+                <div class="analog-three" style="width:1000px;">
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>项目1 市场营销.jpg</b>
+                    </div>
+                    <div class="analog-three-in" style="width:100%;">
+                        <div class="text-center" id="view">
+                            这里是预览窗口
+                        </div>
+                        
+                        <div class="text-center">
+                            <button style="margin-left:0" data-dismiss="modal" type="button" >关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>

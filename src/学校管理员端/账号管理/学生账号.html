@@ -1,0 +1,231 @@
+<div class="x_content">
+
+        <div class="col-xs-2">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            @@include('include/layout/sidebar.html',{
+                "item":[
+                    {
+                        "title":"学生账号",
+                        "link":"#",
+                        "active":"active"
+                    },
+                    {
+                        "title":"教师账号",
+                        "link":"userTeacher.html"
+                    }
+                ]
+            })
+        </div>
+    
+        <div class="col-xs-10">
+            <div class="central-one xs">
+                <div class="input-one">
+                    学届：<select name="city" style="width: 120px;">
+                        <option value="">全部</option>
+                        <option value="">2013届</option>
+                        <option value="">2014届</option>
+                    </select>
+                    专业：<select name="city" style="width: 120px;">
+                        <option value="">全部</option>
+                        <option value="">电子商务</option>
+                        <option value="">货代与报关</option>
+                    </select>
+                    班级：<select name="city" style="width: 120px;">
+                        <option value="">全部</option>
+                        <option value="">1班</option>
+                        <option value="">2班</option>
+                    </select>
+                    <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">新增班级</button>
+                    <button style="width:70px;"  data-toggle="modal" data-target="#filebox" >导入</button>
+                    <button style="width:70px;">导出</button>
+                </div>
+                <div class="input-one">
+                    姓名：<input type="text">
+                    状态：<select name="city">
+                            <option value="">全部</option>
+                            <option value="">冻结</option>
+                            <option value="">激活</option>
+                        </select>
+                    <button style="color:white" id="bu">搜索</button>
+                </div>
+                <table class="form-one">
+                    <th></th>
+                    <th>序号</th>
+                    <th>学届</th>
+                    <th>专业</th>
+                    <th>班级</th>
+                    <th>账号</th>
+                    <th>姓名</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>2018</td>
+                        <td>电子商务</td>
+                        <td>1班</td>
+                        <td>369012345</td>
+                        <td>张明</td>
+                        <td>激活</td>
+                        <td>
+                            <a href="#"  data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                            <a href="">重置密码</a> &nbsp;&nbsp;
+                            <a href="#" data-toggle="modal" data-target="#myModal_one" >手机邮箱重置</a>
+                            <a href="">冻结</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>2</td>
+                        <td>2018</td>
+                        <td>电子商务</td>
+                        <td>1班</td>
+                        <td>369012345</td>
+                        <td>张明</td>
+                        <td>激活</td>
+                        <td>
+                            <a href="#"  data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                            <a href="">重置密码</a> &nbsp;&nbsp;
+                            <a href="">手机邮箱重置</a>
+                            <a href="">冻结</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>3</td>
+                        <td>2018</td>
+                        <td>电子商务</td>
+                        <td>1班</td>
+                        <td>369012345</td>
+                        <td>张明</td>
+                        <td>激活</td>
+                        <td>
+                            <a href="#"  data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                            <a href="">重置密码</a> &nbsp;&nbsp;
+                            <a href="">手机邮箱重置</a>
+                            <a href="">冻结</a>
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="input-two">
+                    <input type="checkbox"> 全选&nbsp;&nbsp;
+                    <button>冻结选中</button>
+                    
+                    <div>
+                        @@include('include/page/paging.html')
+                    </div>
+                </div>
+
+                <!-- 弹框 -->
+
+                <div class="update_modal">
+                    <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+                        <div class="analog">
+                            <div class="analog-one">
+                                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                                <b>新增学生账号</b>
+                            </div>
+                            <div class="analog-three-in">
+                                学届：<select name="city">
+                                            <option value="">请选择</option>
+                                            <option value="">2013届</option>
+                                            <option value="">2014届</option>
+                                        </select> <br>
+                                专业：<select name="city">
+                                            <option value="">请选择</option>
+                                            <option value="">电子商务</option>
+                                            <option value="">货代与报关</option>
+                                        </select> <br>
+                            班级：<select name="city">      
+                                    <option value="">请选择</option>
+                                    <option value="">1班</option>
+                                    <option value="">2班</option>
+                                </select> <br>
+                                <span style="font-size:20px; margin-left: 150px">批量添加</span><br>
+                                起始账号：369012347 <br>
+                                数量：<input type="text" placeholder="1">
+                                <button data-dismiss="modal">上课</button> <button data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="update_modal">
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="analog">         
+                            <div class="analog-one">
+                                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                                <b>修改学生账号</b>
+                            </div>
+                            <div class="analog-three-in">
+                                学届：<select name="city">
+                                            <option value="">请选择</option>
+                                            <option value="">2013届</option>
+                                            <option value="">2014届</option>
+                                        </select> <br>
+                                专业：<select name="city">
+                                            <option value="">请选择</option>
+                                            <option value="">电子商务</option>
+                                            <option value="">货代与报关</option>
+                                        </select> <br>
+                                班级：<select name="city">
+                                            <option value="">请选择</option>
+                                            <option value="">1班</option>
+                                            <option value="">2班</option>
+                                        </select> <br>   
+                                账号：<input type="text" placeholder="369012345"><br>
+                                姓名：<input type="text" placeholder="张明"><br>
+                                <button data-dismiss="modal">确定</button> <button data-dismiss="modal">取消</button>
+                            </div>
+                </div>
+                </div>
+                </div>
+
+                <div class="update_modal">
+                        <div class="modal fade" id="myModal_one" tabindex="-1" role="dialog" aria-labelledby="myModal_one">
+                          <div class="analog" style="width:500px">         
+                                  <div class="analog-one">
+                                      <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                                      <b>重置成功</b>
+                                  </div>
+                                    <div class="analog-three-in">
+                                        <div style="font-size:20px;margin-left:140px;">
+                                          <span class="glyphicon glyphicon-ok" style="background: #52a4b7">
+                                          </span>&nbsp;&nbsp;重置成功
+                                         </div>  
+                                      <button style="margin-left:140px;">关闭</button>
+                                  </div>
+                         </div>
+                      </div>
+                  </div>
+                  <!-- 导入 -->
+    <div class="update_modal">
+            <div class="modal fade" id="filebox" tabindex="-1" role="dialog" aria-labelledby="filebox">
+                <div class="analog-three">
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>导入</b>
+                    </div>
+                    <div class="analog-three-in">
+                        <div class="text-center" style="margin-bottom:20px;">
+                            <input style="border:none;line-height: 0;" type="file" name="file" id="file">
+                            <a href="#">下载模板</a>
+                        </div>
+                        
+                        <button>确认</button> <button>取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+            </div>
+        </div>
+        
+
+        <div class="clearfix"></div>
+    
+    </div>
+

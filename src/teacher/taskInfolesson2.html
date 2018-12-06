@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+        @@include('include/layout/nav.html',{
+          "title":"市场营销实务",
+          "menu":[
+            {"title":"市场营销实务","link":"#"},
+            {"title":"市场营销实训","link":"index.html"},
+            {"title":"wish岗位实战课程","link":"index.html"}
+          ],
+          "nav":[
+            {"title":"教案","link":"taskInfolesson2.html",
+            "active":"active"},
+            {"title":"课程简介","link":"courseInfo.html"},
+            {"title":"课程设计","link":"courseDesign.html"},
+
+            {"title":"互动课堂","link":"interact.html"},
+
+            {"title":"模拟实训","link":"#"},
+
+            {"title":"成绩中心","link":"#"}
+          ],
+          "index":{
+            "title" : "首页",
+            "link"  : "taskInfo2.html"
+          }
+        })
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"首页",
+            "link":"#"
+          },
+          "nav":[
+          ],
+          "template": "教师端/理论课程/教案.html"
+        })
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    @@include('include/layout/header.js')
+  </script>
+</body>
+</html>

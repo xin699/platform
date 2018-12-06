@@ -1,0 +1,170 @@
+<div class="x_content" style="float: none;">
+
+        <div class="col-xs-2">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            @@include('include/layout/sidebar.html',{
+                "item":[
+                    {
+                        "title":"专业课程分配",
+                        "link":"LectureCourses.html"
+                    },
+                    {
+                        "title":"任教分配",
+                        "link":"#",
+                        "active":"active"
+                    },
+                    {
+                        "title":"学期管理",
+                        "link":"LectureSemester.html"
+                    }
+                ]
+            })
+        </div>
+        
+        <div class="col-xs-10">
+<div class="central-one xs">
+    <div class="input-one">
+        专业：<select name="city">
+            <option value="">全部</option>
+            <option value="">电子商务</option>
+            <option value="">货代与报关</option>
+        </select>
+        学届：<select name="city">
+            <option value="">全部</option>
+            <option value="">2018届</option>
+            <option value="">2017届</option>
+        </select>
+        学期：<select name="city">
+            <option value="">全部</option>
+            <option value="">1</option>
+            <option value="">2</option>
+        </select>
+        <button style="color:white" id="bu">搜索</button>
+    </div>
+    <table class="form-two">
+        <th>序号</th>
+        <th>学届</th>
+        <th>专业</th>
+        <th>班级</th>
+        <th>课程类型</th>
+        <th>授课课程</th>
+        <th>授课教师</th>
+        <th>操作</th>
+        <tr>
+            <td rowspan="2">1</td>
+            <td rowspan="2">2017</td>
+            <td rowspan="2">电子商务</td>
+            <td rowspan="2">2017仓储<br>配送管理1班</td>
+            <td rowspan="2">理论课程</td>
+            <td>语文</td>
+            <td>张老师</td>
+            <td rowspan="2">
+                <a href="#" data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                <a href="#" data-toggle="modal" data-target="#mystery" >复用任教设置</a>
+            </td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>李老师</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2</td>
+            <td rowspan="2">2017</td>
+            <td rowspan="2">电子商务</td>
+            <td rowspan="2">2017仓储<br>配送管理1班</td>
+            <td rowspan="2">理论课程</td>
+            <td>wish电商岗位实战</td>
+            <td>张老师</td>
+            <td rowspan="2">
+                <a href="#">修改</a> &nbsp;&nbsp;
+                <a href="">复用任教设置</a>
+            </td>
+        </tr>
+        <tr>
+            <td>淘宝电商岗位实战</td>
+            <td>李老师</td>
+        </tr>
+    </table>
+
+    <div>
+        @@include('include/page/paging.html')
+    </div>
+    <!-- 弹框 -->
+
+    <div class="update_modal">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="analog-four">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>任教分配</b>
+                </div>
+                <div class="analog-four-in" style="line-height:30px;width:300px;">
+                    <span style="margin-left:30px">教授班级：2017届电子商务1班</span><br>
+                    <span style="margin-left:30px;line-height: 1px">学期：第一学期</span><br>
+                    <table class="form-one" style="width:100%;top:0px">
+                        <th class="trc">课程名称</th>
+                        <th class="trc">课程类型</th>
+                        <th class="trc">授课老师</th>
+                        <tr>
+                            <td>语文</td>
+                            <td>理论课程</td>
+                            <td>
+                                <select name="city" style="width:70px">
+                                    <option value="">李老师</option>
+                                    <option value="">张老师</option>
+                                    <option value="">王老师</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>数学</td>
+                            <td>理论课程</td>
+                            <td>
+                                <select name="city" style="width:70px">
+                                    <option value="">李老师</option>
+                                    <option value="">张老师</option>
+                                    <option value="">王老师</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button style="margin-left:0px">确定</button> <button style="margin-left:38px">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="update_modal">
+        <div class="modal fade" id="mystery" tabindex="-1" role="dialog" aria-labelledby="mystery">
+            <div class="analog">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>2017届仓储配送1班</b>
+                </div>
+                <div class="text-center">
+                    将本课程的设计复用到下列选中班级中：
+                </div>
+                <div class="analog-three-in" id="toggle">
+                        <span class="btn btn-round btn-default">2017届仓储配送3班</span>
+                        <span  class="btn btn-round btn-default btn-primary">2017届仓储配送1班</span>
+                        <span  class="btn btn-round btn-default btn-primary">2017届仓储配送2班</span>
+
+                        
+                    <div class="text-center">
+                        <button>确认</button>
+                        <button>取消</button>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="clearfix"></div>
+
+</div>

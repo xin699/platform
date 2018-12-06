@@ -1,0 +1,136 @@
+<div class="x_content" style="float: none;">
+
+        <div class="col-xs-2">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            @@include('include/layout/sidebar.html',{
+                "item":[
+                    {
+                        "title":"专业课程分配",
+                        "link":"LectureCourses.html"
+                    },
+                    {
+                        "title":"任教分配",
+                        "link":"LectureTeach.html"
+                    },
+                    {
+                        "title":"学期管理",
+                        "link":"#",
+                        "active":"active"
+                    }
+                ]
+            })
+        </div>
+        
+        <div class="col-xs-10">
+<div class="central-one xs">
+    <div class="input-one">
+        状态：<select name="city" style="width:300px">
+            <option value="">全部</option>
+            <option value="">进行中</option>
+            <option value="">已过期</option>
+        </select>
+        <button style="color:white" id="bu">搜索</button>
+        <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">新增学期</button>
+    </div>
+    <table class="form-two">
+        <th>序号</th>
+        <th>学年</th>
+        <th>学期</th>
+        <th>开始时间</th>
+        <th>结束时间</th>
+        <th>状态</th>
+        <td>操作</td>
+        <tr>
+
+            <td>1</td>
+            <td>2018~2019</td>
+            <td>第一学期</td>
+            <td>2018-05-22</td>
+            <td>2018-09-29</td>
+            <td>进行中</td>
+            <td>
+                <a href="#" data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                <a href="">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2015~2016</td>
+            <td>第一学期</td>
+            <td>2015-08-31</td>
+            <td>2016-01-14</td>
+            <td>已过期</td>
+            <td>
+                <a href="#">修改</a> &nbsp;&nbsp;
+                <a href="">删除</a>
+            </td>
+        </tr>
+    </table>
+
+    <div>
+        @@include('include/page/paging.html')
+    </div>
+    <!-- 弹框 -->
+
+    <div class="update_modal">
+        <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+            <div class="analog-four">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>新增学期</b>
+                </div>
+                <div class="analog-four-in" style="width:300px;">
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学年：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">2014-2015</option>
+                        <option value="">2018-2019</option>
+                    </select> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学期：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">第一学期</option>
+                        <option value="">第二学期</option>
+                    </select> <br>
+                    开始时间：<input class="time" type="text" value="" id="date_first"> <br>
+                    结束时间：<input class="time" type="text" value="" id="date_last"> <br>
+                    <button style="margin-left:0px">确定</button> <button style="margin-left:38px">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="update_modal">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="analog-four">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>修改学期</b>
+                </div>
+                <div class="analog-four-in" style="width:285px;">
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学年：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">2014-2015</option>
+                        <option value="">2018-2019</option>
+                    </select> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学期：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">第一学期</option>
+                        <option value="">第二学期</option>
+                    </select> <br>
+                    开始时间：<input class="time" type="text" id="date_first2"> <br>
+                    结束时间：<input class="time" type="text" id="date_last2"> <br>
+                    <button style="margin-left:0px">确定</button> <button style="margin-left:38px">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="clearfix"></div>
+
+</div>

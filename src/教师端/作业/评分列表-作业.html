@@ -1,0 +1,136 @@
+<div class="x_content" style="float: none;">
+
+        <div class="col-xs-2">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            @@include('include/layout/sidebar.html',{
+            "item":[
+                {
+                "title":"作业列表",
+                "link":"taskCenter.html"
+                },
+                {
+                "title":"评分列表",
+                "link":"#",
+                "active":"active"
+                }
+            ]
+            })
+        </div>
+    
+        <div class="col-xs-10">
+            <div class="qq">
+                <div class="teaching " style="width:100%;" >
+                    <div class="input-3">
+                        <input type="text" placeholder="输入作业名称">
+                        <select name="city">
+                            <option value="">选择课程</option>
+                            <option value="">集装箱码头</option>
+                            <option value="">货代与报关</option>
+                            <option value="">数学</option>
+                            <option value="">创库配送</option>
+                            <option value="">运输管理</option>
+                        </select>
+                        <select name="city">
+                            <option value="">选择单元</option>
+                            <option value="">第一单元</option>
+                            <option value="">第二单元</option>
+                            <option value="">第三单元</option>
+                            <option value="">第四单元</option>
+                            <option value="">第五单元</option>
+                            <option value="">第六单元</option>
+                        </select>
+                        <select name="city">
+                            <option value="">选择班级</option>
+                            <option value="">2017届仓库与配送管理1班</option>
+                            <option value="">2018届物流管理2班</option>
+                            <option value="">2016届货代报关1班</option>
+                        </select>
+                        <button style="color:white">搜索</button>
+                    </div>
+
+                
+
+                    <div class="interactive-2 w100">
+                            <div class="text-left">
+                                <span class="h4">作业123456</span>
+                                <span class="orange">线上作业</span>
+                            </div>
+                            <div class="text-left ">
+                            <span class="type">2017届运输管理</span>
+                            <div class="pull-right biger-knob">
+                                    <a class="inl-bl" href="#">
+                                        <input type="text" class="dial" 
+                                        readonly 
+                                        data-width="100" 
+                                        data-height="100"  
+                                        data-min="0" 
+                                        data-fgColor="#118199" 
+                                        data-max="50" 
+                                        value="5" >
+                                        <div class="text-center">未批</div>
+                                    </a>
+                                    <a class="inl-bl" href="#">
+                                        <input type="text" class="dial" 
+                                        readonly 
+                                        data-width="100" 
+                                        data-height="100" 
+                                        data-min="0"
+                                        data-fgColor="#118199"
+                                        data-max="50"
+                                        value="0" >
+                                        <div class="text-center">未交</div>
+                                    </a> 
+
+                            </div>
+                            </div>
+                            <div class="text-left">
+                                <span>集装箱码头</span>
+                                <span>第一单元</span>
+                            </div>
+                            <div class="text-left">
+                                错误率：<span class="error">0%</span>
+                                总人数：<span class="num">10</span>
+                            </div>
+                        
+                    </div>
+                    <div class="interactive-2 w100">
+                            <div class="text-left">
+                                <span class="h4">作业123456</span>
+                                <span class="blue">线下作业</span>
+                            </div>
+                            <div class="text-left ">
+                            <span class="type">2017届运输管理</span>
+                            <div class="pull-right biger-knob">
+                                    <a class="inl-bl" href="#">
+                                        <input type="text" class="dial" 
+                                        readonly 
+                                        data-width="100" 
+                                        data-height="100"  
+                                        data-min="0" 
+                                        data-fgColor="#118199" 
+                                        data-max="50" 
+                                        value="5" >
+                                        <div class="text-center">未批</div>
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="text-left">
+                                <span>集装箱码头</span>
+                                <span>第一单元</span>
+                            </div>
+                            <div class="text-left">
+                                总人数：<span class="num">10</span>
+                            </div>
+                        
+                    </div>
+                        @@include('include/page/paging.html')
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="clearfix"></div>
+
+</div>

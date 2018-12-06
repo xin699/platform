@@ -1,0 +1,63 @@
+.daye{
+    .central{
+        position: relative;
+        width:950px;
+        padding-bottom: 50px;
+        background:white;
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+     .shadow {
+         -webkit-box-shadow: #666 0px 0px 10px;
+         -moz-box-shadow: #666 0px 0px 10px;
+         box-shadow: #666 0px 0px 10px;
+         border-radius: 20px;
+     }
+    .head{
+        width:930px;
+        height:20px;
+        line-height: 20px;
+        margin-left:10px;
+        padding-left:10px;
+        border-left: 3px solid red;
+        // border-bottom: 1px solid #eee;
+    }
+    .ziti{
+        font-size: 16px;
+    }
+    .tx{
+        width:950px;
+        height:130px;
+        line-height:130px;
+        text-align: center;
+    }
+    .information{
+        width:800px;
+        margin-left:130px;
+        line-height: 30px;
+    }
+    .information input{
+        margin-top:20px;
+    }
+    .input{
+        width:270px;
+    }
+    .input-1{
+         width:400px;
+         height:100px;
+    }
+    .button-1{
+        width:70%;
+        margin-top:20px;
+        background: white;
+        text-align: center;
+    }
+    .button-1 button{
+        width:100px;
+        height:40px;
+        line-height: 40px;
+        border-radius:12px; 
+        background: #10859d;
+        border: 1px solid #10859d;
+    }
+}   

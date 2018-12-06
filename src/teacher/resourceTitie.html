@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"资源管理",
+            "link":"#"
+          },
+          "nav":[
+
+          ],
+          "template": "教师端/教学资源库/资源管理-个人库题目.html"
+        })
+    </div>
+  </div>
+  <script  src="@@webRoot/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+   require(['jquery','/js/range.js'],function($,changeSpeed){
+
+      // 文件上传按钮绑定
+      $('#bu-one').click(function(e) {
+        $('#files')[0].click()
+      })
+
+      // 删除添加文件
+      $('.files-wrap').on('click','a',function(e){
+        // 删除文件ajax
+
+        // 可以在这里写成功然后执行下面代码
+        $('#files').val('');
+        $(this).parents('.flie-list').remove();
+      })
+
+
+      $('#files').change(function(e){
+        var files = e.target.files[0];
+        var wrap = $('.files-wrap');
+
+        var suffix = files.name.split('.')[1].toLowerCase();
+        var fileName = files.name.split('.')[0];
+        var fileSize = files.size;
+
+        wrap.children('.flie-list').remove()
+
+        // 后缀检测
+        if(suffix !== 'xls'){
+          alert('不支持当前类型文件')
+          return false
+        }
+        // 文件大小检测
+        if(fileSize > 104857600){
+          alert('当前文件不能超过100MB')
+          return false          
+        }
+
+        var list = "";
+            list += "<div class=\"flie-list\">\n";
+            list += "	<div class=\"files-title\">\n";
+            list += "	"+fileName.substr(0,30)+'......'+ suffix +" <a class=\"pull-right glyphicon glyphicon-remove validate\" href=\"javascript:void(0);\"><\/a>\n";
+            list += "	<\/div>\n";
+            list += "	<div class=\"progress\">\n";
+            list += "		<div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" style=\"width: 0%;\">\n";
+            list += "                                   0%\n";
+            list += "		<\/div>\n";
+            list += "	<\/div>\n";
+            list += "<\/div>\n";
+                
+        wrap.append(list)
+
+
+      })
+      // 模态窗口关闭清理列表
+      $('#mygood').on('hidden.bs.modal', function () {
+        $('.files-wrap').children('.flie-list').remove()
+      })
+
+      // 按钮多选
+      $('#selectAll').click(function(e) {
+        var checked = this.checked;
+        $('#selectTable').find('input:checkbox').each(function(i,e) {
+          e.checked = checked
+        })
+      })
+        // 滑动条事件
+        var value = parseFloat($('#range_speed').val());
+        var valStr = value*100 + "% 100%";
+        $('#value1').html(value.toFixed(1));
+        $('#range_speed').css({
+          "background-size": valStr
+        })
+
+        // 选择框
+
+        $('#subject').change(function(e){
+          $('.subject-tab').hide().eq(this.value - 1).show()
+        })
+
+        // 单选 删除
+        $('.subject-tab').on('click','.delOption',function(e){
+            var $parent = $(e.delegateTarget);
+            var list = function (str) { return $parent.find(str).children()};
+
+          if(list('.outOption').length>2){
+            list('.outOption').last().remove()
+            list('.selectOption').last().remove()
+            list('.selectOptionCheckbox').not('span').last().remove()
+          }
+
+        })
+
+        // 单选 添加
+        $('.subject-tab').on('click','.addOption',function(e){
+          var $parent = $(e.delegateTarget);
+          var list = function (str) { return $parent.find(str).children()};
+          var len = list('.outOption').length + 65
+
+
+          if(list('.outOption').length<7){
+            // 单选
+            var a = list('.outOption').eq(0).clone().children('span').html(" &#"+ len +";：").end()
+
+            list('.outOption').parent().append(a)
+
+            var b = list('.selectOption').eq(0).clone().attr('for','label' + list('.outOption').length)
+            .children('span').html(" &#"+ len +"; ").end().children('input').attr('id','label' + list('.outOption').length).end()
+
+            list('.selectOption').parent().append(b)
+            // 多选
+            var c = list('.selectOptionCheckbox').eq(0).clone()
+            .attr('for','checkbox' + list('.outOption').length)
+            .children('span').html(" &#"+ len +"; ").end()
+            .children('input').attr('id','checkbox' + list('.outOption').length).end()
+
+            list('.selectOptionCheckbox').not('span').last().after(c)
+          }
+            
+        })
+   })
+  </script>
+</body>
+</html>

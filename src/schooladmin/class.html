@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"班级管理",
+            "link":"#"
+          },
+          "nav":[
+
+          ],
+          "template": "学校管理员端/班级管理/班级管理.html"
+        })
+    </div>
+  </div>
+  <script  src="@@webRoot/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    require(['jquery'],function(e){
+      var $list = $('#list');
+      $('#listAdd').click(function(e){
+        var len = $list.children().length;
+        if(len < 10){
+          var strVar = "<div class=\"analog-three-two-in\">"+(len+1)+"班<\/div>\n";
+          $list.append(strVar);
+        }else{
+          alert('最大只能10个')
+        }
+
+      })
+
+      $('#listDel').click(function(e){
+        var len = $list.children().length;
+        if(len>0){
+          $list.children().last().remove()
+        }
+      })
+    })
+  </script>
+</body>
+</html>

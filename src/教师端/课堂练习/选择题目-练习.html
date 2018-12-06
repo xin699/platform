@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>作业列表</title>
+</head>
+
+<body class="nav-md wx">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{           "index":{             "title":"张志峰 老师"           },           "menu":[             {"title":"简历中心","link":"#"},             {"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+    </div>
+         <div class="central-1 shadow">
+                <div class="input-1">
+                        <b>题目选择：</b><button id="bu" style="color:white">题库选题</button>
+                        <span class="right" style="margin-right:60px"><b>作业总分：0</b></span>
+                </div>
+                <table class="picture-one">
+                    <th>单选题</th>
+                    <th>题目数量：<input type="text" placeholder="2"></th>
+                    <th>批量设置：<input type="text">分</th>
+                    <th>题目总分10分</th>
+                    <th>收起</th>
+                </table>
+                <table class="picture-two">
+                    <th>序号</th>
+                    <th>题干</th>
+                    <th>分值</th>
+                    <th>难易度</th>
+                    <th>操作</th>
+                    <tr>
+                        <td>1</td>
+                        <td>仓储管理系统中存货管理模块不包括以下哪项（ ）。</td>
+                        <td><input type="text"></td>
+                        <td>5</td>
+                        <td>移除</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>仓储管理系统中存货管理模块不包括以下哪项（ ）。</td>
+                        <td><input type="text"></td>
+                        <td>5</td>
+                        <td>移除</td>
+                    </tr>
+                </table>
+                <table class="picture-three">
+                            <th>单选题</th>
+                            <th>题目数量：<input type="text" placeholder="2"></th>
+                            <th>批量设置：<input type="text">分</th>
+                            <th>题目总分10分</th>
+                            <th>展开</th>
+                            <tr style="height:20px;"></tr>
+                        <tr>
+                            <td>单选题</td>
+                            <td>题目数量：<input type="text" placeholder="2"></td>
+                            <td>批量设置：<input type="text">分</td>
+                            <td>题目总分10分</td>
+                            <td>展开</td>
+                        </tr>
+                        <tr style="height:20px;"></tr>
+                         <tr>
+                            <td>单选题</td>
+                            <td>题目数量：<input type="text" placeholder="2"></td>
+                            <td>批量设置：<input type="text">分</td>
+                            <td>题目总分10分</td>
+                            <td>展开</td>
+                        </tr>
+                        <tr style="height:20px;"></tr>
+                         <tr>
+                            <td>单选题</td>
+                            <td>题目数量：<input type="text" placeholder="2"></td>
+                            <td>批量设置：<input type="text">分</td>
+                            <td>题目总分10分</td>
+                            <td>展开</td>
+                        </tr>
+                        <tr style="height:20px;"></tr>
+                         <tr>
+                            <td>单选题</td>
+                            <td>题目数量：<input type="text" placeholder="2"></td>
+                            <td>批量设置：<input type="text">分</td>
+                            <td>题目总分10分</td>
+                            <td>展开</td>
+                        </tr>
+                </table>
+                <div class="picturep-bu">
+                        <button style="color:white" class="left">上一步</button>
+                        <button style="color:white" class="right">保存，下一步</button>
+                </div>
+         </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+</html>

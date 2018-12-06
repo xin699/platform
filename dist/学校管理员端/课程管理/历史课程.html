@@ -1,0 +1,122 @@
+<div class="xs">
+    <div class="input-one">
+        学年：<select name="city">
+            <option value="">全部</option>
+            <option value="">1年</option>
+            <option value="">2年</option>
+        </select>
+        学期：<select name="city">
+            <option value="">全部</option>
+            <option value="">第一学期</option>
+            <option value="">第二学期</option>
+        </select>
+        课程类别：<select name="city">
+            <option value="">全部</option>
+            <option value="">理论课程</option>
+            <option value="">实训课程</option>
+        </select>
+        课程名：<select name="city">
+            <option value="">全部</option>
+            <option value="">地理</option>
+            <option value="">历史</option>
+        </select>
+        <button style="color:white" id="bu">搜索</button>
+    </div>
+    <table class="form-one">
+        <th>序号</th>
+        <th>课程名</th>
+        <th>课程类别</th>
+        <th>单元数量</th>
+        <th>学分</th>
+        <th>操作</th>
+        <tr>
+            <td>1</td>
+            <td>地理</td>
+            <td>理论课程</td>
+            <td>2</td>
+            <td>10</td>
+            <td>
+                <a href="#" data-toggle="modal" data-target="#myModal">修改</a> &nbsp;&nbsp;
+                <a href="">资源管理</a> &nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>历史</td>
+            <td>理论课程</td>
+            <td>3</td>
+            <td>10</td>
+            <td>
+                <a href="">修改</a> &nbsp;&nbsp;
+                <a href="">资源管理</a> &nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>物流系统实训</td>
+            <td>实训课程</td>
+            <td>3</td>
+            <td>10</td>
+            <td>
+                <a href="">修改</a> &nbsp;&nbsp;
+                <a href="">资源管理</a> &nbsp;&nbsp;
+                <a href="#" data-toggle="modal" data-target="#mystery">实训软件</a>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>wish电商岗位课程</td>
+            <td>企业课程</td>
+            <td>4</td>
+            <td>-</td>
+            <td>
+                <a href="">修改</a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <div id="pagination" class="pagination2"></div>
+    </div>
+    <!-- 弹框 -->
+
+    <div class="update_modal">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="analog">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>修改课程</b>
+                </div>
+                <div class="analog-three-in">
+                    课程类别：<select name="city" style="width:315px">
+                        <option value="">请选择</option>
+                        <option value="">理论课程</option>
+                        <option value="">实训课程</option>
+                    </select> <br>
+                    课程名字：<input type="text" placeholder="地理" style="width:315px"><br>
+                    单元名称：<input type="text" placeholder="第一单元" style="width:315px"><span class="color-one">-删除</span><br>
+                    <input type="text" placeholder="第二单元" style="width:315px;margin-left:65px;"><span class="color-one">-删除</span><br>
+                    课程学分：<input type="text" placeholder="10" style="width:315px"><br>
+                    <button>确定</button> <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="update_modal">
+        <div class="modal fade" id="mystery" tabindex="-1" role="dialog" aria-labelledby="mystery">
+            <div class="analog">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>实训软件</b>
+                </div>
+                <div class="analog-three-in">
+                    <span style="margin-left:85px;font-size:20px;">课程名称：物流实训课程</span><br>
+                    <input type="checkbox" style="width:14px;height:14px;">&nbsp;&nbsp;供应链管理系统
+                    <input type="checkbox" style="width:14px;height:14px;margin-left:160px">&nbsp;&nbsp;仓储物流系统<br>
+                    <input type="checkbox" style="width:14px;height:14px;">&nbsp;&nbsp;快递系统 <br>
+                    <button>确定</button> <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

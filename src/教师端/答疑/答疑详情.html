@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+    <!-- endbuild -->
+    <title>学校库</title>
+</head>
+
+<body class="nav-md wx">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+            @@include('include/layout/header.html',{ "index":{ "title":"张志峰 老师" }, "menu":[
+            {"title":"简历中心","link":"#"}, {"title":"我的企业任务","link":"#"} ] })
+        </div>
+        <!-- content -->
+
+    </div>
+    <div class="central-1 shadow">
+        <div class="input-1" style="border-bottom:2px solid #eee;">
+            <span style="font-size:20px;">B2B分销运营实务</span>
+            <span style="font-size:20px;margin-left:30px;">1班</span>
+            <span style="float:right;color:red">问题已共享</span>
+        </div>
+        <div class="details_one">
+            <span>
+                <img src="/images/t6.png" alt="">
+            </span>
+            <div class="details_two"><span style="font-size:20px;">黄玉 </span><br>发布于：2018年06月26日 08:30:28 </div>
+            管理操作流程？
+        </div>
+        <div class="input-1" style="border-bottom:2px solid #eee;">
+            <span style="margin-left:50px;">全部回复 <span style="margin-left:10px;">2</span></span>
+        </div>
+        <div class="details_three">
+            <span>
+                <img src="/images/t6.png" alt="">
+            </span>
+            <div class="details_two"><span style="font-size:20px;">张老师 </span><br>发布于：2018年06月26日 08:30:288
+                <span class="glyphicon glyphicon-link" style="float:right;color:#52a4b7"> 引用</span>
+            </div>
+            管理操作流程是一种以规范化的构造端到端的卓越业务流程为中心,以持续的提高组织业务绩效为目的的系统化方法。
+        </div>
+        <div class="details_three">
+            <span>
+                <img src="/images/t6.png" alt="">
+            </span>
+            <div class="details_two"><span style="font-size:20px;">黄玉 </span><br>发布于：2018年06月26 08:50:30
+                <span class="glyphicon glyphicon-link" style="float:right;color:#52a4b7"> 引用</span>
+            </div>
+            张老师 2018-6-20 10:00 <br>
+            管理操作流程是一种以规范化的构造端到端的卓越业务流程为中心,以持续的提高组织业务绩效为目的的系统化方法。 <br>
+            好的，张老师
+        </div>
+        <div class="details_three">
+            <span>
+                <img src="/images/t6.png" alt="">
+            </span>
+            <div class="details_two"><span style="font-size:20px;">吴同学 </span><br>发布于：2018年06月26 08:45:26
+                <span class="glyphicon glyphicon-link" style="float:right;color:#52a4b7"> 引用</span>
+                <span class="glyphicon glyphicon-trash" style="float:right;color:#52a4b7;margin-right:20px"> 删除</span>
+            </div>
+            管理操作流程是一种以规范化的构造端到端的卓越业务流程为中心,以持续的提高组织业务绩效为目的的系统化方法。
+        </div>
+        <div class="details_three">
+            <span>
+                <img src="/images/t6.png" alt="">
+            </span>
+            <div class="details_two"><span style="font-size:20px;">吴同学 </span><br>发布于：2018年06月26 08:45:26
+                <span class="glyphicon glyphicon-link" style="float:right;color:#52a4b7"> 引用</span>
+            </div>
+            管理操作流程是一种以规范化的构造端到端的卓越业务流程为中心,以持续的提高组织业务绩效为目的的系统化方法。
+        </div>
+        <div class="details_three" style="text-align:center">
+            <span class="details_fore"><img src="/images/t6.png" alt=""></span>
+            <img src="/images/e10.png" alt="">
+        </div>
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+      <meta charset="UTF-8" />
+    <!-- Render engine selection -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Friendly view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <!-- Disable chrome translation prompt -->
+    <meta name="google" value="notranslate">
+    <!-- Ignore identifying phone numbers, email addresses -->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="author" content="biger">
+    <!-- src -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.polyfill.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="/css/all.css">
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        <div class="nav_menu">
+    <nav class="clearfix">
+        <div class="nav pull-left logo-left">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="">
+            </a>
+            <a href="">
+                <i class="icon-教育云平台" style="font-size:20px;"></i>
+                
+                教育云平台
+                </a>
+            |
+            <a href="index.html">
+                <i class="icon-企业服务" style="font-size:20px;"></i>
+                企业服务</a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right">
+            <li class="download">
+                <a href="javascript:;" style="font-weight: bold;margin: 0">下载APP</a>
+            </li>
+            <li style="margin-right: 10px">
+                <a href="javascript:;" class="dropdown-toggle info-number hvr-buzz-out">
+                    <i class="icon-提醒" style="font-size:20px;"></i>
+                    <span class="badge bg-red">6</span>
+                </a>
+            </li>
+            <li class="">
+                <!-- 头像 -->
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../../images/img.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li>
+                        <a class="role" style="padding:12px 20px 0 20px;color: black" href="javascript:;">张志峰 老师</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    
+                        <li>
+                            <a href="#">简历中心</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">我的企业任务</a>
+                        </li>
+                    
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">修改密码</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">安全退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+      
+      <li role="presentation" class="active"><a href="#">学校管理员</a>
+      </li>
+      
+      
+        <a class="pull-right biger-button" href="schoolManage.html">返回学校列表</a>
+      
+      
+
+      
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="x_content" style="float: none;">
+
+    <div class="col-xs-2">
+        <!-- required for floating -->
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs tabs-left biger-x-nav">
+    
+        <li class="active" ><a href="#">益达大学</a>
+        </li>
+    
+</ul>
+    </div>
+    
+    <div class="col-xs-10">
+        <div class="xs">
+            <div class="input-one">
+                <span style="font-size:20px;"><b>学校详情</b></span>
+            </div>
+            <div class="pillar" style="margin-left:80px">
+                <div id="class"><img src="/images/e2.png" alt=""></div>
+                <div><span style="font-size:17px"><b>级别</b></span></div>
+                <!-- 后台导入数据表echarts -->
+            </div>
+            <div class="pillar" style="margin-left:80px">
+                <div id="user"><img src="/images/e2.png" alt=""></div>
+                <div><span style="font-size:17px"><b>用户</b></span></div>
+                <!-- 后台导入数据表echarts -->
+            </div>
+            <div class="input-one">
+                <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">新增管理员</button>
+            </div>
+            <table class="form-one">
+                <th>序号</th>
+                <th>账号</th>
+                <th>姓名</th>
+                <th>状态</th>
+                <th>操作</th>
+                <tr>
+                    <td>1</td>
+                    <td>111800001</td>
+                    <td>111800001</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#myModal">修改</a>
+                        <a href="#">重置密码</a>
+                        <a href="#">冻结</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>111800001</td>
+                    <td>111800001</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#myModal">修改</a>
+                        <a href="#">重置密码</a>
+                        <a href="#">冻结</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>111800001</td>
+                    <td>111800001</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#myModal">修改</a>
+                        <a href="#">重置密码</a>
+                        <a href="#">冻结</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>111800001</td>
+                    <td>111800001</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#myModal">修改</a>
+                        <a href="#">重置密码</a>
+                        <a href="#">冻结</a>
+                    </td>
+                </tr>
+            </table>
+
+            <div>
+                <div id="pagination" class="pagination2"></div>
+            </div>
+            <!-- 弹框 -->
+
+            <div class="update_modal">
+                <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+                    <div class="analog-four">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>创建管理员</b>
+                        </div>
+                        <div class="analog-three-in" style="width:500px;line-height:60px;padding-left:50px;">
+                            账号：自动生成 <br>
+                            姓名：<input type="text">
+                            <button>提交</button> <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="update_modal">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="analog-four">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>修改学校</b>
+                        </div>
+                        <div class="analog-three-in" style="width:500px;line-height:60px;padding-left:50px;">
+                            账号：111800001 <br>
+                            姓名：<input type="text">
+
+                            <button>提交</button> <button>取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+</div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <script  src="../js/require.js"></script>
+  <script>
+    requirejs.config({
+    paths : {
+        "jquery" : "/js/jquery.min",
+        "bootstrap": "/js/bootstrap.min",
+        "cxCalendar": "/js/jquery.cxcalendar.min",
+        "myPagination":"/js/myPagination"
+    },
+    shim: {
+        jquery: {
+            exports: 'jquery'
+        },
+        bootstrap: {
+            deps: ['jquery']
+        },
+        myPagination:{
+            deps: ['jquery']
+        }
+
+    }
+})
+// base
+require(["jquery","bootstrap","myPagination"],function($){
+
+    $(function($){
+        if($('#pagination').length != 0){
+            new myPagination({
+                id: 'pagination',
+                curPage:1, //初始页码
+                pageTotal: 50, //总页数
+                pageAmount: 10,  //每页多少条
+                dataTotal: 500, //总共多少条数据
+                pageSize: 5, //可选,分页个数
+                showPageTotalFlag:true, //是否显示数据统计
+                showSkipInputFlag:true, //是否支持跳转
+                getPage: function (page) {
+                    //获取当前页数
+                    console.log(page);
+                }
+            })
+        }
+
+    })
+
+ 
+})
+    // 这里只写 调用参数方法，所有组件js全部弄进去 全局js目录
+
+require(['jquery'],function(){
+    $(function(){
+        console.log(12312)
+    })
+})
+
+  </script>
+</body>
+</html>

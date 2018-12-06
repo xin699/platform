@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>分配学校团队</title>
+</head>
+
+<body class="nav-md qq">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{"index":{"title":"张志峰 老师"},"menu":[{"title":"简历中心","link":"#"},{"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+
+    </div>
+    <div class="central-1 shadow">
+            <div class="input-1">
+                             所属班级：<select name="city">
+                                <option value="">全部团队</option>
+                                <option value="">2016届市场营销1班</option>
+                                <option value="">2016届市场营销2班</option>					
+                            </select>
+                            团队名称：<input type="text" placeholder="输入团队名称">
+                            <button style="color:white" id="bu"><img src="/images/q9.png" alt=""></button>
+                            <button style="color:white" id="bu">组建团队</button>
+            </div>
+            <table>
+                <th>序号</th>
+                <th>团队名称</th>
+                <th>学生人数</th>
+                <th>所属班级</th>
+                <th>课程进度</th>
+                <th>操作</th>
+                <tr>
+                    <td>1</td>
+                    <td>电商团队1</td>
+                    <td>18</td>
+                    <td>2016届市场营销1班</td>
+                    <td>- -</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2016届市场营销1班</td>
+                    <td>18</td>
+                    <td>2016届市场营销1班</td>
+                    <td>- -</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2016届市场营销2班</td>
+                    <td>15</td>
+                    <td>2016届市场营销1班</td>
+                    <td>wish运营-店铺运营</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2016届市场营销3班</td>
+                    <td>10</td>
+                    <td>2016届市场营销1班</td>
+                    <td>wish运营-店铺运营</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2016届市场营销4班</td>
+                    <td>5</td>
+                    <td>2016届市场营销1班</td>
+                    <td>wish运营-店铺运营</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>电商团队1</td>
+                    <td>3</td>
+                    <td>2016届市场营销1班</td>
+                    <td>wish运营-店铺运营</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>电商团队1</td>
+                    <td>5</td>
+                    <td>2016届市场营销1班</td>
+                    <td>wish运营-店铺运营</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>电商团队1</td>
+                    <td>7</td>
+                    <td>2016届市场营销1班</td>
+                    <td>wish运营-店铺运营</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>电商团队1</td>
+                    <td>4</td>
+                    <td>2016届市场营销1班</td>
+                    <td>wish运营-店铺运营</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>电商团队1</td>
+                    <td>10</td>
+                    <td>2016届市场营销1班</td>
+                    <td>wish运营-店铺运营</td>
+                    <td>编辑名单 删除团队</td>
+                </tr>
+            </table>
+              <div class="main ">
+                        @@include('include/page/paging.html')
+                    </div>
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+</html>

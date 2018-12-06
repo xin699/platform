@@ -1,0 +1,266 @@
+<div class="central-1 wx">
+    <div style="margin-left:35px;" >
+            <ul class="nav nav-tabs biger-tab1">
+    
+        <li class="active" ><a href="#">学校库</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceYun.html">益达云库</a>
+        </li>
+    
+</ul>
+    </div>
+
+    <div class="input-1 trc" style="margin-top:15px;">
+        <input type="text" placeholder="请输入名称关键字" style="width:250px;">
+        课程类别：<select name="city">
+            <option value="">全部</option>
+            <option value="">理论课程</option>
+            <option value="">实训课程</option>
+        </select>
+        课程名称：<select name="city">
+            <option value="">全部</option>
+            <option value="">地理</option>
+            <option value="">历史</option>
+        </select>
+    </div>
+
+    <div class="input-1 trc">
+        单元：<select name="city">
+            <option value="">全部</option>
+            <option value="">第一单元</option>
+            <option value="">第二单元</option>
+            <option value="">第三单元</option>
+            <option value="">第四单元</option>
+            <option value="">第五单元</option>
+            <option value="">第六单元</option>
+        </select>
+        <button style="color:white" id="bu">搜索</button>
+        <button style="color:white" id="bu" data-toggle="modal" data-target="#mygood">添加资源库</button>
+        <button style="color:white" id="bu">刷新</button>
+    </div>
+    <div style="width: 94%;margin: 10px;margin-left:35px;border: 1px solid #eee;padding: 10px" >
+            <ul class="nav nav-tabs biger-tab2">
+    
+        <li class="active" ><a href="#">电子教材</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">PPT</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">图片</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">视频</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">案例</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">Flash</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">文献资料</a>
+        </li>
+    
+        <li class="undefined" ><a href="resourceTitie.html">题目</a>
+        </li>
+    
+        <li class="undefined" ><a href="#">其它</a>
+        </li>
+    
+</ul>
+    </div>
+    <table class="picture-2" id="selectTable">
+        <th></th>
+        <th>序号</th>
+        <th>课程类别</th>
+        <th>课程名</th>
+        <th>单元</th>
+        <th>名称</th>
+        <th>上传者</th>
+        <th>上传时间</th>
+        <th>操作</th>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>转换中</td>
+            <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#mygoodview" >预览</a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#share" >共享</a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#mygood" >下载</a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#mygood" >删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>2018-06-07</td>
+            <td>
+                <a href="">预览</a>
+                <a href="">共享</a>
+                <a href="">下载</a>
+                <a href="">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>转换中</td>
+            <td>
+                <a href="">预览</a>
+                <a href="">共享</a>
+                <a href="">下载</a>
+                <a href="">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>理论课程</td>
+            <td>地理</td>
+            <td>第1单元</td>
+            <td>项目1 市场营销.jpg</td>
+            <td>张某某</td>
+            <td>2018-06-07</td>
+            <td>
+                <a href="">预览</a>
+                <a href="">共享</a>
+                <a href="">下载</a>
+                <a href="">删除</a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <div class="input-2" style="height:auto">
+    <input type="checkbox" id="selectAll" >全选
+    <button style="color:white" data-toggle="modal" data-target="#share" style="margin-left:5px;">共享</button>
+    <button style="color:white" style="margin-left:5px;">下载到本地</button>
+    <button style="color:white" style="margin-left:5px;">删除</button>
+    <div id="pagination" class="pagination2"></div>
+</div>
+    </div>
+
+    <!-- 弹框 -->
+    <!-- 文件上传 -->
+    <div class="update_modal">
+        <div class="modal fade" id="mygood" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="mygood">
+            <div class="analog-three">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>非题目类上传</b>
+                </div>
+                <div class="analog-three-in">
+                    课程类别：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">理论课程</option>
+                        <option value="">实训课程</option>
+                    </select> <br>
+                    课程名称：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">B2C电商仿真实训</option>
+                        <option value="">B2B分销运营实务</option>
+                    </select> <br>
+                    课程单元：<select name="city">
+                        <option value="">请选择</option>
+                        <option value="">第一单元</option>
+                        <option value="">第二单元</option>
+                    </select> <br>
+                    资源类型：<select name="fileType" id="resType" value="0">
+                        <option value="0">电子教材</option>
+                        <option value="1">PPT</option>
+                        <option value="2">图片</option>
+                        <option value="3">视频</option>
+                        <option value="4">案例</option>
+                        <option value="5">Flash</option>
+                        <option value="6">文献资料</option>
+                        <option value="7">其他</option>
+                    </select> <br>
+                        <button id="bu-one" type="button" >批量选择文件</button>
+                        <input type="file" name="files" style="display:none;" multiple="multiple" id="files">
+
+                        
+                    <div class="files-wrap" style="width:350px;max-height: 260px;overflow-y: auto;">
+                        <!-- <div class="flie-list">
+                            <div class="files-title">dfasdfa.jpg <a class="pull-right glyphicon glyphicon-remove validate" href="javascript:void(0);"></a></div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 60%;">
+                                    60%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flie-list">
+                            <div class="files-title">dfasdfa.jpg <a class="pull-right glyphicon glyphicon-remove validate" href="javascript:void(0);"></a></div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;">
+                                    已完成
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                    <button type="button" >确认</button> <button type="button" >取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="update_modal">
+        <div class="modal fade" id="mygoodview" tabindex="-1" role="dialog" aria-labelledby="mygoodview">
+            <div class="analog-three" style="width:1000px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>项目1 市场营销.jpg</b>
+                </div>
+                <div class="analog-three-in" style="width:100%;">
+                    <div class="text-center" id="view">
+                        这里是预览窗口
+                    </div>
+                    
+                    <div class="text-center">
+                        <button style="margin-left:0" data-dismiss="modal" type="button" >关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="update_modal">
+        <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="share">
+            <div class="analog-three" style="width:400px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>共享资源</b>
+                </div>
+                <div class="analog-three-in" style="width:100%;">
+                    <div class="text-center" id="view">
+                        <label for="yun">
+                            <input type="checkbox" id="yun" name="yun" style="font-size:12px;width:auto;height: auto;">
+                            益达云库
+                        </label>
+                    </div>
+                    
+                    <div class="text-center">
+                            <button style="margin-left:0;" type="button" >确认</button> <button type="button" >取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

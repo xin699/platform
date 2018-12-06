@@ -1,0 +1,108 @@
+
+    <div class="xs">
+            <div style="margin:0 35px;">
+
+                    @@include('include/layout/tab1.html',{
+                        "item":[
+                            {
+                                "title":"行业与品牌",
+                                "link":"platformManage.html"
+                            },
+                            {
+                                "title":"banner图设置",
+                                "link":"platformManageBanner.html"
+                            },
+                            {
+                                "title":"产业园设置",
+                                "link":"platformManagePark.html"
+                            },
+                            {
+                                "title":"专业设置",
+                                "link":"platformManageMajor.html"
+                            },
+                            {
+                                "title":"企业类型",
+                                "link":"#",
+                                "active":"active"
+                            },
+                            {
+                                "title":"征集分类",
+                                "link":"platformManageLevy.html"
+                            }
+                        ]
+                    })
+                </div>
+        <div class="central-two">
+        <div class="input-one">
+                <button style="color:white" data-toggle="modal" data-target="#myModal">新增类型</button>
+        </div>
+                <table class="form-two">
+                       <th>企业类型</th>
+                       <th>顺序</th>
+                       <th>操作</th>
+                       <tr>
+                           <td>零售商（O2O电商）</td>
+                           <td>1</td>
+                           <td>
+                               <a data-toggle="modal" data-target="#myModal" href="#">编辑</a>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>零售商（O2O电商）</td>
+                           <td>2</td>
+                           <td>
+                               <a href="">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                               <a href="">删除</a>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>零售商（O2O电商）</td>
+                           <td>3</td>
+                           <td>
+                                <a href="">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="">删除</a>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>零售商（O2O电商）</td>
+                           <td>4</td>
+                           <td>
+                                <a href="">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="">删除</a>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>其他</td>
+                           <td>5</td>
+                           <td>
+                                <a href="">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="">删除</a>
+                           </td>
+                       </tr>
+                </table>
+                
+                <div >
+            @@include('include/page/paging.html')
+        </div>
+       </div>
+       <div class="update_modal">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="analog-four">
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>设置页</b>
+                    </div>
+                    <div class="analog-three-in">
+                        企业类型：<input type="text" style="width:300px"> <br>
+                        <span style="margin-left:25px">排序：</span><input type="text" style="width:150px">&nbsp;&nbsp;&nbsp;填写数字
+                        <br>
+                        <button>保存</button> <button>取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>评分列表</title>
+</head>
+
+<body class="nav-md wx">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+                    @@include('include/layout/header.html',{           "index":{             "title":"张志峰 老师"           },           "menu":[             {"title":"简历中心","link":"#"},             {"title":"我的企业任务","link":"#"}           ]         })
+        </div>
+        <!-- content -->
+    </div>
+                <div class="central-1 shadow">
+                        <div class="diamond">
+                            <b>作业描述：</b>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Aenean euismod bibendum laoreet. Proin gravida
+                            dolor sit amet lacus accumsan et viverra justo <br>
+                            commodo. Proin sodales pulvinar tempor. Cum sociis 
+                            natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus. Nam fermentum, nulla  <br>
+                            luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                        </div>
+                        <div class="diamond">
+                            <input type="text" placeholder="输入学生姓名或学号">
+                            <button style="color:white"><img src="/images/q9.png" alt=""></button>
+                            <button style="color:white" data-toggle="modal" data-target="#mygood">导入成绩</button>
+                            <table class="diamond-one">
+                                 <th>序号</th>
+                                 <th>学号</th>
+                                 <th>姓名</th>
+                                 <th>成绩</th>
+                                 <tr>
+                                     <td>1</td>
+                                     <td>00001</td>
+                                     <td>张三</td>
+                                     <td><input type="text" placeholder="0"></td>
+                                 </tr>
+                                 <tr>
+                                     <td>2</td>
+                                     <td>00001</td>
+                                     <td>张三</td>
+                                     <td><input type="text" placeholder="50"></td>
+                                 </tr>
+                                 <tr>
+                                     <td>3</td>
+                                     <td>00001</td>
+                                     <td>张三</td>
+                                     <td><input type="text" placeholder="80"></td>
+                                 </tr>
+                            </table>
+                        </div>
+                </div>
+         </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+     <!-- 弹框 -->
+
+    <div class="update_modal">
+        <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
+        <div class="analog">
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>导入成绩</b>
+                    </div>
+                    <div class="analog-two">
+                            下载模板【请先下载模板并按照模板规范导入数据】<br>
+                            <button>选择文件</button>未选择任何文件
+                    </div>
+                    <div class="analog-bu">
+                        <button class="left">确定</button>
+                        <button class="right">取消</button>
+                    </div>
+            </div>
+       </div>
+   </div>                
+</html>

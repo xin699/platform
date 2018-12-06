@@ -1,6 +1,7 @@
 // 全局共用样式 引入 进来，非全局自己局部添加
 $global_bg_color:#f3f5f6;
 .nav-md{
+    font-family: 'Microsoft YaHei',Arial;
     background-color: $global_bg_color;
     .main_container{
         .main{
@@ -183,7 +184,7 @@ $global_bg_color:#f3f5f6;
         @include border-bottom-radius(10px);
         box-shadow: 0 0 20px #c4c5c6;
         min-height: 700px;
-        padding: 22px 55px 60px;
+        padding: 22px 20px 60px;
         margin-bottom: 56px;
     }
 }
@@ -220,3 +221,105 @@ $global_bg_color:#f3f5f6;
         }
     }
 }
+
+.biger-button{
+    width: 135px;
+    height: 31px;
+    line-height: 27px;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    background: #10859d;
+    border: 1px solid #10859d;
+    position: relative;
+    top: -10px;
+    left: -72px;
+    &:hover{
+        color: white
+    }
+}
+
+.biger-x-nav{
+    height: 500px;
+    border: 2px solid #bbb;
+    padding: 0;
+    & > li{
+        margin: 0;
+        &>a{
+            background-color: #fff;
+        }
+    }
+    & > li.active > a, & > li.active > a:hover, & > li.active > a:focus{
+        border-left: 5px solid #11859e;
+        border-radius: 0;
+        background-color: #d9eef3;
+    }
+}
+.biger-tab1{
+    display: inline-block;
+    border: 2px solid #10859d;
+    border-radius: 10px;
+    li{
+        margin-bottom: -2px;
+        border-right: 2px solid #10859d;
+        &:last-child{
+            border-right:none;
+        }
+        &>a{
+            color: #5a5a5a;
+            padding: 5px 12px;
+            &:hover{
+                border: none;
+            }    
+        }
+    } 
+    & > li.active > a, & > li.active > a:focus, & > li.active > a:hover{
+        border:none;
+        background-color: #10859d;
+        color: white;
+        border-radius: 0;
+        margin-right:0;
+    }
+    
+}
+.biger-tab2{
+    display: inline-block;
+    border: none;
+    li{
+        position: relative;
+        left: 0;
+        top: 0;
+        &:after{
+            float: right;
+            height: 10px;
+            border-right:1px solid #afafaf;
+            content: " ";
+            position: absolute;
+            top: 12px;
+            right: 0;
+        }
+        &:last-child:after{
+            border-right:none;
+        }
+        &>a{
+            color: #5a5a5a;
+            padding: 5px 12px;
+            &:hover{
+                border: none;
+            }    
+        }
+    }
+    & > li.active > a, & > li.active > a:focus, & > li.active > a:hover{
+        border:none;
+        border-bottom:2px solid #11859e;
+        color: #11859e;
+        border-radius: 0;
+        margin-right:0;
+    }
+}
+
+@import '../include/layout/header';
+@import '../control/css/yida';
+@import '../control/css/yida-one';
+@import '../control/css/qiye';
+@import 'myPagination';

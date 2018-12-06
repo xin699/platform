@@ -1,0 +1,178 @@
+<div class="x_content" style="float: none;">
+
+    <div class="col-xs-2">
+        <!-- required for floating -->
+        <!-- Nav tabs -->
+        @@include('include/layout/sidebar.html',{
+        "item":[
+        {
+        "title":"教学设置",
+        "link":"taskList4.html"
+        },
+        {
+        "title":"班级教学进度",
+        "link":"#",
+        "active":"active"
+        }
+        ]
+        })
+    </div>
+
+    <div class="col-xs-10">
+        <div class="qq">
+            <div class="teaching" style="width:auto;">
+                <div class="input-1" style="width:1000px">
+                    课程类型：<select name="city">
+                        <option value="">全部</option>
+                        <option value="">理论课程</option>
+                        <option value="">实习课程</option>
+                        <option value="">企业课程</option>
+                    </select>
+                    课程名称：<select name="city">
+                        <option value="">全部</option>
+                        <option value="">B2C电商仿真实训</option>
+                        <option value="">B2B分销运营实训</option>
+                        <option value="">地理</option>
+                        <option value="">历史</option>
+                    </select>
+                    <button style="color:white"><img src="/images/q9.png" alt=""></button>
+                </div>
+                <table>
+                    <th>班级</th>
+                    <th>授课进度</th>
+                    <th>课程类别</th>
+                    <th>课程名称</th>
+                    <th>正在授课</th>
+                    <th>单元数量</th>
+                    <th>学生学习进度</th>
+                    <th>学生数量</th>
+                    <th>操作</th>
+                    <tr>
+                        <td>2016届电子商务1班</td>
+                        <td>66%</td>
+                        <td>理论课程</td>
+                        <td>地理</td>
+                        <td>第一单元第2课时</td>
+                        <td>1</td>
+                        <td>1%</td>
+                        <td>40人</td>
+                        <td><a href="#" data-toggle="modal" data-target="#myModal">设置通过</a></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+
+                <!-- 模拟框 -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="analog">
+                        <table>
+                            <div class="analog-one">
+                                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                                <b>设置通过</b>
+                            </div>
+                            <div class="analog-two">
+                                <input type="text" placeholder="请输入学生ID/姓名">
+                                课程状态：<select name="city">
+                                    <option value="">全部</option>
+                                    <option value="">通过</option>
+                                    <option value="">不通过</option>
+                                </select>
+                                <button><img src="/images/q9.png" alt=""></button>
+                            </div>
+                            <table>
+                                <th><input type="checkbox"></th>
+                                <th>学生ID</th>
+                                <th>姓名</th>
+                                <th>学习进度</th>
+                                <th>课程状态</th>
+                                <th>课程学分</th>
+                                <th>操作</th>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>369012350</td>
+                                    <td>369012350</td>
+                                    <td>0%</td>
+                                    <td>通过</td>
+                                    <td>6</td>
+                                    <td>通过 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不通过</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>369012350</td>
+                                    <td>369012350</td>
+                                    <td>0%</td>
+                                    <td>通过</td>
+                                    <td>6</td>
+                                    <td>通过 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不通过</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>369012350</td>
+                                    <td>369012350</td>
+                                    <td>0%</td>
+                                    <td>通过</td>
+                                    <td>6</td>
+                                    <td>通过 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不通过</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>369012350</td>
+                                    <td>369012350</td>
+                                    <td>0%</td>
+                                    <td>通过</td>
+                                    <td>6</td>
+                                    <td>通过 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不通过</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>369012350</td>
+                                    <td>369012350</td>
+                                    <td>0%</td>
+                                    <td>通过</td>
+                                    <td>6</td>
+                                    <td>通过 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不通过</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>369012350</td>
+                                    <td>黄育</td>
+                                    <td>5%</td>
+                                    <td></td>
+                                    <td>6</td>
+                                    <td>通过 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不通过</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>369012350</td>
+                                    <td>张胜明</td>
+                                    <td>5%</td>
+                                    <td>通过</td>
+                                    <td>6</td>
+                                    <td>通过 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不通过</td>
+                                </tr>
+                            </table>
+                            <div class="analog-three" style="height:auto;">
+                                &nbsp;&nbsp;&nbsp;<input type="checkbox">&nbsp; 全选<button style="color:white">通 &nbsp;
+                                    过</button>
+                                @@include('include/page/paging.html')
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+</div>

@@ -54,7 +54,7 @@
             <li class="">
                 <!-- 头像 -->
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">
+                    <img src="../../images/img.jpg" alt="">
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li>
@@ -116,28 +116,28 @@
             
         </ul>
     </div>
-    <ul class="nav nav-pills">
-        <li role="presentation" class="active">
+    <ul class="nav nav-pills dropdown">
+        <li role="presentation" class="@@index.active">
             <a href="index.html">首页</a>
         </li>
         
-            <li role="presentation" >
+            <li role="presentation" class="undefined"  >
                 <a href="index.html">教案</a>
             </li>
         
-            <li role="presentation" >
+            <li role="presentation" class="undefined"  >
                 <a href="index.html">课程内容</a>
             </li>
         
-            <li role="presentation" >
+            <li role="presentation" class="undefined"  >
                 <a href="index.html">互动课堂</a>
             </li>
         
-            <li role="presentation" >
+            <li role="presentation" class="undefined"  >
                 <a href="index.html">作业/考试</a>
             </li>
         
-            <li role="presentation" >
+            <li role="presentation" class="undefined"  >
                 <a href="index.html">成绩中心</a>
             </li>
         
@@ -146,17 +146,21 @@
 
         <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#" role="tab" data-toggle="tab">课程中心</a>
+      
+      <li role="presentation" class="active"><a href="#">课程中心</a>
       </li>
       
-        <li role="presentation" class=""><a href="#" role="tab"  data-toggle="tab">云库课程</a>
+        <li role="presentation" class="undefined" ><a href="#" >云库课程</a></li>
       
-        <li role="presentation" class=""><a href="#" role="tab"  data-toggle="tab">云库课程</a>
+        <li role="presentation" class="undefined" ><a href="#" >云库课程</a></li>
       
-      </li>
+      
+      
+
+      
     </ul>
     <div id="myTabContent" class="tab-content">
-      <div class="dropdown">
+      <div class="dropdown"></div>
     <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">主题
         <span class="caret"></span>
     </button>
@@ -184,13 +188,48 @@
   <script>
     requirejs.config({
     paths : {
-        "jquery" : "./js/jquery.min",
-        "bootstrap": "./js/bootstrap.min"
+        "jquery" : "/js/jquery.min",
+        "bootstrap": "/js/bootstrap.min",
+        "cxCalendar": "/js/jquery.cxcalendar.min",
+        "myPagination":"/js/myPagination"
+    },
+    shim: {
+        jquery: {
+            exports: 'jquery'
+        },
+        bootstrap: {
+            deps: ['jquery']
+        },
+        myPagination:{
+            deps: ['jquery']
+        }
+
     }
 })
 // base
-require(["jquery"],function($){
-    require(["bootstrap"])
+require(["jquery","bootstrap","myPagination"],function($){
+
+    $(function($){
+        if($('#pagination').length != 0){
+            new myPagination({
+                id: 'pagination',
+                curPage:1, //初始页码
+                pageTotal: 50, //总页数
+                pageAmount: 10,  //每页多少条
+                dataTotal: 500, //总共多少条数据
+                pageSize: 5, //可选,分页个数
+                showPageTotalFlag:true, //是否显示数据统计
+                showSkipInputFlag:true, //是否支持跳转
+                getPage: function (page) {
+                    //获取当前页数
+                    console.log(page);
+                }
+            })
+        }
+
+    })
+
+ 
 })
     // 这里只写 调用参数方法，所有组件js全部弄进去 全局js目录
 

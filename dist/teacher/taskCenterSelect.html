@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+      <meta charset="UTF-8" />
+    <!-- Render engine selection -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Friendly view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <!-- Disable chrome translation prompt -->
+    <meta name="google" value="notranslate">
+    <!-- Ignore identifying phone numbers, email addresses -->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="author" content="biger">
+    <!-- src -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.polyfill.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        <div class="nav_menu">
+    <nav class="clearfix">
+        <div class="nav pull-left logo-left">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="">
+            </a>
+            <a href="">
+                <i class="icon-教育云平台" style="font-size:20px;"></i>
+                
+                教育云平台
+                </a>
+            |
+            <a href="index.html">
+                <i class="icon-企业服务" style="font-size:20px;"></i>
+                企业服务</a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right">
+            <li class="download">
+                <a href="javascript:;" style="font-weight: bold;margin: 0">下载APP</a>
+            </li>
+            <li style="margin-right: 10px">
+                <a href="javascript:;" class="dropdown-toggle info-number hvr-buzz-out">
+                    <i class="icon-提醒" style="font-size:20px;"></i>
+                    <span class="badge bg-red">6</span>
+                </a>
+            </li>
+            <li class="">
+                <!-- 头像 -->
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../../images/img.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li>
+                        <a class="role" style="padding:12px 20px 0 20px;color: black" href="javascript:;">张志峰 老师</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    
+                        <li>
+                            <a href="#">简历中心</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">我的企业任务</a>
+                        </li>
+                    
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">修改密码</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">安全退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+
+        <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+      
+      <li role="presentation" class="active"><a href="#">发布作业</a>
+      </li>
+      
+      
+      
+
+      
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="app">
+    <div class="teaching wx" style="padding-top: 20px">
+        <!-- 向导 -->
+        <div class="bwizard clearfix text-center">
+            <ol class="bwizard-steps clearfix clickable">
+                <li style="width: 150px;" class="active">
+                    <a href="#step1" class="hidden-phone">选择课程</a>
+                </li>
+                <li style="width: 150px;">
+                    <a href="#step2" class="hidden-phone">选择题目</a>
+                </li>
+                <li style="width: 150px;">
+                    <a href="#step3" class="hidden-phone">设置班级</a>
+                </li>
+            </ol>
+        </div>
+        <div class="qq">
+
+            <table class="table biger-table2 " style="margin-left:100px;">
+                <tbody>
+                    <tr>
+                        <td width="100px">作业名称：</td>
+                        <td class="text-left"><input style="width:300px;" class="form-control" type="text" placeholder="输入作业名称"></td>
+                    </tr>
+                    <tr>
+                        <td>选择课程：</td>
+                        <td class="text-left">
+                            <select name="city" class="form-control" style="width:200px;">
+                                <option value="">选择课程</option>
+                                <option value="">集装箱码头</option>
+                                <option value="">货代与报关</option>
+                                <option value="">数学</option>
+                                <option value="">创库配送</option>
+                                <option value="">运输管理</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>选择单元：</td>
+                        <td class="text-left">
+                            <div class="btnlist">
+                                <template v-for="(item,index) in arr" v-if="selectArr[index] && arrSubmit">
+                                    <span :class="['btn','btn-round','btn-default','btn-primary']">{{item}}</span>
+                                </template>
+                            </div>
+                            <a data-toggle="modal" data-target="#mystery" href="#">选择单元</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>选择组题：</td>
+                        <td class="text-left biger-tab-jd" role="tablist">
+                            <button data-target=".t" data-toggle="tab" role="tab" aria-controls="t" class="btn btn-default btn-primary">手工组题</button>
+                            <button data-target=".random" data-toggle="tab" role="tab" aria-controls="random" class="btn btn-default ">随机组题</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="biger-tab-active">
+                <div role="tabpanel" hidden="hidden" class="t active"></div>
+                <div role="tabpanel" hidden="hidden" class="random">
+                    <div class="row">
+
+                        <template v-for="(item, index) in table">
+                            <!-- foldtl -->
+                            <div class="col-md-4">
+                                <div class="table-list">
+                                    <div @click="toggle(index)" :class="['table-list-main',{'foldtl':item.active}]">
+                                        <table class="table biger-table2">
+                                            <tbody>
+                                                <tr>
+                                                    <td>题型</td>
+                                                    <td>单选</td>
+                                                    <td>多选</td>
+                                                    <td>判断</td>
+                                                    <td>排序</td>
+                                                    <td>填空</td>
+                                                    <td>简答</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>题量</td>
+                                                    <td>{{item.radio.num || 0}}</td>
+                                                    <td>{{item.checkbox.num || 0}}</td>
+                                                    <td>{{item.judge.num || 0}}</td>
+                                                    <td>{{item.sort.num || 0}}</td>
+                                                    <td>{{item.pack.num || 0}}</td>
+                                                    <td>{{item.question.num || 0}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>分值</td>
+                                                    <td>{{item.radio.score || 0}}</td>
+                                                    <td>{{item.checkbox.score || 0}}</td>
+                                                    <td>{{item.judge.score || 0}}</td>
+                                                    <td>{{item.sort.score || 0}}</td>
+                                                    <td>{{item.pack.score || 0}}</td>
+                                                    <td>{{item.question.score || 0}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>难易度</td>
+                                                    <td>{{item.radio.range}}</td>
+                                                    <td>{{item.checkbox.range}}</td>
+                                                    <td>{{item.judge.range}}</td>
+                                                    <td>{{item.sort.range}}</td>
+                                                    <td>{{item.pack.range}}</td>
+                                                    <td>{{item.question.range}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-list-footer overflow_hidden">
+                                        <span class="pull-right">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                            <a @click="delopen(index)" data-toggle="modal" data-target=".myModal3" href="#">删除</a>
+                                        </span>
+                                        <span class="pull-right" style="margin-right:15px;">
+                                            <span class="glyphicon glyphicon-edit"></span>
+                                            <a class="edit" @click="edit(index)" data-toggle="modal" data-target="#mygood"
+                                                href="#mygood">修改</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+
+                        <div class="col-md-4">
+                            <div class="table-list text-center" style="height: 215.909px;padding-top: 25px;">
+                                <a class="add" data-toggle="modal" data-target="#mygood" href="#" style="color:#ccc;">
+                                    <div style="font-size: 60px;">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    </div>
+                                    <div class="h3">添加模板</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 20px;">
+                <a href="taskCenterSelect2.html"><button class="btn btn-primary">保存，下一步</button></a> 
+                <a href="javascript:history.back();"><button class="btn btn-default" style="width:110px;">取消</button></a>
+            </div>
+        </div>
+        <!-- 选择单元窗口 -->
+        <div class="update_modal">
+            <div class="modal fade" id="mystery" tabindex="-1" role="dialog" aria-labelledby="mystery">
+                <div class="analog">
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>选择单元（可多选）</b>
+                    </div>
+                    <div class="analog-three-in" id="toggle">
+                            <!-- btn-primary -->
+                        <template v-for="(item,index) in arr">
+                            <span @click="arrToggle(index,item)" :class="['btn','btn-round','btn-default',{'btn-primary':selectArr[index]}]">{{item}}</span>
+                        </template>
+
+                        <span @click="arrToggleAll" :class="['btn' ,'btn-round', 'btn-default', 'select-all',{'btn-primary': selectAll }]">全选</span>
+
+
+                        <div class="text-center">
+                            <button @click="arrSubmit = true" type="button" class="submit" data-dismiss="modal">确认</button>
+                            <button type="button" data-dismiss="modal">取消</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 弹框 -->
+
+        <div class="update_modal">
+            <div class="modal fade" id="mygood" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="mygood">
+                <div class="analog-three">
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>新增/编辑</b>
+                    </div>
+                    <div class="analog-three-in" style="width:500px;">
+
+                        <div class="tab-content">
+
+                            <form>
+                                <table class="table table-bordered text-center biger-table-input-543">
+                                    <tbody>
+                                        <tr>
+                                            <td>题型</td>
+                                            <td>题量</td>
+                                            <td>每题分值</td>
+                                            <td>难易度</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <span>单选</span>
+                                                </label>
+                                            </td>
+                                            <td><input type="number" v-model="mylist.radio.num" name="radio.num" class="form-control"></td>
+                                            <td><input type="number" v-model="mylist.radio.score" class="form-control"></td>
+                                            <td>
+                                                <input type="range" class="range_speed" way-writeonly="true" max="1.0"
+                                                    step="0.1" min="0.1" v-model="mylist.radio.range" value="0.1"
+                                                    oninput="changeSpeed2(this)" />
+                                                <span class="range_value">0.1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <span>多选</span>
+                                                </label>
+                                            </td>
+                                            <td><input type="number" v-model="mylist.checkbox.num" class="form-control"></td>
+                                            <td><input type="number" v-model="mylist.checkbox.score" class="form-control"></td>
+                                            <td>
+                                                <input type="range" name="range" class="range_speed" max="1.0" step="0.1"
+                                                    v-model="mylist.checkbox.range" min="0.1" value="0.1" oninput="changeSpeed2(this)" />
+                                                <span class="range_value">0.1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <span>判断</span>
+                                                </label>
+                                            </td>
+                                            <td><input type="number" v-model="mylist.judge.num" class="form-control"></td>
+                                            <td><input type="number" v-model="mylist.judge.score" class="form-control"></td>
+                                            <td>
+                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.judge.range"
+                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
+                                                <span class="range_value">0.1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <span>排序</span>
+                                                </label>
+                                            </td>
+                                            <td><input type="number" v-model="mylist.sort.num" class="form-control"></td>
+                                            <td><input type="number" v-model="mylist.sort.score" class="form-control"></td>
+                                            <td>
+                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.sort.range"
+                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
+                                                <span class="range_value">0.1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <span>填空</span>
+                                                </label>
+                                            </td>
+                                            <td><input type="number" v-model="mylist.pack.num" class="form-control"></td>
+                                            <td><input type="number" v-model="mylist.pack.score" class="form-control"></td>
+                                            <td>
+                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.pack.range"
+                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
+                                                <span class="range_value">0.1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <span>简答</span>
+                                                </label>
+                                            </td>
+                                            <td><input type="number" v-model="mylist.question.num" class="form-control"></td>
+                                            <td><input type="number" v-model="mylist.question.score" class="form-control"></td>
+                                            <td>
+                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.question.range"
+                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
+                                                <span class="range_value">0.1</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="text-center">
+                                    <button @click="update(mylist)" data-dismiss="modal" type="button">确认</button>
+                                    <button data-dismiss="modal" type="button">取消</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 删除弹窗 -->
+    <div class="qq">
+        <div class="modal fade myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3">
+            <div class="analog" style="width:400px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>删除模板</b>
+                </div>
+                <div class="analog-three " style="width:100%;height: 110px;">
+                    <p class="text-center p">是否确认删除该模板？</p>
+                    <div class="text-center">
+                        <button style="color:white" @click="del" class="submit" type="button" data-dismiss="modal">确认</button>
+                        <button style="color:white" type="button" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+    requirejs.config({
+    paths : {
+        "jquery" : "/js/jquery.min",
+        "bootstrap": "/js/bootstrap.min",
+        "cxCalendar": "/js/jquery.cxcalendar.min",
+        "myPagination":"/js/myPagination"
+    },
+    shim: {
+        jquery: {
+            exports: 'jquery'
+        },
+        bootstrap: {
+            deps: ['jquery']
+        },
+        myPagination:{
+            deps: ['jquery']
+        }
+
+    }
+})
+// base
+require(["jquery","bootstrap","myPagination"],function($){
+
+    $(function($){
+        if($('#pagination').length != 0){
+            new myPagination({
+                id: 'pagination',
+                curPage:1, //初始页码
+                pageTotal: 50, //总页数
+                pageAmount: 10,  //每页多少条
+                dataTotal: 500, //总共多少条数据
+                pageSize: 5, //可选,分页个数
+                showPageTotalFlag:true, //是否显示数据统计
+                showSkipInputFlag:true, //是否支持跳转
+                getPage: function (page) {
+                    //获取当前页数
+                    console.log(page);
+                }
+            })
+        }
+
+    })
+
+ 
+})
+    require(['jquery','/js/range.js','/js/vue.min.js'],function($,r,Vue){
+      
+      // 滑动条事件
+      $('input.range_speed').trigger('input')
+
+
+            // 初始化
+
+      var oldobj = {
+          active:false,
+          radio:{range:0.1},
+          checkbox:{range:0.1},
+          judge:{range:0.1},
+          sort:{range:0.1},
+          pack:{range:0.1},
+          question:{range:0.1}
+        }
+
+      var data = {
+        mylist: JSON.parse(JSON.stringify(oldobj)),
+        updateState:"",
+        delobjIndex:null,
+        table:[
+          {
+            active:true,
+            radio:{
+              num:"2",
+              score:"1",
+              range:0.1
+            },
+            checkbox:{
+              num:"0",
+              score:"1",
+              range:0.1
+            },
+            judge:{
+              num:"0",
+              score:"1",
+              range:0.1
+            },
+            sort:{
+              num:"0",
+              score:"1",
+              range:0.1
+            },
+            pack:{
+              num:"0",
+              score:"1",
+              range:0.1
+            },
+            question:{
+              num:"0",
+              score:"1",
+              range:0.1
+            }
+          }
+        ],
+        // 单元提交
+        arr:[
+          "一.建筑装饰构造概述",
+          "二.建筑装饰造设计适用范围",
+          "三.楼地面装饰构造"
+        ],
+        selectArr:[],
+        selectAll:false,
+        arrSubmit:false
+      }
+      
+      var vm =  new Vue({
+        el:'.app',
+        data: data,
+        methods:{
+          edit:function (index) {
+            this.updateState = index
+            this.mylist = JSON.parse(JSON.stringify(this.table[index]))
+            this.$nextTick(function(){
+              $('input.range_speed').trigger('input')
+            })
+          },
+          del:function(){
+            this.table.splice(this.delobjIndex,1)
+          },
+          update:function(obj){
+            
+            if(this.updateState!==""){
+              vm.$set(vm.table, this.updateState, obj)
+            }else{
+              this.table.push(obj)
+            }
+
+            this.updateState = ""
+
+            this.mylist = JSON.parse(JSON.stringify(oldobj))
+
+            this.$nextTick(function(){
+              $('input.range_speed').trigger('input')
+            })
+
+          },
+          toggle:function(index){
+            this.table.forEach(function(item){
+              item.active = false
+            })
+            this.table[index].active = true
+          },
+          delopen:function(index){
+            this.delobjIndex = index
+          },
+          arrToggle:function(index,item){
+            var len = this.arr.length
+
+            this.selectArr[index] ? vm.$set(vm.selectArr, index, false) : vm.$set(vm.selectArr, index, true);
+            
+          },
+          arrToggleAll:function(){
+
+            if(!this.selectAll){
+              this.selectArr = this.arr.map(function(){return true})
+              this.selectAll = true
+            }else{
+              this.selectArr = []
+              this.selectAll = false
+            }
+          }
+        }
+      })  
+
+    })
+  </script>
+</body>
+</html>

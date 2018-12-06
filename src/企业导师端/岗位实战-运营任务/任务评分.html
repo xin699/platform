@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>任务评分</title>
+</head>
+
+<body class="nav-md texu">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+            @@include('include/layout/header.html',{ "index":{ "title":"张志峰 老师" }, "menu":[
+            {"title":"简历中心","link":"#"}, {"title":"我的企业任务","link":"#"} ] })
+        </div>
+        <!-- content -->
+    </div>
+    <div class="central-one shadow">
+                                <div class="input-one">
+                                        <input type="text" placeholder="输入任务名称">
+                                        <button>搜索</button>
+                                        <button class="right">发布任务</button>
+                                </div>
+                    <div class="interactive">
+                              <b>任务1任务</b><br>
+                                    电商团队1、电商团队2、电商团队3、电商团队4、电商团队5<br>
+                                    wish电商岗位实战课程 &nbsp;&nbsp;|&nbsp;&nbsp; wish运营 &nbsp;&nbsp;|&nbsp;&nbsp;  店铺运营<br>
+                                    开始时间：2018:06:13  00:00:00 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                    结束时间：2018:06:13 00:00:00        
+                              <div class="interactive-one">                                          
+                                    <span><a href=""><img src="/images/t5.png" alt=""></a></span><br>已交
+                              </div>    
+                    </div>
+                 <div class="interactive">
+                              <b>任务1任务</b><br>
+                                    电商团队1、电商团队2、电商团队3、电商团队4、电商团队5<br>
+                                    wish电商岗位实战课程 &nbsp;&nbsp;|&nbsp;&nbsp; wish运营 &nbsp;&nbsp;|&nbsp;&nbsp;  店铺运营<br>
+                                    开始时间：2018:06:13  00:00:00 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                    结束时间：2018:06:13 00:00:00        
+                              <div class="interactive-one">                                          
+                                    <span><a href=""><img src="/images/t5.png" alt=""></a></span><br>已交
+                              </div>    
+                </div>
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+
+</html>

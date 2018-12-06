@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    @@include('include/layout/meta.html')
+    <!-- build:css /css/all.css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontello.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!-- endbuild -->
+
+    <title>企业管理</title>
+</head>
+
+<body class="nav-md xs">
+    <div class="main_container">
+        <!-- header -->
+        <div class="top_nav clearfix">
+            @@include('include/layout/header.html',{"index":{"title":"张志峰 老师"},"menu":[{"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"} ] })
+        </div>
+        <!-- content -->
+
+    </div>
+    <div class="central shadow">
+        <div class="input-one">
+                任务搜索：<input type="text" placeholder="输入任务名称或任务编号" style="width:230px;">
+                 状态：<select name="city">
+                                <option value="">全部</option>
+                                <option value="">未审核</option>
+                                <option value="">已审核</option>
+                                <option value="">未通过</option>
+                        </select>
+                <button style="color:white"">搜索</button>
+        </div>
+                <table class="form-two">
+                        <th>序号</th>
+                        <th>任务编号</th>
+                        <th>任务名称</th>
+                        <th>企业导师</th>
+                        <th>联系方式</th>
+                        <th>领域</th>
+                        <th>发布日期</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                        <tr>
+                            <td>1</td>
+                            <td>20336855</td>
+                            <td>餐饮logo</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>网站建设</td>
+                            <td>2017-2-1</td>
+                            <td>未审核</td>
+                            <td>
+                                <a href="">处理</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>20336855</td>
+                            <td>游戏网站</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>营销策划</td>
+                            <td>2017-2-1</td>
+                            <td>未审核</td>
+                            <td>
+                                <a href="">处理</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>20336855</td>
+                            <td>游戏网站</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>营销策划</td>
+                            <td>2017-2-1</td>
+                            <td>未审核</td>
+                            <td>
+                                <a href="">处理</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>20336855</td>
+                            <td>游戏网站</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>营销策划</td>
+                            <td>2017-2-1</td>
+                            <td>未审核</td>
+                            <td>
+                                <a href="">处理</a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>5</td>
+                            <td>20336855</td>
+                            <td>游戏网站</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>设计</td>
+                            <td>2017-2-1</td>
+                            <td>未审核</td>
+                            <td>
+                                <a href="">处理</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>20336855</td>
+                            <td>游戏网站</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>设计</td>
+                            <td>2017-2-1</td>
+                            <td>已通过</td>
+                            <td>
+                                <a href="">处理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>20336855</td>
+                            <td>餐饮logo</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>设计</td>
+                            <td>2017-2-1</td>
+                            <td>已通过</td>
+                            <td>
+                                <a href="">处理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>20336855</td>
+                            <td>餐饮logo</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>网站建设</td>
+                            <td>2017-2-1</td>
+                            <td>已通过</td>
+                            <td>
+                                <a href="">处理</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="">删除</a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>9</td>
+                            <td>20336855</td>
+                            <td>餐饮logo</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>网站建设</td>
+                            <td>2017-2-1</td>
+                            <td>未审核</td>
+                            <td>
+                                <a href="">处理</a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>10</td>
+                            <td>20336855</td>
+                            <td>餐饮logo</td>
+                            <td>张先生</td>
+                            <td>13666666</td>
+                            <td>网站建设</td>
+                            <td>2017-2-1</td>
+                            <td>未审核</td>
+                            <td>
+                                <a href="">处理</a>
+                            </td>
+                        </tr>
+                </table>
+                
+                <div class="main ">
+            @@include('include/page/paging.html')
+        </div>
+
+    </div>
+    <script src="../../js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                "jquery": "../../js/jquery.min",
+                "bootstrap": "../../js/bootstrap.min"
+            }
+        })
+        // base
+        require(["jquery"], function ($) {
+            require(["bootstrap"])
+        })
+    </script>
+</body>
+</html>

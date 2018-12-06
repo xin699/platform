@@ -1,11 +1,17 @@
 <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-      <li role="presentation" class="active"><a href="@@index.link" role="tab" data-toggle="tab">@@index.title</a>
+      
+      <li role="presentation" class="@@if(typeof(index.active) === 'undefined'){active}"><a href="@@index.link">@@index.title</a>
       </li>
       @@for(var list of nav){
-        <li role="presentation" class=""><a href="` + list.link + `" role="tab"  data-toggle="tab">`+ list.title +`</a>
+        <li role="presentation" class="` + list.active + `" ><a href="` + list.link + `" >`+ list.title +`</a></li>
       }
-      </li>
+      @@if(typeof(back) != 'undefined'){
+        <a class="pull-right biger-button" href="@@back.link">@@back.title</a>
+      }
+      
+
+      
     </ul>
     <div id="myTabContent" class="tab-content">
       @@include('@@template')
