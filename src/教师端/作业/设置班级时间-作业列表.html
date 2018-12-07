@@ -1,16 +1,45 @@
-<div class="teaching wx">
-    <div class="teaching-in">
-        选择班级：<select name="city"> <span>
-                <option value="">选择班级</option>
-                <option value="">集装箱码头</option>
-                <option value="">货代与报关</option>
-                <option value="">数学</option>
-        </select> <a href="">+添加</a><br>
-        作答时间：<input type="time" value="11:00"/ style="width:115px"> --
-        <input type="time" value="13:00"/ style="width:115px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br>
-        <button style="color:white">保存，并返回列表</button>
-        <button style="color:white">发布作业</button>
-        <button style="color:white">返回上一步</button>
+<div class="teaching qq">
+      <!-- 导航 -->
+    <div class="bwizard clearfix text-center">
+        <ol class="bwizard-steps clearfix clickable">
+            <li style="width: 150px;">
+                <a href="#step1" class="hidden-phone">选择课程</a>
+            </li>
+            <li style="width: 150px;" >
+                <a href="#step2" class="hidden-phone">选择题目</a>
+            </li>
+            <li style="width: 150px;" class="active">
+                <a href="#step3" class="hidden-phone">设置班级</a>
+            </li>
+        </ol>
+    </div>
+
+    <table class="table biger-table2" style="margin: 50px 0px;">
+        <tbody>
+            <tr>
+                <td class="text-right">选择班级：</td>
+                <td class="text-left">
+                    <select class="form-control inl-bl" style="width:200px;" name="city">
+                        <option value="">选择班级</option>
+                        <option value="">集装箱码头</option>
+                        <option value="">货代与报关</option>
+                        <option value="">数学</option>
+                     </select>
+                     <a href="javascript:void(0);">添加</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">作答时间：</td>
+                <td class="text-left">
+                    <input id="linkage1" class="form-control inl-bl" type="text" value="" style="width:160px"> ——
+                    <input id="linkage2" class="form-control inl-bl" type="text" value="" style="width:160px">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-center">
+        <button class="btn btn-primary" style="width:150px;">保存，并返回列表</button>
+        <button class="btn btn-primary" style="width:120px;">发布作业</button>
+        <button class="btn btn-primary" style="width:120px;">返回上一步</button>
     </div>
 </div>

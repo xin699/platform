@@ -46,7 +46,9 @@
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    require(['jquery'],function($){
+    require(['jquery','/js/jquery.cxcalendar.languages.js','/js/linkage.js'],function($){
+
+    linkage('#linkage1','#linkage2');
 
     })
   </script>
