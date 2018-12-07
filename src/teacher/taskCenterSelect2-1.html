@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/hover-min.css">
 <link rel="stylesheet" href="css/common.css">
   <!-- endbuild -->
-  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
 
   <title>首页</title>
 </head>
@@ -30,7 +29,6 @@
     <!-- content -->
     <div class="main">
 
-
         @@include('include/layout/layout.html',{
           "index":{
             "title":"发布作业",
@@ -38,7 +36,7 @@
           },
           "nav":[
           ],
-          "template": "教师端/作业/选择题目-作业列表.html"
+          "template": "教师端/作业/题库选题-作业列表.html"
         })
 
     </div>
@@ -46,9 +44,132 @@
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    require(['jquery','/js/vue.min.js'],function($,Vue){
-        
-    })
+    require(['jquery','/js/range.js','myPagination'],function($,changeSpeed){
+
+         
+  if($('#pagination').length != 0){
+      new myPagination({
+          id: 'pagination2',
+          curPage:1, //初始页码
+          pageTotal: 50, //总页数
+          pageAmount: 10,  //每页多少条
+          dataTotal: 500, //总共多少条数据
+          pageSize: 5, //可选,分页个数
+          showPageTotalFlag:false, //是否显示数据统计
+          showSkipInputFlag:false, //是否支持跳转
+          getPage: function (page) {
+              //获取当前页数
+              console.log(page);
+          }
+      })
+  }
+
+  // Excel上传
+
+  $('#file').change(function(e){
+
+    var f = e.target.files[0];
+    var suffix = f.name.split('.')[1].toLowerCase();
+    var fileSize = f.size;
+
+    if (['xls','xlsx'].indexOf(suffix)=== -1) {
+      alert('当前不支持该类型！')
+      $(this).val('')
+        return false
+    }
+
+    if(fileSize > 104857600){
+      alert('当前不支持2M以上文件！')
+      $(this).val('')
+        return false
+    }
+
+  })
+
+  // 弹窗层解决
+  $('.mygood,.mygoodview,.myModal3')
+  .on('show.bs.modal',function(e){
+    $el = $(e.relatedTarget).parents('.mygoodview2')
+    if($el.length){
+      $(this).css('z-index',$el.css('z-index')+2)
+      $('.modal-backdrop').last().css('z-index',$el.css('z-index')+1)
+    }
+  })
+  .on('hide.bs.modal',function(e){
+    $('.modal-backdrop').attr('style','')
+  })
+
+
+  $('.mygood').on('show.bs.modal',function(e){
+
+    if($(e.relatedTarget).is('.editbtn')){
+      $(this).find('.edit').show().end().find('.add').hide()
+    }else{
+      $(this).find('.edit').hide().end().find('.add').show()
+    }
+  })
+
+  $('table').on('click','input[type=checkbox]:first',function(e){
+      var $self = this
+      $(e.delegateTarget).find('input[type=checkbox]').each(function(){this.checked = $self.checked})
+  })
+
+
+  // 滑动条事件
+  var value = parseFloat($('#range_speed').val());
+  var valStr = value*100 + "% 100%";
+  $('#value1').html(value.toFixed(1));
+  $('#range_speed').css({
+    "background-size": valStr
+  })
+
+  // 选择框
+
+  $('#subject').change(function(e){
+    $('.subject-tab').hide().eq(this.value - 1).show()
+  })
+
+  // 单选 删除
+  $('.subject-tab').on('click','.delOption',function(e){
+      var $parent = $(e.delegateTarget);
+      var list = function (str) { return $parent.find(str).children()};
+
+    if(list('.outOption').length>2){
+      list('.outOption').last().remove()
+      list('.selectOption').last().remove()
+      list('.selectOptionCheckbox').not('span').last().remove()
+    }
+
+  })
+
+  // 单选 添加
+  $('.subject-tab').on('click','.addOption',function(e){
+    var $parent = $(e.delegateTarget);
+    var list = function (str) { return $parent.find(str).children()};
+    var len = list('.outOption').length + 65
+
+
+    if(list('.outOption').length<7){
+      // 单选
+      var a = list('.outOption').eq(0).clone().children('span').html(" &#"+ len +";：").end()
+
+      list('.outOption').parent().append(a)
+
+      var b = list('.selectOption').eq(0).clone().attr('for','label' + list('.outOption').length)
+      .children('span').html(" &#"+ len +"; ").end().children('input').attr('id','label' + list('.outOption').length).end()
+
+      list('.selectOption').parent().append(b)
+      // 多选
+      var c = list('.selectOptionCheckbox').eq(0).clone()
+      .attr('for','checkbox' + list('.outOption').length)
+      .children('span').html(" &#"+ len +"; ").end()
+      .children('input').attr('id','checkbox' + list('.outOption').length).end()
+
+      list('.selectOptionCheckbox').not('span').last().after(c)
+    }
+      
+  })
+})
   </script>
 </body>
 </html>

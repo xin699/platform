@@ -1,164 +1,678 @@
-<!DOCTYPE html>
-<html lang="cn-zh">
-
-<head>
-    @@include('include/layout/meta.html')
-    <!-- build:css /css/all.css -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/fontello.css">
-    <link rel="stylesheet" href="/css/custom.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <!-- endbuild -->
-
-    <title>课堂练习草稿箱</title>
-</head>
-
-<body class="nav-md qq">
-    <div class="main_container">
-        <!-- header -->
-        <div class="top_nav clearfix">
-                    @@include('include/layout/header.html',{           "index":{             "title":"张志峰 老师"           },           "menu":[             {"title":"简历中心","link":"#"},             {"title":"我的企业任务","link":"#"}           ]         })
+<div class="qq">
+        <div class="teaching" style="width:100%;">
+            <!-- top -->
+            <div class="input-3" style="width:90%;">
+                <span>题干：</span><input type="text" placeholder="请输入题干等关键字">
+                难度：<select name="city">
+                    <option value="">全部</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+                <button style="color:white;">查询</button>
+                <button data-toggle="modal" data-target=".excel" style="color:white;margin-left:20px;">Excel导入</button>
+                <button data-toggle="modal" data-target=".mygoodview2" style="color:white">学校库导入</button>
+                <button data-toggle="modal" data-target=".mygood" style="color:white">手动添加</button>
+            </div>
+            <!-- tab -->
+            <div class="wx" style="width:90%;margin:5px auto;" >
+                <ul class="nav nav-pills">
+                    <li role="presentation" data-toggle="tab" class="active"><a href="#">单选</a></li>
+                    <li role="presentation" data-toggle="tab"><a href="#">多选</a></li>
+                    <li role="presentation" data-toggle="tab"><a href="#">判断</a></li>
+                    <li role="presentation" data-toggle="tab"><a href="#">填空</a></li>
+                    <li role="presentation" data-toggle="tab"><a href="#">简答</a></li>
+                    <li role="presentation" data-toggle="tab"><a href="#">排序</a></li>
+                </ul>
+            </div>
+            <!-- main -->
+            <table class="table table-border table-hover" >
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>序号</th>
+                    <th>题干</th>
+                    <th>难易度</th>
+                    <th>来源</th>
+                    <th>上传时间</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>仓储管理系统中存货管理模块不包括以下哪项（ ）.</td>
+                    <td>2</td>
+                    <td>学校库导入</td>
+                    <td>2018-08-04</td>
+                    <td>
+                        <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                        <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                        <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                    </td>
+                </tr>
+                 <tr>
+                    <td><input type="checkbox"></td>
+                    <td>2</td>
+                    <td>人员安全管理的评价指标包括（）。</td>
+                    <td>2</td>
+                    <td>个人库</td>
+                    <td>2018-08-04</td>
+                    <td>
+                        <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                        <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                        <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                    </td>
+                </tr>
+                 <tr>
+                    <td><input type="checkbox"></td>
+                    <td>3</td>
+                    <td>人员安全管理的评价指标包括（）。</td>
+                    <td>2</td>
+                    <td>手动添加</td>
+                    <td>2018-08-04</td>
+                    <td>
+                        <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                        <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                        <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                    </td>
+                </tr>
+                 <tr>
+                    <td><input type="checkbox"></td>
+                    <td>4</td>
+                    <td>人员安全管理的评价指标包括（）。</td>
+                    <td>2</td>
+                    <td>手动添加</td>
+                    <td>2018-08-04</td>
+                    <td>
+                        <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                        <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                        <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                    </td>
+                </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>5</td>
+                    <td>人员安全管理的评价指标包括（）。</td>
+                    <td>2</td>
+                    <td>手动添加</td>
+                    <td>2018-08-04</td>
+                    <td>
+                        <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                        <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                        <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                    </td>
+                </tr>
+                 <tr>
+                    <td><input type="checkbox"></td>
+                    <td>6</td>
+                    <td>人员安全管理的评价指标包括（）。</td>
+                    <td>2</td>
+                    <td>手动添加</td>
+                    <td>2018-08-04</td>
+                    <td>
+                        <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                        <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                        <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                    </td>
+                </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>7</td>
+                    <td>人员安全管理的评价指标包括（）。</td>
+                    <td>2</td>
+                    <td>手动添加</td>
+                    <td>2018-08-04</td>
+                    <td>
+                        <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                        <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                        <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                    </td>
+                </tr>
+               
+            </table>
+            <!-- page -->
+            <div>
+                @@include('include/page/paging.html')
+            </div>
         </div>
-        <!-- content -->
+        <div class="text-center">
+            <a href="javascript:history.back();" type="button" class="btn btn-primary" style="width:120px;" >提交</a>
+        </div>
+    
+        <!-- 删除弹窗 -->
+        <div class="modal fade myModal3" tabindex="-1" role="dialog" style="z-index:1500;" aria-labelledby="myModal3">
+            <div class="analog" style="width:400px;" >
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>删除题目</b>
+                    </div>
+                    <div class="analog-three " style="width:100%;height: 110px;" >
+                        <p class="text-center p">是否确认删除该题目？</p>
+                        <div class="text-center">
+                            <button style="color:white" class="submit" type="button"  data-dismiss="modal" >确认</button>
+                            <button style="color:white" type="button"  data-dismiss="modal" >取消</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    
+    </div> 
+    
+    <div class="wx">
+            <!-- 学校库导入 -->
+            <div class="update_modal">
+                    <div class="modal fade mygoodview2" tabindex="-1" role="dialog" aria-labelledby="mygoodview2">
+                        <div class="analog-three" style="width:1000px;">
+                            <div class="analog-one">
+                                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                                <b>学校库导入</b>
+                            </div>
+                            <div class="analog-three-in" style="width:80%;">
+                                <!-- select -->
+                                <div class="text-left">
+                                        <span>选择课程/单元：</span>
+                                        <select style="width:150px;" name="city" value="1"  >
+                                            <option value="1" >课程1</option>
+                                            <option value="2">课程2</option>
+                                            <option value="3">课程3</option>
+                                        </select> 
+                                        <select style="width:150px;" name="city" value="1"  >
+                                            <option value="1" >第一单元</option>
+                                            <option value="2">第二单元</option>
+                                            <option value="3">第三单元</option>
+                                        </select>
+                                        <a style="width:80px;" href="javascript:void(0);" class="btn btn-primary">查询</a> 
+                                </div>
+    
+                                <!-- tab -->
+                                <div class="wx" style="margin:5px auto;" >
+                                    <ul class="nav nav-pills">
+                                        <li role="presentation" data-toggle="tab" class="active"><a href="#">单选</a></li>
+                                        <li role="presentation" data-toggle="tab"><a href="#">多选</a></li>
+                                        <li role="presentation" data-toggle="tab"><a href="#">判断</a></li>
+                                        <li role="presentation" data-toggle="tab"><a href="#">填空</a></li>
+                                        <li role="presentation" data-toggle="tab"><a href="#">简答</a></li>
+                                        <li role="presentation" data-toggle="tab"><a href="#">排序</a></li>
+                                    </ul>
+                                </div>
+                                <!-- main -->
+                                <table class="table table-bordered table-hover text-center" >
+                                    <tr>
+                                        <td><input class="checkbox" type="checkbox"></td>
+                                        <td>序号</td>
+                                        <td>题干</td>
+                                        <td>难易度</td>
+                                        <td>来源</td>
+                                        <td>上传时间</td>
+                                        <td>操作</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="checkbox" type="checkbox"></td>
+                                        <td>1</td>
+                                        <td>仓储管理系统中存货管理模块不包括以下哪项（ ）.</td>
+                                        <td>2</td>
+                                        <td>学校库导入</td>
+                                        <td>2018-08-04</td>
+                                        <td>
+                                            <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                                            <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                                            <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="checkbox" type="checkbox"></td>
+                                        <td>2</td>
+                                        <td>人员安全管理的评价指标包括（）。</td>
+                                        <td>2</td>
+                                        <td>个人库</td>
+                                        <td>2018-08-04</td>
+                                        <td>
+                                            <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                                            <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                                            <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="checkbox" type="checkbox"></td>
+                                        <td>3</td>
+                                        <td>人员安全管理的评价指标包括（）。</td>
+                                        <td>2</td>
+                                        <td>手动添加</td>
+                                        <td>2018-08-04</td>
+                                        <td>
+                                            <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                                            <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                                            <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="checkbox" type="checkbox"></td>
+                                        <td>4</td>
+                                        <td>人员安全管理的评价指标包括（）。</td>
+                                        <td>2</td>
+                                        <td>手动添加</td>
+                                        <td>2018-08-04</td>
+                                        <td>
+                                            <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                                            <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                                            <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="checkbox" type="checkbox"></td>
+                                        <td>5</td>
+                                        <td>人员安全管理的评价指标包括（）。</td>
+                                        <td>2</td>
+                                        <td>手动添加</td>
+                                        <td>2018-08-04</td>
+                                        <td>
+                                            <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                                            <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                                            <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="checkbox" type="checkbox"></td>
+                                        <td>6</td>
+                                        <td>人员安全管理的评价指标包括（）。</td>
+                                        <td>2</td>
+                                        <td>手动添加</td>
+                                        <td>2018-08-04</td>
+                                        <td>
+                                            <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                                            <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                                            <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="checkbox" type="checkbox"></td>
+                                        <td>7</td>
+                                        <td>人员安全管理的评价指标包括（）。</td>
+                                        <td>2</td>
+                                        <td>手动添加</td>
+                                        <td>2018-08-04</td>
+                                        <td>
+                                            <a class="editbtn" data-toggle="modal" data-target=".mygood" href="#">编辑</a>
+                                            <a data-toggle="modal" data-target=".mygoodview" href="#">查看</a>
+                                            <a data-toggle="modal" data-target=".myModal3" href="#">删除</a>    
+                                        </td>
+                                    </tr>
+                                
+                                </table>
+                                
+                                <div>
+                                    <div id="pagination2" class="pagination2"></div>
+                                </div>
+                                <div class="text-center">
+                                    <button style="margin-left:0" data-dismiss="modal" type="button" >提交保存</button>
+                                    <button  data-dismiss="modal" type="button" >关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!-- 手动添加 -->
+            <div class="update_modal">
+                <div class="modal fade mygood" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="mygood">
+                    <div class="analog-three">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>手动添加</b>
+                        </div>
+                        <div class="analog-three-in" style="width:500px;">
+                           
+                            <div class="tab-content">
+                                <!-- tab2 -->
+                                <div role="tabpanel" class="tab-pane active" id="profile">
+                                    <div>
+                                            所属题型：<select name="city" value="1" id="subject" >
+                                                    <option value="1" >单选</option>
+                                                    <option value="2">多选</option>
+                                                    <option value="3">判断</option>
+                                                    <option value="4">填空</option>
+                                                    <option value="5">简答</option>
+                                                    <option value="6">排序</option>
+                                                </select> 
+                                    </div>
+                                <!-- subject-tab1 -->
+                                <div class="subject-tab">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>输入题干：</td>
+                                                <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>输入选项：</td>
+                                                <td class="outOption">
+                                                    <div><span> A：</span><input type="text"></div>
+                                                    <div><span> B：</span><input type="text"></div>
+                                                    <div><span> C：</span><input type="text"></div>
+                                                    <div><span> D：</span><input type="text"></div>    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                                <td>
+                                                    <span><a class="delOption" href="#">-删除选项</a></span>
+                                                    <span><a class="addOption" href="#">+添加选项</a></span>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>选择答案：</td>
+                                                <td class="selectOption">
+                                                    <label for="label1">
+                                                        <input type="radio" id="radio1" value="A" name="radio" class="radio">
+                                                        <span>A</span>
+                                                    </label>
+                                                    <label for="label2">
+                                                        <input type="radio" id="radio2" value="B" name="radio" class="radio">
+                                                        <span>B</span>
+                                                    </label>
+                                                    <label for="label3">
+                                                        <input type="radio" id="radio3" value="C" name="radio" class="radio">
+                                                        <span>C</span>
+                                                    </label>
+                                                    <label for="label4">
+                                                        <input type="radio" id="radio4" value="D" name="radio" class="radio">
+                                                        <span>D</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>      
+                                </div>
+                                <!-- subject-tab2 -->
+                                <div class="subject-tab" style="display:none;">
+                                    <table>
+                                        <tbody>
+                            
+                                            <tr>
+                                                <td>输入题干：</td>
+                                                <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>输入选项：</td>
+                                                <td class="outOption">
+                                                    <div><span> A：</span><input type="text"></div>
+                                                    <div><span> B：</span><input type="text"></div>
+                                                    <div><span> C：</span><input type="text"></div>
+                                                    <div><span> D：</span><input type="text"></div>    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                                <td>
+                                                    <span><a class="delOption" href="#">-删除选项</a></span>
+                                                    <span><a class="addOption" href="#">+添加选项</a></span>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>选择答案：</td>
+                                                <td class="selectOptionCheckbox">
+                                                    <label for="checkbox1">
+                                                        <input type="checkbox" id="checkbox1" value="A" name="checkbox" class="radio">
+                                                        <span>A</span>
+                                                    </label>
+                                                    <label for="checkbox2">
+                                                        <input type="checkbox" id="checkbox2" value="B" name="checkbox" class="radio">
+                                                        <span>B</span>
+                                                    </label>
+                                                    <label for="checkbox3">
+                                                        <input type="checkbox" id="checkbox3" value="C" name="checkbox" class="radio">
+                                                        <span>C</span>
+                                                    </label>
+                                                    <label for="checkbox4">
+                                                        <input type="checkbox" id="checkbox4" value="D" name="checkbox" class="radio">
+                                                        <span>D</span>
+                                                    </label>
+                                                    <span style="margin-left: 2rem">可多选答案</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+        
+                                </div>
+                                <!-- subject-tab3 -->  
+                                <div class="subject-tab" style="display:none;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>输入题干：</td>
+                                                <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>选择答案：</td>
+                                                <td>
+                                                    <label for="radioIs"><input type="radio" id="radioIs" value="A" name="radio" class="radio">是</label>
+                                                    <label for="radioNo"><input type="radio" id="radioNo" value="B" name="radio" class="radio">否</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </div>
+                                <!-- subject-tab4 -->  
+                                <div class="subject-tab" style="display:none;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>输入题干：</td>
+                                                <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>输入选项：</td>
+                                                <td>
+                                                    <div>1. <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"></div>
+                                                    <div>2. <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"></div>
+                                                    <div>3. <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"> 或 <input class="w100" type="text"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>  
+                                </div>
+                                <!-- subject-tab5 -->  
+                                <div class="subject-tab" style="display:none;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>输入题干：</td>
+                                                <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </div>
+                                <!-- subject-tab6 -->  
+                                <div class="subject-tab" style="display:none;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>输入题干：</td>
+                                                <td><textarea style="resize:none;width:350px;"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>输入选项：</td>
+                                                <td class="outOption">
+                                                    <div><span> A：</span><input type="text"></div>
+                                                    <div><span> B：</span><input type="text"></div>
+                                                    <div><span> C：</span><input type="text"></div>
+                                                    <div><span> D：</span><input type="text"></div>    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                                <td>
+                                                    <span><a class="delOption" href="#">-删除选项</a></span>
+                                                    <span><a class="addOption" href="#">+添加选项</a></span>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>标准答案：</td>
+                                                <td>
+                                                    <input type="text" style="width: 300px;"> <span>参考格式：BCDA</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>   
+                                </div>
+        
+                                <table>
+                                    <tbody>
+                                            <tr>
+                                                <td width="100px">解题思路：</td>
+                                                <td>
+                                                    <div style="margin-top:20px;">
+                                                        <textarea style="resize:none;width:350px;"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>题目难度：</td>
+                                                <td>
+                                                    <input type="range" name="range_speed" id="range_speed" max="1.0" step="0.1"  min="0.1" value="0.1" oninput="changeSpeed()" />
+                                                    <span id="value1">0.1</span>
+                                                    (数值越大难度越高)
+                                                </td>
+                                            </tr>
+                                            <tr class="edit" hidden="hidden">
+                                                <td>选择单元：</td>
+                                                <td>
+                                                    <select name="city" value="1"  >
+                                                        <option value="1" >第一单元</option>
+                                                        <option value="2">第二单元</option>
+                                                        <option value="3">第三单元</option>
+                                                    </select> 
+                                                </td>
+                                            </tr>
+                                            <tr class="add">
+                                                <td>选择课程/单元：</td>
+                                                <td>
+                                                    <select style="width:150px;" name="city" value="1"  >
+                                                        <option value="1" >课程1</option>
+                                                        <option value="2">课程2</option>
+                                                        <option value="3">课程3</option>
+                                                    </select> 
+                                                    <select style="width:150px;" name="city" value="1"  >
+                                                        <option value="1" >第一单元</option>
+                                                        <option value="2">第二单元</option>
+                                                        <option value="3">第三单元</option>
+                                                    </select> 
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+        
+                                <div class="text-center">
+                                    <button class="add" style="margin: 0" type="button">保存，继续添加</button>
+                                    <button style="margin: 0" type="button">保存</button>
+                                    <button style="margin: 0" type="button">取消</button>
+                                </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 预览窗口 -->
+            <div class="update_modal">
+                <div class="modal fade mygoodview" tabindex="-1" role="dialog" aria-labelledby="mygoodview">
+                    <div class="analog-three" style="width:1000px;">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>项目1 市场营销.jpg</b>
+                        </div>
+                        <div class="analog-three-in" style="width:80%;">
+                            <div class="text-left" >
+                                <div class="h4"> 1、仓储管理系统中存货管理模块不包括以下哪项（    ）。（5分）</div>
+                                <!-- 单选 -->
+                               <div style="margin-left:20px;line-height:30px;">
+                                    <p>A回单清查</p>
+                                    <p>B.盘点表</p>
+                                    <p>C.库存调整</p>
+                                    <p>D.综合考核</p>
+                               </div>
+        
+                               <!-- 判断 -->
+        
+                               <!-- <div style="margin-left:20px;line-height:30px;">
+                                    <p>是</p>
+                                    <p>否</p>
+                               </div> -->
+                               
+                            </div>
+                            <div style="padding:5px;border:1px dashed #ccc;background: #f9f9f9;">
+                                <table style="vertical-align: top;" >
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:75px;">正确答案：</td>
+                                            <td>是</td>
+                                        </tr>
+                                        <tr>
+                                            <td>解题思路：</td>
+                                            <td class="line-height: normal;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsum modi, quasi aut vitae officia debitis optio blanditiis eum aperiam! Distinctio accusantium minima sint facere dignissimos fugiat inventore recusandae minus.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>难易度：</td>
+                                            <td>0.5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+        
+                            <div class="text-center">
+                                <button style="margin-left:0" data-dismiss="modal" type="button" >关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- excel -->
+            <div class="update_modal">
+                <div class="modal fade excel" tabindex="-1" role="dialog" aria-labelledby="excel">
+                    <div class="analog-three" style="width:600px;">
+                        <div class="analog-one">
+                            <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                            <b>Excel导入</b>
+                        </div>
+                        <div class="analog-three-in" style="width:80%;">
+                            <div class="text-">
+                                <a style="text-decoration:underline;color:#3300ff;" href="#">下载模板</a>
+                                <span class="red">【请先下载模板并按照模板规范导入数据】</span>
+                            </div>
+    
+                            <div class="text-left">
+                                <input type="file" name="file" id="file">
+                            </div>
+    
+                            <div class="text-left" style="margin-top:20px;">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>选择课程/单元：</td>
+                                            <td>
+                                                <select style="width:150px;" name="city" value="1"  >
+                                                    <option value="1" >课程1</option>
+                                                    <option value="2">课程2</option>
+                                                    <option value="3">课程3</option>
+                                                </select> 
+                                                <select style="width:150px;" name="city" value="1"  >
+                                                    <option value="1" >第一单元</option>
+                                                    <option value="2">第二单元</option>
+                                                    <option value="3">第三单元</option>
+                                                </select> 
+                                            </td> 
+                                        </tr>
+                                    </tbody>
+                                </table>
+     
+                            </div>
+        
+                            <div class="text-center" style="margin-top:20px;">
+                                <button style="margin-left:0" data-dismiss="modal" type="button" >确认</button>
+                                <button  data-dismiss="modal" type="button" >取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
     </div>
-    <div class="central-1 shadow">
-        <div class="input-1">
-            <span style="margin-left:20px;">题干：</span><input type="text" placeholder="请输入题干等关键字">
-            难度：<select name="city">
-                <option value="">全部</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-            </select>
-            <button style="color:white;">查询</button>
-            <button style="color:white;margin-left:20px;">Excel导入</button>
-            <button style="color:white;margin-left:20px;">学校库导入</button>
-            <button style="color:white;margin-left:20px;">手动添加</button>
-        </div>
-        <div class="main ">
-            @@include('include/page/nav-2.html')
-        </div>
-        <table>
-                <th><input type="checkbox"></th>
-                <th>序号</th>
-                <th>题干</th>
-                <th>难易度</th>
-                <th>来源</th>
-                <th>上传时间</th>
-                <th>操作</th>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>1</td>
-                <td>仓储管理系统中存货管理模块不包括以下哪项（ ）.</td>
-                <td>2</td>
-                <td>学校库导入</td>
-                <td>2018-08-04</td>
-                <td>
-                    <a href="">编辑</a>
-                    <a href="">查看</a>
-                    <a href="">删除</a>    
-                </td>
-            </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-                <td>2</td>
-                <td>人员安全管理的评价指标包括（）。</td>
-                <td>2</td>
-                <td>学校库导入</td>
-                <td>2018-08-04</td>
-                <td>
-                    <a href="">编辑</a>
-                    <a href="">查看</a>
-                    <a href="">删除</a>    
-                </td>
-            </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-                <td>3</td>
-                <td>人员安全管理的评价指标包括（）。</td>
-                <td>2</td>
-                <td>学校库导入</td>
-                <td>2018-08-04</td>
-                <td>
-                    <a href="">编辑</a>
-                    <a href="">查看</a>
-                    <a href="">删除</a>    
-                </td>
-            </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-                <td>4</td>
-                <td>人员安全管理的评价指标包括（）。</td>
-                <td>2</td>
-                <td>学校库导入</td>
-                <td>2018-08-04</td>
-                <td>
-                    <a href="">编辑</a>
-                    <a href="">查看</a>
-                    <a href="">删除</a>    
-                </td>
-            </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>5</td>
-                <td>人员安全管理的评价指标包括（）。</td>
-                <td>2</td>
-                <td>学校库导入</td>
-                <td>2018-08-04</td>
-                <td>
-                    <a href="">编辑</a>
-                    <a href="">查看</a>
-                    <a href="">删除</a>    
-                </td>
-            </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-                <td>6</td>
-                <td>人员安全管理的评价指标包括（）。</td>
-                <td>2</td>
-                <td>学校库导入</td>
-                <td>2018-08-04</td>
-                <td>
-                    <a href="">编辑</a>
-                    <a href="">查看</a>
-                    <a href="">删除</a>    
-                </td>
-            </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>7</td>
-                <td>人员安全管理的评价指标包括（）。</td>
-                <td>2</td>
-                <td>学校库导入</td>
-                <td>2018-08-04</td>
-                <td>
-                    <a href="">编辑</a>
-                    <a href="">查看</a>
-                    <a href="">删除</a>    
-                </td>
-            </tr>
-           
-        </table>
-        <div class="main ">
-            @@include('include/page/paging.html')
-        </div>
-        <div class="input-3">
-            <button style="color:white;margin-left:30px;">提交</button> 
-        </div>
-    </div>
-    <script src="../../js/require.js"></script>
-    <script>
-        requirejs.config({
-            paths: {
-                "jquery": "../../js/jquery.min",
-                "bootstrap": "../../js/bootstrap.min"
-            }
-        })
-        // base
-        require(["jquery"], function ($) {
-            require(["bootstrap"])
-        })
-    </script>
-</body>
-
-</html>
