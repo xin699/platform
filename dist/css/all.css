@@ -11781,6 +11781,132 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
   .bwizard-steps li:after, .bwizard-steps li:before {
     border: 0; } }
 
+/* --------------------- auther: xin ------------------------------------ */
+.play_hiede {
+  padding: 20px 0;
+  line-height: 1.2;
+  color: #ff0000;
+  width: 20px;
+  margin-left: 6px;
+  margin-top: 135px;
+  font-size: 15px; }
+
+.play_hide_logo {
+  width: 16px;
+  margin-bottom: 6px; }
+
+.sk .xin_btn {
+  background: white;
+  border-radius: 0 10px 10px 0;
+  border-left: 1px solid #ccc; }
+
+.sk .xin_btn button {
+  width: 100%;
+  border-radius: 0; }
+
+.play_four .talk_recordbox {
+  min-height: 80px;
+  color: #afafaf;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 0; }
+
+.play_four .talk_recordbox .user {
+  float: left;
+  display: inline;
+  height: 45px;
+  width: 45px;
+  margin-top: 0;
+  margin-right: 5px;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center; }
+
+.play_four .talk_recordbox .talk_recordtextbg {
+  float: left;
+  width: 10px;
+  height: 30px;
+  display: block;
+  background-image: url(../images/talk_recordtext.png);
+  background-repeat: no-repeat;
+  background-position: left top; }
+
+.play_four .talk_recordbox .talk_recordtext {
+  border-radius: 5px;
+  background-color: #b8d45c;
+  width: 240px;
+  height: auto;
+  display: block;
+  padding: 5px;
+  float: left;
+  color: #333; }
+
+.play_four .talk_recordbox h3 {
+  font-size: 14px;
+  padding: 2px 0 5px;
+  text-transform: uppercase;
+  font-weight: 100; }
+
+.talk_time {
+  color: #666;
+  text-align: right;
+  width: 240px;
+  display: block; }
+
+.talk_title {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  background: #01aee0;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.borderNo li a {
+  border: none !important; }
+
+.xin-model .analog-seven {
+  padding-bottom: 10px; }
+
+.xin-model .analog-seven-in {
+  padding-bottom: 30px; }
+
+.xin-model .xin-model-footer {
+  margin-top: 15px;
+  text-align: center; }
+
+.xin-model .xin-model-footer button {
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 8px;
+  background: #10859d;
+  border: 1px solid #10859d;
+  color: #fff;
+  margin-right: 8px;
+  padding: 6px 25px; }
+
+.search-btn {
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 8px;
+  background: #10859d;
+  border: 1px solid #10859d;
+  color: #fff;
+  margin-right: 8px;
+  padding: 6px 25px; }
+
+.class_edit {
+  color: #ff0000;
+  padding: 0 10px; }
+
+.class_check {
+  padding: 0 10px; }
+
+/* --------------------- auther: xin ------------------------------------ */
 .daye .central {
   position: relative;
   width: 950px;
