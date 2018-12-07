@@ -1,160 +1,226 @@
-<!DOCTYPE html>
-<html lang="cn-zh">
+<div class="row biger-tab-153">
+    <div class="col-md-3" >
+        <div style="border:1px solid #ccc;">                
+            <h3 class="text-center" style="background:#f2f2f2;margin: 0;padding: 30px 0">
+                学生列表 10人
+            </h3>
 
-<head>
-    @@include('include/layout/meta.html')
-    <!-- build:css /css/all.css -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/fontello.css">
-    <link rel="stylesheet" href="/css/custom.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <!-- endbuild -->
-
-    <title>互动课堂</title>
-</head>
-
-<body class="nav-md qq">
-    <div class="main_container">
-        <!-- header -->
-        <div class="top_nav clearfix">
-            @@include('include/layout/header.html',{ "index":{ "title":"张志峰 老师" }, "menu":[
-            {"title":"简历中心","link":"#"}, {"title":"我的企业任务","link":"#"} ] })
-        </div>
-        <!-- content -->
-    </div> 
-      <div class="central-1 shadow">
-            <div class="details_one">
-                    <div class="details_two trc">
-                            <span style="font-size:20px;">学生列表  10人</span>
-                    </div>
-                    <div class="details_two">
-                            <span>输入学生姓名</span>
-                    </div>
-                    <div class="details_three">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">全部</a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">已交</a></li>
-                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">未交</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="home">
-                                <div class="details_two-in">
-                                    <span style="margin-left:5px;"><img src="/images/t6.png" alt=""></span>
-                                    <span style="margin-left:10px;">张三三</span>
-                                    <div class="details_three-in" style="margin-left:12px;">退回</div>
-                                </div>
-                                <div class="details_two-in">
-                                    <span style="margin-left:5px;"><img src="/images/t6.png" alt=""></span>
-                                    <span style="margin-left:10px;">张三丰</span>
-                                </div>
-                                <div class="details_two-in">
-                                    <span style="margin-left:5px;"><img src="/images/t6.png" alt=""></span>
-                                    <span style="margin-left:10px;">张冬冬</span>
-                                    <span style="margin-left:20px;font-size:15px;color:#10859d">80分</span>
-                                </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="profile">
-                               <div class="details_two-in">
-                                    <span style="margin-left:5px;"><img src="/images/t6.png" alt=""></span>
-                                    <span style="margin-left:10px;">李四四</span>
-                                    <div class="details_three-in" style="margin-left:12px;">未批</div>
-                                </div>
-                                <div class="details_two-in">
-                                    <span style="margin-left:5px;"><img src="/images/t6.png" alt=""></span>
-                                    <span style="margin-left:10px;">李柳柳</span>
-                                    <span style="margin-left:20px;font-size:15px;color:#10859d">50分</span>
-                                </div>
-                                <div class="details_two-in">
-                                    <span style="margin-left:5px;"><img src="/images/t6.png" alt=""></span>
-                                    <span style="margin-left:10px;">张三三</span>
-                                    <span style="margin-left:20px;font-size:15px;color:#10859d">80分</span>
-                                </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="messages">
-                                <div class="details_two-in">
-                                    <span style="margin-left:5px;"><img src="/images/t6.png" alt=""></span>
-                                    <span style="margin-left:10px;">张三三</span>
-                                    <div class="details_three-in" style="margin-left:12px;">退回</div>
-                                </div>
-                                <div class="details_two-in">
-                                    <span style="margin-left:5px;"><img src="/images/t6.png" alt=""></span>
-                                    <span style="margin-left:10px;">李五</span>
-                                </div>
-                        </div>
-                    </div>
-                    </div>
+            <div class="search">
+                <input  type="text" class="form-control text-center" placeholder="输入学生姓名" >
             </div>
-            <div class="details_four">
-               <div style="display:inline-block">
-                题型： <button>单选</button>        <button>多选</button>       <button>判断</button> 
-                    <div>
-                           <button style="margin-left:42px">排序</button>      
-                            <button>填空</button>       <button>简答</button>
-                    </div>
-               </div>
-                        <div style="display:inline-block;margin-left:170px;">
-                                <span style="font-size:20px;">作业得分：100 </span>
-                            <div>   
-                                <button>批阅</button>    <button style="margin-left:30px">退回从做</button>
-                            </div>
-                        </div>
-            </div>
-             <div class="interactive_two details_four-in" style="width:850px;">
-           <b>[简答题，共10分]</b>  <br>
-           1、简述马克思主义科学体系的三个组成部分及其直接理论来源。（10分） <input type="text" placeholder="8" style="width:40px;height:20px">分 <br>
-            学生答案：<div style="margin-left:80px;margin-top:-33px;line-height:20px">
-                            德国古典哲学、英国古典政治经济学和19世纪英法两国的空想社会主义。
-                    </div> <br>
-            教师评语：<div style="margin-left:80px;margin-top:-33px;line-height:20px">
-                        <textarea style="width:500px;height:120px;line-height: 15px;resize:none">
+
+            <div class="tab">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">全部</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">已交</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">未交</a>
+                    </li>
+                </ul>
+                
+                <!-- Tab panes -->
+                <div class="tab-content overflow_hidden" style="height: 500px;">
+                    <div role="tabpanel" class="tab-pane active " id="home">
                             
-                        </textarea>    
-                        <input type="checkbox" style="margin-top:100px">补充修改
-                    </div> <br>
-            <div class="trc" style="padding:10px;">
-                    正确答案：<div style="margin-left:80px;margin-top:-33px;line-height:20px">
-                                    （1）马克思主义理论体系的三个主要组成部份：马克思主义哲学，马克思主义政治经济学、科学社会主义。
-                                    （2） 理论来源：德国古典哲学、英国古典政治经济学和19世纪英法两国的空想社会主义。
-                             </div><br>
-                    解题思路:<div style="margin-left:80px;margin-top:-33px;line-height:20px">  
-                                略
+
+                            <div class="row list-tab text-center">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    张三三
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="green">80分</span>                        
+                                </div>
                             </div>
-            </div>      
-        </div>
-         <div class="interactive_two details_four_in" style="width:850px;">
-           <b>[单选题，共5分]</b>  <br>
-           1、仓储管理系统中存货管理模块不包括以下哪项（    ）。（5分） <input type="text" placeholder="5" style="width:40px;height:20px;">分 <br>
-                <div style="margin-left:25px;">
-                    A、回单清查 <br>
-                    B、盘点表 <br> 
-                    C、库存调整 <br>
-                    D、综合考核 <br>
-                       <div class="trc" style="padding:10px;">
-                            正确答案：<div style="margin-left:80px;margin-top:-33px;line-height:20px">
-                                         A、回单清查
-                                    </div><br>
-                            解题思路:<div style="margin-left:80px;margin-top:-33px;line-height:20px">  
-                                        略
-                                    </div>
-                        </div>
+                            <div class="row list-tab text-center">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    张三三
+                                </div>
+                                <div class="col-md-4">
+                                   <span class="green"> 80分</span>
+                                </div>
+                            </div>
+                            <div class="row list-tab text-center">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    张三三
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="btn btn-danger">未批</span>
+                                </div>
+                            </div>
+                            <div class="row list-tab text-center">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    张三三
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="btn btn-danger">退回</span>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                            <div class="row list-tab text-center">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    张三三
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="green">80分</span>                        
+                                </div>
+                            </div>
+                            <div class="row list-tab text-center">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    张三三
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="green"> 80分</span>
+                                </div>
+                            </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                            <div class="row list-tab text-center">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    张三三
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="green">80分</span>                        
+                                </div>
+                            </div>
+                            <div class="row list-tab text-center">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    张三三
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="green"> 80分</span>
+                                </div>
+                            </div>
+                    </div>
                 </div>
-                        </div>
-                </div>
+            
+            </div>
         </div>
     </div>
-    <script src="../../js/require.js"></script>
-    <script>
-        requirejs.config({
-            paths : {
-                "jquery" : "../../js/jquery.min",
-                "bootstrap": "../../js/bootstrap.min"
-            }
-        })
-        // base
-        require(["jquery"],function($){
-            require(["bootstrap"])
-        })
-    </script>
-</body>
-
-</html>
+    <div class="col-md-9" >
+        <div class="overflow_hidden" style="border:1px solid #ccc;" >
+            <div  class="row" style="border-bottom:1px solid #ccc">
+                <div class="col-md-6" style="border-right:1px dashed;padding:5px">
+                    <table class="text-cente" style="margin:20px;">
+                        <tbody>
+                            <tr>
+                                <td width="50px">题型：</td>
+                                <td>
+                                    <button type="button" class="btn btn-default btn-primary" style="width:100px;" >单选</button>
+                                    <button type="button" class="btn btn-default" style="width:100px;" >多选</button>
+                                    <button type="button" class="btn btn-default" style="width:100px;" >判断</button>
+                                    <button type="button" class="btn btn-default" style="width:100px;" >排序</button>
+                                    <button type="button" class="btn btn-default" style="width:100px;" >填空</button>
+                                    <button type="button" class="btn btn-default" style="width:100px;" >简答</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6" style="padding:20px;padding-left:50px">
+                    <h4>作业得分：100</h4>
+                    <div class="text-left" style="margin-top: 25px;">
+                            <button type="button" class="btn btn-default active" style="width:100px;margin-right: 20px" >批阅</button>
+                            <button type="button" class="btn btn-default active" style="width:100px;" >退回重做</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-main">
+                <div class="list-tab-list">
+                        <div class="text-left">
+                            <div class="h4"> 【简答题，共10分】</div>
+                            <div class="h4"> 1、仓储管理系统中存货管理模块不包括以下哪项（    ）。（5分）</div>
+                            <!-- 单选 -->
+                            <div style="margin-left:20px;line-height:30px;">
+                                <p>A回单清查</p>
+                                <p>B.盘点表</p>
+                                <p>C.库存调整</p>
+                                <p>D.综合考核</p>
+                            </div>
+                            
+                        </div>
+                        <div style="padding:5px;border:1px dashed #ccc;background: #f9f9f9;">
+                            <table style="vertical-align: top;">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:75px;">正确答案：</td>
+                                        <td>是</td>
+                                    </tr>
+                                    <tr>
+                                        <td>解题思路：</td>
+                                        <td class="line-height: normal;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsum modi, quasi aut vitae officia debitis optio blanditiis eum aperiam! Distinctio accusantium minima sint facere dignissimos fugiat inventore recusandae minus.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>难易度：</td>
+                                        <td>0.5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+                <div class="list-tab-list">
+                        <div class="text-left">
+                            <div class="h4"> 【简答题，共10分】</div>
+                            <div class="h4"> 1、仓储管理系统中存货管理模块不包括以下哪项（    ）。（5分）</div>
+                            <!-- 单选 -->
+                            <div style="margin-left:20px;line-height:30px;">
+                                <p>A回单清查</p>
+                                <p>B.盘点表</p>
+                                <p>C.库存调整</p>
+                                <p>D.综合考核</p>
+                            </div>
+                            
+                        </div>
+                        <div style="padding:5px;border:1px dashed #ccc;background: #f9f9f9;">
+                            <table style="vertical-align: top;">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:75px;">正确答案：</td>
+                                        <td>是</td>
+                                    </tr>
+                                    <tr>
+                                        <td>解题思路：</td>
+                                        <td class="line-height: normal;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsum modi, quasi aut vitae officia debitis optio blanditiis eum aperiam! Distinctio accusantium minima sint facere dignissimos fugiat inventore recusandae minus.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>难易度：</td>
+                                        <td>0.5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

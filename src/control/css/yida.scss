@@ -1903,4 +1903,81 @@
   padding: 0 10px;
 }
 
+.foldt_2, .foldt_3 {
+  position: relative;
+}
+
+.foldt_2:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: -1px;
+  width: 0px;
+  height: 0px;
+  border-right: 70px solid #66cc00;
+  border-bottom: 70px solid transparent;
+}
+
+.foldt_2:after {
+  content: "进行中";
+  position: absolute;
+  top: 10px;
+  font-weight: bold;
+  right: 0%;
+  color: white;
+  white-space: nowrap;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.foldt_3:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: -1px;
+  width: 0px;
+  height: 0px;
+  border-right: 70px solid #ccc;
+  border-bottom: 70px solid transparent;
+}
+
+.foldt_3:after {
+  content: "已结束";
+  position: absolute;
+  top: 10px;
+  font-weight: bold;
+  right: 0%;
+  color: white;
+  white-space: nowrap;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.foldt_2 .overflow_hidden a, .foldt_3 .overflow_hidden a {
+  margin-right: 20px;
+  color: rgb(0, 102, 254);
+}
+
 /* --------------------- auther: xin ------------------------------------ */
+
+.biger-tab-153{
+  .nav-tabs > li>a{
+    padding: 15px 30px;
+  }
+  .list-tab{
+    line-height: 60px;
+    border-bottom:1px solid #ccc;
+    font-size: 20px;
+  }
+  .glyphicon{
+    font-size:35px;
+    left: 15px;
+    top:7px;
+  }
+  .list-tab-list{
+    padding: 50px;
+    border-top: 1px solid  #ccc;
+    border-bottom: 1px solid  #ccc;
+    margin-top: 20px;
+  }
+}

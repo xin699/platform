@@ -48,7 +48,32 @@
     @@include('@@webRoot/src/js/config.js')
     require(['jquery','/js/jquery.cxcalendar.languages.js','/js/linkage.js'],function($){
 
-    linkage('#linkage1','#linkage2');
+      linkage('#linkage1','#linkage2');
+
+    var strVar = "<tr class=\"list\">\n";
+        strVar += "	<td>\n";
+        strVar += "	<\/td>\n";
+        strVar += "	<td class=\"text-left\">\n";
+        strVar += "		<select class=\"form-control inl-bl\" style=\"width:200px;\" name=\"city\">\n";
+        strVar += "			<option value=\"\">选择班级<\/option>\n";
+        strVar += "			<option value=\"\">集装箱码头<\/option>\n";
+        strVar += "			<option value=\"\">货代与报关<\/option>\n";
+        strVar += "			<option value=\"\">数学<\/option>\n";
+        strVar += "		<\/select>\n";
+        strVar += "		<a class=\"del\" href=\"javascript:void(0);\">删除<\/a>\n";
+        strVar += "	<\/td>\n";
+        strVar += "<\/tr>\n";
+
+
+      $('.add').click(function(e){
+        if($('.list').length<5){
+          $(this).parents('tr').after(strVar);
+        }
+      })
+
+      $('.biger-table2').on('click','.del',function(e){
+        $(this).parents('tr').remove()
+      })
 
     })
   </script>

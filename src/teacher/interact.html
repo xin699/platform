@@ -57,7 +57,7 @@
 
         @@include('include/layout/layout.html',{
           "index":{
-            "title":"首页",
+            "title":"互动课堂",
             "link":"#"
           },
           "nav":[
@@ -74,6 +74,12 @@
   <script>
     @@include('@@webRoot/src/js/config.js')
     @@include('include/layout/header.js')
+
+    require(['jquery'],function($) {
+      $('#myTab .biger-button').click(function() {
+        $('#mygood3').modal('show')
+      })
+    })
   </script>
 </body>
 </html>

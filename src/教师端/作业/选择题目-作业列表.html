@@ -17,7 +17,7 @@
     <div class="input-1">
         <b>题目选择：</b>
 
-        <a href="taskCenterSelect2-1.html"><button class="bu" style="color:white;margin: 0">题库选题</button></a>
+        <a href="taskCenterSelect2-1.html" class="btn btn-primary">题库选题</a>
 
         <span class="right" style="margin-right:60px">
             <b>作业总分：<span class="red">{{totalNum}}</span></b>
@@ -62,8 +62,8 @@
             
         <!-- taskCenterSelect3.html -->
         <div class="picturep-bu">
-            <a href="javascript:;history.back()"><button type="button" style="color:white" class="left">上一步</button></a>
-            <a @click="submitNum($event)" href="taskCenterSelect3.html"><button type="button" style="color:white" class="right">保存，下一步</button></a>
+            <a href="javascript:;history.back()" class="btn btn-primary">上一步</a>
+            <a @click="submitNum($event)" href="taskCenterSelect3.html" class="btn btn-primary pull-right">保存，下一步</a>
         </div>
     </form>
 </div>

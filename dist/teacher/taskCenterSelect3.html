@@ -131,7 +131,7 @@
                         <option value="">货代与报关</option>
                         <option value="">数学</option>
                      </select>
-                     <a href="javascript:void(0);">添加</a>
+                     <a class="add" href="javascript:void(0);">添加</a>
                 </td>
             </tr>
             <tr>
@@ -144,9 +144,9 @@
         </tbody>
     </table>
     <div class="text-center">
-        <button class="btn btn-primary" style="width:150px;">保存，并返回列表</button>
-        <button class="btn btn-primary" style="width:120px;">发布作业</button>
-        <button class="btn btn-primary" style="width:120px;">返回上一步</button>
+        <a href="taskCenter.html"><button class="btn btn-primary" style="width:150px;">保存，并返回列表</button></a> 
+        <a href="taskCenter.html"><button class="btn btn-primary" style="width:120px;">发布作业</button></a> 
+        <a href="javascript:history.back();"><button class="btn btn-primary" style="width:120px;">返回上一步</button></a>
     </div>
 </div>
     </div>
@@ -203,7 +203,32 @@ require(["jquery","bootstrap","myPagination"],function($){
 })
     require(['jquery','/js/jquery.cxcalendar.languages.js','/js/linkage.js'],function($){
 
-    linkage('#linkage1','#linkage2');
+      linkage('#linkage1','#linkage2');
+
+    var strVar = "<tr class=\"list\">\n";
+        strVar += "	<td>\n";
+        strVar += "	<\/td>\n";
+        strVar += "	<td class=\"text-left\">\n";
+        strVar += "		<select class=\"form-control inl-bl\" style=\"width:200px;\" name=\"city\">\n";
+        strVar += "			<option value=\"\">选择班级<\/option>\n";
+        strVar += "			<option value=\"\">集装箱码头<\/option>\n";
+        strVar += "			<option value=\"\">货代与报关<\/option>\n";
+        strVar += "			<option value=\"\">数学<\/option>\n";
+        strVar += "		<\/select>\n";
+        strVar += "		<a class=\"del\" href=\"javascript:void(0);\">删除<\/a>\n";
+        strVar += "	<\/td>\n";
+        strVar += "<\/tr>\n";
+
+
+      $('.add').click(function(e){
+        if($('.list').length<5){
+          $(this).parents('tr').after(strVar);
+        }
+      })
+
+      $('.biger-table2').on('click','.del',function(e){
+        $(this).parents('tr').remove()
+      })
 
     })
   </script>
