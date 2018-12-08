@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/hover-min.css">
 <link rel="stylesheet" href="css/common.css">
   <!-- endbuild -->
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
 
   <title>首页</title>
 </head>
@@ -36,6 +37,10 @@
           },
           "nav":[
           ],
+          "back":{
+            "title": "返回列表",
+            "link": "javascript:history.back();"
+          },
           "template": "教师端/作业/批改详情-作业.html"
         })
 
@@ -44,8 +49,14 @@
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    require(['jquery','/js/jquery.knob.js'],function($){
-
+    require(['jquery','/js/jquery.cxcalendar.languages.js'],function(){
+      $('#toggle-btn').on('click','.btn',function(e) {
+          $(this).toggleClass('btn-primary');
+        })
+       $('.time').cxCalendar({
+            type: 'datetime',
+            format: 'YYYY-MM-DD HH:mm:ss'
+        });
     })
   </script>
 </body>
