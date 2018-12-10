@@ -1846,3 +1846,9 @@
   border-top: 1px solid  #ccc;
   border-bottom: 1px solid  #ccc;
   margin-top: 20px; }
+
+.biger-img {
+  border: 2px solid #cfe6eb;
+  width: 80%;
+  padding: 50px;
+  margin: 0 auto; }

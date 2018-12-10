@@ -12067,6 +12067,12 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
   border-bottom: 1px solid  #ccc;
   margin-top: 20px; }
 
+.biger-img {
+  border: 2px solid #cfe6eb;
+  width: 80%;
+  padding: 50px;
+  margin: 0 auto; }
+
 .daye .central {
   position: relative;
   width: 950px;
