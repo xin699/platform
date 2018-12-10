@@ -12,6 +12,10 @@
               dateFirstApi = api;
           });
 
+          dateFirst.focus(function(){
+            $(document).off('focusin')
+          })
+
           dateLast.cxCalendar({
               type: 'datetime',
               format: 'YYYY-MM-DD HH:mm:ss'
