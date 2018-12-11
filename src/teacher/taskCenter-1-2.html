@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"批改详情",
+            "link":"#"
+          },
+          "nav":[
+          ],
+          "back":{
+            "title": "返回列表",
+            "link": "javascript:history.back();"
+          },
+          "template": "教师端/作业/批改详情(导入)-评分.html"
+        })
+
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    require(['jquery'],function(){
+        $('#file').change(function(e){
+          
+          var f = e.target.files[0];
+          var suffix = f.name.split('.')[1].toLowerCase();
+          var fileSize = f.size;
+
+          if (['xls','xlsx'].indexOf(suffix)=== -1) {
+            alert('当前不支持该类型！')
+            $(this).val('')
+              return false
+          }
+
+          if(fileSize > 104857600){
+            alert('当前不支持2M以上文件！')
+            $(this).val('')
+              return false
+          }
+        })
+    })
+  </script>
+</body>
+</html>
