@@ -96,6 +96,29 @@ gulp.task('default',['css','html','js','fonts','img'], function() {
     gulp.watch(['src/**/**/*.css','src/**/**/*.scss'],['html','css']);
 });
 
+
+gulp.task('html2',['css','html'], function() {
+    
+    // 启动服务器
+    browserSync({
+        server:{
+            baseDir: './dist/'
+        }
+    });
+    // 检测 三层遍历
+    gulp.watch(['src/**/**/*.{html,js}'],['html','css']).on('change',function(event){
+        // 检测删除文件
+        if (event.type === 'deleted'){
+            gulp.src(event.path.replace('\\src\\','\\dist\\'))
+            .pipe(plugins.clean())
+        }
+        // 热更新
+        browserSync.reload()
+    });
+    // 两层遍历
+    gulp.watch(['src/**/**/*.css','src/**/**/*.scss'],['html','css']);
+});
+
 // 整理整体结构，方便开发模块
 // 整理常用开发jquery插件，工具
 // include 下面放插件模板
