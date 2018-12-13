@@ -157,7 +157,6 @@
                 <option value="">2016届货代报关1班</option>
             </select>
             <button style="color:white" id="bu">搜索</button>
-            <button style="color:white" id="bu">新增新练习</button>
         </div>
 
         <div class="interactive-2 w100">
@@ -168,40 +167,11 @@
                 <span class="type">2017届运输管理</span>
                 <div class="pull-right">
 
-                    <a title="编辑" data-toggle="modal" data-target=".myModal2" href="#">
-                        <span class="glyphicon glyphicon-edit"></span>
-                    </a>
-
-                    <a title="删除" data-toggle="modal" data-target=".myModal2" href="#">
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </a>
-
-                </div>
-            </div>
-            <div class="text-left">
-                <span>集装箱码头</span>
-                <span>第一单元</span>
-            </div>
-            <div class="text-left">
-                开始时间：<span class="time-start">2018:06:13  00:00:00</span>
-                结束时间：<span class="time-end">2018:06:13  00:00:00</span>
-            </div>
-
-        </div>
-
-        <div class="interactive-2 w100">
-            <div class="text-left">
-                <span class="h4">作业123456</span>
-            </div>
-            <div class="text-left overflow_hidden">
-                <span class="type">2017届运输管理</span>
-                <div class="pull-right">
-
-                    <a title="编辑" data-toggle="modal" data-target=".myModal2" href="#">
+                    <a title="查看" href="taskCenterView.html">
                         <span class="glyphicon glyphicon-eye-open"></span>
                     </a>
 
-                    <a title="删除" data-toggle="modal" data-target=".myModal2" href="#">
+                    <a title="删除" data-toggle="modal" data-target=".myModal3" href="#">
                         <span class="glyphicon glyphicon-trash"></span>
                     </a>
 
@@ -226,8 +196,37 @@
                 <span class="type">2017届运输管理</span>
                 <div class="pull-right">
 
-                    <a title="删除" data-toggle="modal" data-target=".myModal2" href="#">
+                    <a title="查看" href="taskCenterView.html">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+
+                    <a title="删除" data-toggle="modal" data-target=".myModal3" href="#">
                         <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="text-left">
+                <span>集装箱码头</span>
+                <span>第一单元</span>
+            </div>
+            <div class="text-left">
+                开始时间：<span class="time-start">2018:06:13  00:00:00</span>
+                结束时间：<span class="time-end">2018:06:13  00:00:00</span>
+            </div>
+
+        </div>
+
+        <div class="interactive-2 w100">
+            <div class="text-left">
+                <span class="h4">作业123456</span>
+            </div>
+            <div class="text-left overflow_hidden">
+                <span class="type">2017届运输管理</span>
+                <div class="pull-right">
+
+                    <a title="查看"  href="taskCenterView.html">
+                        <span class="glyphicon glyphicon-eye-open"></span>
                     </a>
 
                 </div>
@@ -247,34 +246,21 @@
     </div>
 
 
-    <!-- 弹框 -->
 
-    <div class="update_modal">
-        <div class="modal fade" id="mygood" tabindex="-1" role="dialog" aria-labelledby="mygood">
-            <div class="analog-seven">
+    <!-- 删除弹窗 -->
+    <div class="modal fade myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3">
+        <div class="analog" style="width:400px;" >
                 <div class="analog-one">
                     <button type="button" class="close close-one" data-dismiss="modal">x</button>
-                    <b>重新发布</b>
+                    <b>删除练习</b>
                 </div>
-                <div class="analog-seven-in">
-                    班级名称：<select name="city">
-                        <option value="">2017届仓库与配送管理1班</option>
-                        <option value="">2018届物流管理2班</option>
-                        <option value="">2016届货代报关1班</option>
-                    </select>&nbsp;&nbsp;<a href=""> +添加</a> <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <select name="city">
-                        <option value="">2018届物流管理2班</option>
-                        <option value="">2017届仓库与配送管理1班</option>
-                        <option value="">2016届货代报关1班</option>
-                    </select>&nbsp;&nbsp;<a href=""> -删除</a><br>
-                    作业名称：<input type="text"><br>
-                    作答时间：<input type="time" value="--:--"/ style="width:115px"> --
-                    <input type="time" value="--:--"/ style="width:115px"><br><br>
-                    <button>确定</button> <button>取消</button>
+                <div class="analog-three " style="width:100%;height: 110px;" >
+                    <p class="text-center p">是否确认删除该练习？（删除练习不可恢复）</p>
+                    <div class="text-center">
+                        <button style="color:white" class="submit" type="button"  data-dismiss="modal" >确认</button>
+                        <button style="color:white" type="button"  data-dismiss="modal" >取消</button>
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
 
