@@ -51,7 +51,8 @@
     @@include('@@webRoot/src/js/config.js')
     require(['jquery','/js/jquery.cxcalendar.languages.js'],function(){
       $('#toggle-btn').on('click','.btn',function(e) {
-          $(this).toggleClass('btn-primary');
+        var a = e.target // newly activated tab
+         $(a).addClass('btn-primary').siblings().removeClass('btn-primary')
         })
        $('.time').cxCalendar({
             type: 'datetime',
