@@ -1,4 +1,108 @@
-<div class="qq">
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+      <meta charset="UTF-8" />
+    <!-- Render engine selection -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Friendly view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <!-- Disable chrome translation prompt -->
+    <meta name="google" value="notranslate">
+    <!-- Ignore identifying phone numbers, email addresses -->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="author" content="biger">
+    <!-- src -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.polyfill.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="/css/all.css">
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        <div class="nav_menu">
+    <nav class="clearfix">
+        <div class="nav pull-left logo-left">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="">
+            </a>
+            <a href="">
+                <i class="icon-教育云平台" style="font-size:20px;"></i>
+                
+                教育云平台
+                </a>
+            |
+            <a href="index.html">
+                <i class="icon-企业服务" style="font-size:20px;"></i>
+                企业服务</a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right">
+            <li class="download">
+                <a href="javascript:;" style="font-weight: bold;margin: 0">下载APP</a>
+            </li>
+            <li style="margin-right: 10px">
+                <a href="javascript:;" class="dropdown-toggle info-number hvr-buzz-out">
+                    <i class="icon-提醒" style="font-size:20px;"></i>
+                    <span class="badge bg-red">6</span>
+                </a>
+            </li>
+            <li class="">
+                <!-- 头像 -->
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../../images/img.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li>
+                        <a class="role" style="padding:12px 20px 0 20px;color: black" href="javascript:;">张志峰 老师</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    
+                        <li>
+                            <a href="#">简历中心</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">我的企业任务</a>
+                        </li>
+                    
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">修改密码</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">安全退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+      
+      <li role="presentation" class="active"><a href="#">课堂练习草稿箱</a>
+      </li>
+      
+      
+      
+
+      
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="qq">
         <div class="teaching" style="width:100%;">
             <!-- top -->
             <div class="input-3" style="width:90%;">
@@ -138,7 +242,7 @@
             </table>
             <!-- page -->
             <div>
-                @@include('include/page/paging.html')
+                <div id="pagination" class="pagination2"></div>
             </div>
         </div>
         <div class="text-center">
@@ -640,3 +744,184 @@
             </div>
     
     </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+      requirejs.config({
+    paths : {
+        "jquery" : "/js/jquery.min",
+        "bootstrap": "/js/bootstrap.min",
+        "cxCalendar": "/js/jquery.cxcalendar.min",
+        "myPagination":"/js/myPagination"
+    },
+    shim: {
+        jquery: {
+            exports: 'jquery'
+        },
+        bootstrap: {
+            deps: ['jquery']
+        },
+        myPagination:{
+            deps: ['jquery']
+        }
+
+    }
+})
+// base
+require(["jquery","bootstrap","myPagination"],function($){
+
+    $(function($){
+        if($('#pagination').length != 0){
+            new myPagination({
+                id: 'pagination',
+                curPage:1, //初始页码
+                pageTotal: 50, //总页数
+                pageAmount: 10,  //每页多少条
+                dataTotal: 500, //总共多少条数据
+                pageSize: 5, //可选,分页个数
+                showPageTotalFlag:true, //是否显示数据统计
+                showSkipInputFlag:true, //是否支持跳转
+                getPage: function (page) {
+                    //获取当前页数
+                    console.log(page);
+                }
+            })
+        }
+
+    })
+
+ 
+})
+      require(['jquery','/js/range.js','myPagination'],function($,changeSpeed){
+  
+           
+    if($('#pagination').length != 0){
+        new myPagination({
+            id: 'pagination2',
+            curPage:1, //初始页码
+            pageTotal: 50, //总页数
+            pageAmount: 10,  //每页多少条
+            dataTotal: 500, //总共多少条数据
+            pageSize: 5, //可选,分页个数
+            showPageTotalFlag:false, //是否显示数据统计
+            showSkipInputFlag:false, //是否支持跳转
+            getPage: function (page) {
+                //获取当前页数
+                console.log(page);
+            }
+        })
+    }
+  
+    // Excel上传
+  
+    $('#file').change(function(e){
+  
+      var f = e.target.files[0];
+      var suffix = f.name.split('.')[1].toLowerCase();
+      var fileSize = f.size;
+  
+      if (['xls','xlsx'].indexOf(suffix)=== -1) {
+        alert('当前不支持该类型！')
+        $(this).val('')
+          return false
+      }
+  
+      if(fileSize > 104857600){
+        alert('当前不支持2M以上文件！')
+        $(this).val('')
+          return false
+      }
+  
+    })
+  
+    // 弹窗层解决
+    $('.mygood,.mygoodview,.myModal3')
+    .on('show.bs.modal',function(e){
+      $el = $(e.relatedTarget).parents('.mygoodview2')
+      if($el.length){
+        $(this).css('z-index',$el.css('z-index')+2)
+        $('.modal-backdrop').last().css('z-index',$el.css('z-index')+1)
+      }
+    })
+    .on('hide.bs.modal',function(e){
+      $('.modal-backdrop').attr('style','')
+    })
+  
+  
+    $('.mygood').on('show.bs.modal',function(e){
+  
+      if($(e.relatedTarget).is('.editbtn')){
+        $(this).find('.edit').show().end().find('.add').hide()
+      }else{
+        $(this).find('.edit').hide().end().find('.add').show()
+      }
+    })
+  
+    $('table').on('click','input[type=checkbox]:first',function(e){
+        var $self = this
+        $(e.delegateTarget).find('input[type=checkbox]').each(function(){this.checked = $self.checked})
+    })
+  
+  
+    // 滑动条事件
+    var value = parseFloat($('#range_speed').val());
+    var valStr = value*100 + "% 100%";
+    $('#value1').html(value.toFixed(1));
+    $('#range_speed').css({
+      "background-size": valStr
+    })
+  
+    // 选择框
+  
+    $('#subject').change(function(e){
+      $('.subject-tab').hide().eq(this.value - 1).show()
+    })
+  
+    // 单选 删除
+    $('.subject-tab').on('click','.delOption',function(e){
+        var $parent = $(e.delegateTarget);
+        var list = function (str) { return $parent.find(str).children()};
+  
+      if(list('.outOption').length>2){
+        list('.outOption').last().remove()
+        list('.selectOption').last().remove()
+        list('.selectOptionCheckbox').not('span').last().remove()
+      }
+  
+    })
+  
+    // 单选 添加
+    $('.subject-tab').on('click','.addOption',function(e){
+      var $parent = $(e.delegateTarget);
+      var list = function (str) { return $parent.find(str).children()};
+      var len = list('.outOption').length + 65
+  
+  
+      if(list('.outOption').length<7){
+        // 单选
+        var a = list('.outOption').eq(0).clone().children('span').html(" &#"+ len +";：").end()
+  
+        list('.outOption').parent().append(a)
+  
+        var b = list('.selectOption').eq(0).clone().attr('for','label' + list('.outOption').length)
+        .children('span').html(" &#"+ len +"; ").end().children('input').attr('id','label' + list('.outOption').length).end()
+  
+        list('.selectOption').parent().append(b)
+        // 多选
+        var c = list('.selectOptionCheckbox').eq(0).clone()
+        .attr('for','checkbox' + list('.outOption').length)
+        .children('span').html(" &#"+ len +"; ").end()
+        .children('input').attr('id','checkbox' + list('.outOption').length).end()
+  
+        list('.selectOptionCheckbox').not('span').last().after(c)
+      }
+        
+    })
+  })
+    </script>
+</body>
+</html>

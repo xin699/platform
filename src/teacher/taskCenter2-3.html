@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"课堂练习草稿箱",
+            "link":"#"
+          },
+          "nav":[
+
+          ],
+          "back":{
+            "title":"返回列表",
+            "link":"javascript:history.back();"
+          },
+          "template": "教师端/课堂练习/组题（草稿）-草稿.html"
+        })
+
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+      @@include('@@webRoot/src/js/config.js')
+      require(['jquery','/js/vue.min.js'],function($,Vue){
+  
+        var vm = new Vue({
+          el: "#app",
+          data: {
+            list: {
+              radio:{
+                toggle:true,
+                text:'单选题',
+                totalNum:0,
+                num:'',
+                subNum:[
+                  {
+                    text:'仓储管理系统中存货管理模块不包括以下哪项（ ）。',
+                    num:'',
+                    rank:5
+                  },
+                  {
+                    text:'仓储管理系统中存货管理模块不包括以下哪项（ ）。',
+                    num:'',
+                    rank:5
+                  }
+                ]
+              },
+              checkbox:{
+                toggle:false,
+                text:'多选题',
+                totalNum:0,
+                num:'',
+                subNum:[
+                  {
+                    text:'仓储管理系统中存货管理模块不包括以下哪项（ ）。',
+                    num:'',
+                    rank:.2
+                  },
+                  {
+                    text:'仓储管理系统中存货管理模块不包括以下哪项（ ）。',
+                    num:'',
+                    rank:.2
+                  }
+                ]
+              },
+              judge:{
+                toggle:false,
+                text:'判断题',
+                totalNum:0,
+                num:'',
+                subNum:[]
+              },
+              sort:{
+                toggle:false,
+                text:'排序题',
+                totalNum:0,
+                num:'',
+                subNum:[]
+              },
+              pack:{
+                toggle:false,
+                text:'填空题',
+                totalNum:0,
+                num:'',
+                subNum:[]
+              },
+              question:{
+                toggle:false,
+                text:'简答题',
+                totalNum:0,
+                num:'',
+                subNum:[]
+              }
+            },
+                    // 单元提交
+            arr:[
+              "一.建筑装饰构造概述",
+              "二.建筑装饰造设计适用范围",
+              "三.楼地面装饰构造"
+            ],
+            selectArr:[],
+            selectAll:false,
+            arrSubmit:false
+          },
+          methods:{
+            allNum:function(num,obj,superobj){
+              // 设置所有分数
+              obj.map(function(i){
+                i.num = num
+              })
+              
+              this.computedTotal(superobj,obj)
+            },
+            computedTotal:function(obj,item){
+              var total;
+              // 计算所有分数
+              if(!item[0]){
+                obj.totalNum = 0
+                return false
+              }
+              if(item.length>1){
+                total = item.reduce(function(x,y){return parseInt(x.num||0,10)+parseInt(y.num||0,10)})
+              }else{
+                total = item[0].num
+              }
+  
+              obj.totalNum = total
+            },
+            submitNum:function(e){
+              // 分数提交检测
+              if(this.totalNum > 100){
+                alert('你的所有分数不能超过100分')
+                e.preventDefault()
+              }
+              
+            },
+            arrToggle:function(index,item){
+              var len = this.arr.length
+
+              this.selectArr[index] ? vm.$set(vm.selectArr, index, false) : vm.$set(vm.selectArr, index, true);
+              
+            },
+            arrToggleAll:function(){
+
+              if(!this.selectAll){
+                this.selectArr = this.arr.map(function(){return true})
+                this.selectAll = true
+              }else{
+                this.selectArr = []
+                this.selectAll = false
+              }
+            }
+          },
+          computed: {
+            // 总分计算
+            totalNum:function(){
+  
+                var arr = []
+  
+                for(item in this.list){
+                  arr.push(this.list[item].totalNum)
+                }
+  
+                var total = arr.reduce(function(x,y){return parseInt(x||0,10)+parseInt(y||0,10)})
+  
+              return total
+            }
+          }
+        })
+  
+      })
+    </script>
+</body>
+</html>
