@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/common.css">
   <!-- endbuild -->
   <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
+  <link rel="stylesheet" href="/css/bootstrap-slider.min.css">
 
   <title>首页</title>
 </head>
@@ -46,22 +47,51 @@
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    require(['jquery','/js/range.js','/js/vue.min.js'],function($,r,Vue){
+    require(['jquery','/js/bootstrap-slider.min.js','/js/vue.min.js'],function($,Slider,Vue){
       
-      // 滑动条事件
-      $('input.range_speed').trigger('input')
+      $(window).load(function(){
+        var myslider =  $.map($('input.span2').get(),function(item){
+            return (new Slider(item,{}))
+          })
 
+        $('.span2').on('slide',function(e){
+          var name = $(this).data('object')
+          vm.mylist[name].range = $(this).val()
+        })       
+
+        $("#mygood").on('show.bs.modal',function(e){
+          
+          var value = []; 
+
+          $.each(vm.mylist,function(i){
+            if(typeof vm.mylist[i] !== typeof true){
+              value.push(vm.mylist[i].range) 
+            }            
+          })
+
+          $(myslider).each(function(i){
+            var val = $.map(value[i].split(','),function(i){return parseFloat(i)})
+            this.setValue(val)
+          })
+
+        })
+        $("#mygood").on('hide.bs.modal',function(e){
+          $(myslider).each(function(){this.refresh()})
+          vm.cancel()
+        })
+
+      })
 
             // 初始化
 
       var oldobj = {
           active:false,
-          radio:{range:0.1},
-          checkbox:{range:0.1},
-          judge:{range:0.1},
-          sort:{range:0.1},
-          pack:{range:0.1},
-          question:{range:0.1}
+          radio:{range:"0,1"},
+          checkbox:{range:"0,1"},
+          judge:{range:"0,1"},
+          sort:{range:"0,1"},
+          pack:{range:"0,1"},
+          question:{range:"0,1"}
         }
 
       var data = {
@@ -74,32 +104,32 @@
             radio:{
               num:"2",
               score:"1",
-              range:0.1
+              range:"0.1,0.5"
             },
             checkbox:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,0.5"
             },
             judge:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,0.2"
             },
             sort:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,0.5"
             },
             pack:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,1"
             },
             question:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,0.5"
             }
           }
         ],
@@ -121,14 +151,16 @@
           edit:function (index) {
             this.updateState = index
             this.mylist = JSON.parse(JSON.stringify(this.table[index]))
-            this.$nextTick(function(){
-              $('input.range_speed').trigger('input')
-            })
+            // this.$nextTick(function(){
+            //   $('input.range_speed').trigger('input')
+            // })            
           },
           del:function(){
             this.table.splice(this.delobjIndex,1)
           },
           update:function(obj){
+
+            console.log(obj.radio)
             
             if(this.updateState!==""){
               vm.$set(vm.table, this.updateState, obj)
@@ -140,9 +172,6 @@
 
             this.mylist = JSON.parse(JSON.stringify(oldobj))
 
-            this.$nextTick(function(){
-              $('input.range_speed').trigger('input')
-            })
 
           },
           toggle:function(index){
@@ -169,6 +198,9 @@
               this.selectArr = []
               this.selectAll = false
             }
+          },
+          cancel:function(){
+            this.mylist = JSON.parse(JSON.stringify(oldobj))
           }
         }
       })  

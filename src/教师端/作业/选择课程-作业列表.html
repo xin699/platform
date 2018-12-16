@@ -56,6 +56,7 @@
 
                 </tbody>
             </table>
+
             <div class="biger-tab-active">
                 <div role="tabpanel" hidden="hidden" class="t active"></div>
                 <div role="tabpanel" hidden="hidden" class="random">
@@ -66,7 +67,7 @@
                             <div class="col-md-4">
                                 <div class="table-list">
                                     <div @click="toggle(index)" :class="['table-list-main',{'foldtl':item.active}]">
-                                        <table class="table biger-table2">
+                                        <table class="table biger-table2 biger-table-temp1">
                                             <tbody>
                                                 <tr>
                                                     <td>题型</td>
@@ -132,9 +133,11 @@
                                 </a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
             <div class="text-center" style="margin-top: 20px;">
                 <a href="taskCenterSelect2.html"><button class="btn btn-primary">保存，下一步</button></a> 
                 <a href="javascript:history.back();"><button class="btn btn-default" style="width:110px;">取消</button></a>
@@ -198,10 +201,7 @@
                                             <td><input type="number" v-model="mylist.radio.num" name="radio.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.radio.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" way-writeonly="true" max="1.0"
-                                                    step="0.1" min="0.1" v-model="mylist.radio.range" value="0.1"
-                                                    oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" v-model="mylist.radio.range" :data-vue-value="mylist.radio.range" data-object="radio" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -213,9 +213,7 @@
                                             <td><input type="number" v-model="mylist.checkbox.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.checkbox.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" name="range" class="range_speed" max="1.0" step="0.1"
-                                                    v-model="mylist.checkbox.range" min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.checkbox.range" data-object="checkbox" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -227,9 +225,7 @@
                                             <td><input type="number" v-model="mylist.judge.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.judge.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.judge.range"
-                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.judge.range" data-object="judge" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -241,9 +237,7 @@
                                             <td><input type="number" v-model="mylist.sort.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.sort.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.sort.range"
-                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.sort.range" data-object="sort" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -255,9 +249,7 @@
                                             <td><input type="number" v-model="mylist.pack.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.pack.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.pack.range"
-                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.pack.range" data-object="pack" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -269,9 +261,7 @@
                                             <td><input type="number" v-model="mylist.question.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.question.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.question.range"
-                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.question.range" data-object="question" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                     </tbody>
