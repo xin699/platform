@@ -34,12 +34,12 @@
 
         @@include('include/layout/layout.html',{
           "index":{
-            "title":"发布作业",
+            "title":"发布练习",
             "link":"#"
           },
           "nav":[
           ],
-          "template": "教师端/作业/选择课程-作业列表.html"
+          "template": "教师端/作业/选择课程-作业列表.1.html"
         })
 
     </div>
@@ -55,7 +55,19 @@
         $('.biger-tab-jd').on('click','.btn',function(e){
           $(this).addClass('btn-primary').siblings().removeClass('btn-primary')
         })
-        
+
+        // 选中效果
+        $('#note').on('click','a',function(e){
+          if( $(this).is('.on')){
+            $(this).text('添加').removeClass('on')
+            $(this).parents('tr').siblings().not('.tr').removeClass('hide')
+          }else{
+            $(this).text('重选').addClass('on')
+            $(this).parents('tr').siblings().not('.tr').addClass('hide')
+          }
+          
+        })
+
         var myslider =  $.map($('input.span2').get(),function(item){
             return (new Slider(item,{}))
           })
@@ -88,7 +100,7 @@
 
       })
 
-            // 初始化
+      // 初始化
 
       var oldobj = {
           active:false,

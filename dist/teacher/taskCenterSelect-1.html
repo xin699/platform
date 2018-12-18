@@ -18,6 +18,7 @@
     <![endif]-->
   <link rel="stylesheet" href="/css/all.css">
   <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
+  <link rel="stylesheet" href="/css/bootstrap-slider.min.css">
 
   <title>首页</title>
 </head>
@@ -95,7 +96,7 @@
         <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
       
-      <li role="presentation" class="active"><a href="#">发布作业</a>
+      <li role="presentation" class="active"><a href="#">发布练习</a>
       </li>
       
       
@@ -157,11 +158,13 @@
                         <td class="text-left biger-tab-jd" role="tablist">
                             <button data-target=".t" data-toggle="tab" role="tab" aria-controls="t" class="btn btn-default btn-primary">手工组题</button>
                             <button data-target=".random" data-toggle="tab" role="tab" aria-controls="random" class="btn btn-default ">随机组题</button>
+                            <button data-target=".c" data-toggle="tab" role="tab" aria-controls="c" class="btn btn-default ">引用草稿箱</button>
                         </td>
                     </tr>
 
                 </tbody>
             </table>
+
             <div class="biger-tab-active">
                 <div role="tabpanel" hidden="hidden" class="t active"></div>
                 <div role="tabpanel" hidden="hidden" class="random">
@@ -172,7 +175,7 @@
                             <div class="col-md-4">
                                 <div class="table-list">
                                     <div @click="toggle(index)" :class="['table-list-main',{'foldtl':item.active}]">
-                                        <table class="table biger-table2">
+                                        <table class="table biger-table2 biger-table-temp1">
                                             <tbody>
                                                 <tr>
                                                     <td>题型</td>
@@ -238,12 +241,75 @@
                                 </a>
                             </div>
                         </div>
+
                     </div>
                 </div>
+                <div role="tabpanel" hidden="hidden" class="c">
+                    <table class="table table-bordered" id="note">
+                        <tbody>
+                            <tr class="tr">
+                                <td>序号</td>
+                                <td>练习名称</td>
+                                <td>单选题</td>
+                                <td>多选题</td>
+                                <td>判断题</td>
+                                <td>排序题</td>
+                                <td>填空题</td>
+                                <td>简答题</td>
+                                <td>操作</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>作业123456</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td><a href="javascript:void(0);">添加</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>作业123456</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td><a href="javascript:void(0);">添加</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>作业123456</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td><a href="javascript:void(0);">添加</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>作业123456</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td><a href="javascript:void(0);">添加</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
             <div class="text-center" style="margin-top: 20px;">
-                <button class="btn btn-primary">保存，下一步</button>
-                <button class="btn btn-default" style="width:110px;">取消</button>
+                <a href="taskCenterSelect2.html"><button class="btn btn-primary">保存，下一步</button></a> 
+                <a href="javascript:history.back();"><button class="btn btn-default" style="width:110px;">取消</button></a>
             </div>
         </div>
         <!-- 选择单元窗口 -->
@@ -304,10 +370,7 @@
                                             <td><input type="number" v-model="mylist.radio.num" name="radio.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.radio.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" way-writeonly="true" max="1.0"
-                                                    step="0.1" min="0.1" v-model="mylist.radio.range" value="0.1"
-                                                    oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" v-model="mylist.radio.range" :data-vue-value="mylist.radio.range" data-object="radio" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -319,9 +382,7 @@
                                             <td><input type="number" v-model="mylist.checkbox.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.checkbox.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" name="range" class="range_speed" max="1.0" step="0.1"
-                                                    v-model="mylist.checkbox.range" min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.checkbox.range" data-object="checkbox" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -333,9 +394,7 @@
                                             <td><input type="number" v-model="mylist.judge.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.judge.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.judge.range"
-                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.judge.range" data-object="judge" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -347,9 +406,7 @@
                                             <td><input type="number" v-model="mylist.sort.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.sort.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.sort.range"
-                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.sort.range" data-object="sort" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -361,9 +418,7 @@
                                             <td><input type="number" v-model="mylist.pack.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.pack.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.pack.range"
-                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.pack.range" data-object="pack" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -375,9 +430,7 @@
                                             <td><input type="number" v-model="mylist.question.num" class="form-control"></td>
                                             <td><input type="number" v-model="mylist.question.score" class="form-control"></td>
                                             <td>
-                                                <input type="range" class="range_speed" max="1.0" step="0.1" v-model="mylist.question.range"
-                                                    min="0.1" value="0.1" oninput="changeSpeed2(this)" />
-                                                <span class="range_value">0.1</span>
+                                                <input type="text" class="span2" :data-vue-value="mylist.question.range" data-object="question" data-slider-min="0.1" data-slider-max="1" data-slider-step="0.1" data-slider-value="[0,1]"/>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -467,22 +520,69 @@ require(["jquery","bootstrap","myPagination"],function($){
 
  
 })
-    require(['jquery','/js/range.js','/js/vue.min.js'],function($,r,Vue){
+    require(['jquery','/js/bootstrap-slider.min.js','/js/vue.min.js'],function($,Slider,Vue){
       
-      // 滑动条事件
-      $('input.range_speed').trigger('input')
+      $(window).load(function(){
 
+        // 切换
+        $('.biger-tab-jd').on('click','.btn',function(e){
+          $(this).addClass('btn-primary').siblings().removeClass('btn-primary')
+        })
 
-            // 初始化
+        // 选中效果
+        $('#note').on('click','a',function(e){
+          if( $(this).is('.on')){
+            $(this).text('添加').removeClass('on')
+            $(this).parents('tr').siblings().not('.tr').removeClass('hide')
+          }else{
+            $(this).text('重选').addClass('on')
+            $(this).parents('tr').siblings().not('.tr').addClass('hide')
+          }
+          
+        })
+
+        var myslider =  $.map($('input.span2').get(),function(item){
+            return (new Slider(item,{}))
+          })
+
+        $('.span2').on('slide',function(e){
+          var name = $(this).data('object')
+          vm.mylist[name].range = $(this).val()
+        })       
+
+        $("#mygood").on('show.bs.modal',function(e){
+          
+          var value = []; 
+
+          $.each(vm.mylist,function(i){
+            if(typeof vm.mylist[i] !== typeof true){
+              value.push(vm.mylist[i].range) 
+            }            
+          })
+
+          $(myslider).each(function(i){
+            var val = $.map(value[i].split(','),function(i){return parseFloat(i)})
+            this.setValue(val)
+          })
+
+        })
+        $("#mygood").on('hide.bs.modal',function(e){
+          $(myslider).each(function(){this.refresh()})
+          vm.cancel()
+        })
+
+      })
+
+      // 初始化
 
       var oldobj = {
           active:false,
-          radio:{range:0.1},
-          checkbox:{range:0.1},
-          judge:{range:0.1},
-          sort:{range:0.1},
-          pack:{range:0.1},
-          question:{range:0.1}
+          radio:{range:"0,1"},
+          checkbox:{range:"0,1"},
+          judge:{range:"0,1"},
+          sort:{range:"0,1"},
+          pack:{range:"0,1"},
+          question:{range:"0,1"}
         }
 
       var data = {
@@ -495,32 +595,32 @@ require(["jquery","bootstrap","myPagination"],function($){
             radio:{
               num:"2",
               score:"1",
-              range:0.1
+              range:"0.1,0.5"
             },
             checkbox:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,0.5"
             },
             judge:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,0.2"
             },
             sort:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,0.5"
             },
             pack:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,1"
             },
             question:{
               num:"0",
               score:"1",
-              range:0.1
+              range:"0.1,0.5"
             }
           }
         ],
@@ -542,14 +642,16 @@ require(["jquery","bootstrap","myPagination"],function($){
           edit:function (index) {
             this.updateState = index
             this.mylist = JSON.parse(JSON.stringify(this.table[index]))
-            this.$nextTick(function(){
-              $('input.range_speed').trigger('input')
-            })
+            // this.$nextTick(function(){
+            //   $('input.range_speed').trigger('input')
+            // })            
           },
           del:function(){
             this.table.splice(this.delobjIndex,1)
           },
           update:function(obj){
+
+            console.log(obj.radio)
             
             if(this.updateState!==""){
               vm.$set(vm.table, this.updateState, obj)
@@ -561,9 +663,6 @@ require(["jquery","bootstrap","myPagination"],function($){
 
             this.mylist = JSON.parse(JSON.stringify(oldobj))
 
-            this.$nextTick(function(){
-              $('input.range_speed').trigger('input')
-            })
 
           },
           toggle:function(index){
@@ -590,6 +689,9 @@ require(["jquery","bootstrap","myPagination"],function($){
               this.selectArr = []
               this.selectAll = false
             }
+          },
+          cancel:function(){
+            this.mylist = JSON.parse(JSON.stringify(oldobj))
           }
         }
       })  

@@ -27,7 +27,6 @@
 
                 <div class="wrap-list">
                     <div class="drop-down-two">
-                        <input type="checkbox" hidden="hidden" name="" id=""> 
                         <a class="drop-down-two-header" href="javascript:void(0);">
                             <span class="glyphicon glyphicon-chevron-down"></span> 第1课时
                         </a> 
@@ -305,9 +304,6 @@
                                 <a data-toggle="tab" href="#">文献资料</a>
                             </li>
                             <li>
-                                <a data-toggle="tab" href="#">题目</a>
-                            </li>
-                            <li>
                                 <a data-toggle="tab" href="#">其它</a>
                             </li>
                         </ul>
@@ -334,7 +330,7 @@
                                <td>资源名称.doc</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            <tr>
                                <td><input class="checkbox" type="checkbox" name=""></td>
@@ -342,7 +338,7 @@
                                <td>资源名称.doc</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            <tr>
                                <td><input class="checkbox" type="checkbox" name=""></td>
@@ -350,7 +346,7 @@
                                <td>资源名称.doc</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            <tr>
                                <td><input class="checkbox" type="checkbox" name=""></td>
@@ -358,7 +354,7 @@
                                <td>资源名称.doc</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            
                         </tbody>
@@ -387,7 +383,7 @@
                                <td>广州航海学院</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            <tr>
                                <td><input class="checkbox" type="checkbox" name=""></td>
@@ -399,7 +395,7 @@
                                <td>广州航海学院</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            <tr>
                                <td><input class="checkbox" type="checkbox" name=""></td>
@@ -411,7 +407,7 @@
                                <td>广州航海学院</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            <tr>
                                <td><input class="checkbox" type="checkbox" name=""></td>
@@ -423,7 +419,7 @@
                                <td>广州航海学院</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            <tr>
                                <td><input class="checkbox" type="checkbox" name=""></td>
@@ -435,7 +431,7 @@
                                <td>广州航海学院</td>
                                <td>张老师</td>
                                <td>2018-6-19</td>
-                               <td><a href="#">预览</a></td>
+                               <td><a data-toggle="modal" data-target=".mygoodview" href="#">预览</a></td>
                            </tr>
                            
                           
@@ -449,6 +445,62 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 预览 -->
+<div class="wx">
+    <!-- 预览窗口 -->
+    <div class="update_modal">
+        <div class="modal fade mygoodview" tabindex="-1" role="dialog" aria-labelledby="mygoodview">
+            <div class="analog-three" style="width:1000px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>项目1 资源名称.doc</b>
+                </div>
+                <div class="analog-three-in" style="width:80%;">
+                    <div class="text-left" >
+                        <div class="h4"> 1、仓储管理系统中存货管理模块不包括以下哪项（    ）。（5分）</div>
+                        <!-- 单选 -->
+                        <div style="margin-left:20px;line-height:30px;">
+                            <p>A回单清查</p>
+                            <p>B.盘点表</p>
+                            <p>C.库存调整</p>
+                            <p>D.综合考核</p>
+                        </div>
+
+                        <!-- 判断 -->
+
+                        <!-- <div style="margin-left:20px;line-height:30px;">
+                            <p>是</p>
+                            <p>否</p>
+                        </div> -->
+                        
+                    </div>
+                    <div style="padding:5px;border:1px dashed #ccc;background: #f9f9f9;">
+                        <table style="vertical-align: top;" >
+                            <tbody>
+                                <tr>
+                                    <td style="width:75px;">正确答案：</td>
+                                    <td>是</td>
+                                </tr>
+                                <tr>
+                                    <td>解题思路：</td>
+                                    <td class="line-height: normal;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsum modi, quasi aut vitae officia debitis optio blanditiis eum aperiam! Distinctio accusantium minima sint facere dignissimos fugiat inventore recusandae minus.</td>
+                                </tr>
+                                <tr>
+                                    <td>难易度：</td>
+                                    <td>0.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="text-center">
+                        <button style="margin-left:0" data-dismiss="modal" type="button" >关闭</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

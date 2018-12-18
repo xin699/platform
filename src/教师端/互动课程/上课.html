@@ -4,7 +4,7 @@
             <span style="font-size:20px;">互动课堂</span> <span style="font-size:20px;margin:0 15px 0 15px;">运输管理</span> |
             <span style="margin:0 15px 0 15px;">第一单元</span> | <span style="margin:0 15px 0 15px;">第二课时</span>
             <button style="color:white;margin-left:10px;" data-toggle="modal" data-target="#mygood">变更课时</button>
-            <button style="color:white;margin-left:500px;" data-toggle="modal" data-target="#mygood-one">下课</button>
+            <button style="color:white;margin-left:450px;" data-toggle="modal" data-target="#mygood-one">下课</button>
         </div>
 
         <div class="play_one">
@@ -14,11 +14,11 @@
                     点击左侧导航栏
                 </div>
                 <div class="play_six xin_btn" style="display: none">
-                    <button style="margin-top:35px" data-toggle="modal" data-target="#mygood-two">课程资源</button>
-                    <button data-toggle="modal" data-target="#mygood-three">课堂签到</button>
-                    <button data-toggle="modal" data-target="#mygood-four">签到明细</button>
-                    <button>发布课堂练习</button>
-                    <button data-toggle="modal" data-target="#mygood-five">课堂练习明细</button>
+                    <button style="margin-top:35px" data-toggle="modal" type="button"  data-target="#mygood-two">课程资源</button>
+                    <button data-toggle="modal" type="button"  data-target="#mygood-three">课堂签到</button>
+                    <button data-toggle="modal" type="button"  data-target="#mygood-four">签到明细</button>
+                    <a href="taskCenterSelect-1.html"><button type="button"> 发布课堂练习</button></a> 
+                    <button data-toggle="modal" type="button"  data-target="#mygood-five">课堂练习明细</button>
                     <button>摄像头关闭</button>
                 </div>
             </div>
@@ -300,7 +300,8 @@
                     <span style="font-size: 22px">是否下课？</span><br><br>
                 </div>
                 <div class="xin-model-footer">
-                    <button>是</button> <button data-dismiss="modal">否</button>
+                    <a href="interact.html"><button type="button">是</button></a>    
+                    <button type="button" data-dismiss="modal">否</button>
                 </div>
             </div>
         </div>
@@ -308,19 +309,25 @@
 
     <div class="update_modal">
         <div class="modal fade" id="mygood-two" tabindex="-1" role="dialog" aria-labelledby="mygood-two">
-            <div class="analog-seven" style="width:600px">
+            <div class="analog-seven" style="width:700px">
                 <div class="analog-one">
                     <button type="button" class="close close-one" data-dismiss="modal">x</button>
                     <b>资源列表</b>
                 </div>
-                <div class="analog-seven-in">
-                    班级名称：<select name="city" style="width:150px">
+                <div class="analog-seven-in" style="width:550px">
+                    <select name="city" style="width:150px">
                         <option value="">请选择单元</option>
                         <option value="">第一单元</option>
-                        <option value="">市场营销</option>
+                        <option value="">第一单元</option>
                     </select>
-                    <button style="margin-left:10px;">查询</button><button style="margin-left:-2px;">添加本地资源</button>
-                    <table style="width:90%">
+                    <select name=""  style="width:150px">
+                            <option value="">请选择课时</option>
+                        <option value="">第一课时</option>
+                        <option value="">第二课时</option>
+                        <option value="">第三课时</option>
+                    </select>
+                    <button style="margin-left:10px;">查询</button><button id="addfile" style="margin-left:-2px;">添加本地资源</button>
+                    <table style="width:100%">
                         <th style="text-align: center;">资源名称</th>
                         <th style="text-align: center;">资源类型</th>
                         <tr>
@@ -347,18 +354,18 @@
 
     <div class="update_modal">
         <div class="modal fade xin-model" id="mygood-three" tabindex="-1" role="dialog" aria-labelledby="mygood-three">
-            <div class="analog-seven" style="width:600px">
+            <div class="analog-seven" style="width:400px">
                 <div class="analog-one">
                     <button type="button" class="close close-one" data-dismiss="modal">x</button>
                     <b>课堂签到</b>
                 </div>
-                <div class="analog-seven-in" style="line-height: 40px;padding: 0 133px 20px 133px;">
+                <div class="analog-seven-in" style="line-height: 40px;width: 220px;">
                     当前：2018/06/12 下午05:03:36 <br>
                     结束：2018/06/12 下午05:03:36 <br>
-                    签到时长：<input type="text" style="width:70px;height:20px">&nbsp;(分钟)
+                    签到时长：<input type="text" id="makeValue" style="width:70px;height:20px"><span class="red"></span>&nbsp;(分钟)
                 </div>
                 <div class="xin-model-footer">
-                    <button>提交</button> <button data-dismiss="modal">关闭</button>
+                    <button type="button" id="makeSubmit" >提交</button>
                 </div>
             </div>
         </div>
@@ -391,73 +398,74 @@
                             <td>张同学</td>
                             <td>88854558</td>
                             <td>缺席</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>张同学</td>
                             <td>88854558</td>
                             <td>缺席</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>周同学</td>
                             <td>88854558</td>
                             <td>缺席</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>周同学</td>
                             <td>88854558</td>
                             <td>迟到</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>5</td>
                             <td>周同学</td>
                             <td>88854558</td>
                             <td>迟到</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td>郑同学</td>
                             <td>88854558</td>
                             <td>迟到</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>7</td>
                             <td>郑同学</td>
                             <td>88854558</td>
                             <td>迟到</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>8</td>
                             <td>郑同学</td>
                             <td>88854558</td>
                             <td>迟到</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>9</td>
                             <td>郑同学</td>
                             <td>88854558</td>
-                            <td>修改状态</td>
-                            <td>修改状态</td>
+                            <td>迟到</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                         <tr>
                             <td>10</td>
                             <td>郑同学</td>
                             <td>88854558</td>
                             <td>迟到</td>
-                            <td>修改状态</td>
+                            <td><a data-toggle="modal" data-target=".mygood-state" href="#">修改状态</a></td>
                         </tr>
                     </table>
                     共计：40条。已签到：10人；迟到：1人；缺席：2人；事假：2人；病假：2人。
+                    <div id="pagination2" class="pagination2"></div>
                 </div>
             </div>
         </div>
@@ -465,13 +473,13 @@
 
     <div class="update_modal">
         <div class="modal fade" id="mygood-five" tabindex="-1" role="dialog" aria-labelledby="mygood-five">
-            <div class="analog-seven" style="width:800px">
+            <div class="analog-seven" style="width:850px">
                 <div class="analog-one">
                     <button type="button" class="close close-one" data-dismiss="modal">x</button>
                     <b>课堂练习列表</b>
                 </div>
-                <div class="analog-seven-in" style="width:710px">
-                    <table style="width:95%">
+                <div class="analog-seven-in" style="margin: 0 auto;width:800px">
+                    <table style="width:100%">
                         <th style="text-align: center;">序号</th>
                         <th style="text-align: center;">练习标题</th>
                         <th style="text-align: center;">发布时间</th>
@@ -486,9 +494,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>0%</td>
-                            <td>进行中</td>
                             <td>0/7</td>
-                            <td class="class_edit">批改</td>
+                            <td><span class="red">进行中</span></td>
+                            <td class="class_edit"><a class="red" href="taskCenter-1-1.html">批改</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -496,9 +504,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>0%</td>
-                            <td>进行中</td>
                             <td>0/7</td>
-                            <td class="class_edit">批改</td>
+                            <td><span class="red">进行中</span></td>
+                            <td class="class_edit"><a class="red" href="taskCenter-1-1.html">批改</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
@@ -506,9 +514,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>50%</td>
-                            <td>已结束</td>
                             <td>0/7</td>
-                            <td class="class_check">查看</td>
+                            <td>已结束</td>
+                            <td class="class_check"><a href="taskCenter-1-1.html">查看</a></td>
                         </tr>
                         <tr>
                             <td>4</td>
@@ -516,9 +524,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>50%</td>
-                            <td>已结束</td>
                             <td>0/7</td>
-                            <td class="class_check">查看</td>
+                            <td>已结束</td>
+                            <td class="class_check"><a href="taskCenter-1-1.html">查看</a></td>
                         </tr>
                         <tr>
                             <td>5</td>
@@ -526,9 +534,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>50%</td>
-                            <td>已结束</td>
                             <td>0/7</td>
-                            <td class="class_check">查看</td>
+                            <td>已结束</td>
+                            <td class="class_check"><a href="taskCenter-1-1.html">查看</a></td>
                         </tr>
                         <tr>
                             <td>6</td>
@@ -536,9 +544,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>50%</td>
-                            <td>已结束</td>
                             <td>0/7</td>
-                            <td class="class_check">查看</td>
+                            <td>已结束</td>
+                            <td class="class_check"><a href="taskCenter-1-1.html">查看</a></td>
                         </tr>
                         <tr>
                             <td>7</td>
@@ -546,9 +554,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>50%</td>
-                            <td>已结束</td>
                             <td>0/7</td>
-                            <td class="class_check">查看</td>
+                            <td>已结束</td>
+                            <td class="class_check"><a href="taskCenter-1-1.html">查看</a></td>
                         </tr>
                         <tr>
                             <td>8</td>
@@ -556,9 +564,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>50%</td>
-                            <td>已结束</td>
                             <td>0/7</td>
-                            <td class="class_check">查看</td>
+                            <td>已结束</td>
+                            <td class="class_check"><a href="taskCenter-1-1.html">查看</a></td>
                         </tr>
                         <tr>
                             <td>9</td>
@@ -566,9 +574,9 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>50%</td>
-                            <td>已结束</td>
                             <td>0/7</td>
-                            <td class="class_check">查看</td>
+                            <td>已结束</td>
+                            <td class="class_check"><a href="taskCenter-1-1.html">查看</a></td>
                         </tr>
                         <tr>
                             <td>10</td>
@@ -576,13 +584,101 @@
                             <td>2018:06:13 00:00:00</td>
                             <td>2018:06:13 00:00:00</td>
                             <td>50%</td>
-                            <td>已结束</td>
                             <td>0/7</td>
-                            <td class="class_check">查看</td>
+                            <td>已结束</td>
+                            <td class="class_check"><a href="taskCenter-1-1.html">查看</a></td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="update_modal">
+        <div class="modal fade xin-model mygood-state" tabindex="-1" role="dialog" aria-labelledby="mygood-state">
+            <div class="analog-seven" style="width:400px">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>修改状态</b>
+                </div>
+                <div class="analog-seven-in" style="width: auto;padding: 20px">
+                    <a herf="#" class="btn btn-default btn-block btn-primary" >已签到</a>
+                    <a herf="#" class="btn btn-default btn-block" >迟到</a>
+                    <a herf="#" class="btn btn-default btn-block" >事假</a>
+                    <a herf="#" class="btn btn-default btn-block" >病假</a>
+                    <a herf="#" class="btn btn-default btn-block " >缺勤</a>
+                </div>
+                <div class="xin-model-footer">
+                    <button type="button" data-dismiss="modal" >提交修改</button>
+                    <button type="button" data-dismiss="modal" >关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+    <!-- 文件上传 -->
+    <div class="wx">
+            <div class="update_modal">
+                    <div class="modal fade" id="mygoodFile" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="mygoodFile">
+                        <div class="analog-three">
+                            <div class="analog-one">
+                                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                                <b>非题目类上传</b>
+                            </div>
+                            <div class="analog-three-in">
+                                课程类别：<select name="city">
+                                    <option value="">请选择</option>
+                                    <option value="">理论课程</option>
+                                    <option value="">实训课程</option>
+                                </select> <br>
+                                课程名称：<select name="city">
+                                    <option value="">请选择</option>
+                                    <option value="">B2C电商仿真实训</option>
+                                    <option value="">B2B分销运营实务</option>
+                                </select> <br>
+                                课程单元：<select name="city">
+                                    <option value="">请选择</option>
+                                    <option value="">第一单元</option>
+                                    <option value="">第二单元</option>
+                                </select> <br>
+                                资源类型：<select name="fileType" id="resType" value="0">
+                                    <option value="0">电子教材</option>
+                                    <option value="1">PPT</option>
+                                    <option value="2">图片</option>
+                                    <option value="3">视频</option>
+                                    <option value="4">案例</option>
+                                    <option value="5">Flash</option>
+                                    <option value="6">文献资料</option>
+                                    <option value="7">其他</option>
+                                </select> <br>
+                                    <button id="bu-one" type="button" >批量选择文件</button>
+                                    <input type="file" name="files" style="display:none;" multiple="multiple" id="files">
+            
+                                    
+                                <div class="files-wrap" style="width:350px;max-height: 260px;overflow-y: auto;">
+                                    <!-- <div class="flie-list">
+                                        <div class="files-title">dfasdfa.jpg <a class="pull-right glyphicon glyphicon-remove validate" href="javascript:void(0);"></a></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 60%;">
+                                                60%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flie-list">
+                                        <div class="files-title">dfasdfa.jpg <a class="pull-right glyphicon glyphicon-remove validate" href="javascript:void(0);"></a></div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;">
+                                                已完成
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                
+                                <button type="button" data-dismiss="modal" >确认</button> <button type="button" data-dismiss="modal" >取消</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </div>

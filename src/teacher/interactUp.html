@@ -73,13 +73,191 @@
     <script src="/js/require.js"></script>
     <script>
         @@include('@@webRoot/src/js/config.js')
-        require(['jquery', '/js/range.js', '/js/vue.min.js'], function ($, range, Vue) {
+        require(['jquery', 'myPagination'], function ($) {
+
+            $(function($){
+                if($('#pagination2').length != 0){
+                    new myPagination({
+                        id: 'pagination2',
+                        curPage:1, //初始页码
+                        pageTotal: 50, //总页数
+                        pageAmount: 10,  //每页多少条
+                        dataTotal: 500, //总共多少条数据
+                        pageSize: 5, //可选,分页个数
+                        showPageTotalFlag:false, //是否显示数据统计
+                        showSkipInputFlag:false, //是否支持跳转
+                        getPage: function (page) {
+                            //获取当前页数
+                            console.log(page);
+                        }
+                    })
+                }
+
+                    $('#addfile').click(function(e){
+                        $('#mygood-two').modal('hide')
+                        $('#mygoodFile').modal('show')
+                    })
+
+                    $('#mygoodFile').on('hide.bs.modal',function(e){
+                        $('#mygood-two').modal('show')
+                    })
+
+                      // 文件上传按钮绑定
+                    $('#bu-one').click(function(e) {
+                        $('#files')[0].click()
+                    })
+
+
+                    // 分组支持
+                    var fileTypeGroup = [
+                        // 电子教材
+                        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf"],
+                        // ppt
+                        ["ppt", "pptx"],
+                        // 图片
+                        ["jpg", "jpeg", "png", "gif"],
+                        // 视频
+                        ["mp4", "avi", "flv", "wmv"],
+                        // 案例
+                        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf","swf"],
+                        // Flash
+                        ["swf"],
+                        // 文献资料
+                        ["doc", "docx", "xls", "xlsx", "ppt", "pptx","pdf"],
+                        // 其它
+                        ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg", "jpeg", "png", "gif","rar", "zip","pdf", "swf","mp4", "avi", "flv", "wmv"]
+                    ]
+
+                    // 类型大小支持分组
+                    var fileTypeSize = [
+                        // 100M  104857600  b
+                        ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg", "jpeg", "png", "gif"],
+                        // 500M  524288000  b
+                        ["rar", "zip"],
+                        // 1024M  1073741824 b
+                        ["pdf", "swf"],
+                        // 1500M  1572864000  b
+                        ["mp4", "avi", "flv", "wmv"]
+                    ]
+
+                    var fileTypeSizeNum = [104857600,524288000,1073741824,1572864000]
+
+                    // 添加文件变动绑定
+                    $('#files').change(function(e){
+                        var files = e.target.files;
+                        var wrap = $('.files-wrap');
+                        var resType = $('#resType').val();
+
+                        // 计算加入列表和正在选中的文件
+
+                        if(files.length + wrap.children('.flie-list').length > 20){
+                        alert('当前操作不能超过20个文件')
+                        return false
+                        }
+
+                        // 多个文件遍历
+                        $.each(files,function(i,f){
+
+                        var suffix = f.name.split('.').pop().toLowerCase();
+                        var fileName = f.name.split('.')[0];
+                        var fileSize = f.size;
+
+                        // 分组文件支持检测
+                        if(fileTypeGroup[resType].indexOf(suffix) === -1){
+                        alert('当前分组不支持该类型！')
+                        return false
+                        }
+
+                        // 遍历大小
+                        $.each(fileTypeSize,function(i,f){
+                            if(f.indexOf(suffix)!= -1){
+
+                            if(fileSize <= fileTypeSizeNum[i] ){
+
+                                var list = "";
+                                    list += "<div class=\"flie-list\">\n";
+                                    list += "	<div class=\"files-title\">\n";
+                                    list += "	"+fileName.substr(0,30)+'......'+ suffix +" <a class=\"pull-right glyphicon glyphicon-remove validate\" href=\"javascript:void(0);\"><\/a>\n";
+                                    list += "	<\/div>\n";
+                                    list += "	<div class=\"progress\">\n";
+                                    list += "		<div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" style=\"width: 0%;\">\n";
+                                    list += "                                   0%\n";
+                                    list += "		<\/div>\n";
+                                    list += "	<\/div>\n";
+                                    list += "<\/div>\n";
+                                
+                                wrap.append(list)
+
+                                // 这里通过文件检测可以写ajax
+
+                                // ajax添加进度条
+
+                            }else{
+                                alert('不能超过'+ fileTypeSizeNum[i]/ 2**20 +"MB 大小")
+                            }
+
+                            return false
+
+                            }
+                        })
+
+
+                        })
+
+                    })
+                    
+                    // 删除添加文件
+                    $('.files-wrap').on('click','a',function(e){
+                        // 删除文件ajax
+
+                        // 可以在这里写成功然后执行下面代码
+                        $('#files').val('');
+                        $(this).parents('.flie-list').remove();
+                    })
+                    // 文件模态窗口关闭的时候清楚列表
+                    $('#mygoodFile').on('hidden.bs.modal', function () {
+                        $('.files-wrap').children('.flie-list').remove()
+                    })
+
+      
+
+            })
+
+            $('.mygood-state').on('show.bs.modal',function(e){
+                var val = $('#mygood-four').css('z-index')
+                $(this).css('z-index',parseInt(val,10) + 2)
+                $('.modal-backdrop').css('z-index',parseInt(val,10) + 1)
+            })
+
+            $('.mygood-state').on('hide.bs.modal',function(e){
+                $('.modal-backdrop').removeAttr('style')
+            })
+
+            $('.mygood-state').on('click','.btn',function(e){
+                $(this).addClass('btn-primary').siblings().removeClass('btn-primary')
+            })
+
             $('.play_hiede').click(function (e) {
                 $('.play_six').show()
             });
             $('.play_six').mouseleave(function () {
                 $('.play_six').hide()
             })
+
+            // 签到
+            $('#makeSubmit').click(function(e){
+
+                var $obj = $('#makeValue')
+                var val = $obj.val();
+                var $objVal = $obj.next('.red')
+
+                $objVal.text(val)
+                $obj.remove()
+
+                $('#mygood-three').modal('hide')
+
+            })
+
 
             // 聊天
             screenFuc();
