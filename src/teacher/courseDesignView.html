@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"课程简介",
+            "link":"courseInfoView.html",
+            "active":false
+          },
+          "nav":[
+            {
+                "title":"课程设计",
+                "link":"#",
+                "active":"active"
+            }
+          ],
+          "template": "教师端/益达云库课程/课程设计.html"
+        })
+
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    require(['jquery','myPagination'],function($){
+
+      // 滑动
+      $('.toggle-up').click(function(e){
+        var $self = $(this)
+        $self.parents('.drop-down').children('.collapse').toggle("fast",function(e){
+          $self.children().toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-right')
+        })
+      })
+
+      $('.collapse').eq(0).toggle()
+
+      // 列表滑动
+
+      $('.drop-down').on('click','.drop-down-two-header',function(e){
+        var $self = $(this)
+        $self.parents('.drop-down-two').nextAll('.drop-down-two-list').toggle("fast",function(e){
+          $self.children().toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-right')
+        })        
+      })
+
+
+
+    })
+  </script>
+</body>
+</html>
