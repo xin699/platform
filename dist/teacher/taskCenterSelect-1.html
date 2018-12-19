@@ -132,25 +132,15 @@
                     <tr>
                         <td>选择课程：</td>
                         <td class="text-left">
-                            <select name="city" class="form-control" style="width:200px;">
-                                <option value="">选择课程</option>
-                                <option value="">集装箱码头</option>
-                                <option value="">货代与报关</option>
-                                <option value="">数学</option>
-                                <option value="">创库配送</option>
-                                <option value="">运输管理</option>
-                            </select>
+                            货代与报关
                         </td>
                     </tr>
                     <tr>
                         <td>选择单元：</td>
                         <td class="text-left">
                             <div class="btnlist">
-                                <template v-for="(item,index) in arr" v-if="selectArr[index] && arrSubmit">
-                                    <span :class="['btn','btn-round','btn-default','btn-primary']">{{item}}</span>
-                                </template>
+                                第一单元，第二单元
                             </div>
-                            <a data-toggle="modal" data-target="#mystery" href="#">选择单元</a>
                         </td>
                     </tr>
                     <tr>
@@ -310,32 +300,6 @@
             <div class="text-center" style="margin-top: 20px;">
                 <a href="taskCenterSelect2.html"><button class="btn btn-primary">保存，下一步</button></a> 
                 <a href="javascript:history.back();"><button class="btn btn-default" style="width:110px;">取消</button></a>
-            </div>
-        </div>
-        <!-- 选择单元窗口 -->
-        <div class="update_modal">
-            <div class="modal fade" id="mystery" tabindex="-1" role="dialog" aria-labelledby="mystery">
-                <div class="analog">
-                    <div class="analog-one">
-                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
-                        <b>选择单元（可多选）</b>
-                    </div>
-                    <div class="analog-three-in" id="toggle">
-                            <!-- btn-primary -->
-                        <template v-for="(item,index) in arr">
-                            <span @click="arrToggle(index,item)" :class="['btn','btn-round','btn-default',{'btn-primary':selectArr[index]}]">{{item}}</span>
-                        </template>
-
-                        <span @click="arrToggleAll" :class="['btn' ,'btn-round', 'btn-default', 'select-all',{'btn-primary': selectAll }]">全选</span>
-
-
-                        <div class="text-center">
-                            <button @click="arrSubmit = true" type="button" class="submit" data-dismiss="modal">确认</button>
-                            <button type="button" data-dismiss="modal">取消</button>
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -650,8 +614,6 @@ require(["jquery","bootstrap","myPagination"],function($){
             this.table.splice(this.delobjIndex,1)
           },
           update:function(obj){
-
-            console.log(obj.radio)
             
             if(this.updateState!==""){
               vm.$set(vm.table, this.updateState, obj)
