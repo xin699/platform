@@ -63,28 +63,6 @@
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    require(['jquery'],function($){
-
-    $('#che').click(function(e){
-      if(this.checked){
-        $('.myModal').modal('toggle')
-      }else{
-        $('.myModal2').modal('toggle')
-      }
-      return false
-    })
-
-
-    $('.submit').click(function(e){
-      $('#che')[0].checked = true;
-      $('.myModal').modal('hide')
-    })
-
-    $('.qsubmit').click(function(e){
-      $('#che')[0].checked = false;
-      $('.myModal2').modal('hide')
-    })
-    })
   </script>
 </body>
 </html>
