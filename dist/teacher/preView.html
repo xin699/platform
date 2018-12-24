@@ -167,23 +167,252 @@
     </ul>
     <div id="myTabContent" class="tab-content">
       
-    <div class="central qq">
-        <div class="input-1">
-            <select name="city">
-                <option value="">PPT</option>
-                <option value="">图文</option>
-            </select>
+<div class="central">
+    <div class="input-1">
+        <button data-toggle="modal" data-target=".mygoodview" class="btn btn-default btn-primary">提问</button>
+        <button data-toggle="modal" data-target=".mygoodview2" class="btn btn-default btn-primary">笔记</button>
+    </div>
+    <!-- 两个不同类型的可以共用一个页面 -->
+    <!-- PPT -->
+    <div class="central-table">
+        <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellendus ipsa aspernatur totam aut impedit facilis voluptatibus exercitationem ad suscipit autem enim vero distinctio, alias ex nostrum ut, illum quasi. <br> <br> <br>
         </div>
-        <div class="slide">
-                <img src="/images/q1.png" alt="">
-                <div class="slide_in" style="top:600px;">
-                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right"
-                            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                        <a href=""><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a> 
-                        </button>
-                </div>
+        <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellendus ipsa aspernatur totam aut impedit facilis voluptatibus exercitationem ad suscipit autem enim vero distinctio, alias ex nostrum ut, illum quasi.
         </div>
     </div>
+    <!-- 图文 -->
+    <div class="central-table" hidden="hidden" >
+        <table>
+            <tbody>
+                <tr>
+                    <td style="width:120px;">标题：</td>
+                    <td>图文标题</td>
+                </tr>
+                <tr>
+                    <td>内容：</td>
+                    <td style="padding:10px 0;" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellendus ipsa aspernatur totam aut impedit facilis voluptatibus exercitationem ad suscipit autem enim vero distinctio, alias ex nostrum ut, illum quasi.</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <a href="javascript:void(0);">
+                            <img src="/images/q3.png" alt="">
+                            <p class="text-center">附件1</p>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <img src="/images/q3.png" alt="">
+                            <p class="text-center">附件2</p>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <img src="/images/q3.png" alt="">
+                            <p class="text-center">附件3</p>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 评论 -->
+    <div style="border-top: 1px solid black;margin: 30px 0">
+          <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">我的笔记</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">全部笔记</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- 我的笔记 -->
+            <div role="tabpanel" class="tab-pane active" id="home">
+
+                <div class="list overflow_hidden" style="margin: 0 20px;padding: 15px 0;border-bottom: 1px solid #ccc ">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="text-center" >
+                                <img src="/images/t6.png" alt="head">
+                                <div class="list-name ">黄玉</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <p>敲黑板，划重点，就是这里啦。</p>
+                            <div class="list-footer" style="margin-top: 40px;">
+                                <span class="date-time">2018年06月26日 08:30:28</span>
+                                <a href="javascript:void(0);" class="red">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 全部笔记 -->
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="list overflow_hidden" style="margin: 0 20px;padding: 15px 0;border-bottom: 1px solid #ccc ">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="text-center" >
+                                    <img src="/images/t6.png" alt="head">
+                                    <div class="list-name ">黄玉</div>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <p>敲黑板，划重点，就是这里啦。</p>
+                                <div class="list-footer" style="margin-top: 40px;">
+                                    <span class="date-time">2018年06月26日 08:30:28</span>
+                                    <a href="javascript:void(0);" class="red">删除</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="list overflow_hidden" style="margin: 0 20px;padding: 15px 0;border-bottom: 1px solid #ccc ">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="text-center" >
+                                <img src="/images/t6.png" alt="head">
+                                <div class="list-name ">周星星</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <p>就是这里啦。</p>
+                            <div class="list-footer" style="margin-top: 40px;">
+                                <span class="date-time">2018年06月26日 08:30:28</span>
+                                <a href="javascript:void(0);" class="red">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list overflow_hidden" style="margin: 0 20px;padding: 15px 0;border-bottom: 1px solid #ccc ">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="text-center" >
+                                <img src="/images/t6.png" alt="head">
+                                <div class="list-name ">李章</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <p>make</p>
+                            <div class="list-footer" style="margin-top: 40px;">
+                                <span class="date-time">2018年06月26日 08:30:28</span>
+                                <a href="javascript:void(0);" class="red">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- page -->
+        <div id="pagination" class="pagination2"></div>
+    </div>
+</div>
+
+<!-- 预览 -->
+<div class="wx">
+    <!-- 预览窗口 -->
+    <div class="update_modal">
+        <div class="modal fade mygoodview" tabindex="-1" role="dialog" aria-labelledby="mygoodview">
+            <div class="analog-three" style="width:600px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>新增问题</b>
+                </div>
+                <div class="analog-three-in-biger" style="width:80%;">
+                    <table class="table biger-table2">
+                        <tbody>
+                            <tr>
+                                <td>课程名称：</td>
+                                <td>
+                                    <select class="form-control inl-bl" style="width: 110px;" name="" id="">
+                                        <option value="0">理论课程</option>
+                                    </select>
+                                    <select class="form-control inl-bl" style="width: 170px;" name="" id="">
+                                        <option value="0">B2C电商仿真实训</option>
+                                    </select>
+                                    <span>教师：张老师</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>问题描述：</td>
+                                <td>
+                                    <textarea class="form-control checkbox" name="" id="" cols="30" rows="10"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button data-dismiss="modal" type="button" >提问</button>
+                        <button style="margin-left:0" data-dismiss="modal" type="button" >取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 预览 -->
+<div class="wx">
+    <!-- 预览窗口 -->
+    <div class="update_modal">
+        <div class="modal fade mygoodview2" tabindex="-1" role="dialog" aria-labelledby="mygoodview2">
+            <div class="analog-three" style="width:600px;">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>新增笔记</b>
+                </div>
+                <div class="analog-three-in-biger" style="width:80%;">
+                    <table class="table biger-table2">
+                        <tbody>
+                            <tr>
+                                <td class="text-right">课程名称：</td>
+                                <td>
+                                    <select class="form-control inl-bl" style="width: 170px;" name="" id="">
+                                        <option value="0">理论课程</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">课程单元：</td>
+                                <td>
+                                    <select class="form-control inl-bl" style="width: 170px;" name="" id="">
+                                        <option value="0">第一单元</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">课时：</td>
+                                <td>
+                                    <select class="form-control inl-bl" style="width: 170px;" name="" id="">
+                                        <option value="0">第一课时</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">资源：</td>
+                                <td>
+                                    <select class="form-control inl-bl" style="width: 170px;" name="" id="">
+                                        <option value="0">理论课程</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">记录：</td>
+                                <td>
+                                    <textarea class="form-control checkbox" name="" id="" cols="30" rows="10"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <button data-dismiss="modal" type="button" >提问</button>
+                        <button style="margin-left:0" data-dismiss="modal" type="button" >取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
   </div>
     </div>

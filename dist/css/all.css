@@ -11494,7 +11494,7 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     background: white;
     padding-bottom: 50px;
     border-radius: 15px; }
-  .wx .analog-three-in {
+  .wx .analog-three-in, .wx .analog-three-in-biger {
     position: relative;
     top: 15px;
     width: 415px;
@@ -11513,7 +11513,7 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
       display: inline; }
     .wx .analog-three-in input.checkbox {
       position: relative; }
-  .wx .analog-three-in button {
+  .wx .analog-three-in button, .wx .analog-three-in-biger button {
     width: 109px;
     height: 31px;
     line-height: 27px;
@@ -11523,6 +11523,9 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     color: white;
     background: #10859d;
     border: 1px solid #10859d; }
+  .wx .analog-three-in-biger {
+    line-height: normal;
+    padding-bottom: 0; }
   .wx #bu-one {
     margin-left: 150px;
     color: black;
