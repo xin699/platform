@@ -69,7 +69,26 @@
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    @@include('include/layout/header.js')
+    require(['jquery'],function(){
+      // 滑动
+      $('.toggle-up').click(function(e){
+        var $self = $(this)
+        $self.parents('.drop-down').children('.collapse').toggle("fast",function(e){
+          $self.children().toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-right')
+        })
+      })
+
+      $('.collapse').eq(0).toggle()
+
+            // 列表滑动
+
+      $('.drop-down').on('click','.drop-down-two-header',function(e){
+        var $self = $(this)
+        $self.parents('.drop-down-two').nextAll('.drop-down-two-list').toggle("fast",function(e){
+          $self.children().toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-right')
+        })        
+      })
+    })
   </script>
 </body>
 </html>
