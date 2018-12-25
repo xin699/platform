@@ -18,6 +18,8 @@
     <![endif]-->
   <link rel="stylesheet" href="/css/all.css">
 
+  <link rel="stylesheet" href="../fonts/iconfont.css">
+  <link rel="stylesheet" href="../css/chat.css">
   <title>首页</title>
 </head>
 <body class="nav-md">
@@ -113,32 +115,32 @@
         </ul>
     </div>
     <ul class="nav nav-pills dropdown">
-        <li role="presentation" class="active">
+        <li role="presentation" class="false">
             <a href="index.html">首页</a>
         </li>
         
             <li role="presentation" class="undefined"  >
-                <a href="#">在线学习</a>
+                <a href="taskInfoOnline.html">在线学习</a>
             </li>
         
             <li role="presentation" class="undefined"  >
-                <a href="#">提问</a>
+                <a href="taskInfoQuestion.html">提问</a>
             </li>
         
             <li role="presentation" class="undefined"  >
-                <a href="#">笔记</a>
+                <a href="taskInfoNote.html">笔记</a>
+            </li>
+        
+            <li role="presentation" class="active"  >
+                <a href="taskInfoInteractive.html">互动课堂</a>
             </li>
         
             <li role="presentation" class="undefined"  >
-                <a href="#">互动课堂</a>
+                <a href="jobCenter.html">作业</a>
             </li>
         
             <li role="presentation" class="undefined"  >
-                <a href="#">作业</a>
-            </li>
-        
-            <li role="presentation" class="undefined"  >
-                <a href="#">课堂练习</a>
+                <a href="classroom.html">课堂练习</a>
             </li>
         
             <li role="presentation" class="undefined"  >
@@ -146,7 +148,7 @@
             </li>
         
             <li role="presentation" class="undefined"  >
-                <a href="#">学习进度</a>
+                <a href="taskInfoLearning.html">学习进度</a>
             </li>
         
     </ul>
@@ -155,7 +157,7 @@
         <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
       
-      <li role="presentation" class="active"><a href="#">首页</a>
+      <li role="presentation" class="active"><a href="#">互动课堂</a>
       </li>
       
       
@@ -164,18 +166,298 @@
       
     </ul>
     <div id="myTabContent" class="tab-content">
-      
-    <div class="central-1 qq">
-
+      <div class="qq sk">
+    <div class="central-1" style="width: 100%">
         <div class="input-1">
-             <b style="font-size:20px;">互动课堂</b>  <b style="font-size:20px;margin-left:20px">运输管理</b>  
-             <span style="margin-left:20px;margin-right:10px">第一单元</span> | <span style="margin-left:10px">课时1</span>   <span style="margin-left:20px">【张老师】</span>
+            <span style="font-size:20px;">互动课堂</span> <span style="font-size:20px;margin:0 15px 0 15px;">运输管理</span> |
+            <span style="margin:0 15px 0 15px;">第一单元</span> | <span style="margin:0 15px 0 15px;">第二课时</span>
+            <!-- 开发的时候请删除下面3个按钮 -->
+            <a data-toggle="modal"  data-target="#mygood-three" class="btn btn-primary">签到</a>
+            <a data-toggle="modal"  data-target=".myModal2" class="btn btn-primary">签到成功</a>
+            <a data-toggle="modal"  data-target=".lianxi" class="btn btn-primary">练习窗口</a>
         </div>
-        <div class="play">
-            
+        
+        <div class="play_one">
+            <div class="play_side">
+                
+            </div>
         </div>
+        <div class="chatContainer">
+            <div class="chatBtn" data-toggle="tooltip" data-placement="bottom" title="讨论区">
+                <i class="iconfont icon2-xiaoxi1"></i>
+            </div>
+            <!-- <div class="chat-message-num">10</div> -->
+            <div class="chatBox" ref="chatBox">
+                <div class="chatBox-head">
+                    <h3 class="talk_title">讨论区</h3>
+                    <ul class="nav nav-tabs nav-justified borderNo" id="talk-nav" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                                data-toggle="tab">我的发言</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">全部信息</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="chatBox-info">
+                            <div class="chatBox-kuang" ref="chatBoxkuang" style="display: block">
+                                <div class="chatBox-content">
+                                    <div class="chatBox-content-demo" id="chatBox-content-demo">
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
+                                            <div class="left">
+                                                <div class="chat-avatars"><img src="../images/icon01.png" alt="头像" /></div>
+                                                <div class="left-msg">
+                                                    <div class="left-title">李刚</div>
+                                                    <div class="chat-message">
+                                                        给你看张图
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
 
+                                            <div class="left">
+                                                <div class="chat-avatars"><img src="../images/icon01.png" alt="头像" /></div>
+                                                <div class="left-msg">
+                                                    <div class="left-title">布鲁斯</div>
+                                                    <div class="chat-message">
+                                                        <img src="../images/1.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
+                                            <div class="right">
+                                                <div class="chat-message">嗯，适合做壁纸</div>
+                                                <div class="chat-avatars"><img src="../images/icon02.png" alt="头像" /></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="chatBox-send">
+                                    <div class="div-textarea" id="myTalk" contenteditable="true"></div>
+                                    <div>
+                                        <button id="chat-biaoqing" class="btn-default-styles" title="表情">
+                                            <i class="iconfont icon2-biaoqing"></i>
+                                        </button>
+                                        <button id="chat-fasong" class="btn-default-styles chat-fasong" title="发送"><i class="iconfont icon2-fasong"></i>
+                                        </button>
+                                    </div>
+                                    <!-- 表情包 -->
+                                    <div class="biaoqing-photo">
+                                        <ul>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -154px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -154px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -154px;"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="chatBox-info">
+                            <div class="chatBox-kuang" ref="chatBoxkuang" style="display: block">
+                                <div class="chatBox-content">
+                                    <div class="chatBox-content-demo" id="chatBox-content-demo2">
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
+                                            <div class="left">
+                                                <div class="chat-avatars"><img src="../images/icon01.png" alt="头像" /></div>
+                                                <div class="left-msg">
+                                                    <div class="left-title">李刚</div>
+                                                    <div class="chat-message">
+                                                        给你看张图
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
+                                            <div class="right">
+                                                <div class="chat-message">嗯，适合做壁纸</div>
+                                                <div class="chat-avatars"><img src="../images/icon02.png" alt="头像" /></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="chatBox-send">
+                                    <div class="div-textarea" id="allTalk" contenteditable="true"></div>
+                                    <div>
+                                        <button id="chat-biaoqing" class="btn-default-styles" title="表情">
+                                            <i class="iconfont icon2-biaoqing"></i>
+                                        </button>
+                                        <label id="chat-tuxiang" title="学生禁言" for="inputImage" class="btn-default-styles">
+                                            <!-- <input type="file" onchange="selectImg(this)" accept="image/jpg,image/jpeg,image/png"
+                                    name="file" id="inputImage" class="hidden">
+                                <i class="iconfont icon2-tuxiang"></i> -->
+                                            <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>
+                                        </label>
+                                        <button id="chat-fasong2" class="btn-default-styles chat-fasong" title="发送"><i class="iconfont icon2-fasong"></i>
+                                        </button>
+                                    </div>
+                                    <!-- 表情包 -->
+                                    <div class="biaoqing-photo">
+                                        <ul>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -154px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -154px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -154px;"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <!-- 弹框 -->
+
+    <!-- 系统提示 签到成功 -->
+    <div class="modal fade myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="analog" style="width:400px;">
+            <div class="analog-one">
+                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                <b>课堂签到</b>
+            </div>
+            <div class="analog-three " style="width:100%;height: 110px;">
+                <h3 class="text-center p">已签到</h3>
+                <p class="text-center p" style="line-height: 3;">2018-06-12  05:13:36</p>
+                <div class="text-center">
+                    <button style="color:white" type="button" data-dismiss="modal">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- 系统提示 签到 -->
+    <div class="update_modal">
+        <div class="modal fade xin-model" id="mygood-three" tabindex="-1" role="dialog" aria-labelledby="mygood-three">
+            <div class="analog-seven" style="width:400px">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>课堂签到</b>
+                </div>
+                <div class="analog-seven-in text-center" style="line-height: 40px;width: 220px;">
+                    <h3>运输管理　<span style="font-size: 16px;">【张老师】</span></h3>
+                    <div>第一单元 课时1</div>
+                    <div>结束时间：2018-06-12　05:13:36</div>
+                </div>
+                <div class="xin-model-footer">
+                    <button type="button" id="makeSubmit" >签到</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 练习窗口 -->
+    <div class="update_modal">
+        <div class="modal fade lianxi" tabindex="-1" role="dialog" aria-labelledby="lianxi">
+            <div class="analog-seven" style="width:600px">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>课堂练习</b>
+                </div>
+                <div class="analog-seven-in" style="line-height: 40px;width: 500px;">
+                    <h3>练习题123456</h3>
+                    <div><span>集装箱码头</span>　　<span>第一单元</span>　　<span>课时1</span></div>
+                    <div>
+                        <span class="pull-left">开始时间：2018:07:13  00:00:00</span>
+                        <span class="pull-right">结束时间：2018:07:13  00:00:00</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a target="_blank" href="jobInfo.html"><button class="btn btn-primary" style="width: 100px;margin-top: 20px" type="button" >做练习</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
     </div>
   </div>
     </div>
@@ -227,14 +509,300 @@ require(["jquery","bootstrap","myPagination"],function($){
 
  
 })
-    // 这里只写 调用参数方法，所有组件js全部弄进去 全局js目录
+        requirejs.config({
+    paths : {
+        "jquery" : "/js/jquery.min",
+        "bootstrap": "/js/bootstrap.min",
+        "cxCalendar": "/js/jquery.cxcalendar.min",
+        "myPagination":"/js/myPagination"
+    },
+    shim: {
+        jquery: {
+            exports: 'jquery'
+        },
+        bootstrap: {
+            deps: ['jquery']
+        },
+        myPagination:{
+            deps: ['jquery']
+        }
 
-require(['jquery'],function(){
-    $(function(){
-        console.log(12312)
-    })
+    }
 })
+// base
+require(["jquery","bootstrap","myPagination"],function($){
 
+    $(function($){
+        if($('#pagination').length != 0){
+            new myPagination({
+                id: 'pagination',
+                curPage:1, //初始页码
+                pageTotal: 50, //总页数
+                pageAmount: 10,  //每页多少条
+                dataTotal: 500, //总共多少条数据
+                pageSize: 5, //可选,分页个数
+                showPageTotalFlag:true, //是否显示数据统计
+                showSkipInputFlag:true, //是否支持跳转
+                getPage: function (page) {
+                    //获取当前页数
+                    console.log(page);
+                }
+            })
+        }
+
+    })
+
+ 
+})
+        require(['jquery', 'myPagination'], function ($) {
+
+            $(function($){
+                if($('#pagination2').length != 0){
+                    new myPagination({
+                        id: 'pagination2',
+                        curPage:1, //初始页码
+                        pageTotal: 50, //总页数
+                        pageAmount: 10,  //每页多少条
+                        dataTotal: 500, //总共多少条数据
+                        pageSize: 5, //可选,分页个数
+                        showPageTotalFlag:false, //是否显示数据统计
+                        showSkipInputFlag:false, //是否支持跳转
+                        getPage: function (page) {
+                            //获取当前页数
+                            console.log(page);
+                        }
+                    })
+                }
+            })
+
+            // 签到
+            $('#makeSubmit').click(function(e){
+
+              //  签到上传
+                $('#mygood-three').modal('hide')
+                $('.myModal2').modal('show')
+
+            })
+
+
+            // 聊天
+            screenFuc();
+
+            function screenFuc() {
+                var topHeight = $(".chatBox-head").innerHeight(); //聊天头部高度
+                //屏幕小于768px时候,布局change
+                var winWidth = $(window).innerWidth();
+                if (winWidth <= 768) {
+                    var totalHeight = $(window).height(); //页面整体高度
+                    $(".chatBox-info").css("height", totalHeight - topHeight);
+                    var infoHeight = $(".chatBox-info").innerHeight(); //聊天头部以下高度
+                    //中间内容高度
+                    $(".chatBox-content").css("height", infoHeight - 46);
+                    $(".chatBox-content-demo").css("height", infoHeight - 46);
+
+                    $(".chatBox-list").css("height", totalHeight - topHeight);
+                    $(".chatBox-kuang").css("height", totalHeight - topHeight);
+                    $(".div-textarea").css("width", winWidth - 106);
+                } else {
+                    $(".chatBox-info").css("height", 525);
+                    $(".chatBox-content").css("height", 465);
+                    $(".chatBox-content-demo").css("height", 465);
+                    $(".chatBox-list").css("height", 525);
+                    $(".chatBox-kuang").css("height", 525);
+                    $(".div-textarea").css("width", 230);
+                }
+            }
+            (window.onresize = function () {
+                screenFuc();
+            })();
+            //未读信息数量为空时
+            var totalNum = $(".chat-message-num").html();
+            if (totalNum == "") {
+                $(".chat-message-num").css("padding", 0);
+            }
+            $(".message-num").each(function () {
+                var wdNum = $(this).html();
+                if (wdNum == "") {
+                    $(this).css("padding", 0);
+                }
+            });
+
+
+            //打开/关闭聊天框
+            $(".chatBtn").click(function () {
+                $(".chatBox").toggle(10, function () {
+                    if ($(".chatBox").css("display") === 'block') {
+                        $('.play_one').width('700')
+                    } else {
+                        $('.play_one').width('1060')
+                    }
+                });
+            })
+            $(".chat-close").click(function () {
+                $(".chatBox").toggle(10);
+            })
+            //进聊天页面
+            $(".chat-list-people").each(function () {
+                $(this).click(function () {
+                    var n = $(this).index();
+                    $(".chatBox-head-one").toggle();
+                    $(".chatBox-head-two").toggle();
+                    $(".chatBox-list").fadeToggle();
+                    $(".chatBox-kuang").fadeToggle();
+
+                    //传名字
+                    $(".ChatInfoName").text($(this).children(".chat-name").children("p").eq(0).html());
+
+                    //传头像
+                    $(".ChatInfoHead>img").attr("src", $(this).children().eq(0).children("img")
+                        .attr("src"));
+
+                    //聊天框默认最底部
+                    $(document).ready(function () {
+                        $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[
+                            0].scrollHeight);
+                    });
+                })
+            });
+
+            //返回列表
+            $(".chat-return").click(function () {
+                $(".chatBox-head-one").toggle(1);
+                $(".chatBox-head-two").toggle(1);
+                $(".chatBox-list").fadeToggle(1);
+                $(".chatBox-kuang").fadeToggle(1);
+            });
+
+            function po_Last_Div(obj) {
+                if (window.getSelection) { //ie11 10 9 ff safari
+                    obj.focus(); //解决ff不获取焦点无法定位问题
+                    var range = window.getSelection(); //创建range
+                    range.selectAllChildren(obj); //range 选择obj下所有子内容
+                    range.collapseToEnd(); //光标移至最后
+                } else if (document.selection) { //ie10 9 8 7 6 5
+                    var range = document.selection.createRange(); //创建选择对象
+                    //var range = document.body.createTextRange();
+                    range.moveToElementText(obj); //range定位到obj
+                    range.collapse(false); //光标移至最后
+                    range.select();
+                }
+            }
+            var keyEnter1 = document.querySelector('#myTalk');
+            var keyEnter2 = document.querySelector('#allTalk');
+            function keytextarea(e) {
+                e = event || window.event;
+                // console.log($(".div-textarea").val());
+                var keyCode = e.keyCode || e.which || e.charCode;
+                var ctrlKey = e.ctrlKey || e.metaKey;
+                // 判断 ctrl+enter 换行
+                if (ctrlKey && keyCode == 13) {
+                    console.log()
+                    if ($('.chatBox-head .active').index()) {
+                        $('#allTalk').append('\n');
+                        po_Last_Div(keyEnter2)
+                    } else {
+                         $('#myTalk').append('\n');
+                         po_Last_Div(keyEnter1)
+                    }
+                } else if (keyCode == 13) {
+                    // 阻止提交自动换行
+                    e.preventDefault();
+                    // 获取发送按钮id，调用 发送按钮事件
+                    document.querySelector(".chat-fasong").click();
+                }
+            }
+            // 监听事件 键盘按下触发
+            keyEnter1.addEventListener('keydown', keytextarea)
+            keyEnter2.addEventListener('keydown', keytextarea)
+            
+            //      发送信息
+            $(".chat-fasong").click(function () {
+                var textContent = $(".div-textarea").html().replace(/[\n\r]/g, '<br>')
+                var allTalk = $("#allTalk").html().replace(/[\n\r]/g, '<br>')
+                if (textContent != "") {
+                    $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                        "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                        "<div class=\"right\"> <div class=\"chat-message\"> " + textContent +
+                        " </div> " +
+                        "<div class=\"chat-avatars\"><img src=\"../images/icon01.png\" alt=\"头像\" /></div> </div> </div>"
+                    );
+                    //发送后清空输入框
+                    $(".div-textarea").html("");
+                    //聊天框默认最底部
+                    $(document).ready(function () {
+                        $(".chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+                    });
+                }
+                if (allTalk != "") {
+                     $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                        "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                        "<div class=\"right\"> <div class=\"chat-message\"> " + allTalk +
+                        " </div> " +
+                        "<div class=\"chat-avatars\"><img src=\"../images/icon01.png\" alt=\"头像\" /></div> </div> </div>"
+                    );
+                    //发送后清空输入框
+                    $(".div-textarea").html("");
+                    //聊天框默认最底部
+                    $(document).ready(function () {
+                        $(".chatBox-content-demo").scrollTop($("#chatBox-content-demo2")[0].scrollHeight);
+                    });
+                }
+            });
+
+            //      发送表情
+            $("#chat-biaoqing").click(function () {
+                $(".biaoqing-photo").toggle();
+            });
+            $(document).click(function () {
+                $(".biaoqing-photo").css("display", "none");
+            });
+            $("#chat-biaoqing").click(function (event) {
+                event.stopPropagation(); //阻止事件
+            });
+
+            $(".emoji-picker-image").each(function () {
+                $(this).click(function () {
+                    var bq = $(this).parent().html();
+                    console.log(bq)
+                    $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                        "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                        "<div class=\"right\"> <div class=\"chat-message\"> " + bq +
+                        " </div> " +
+                        "<div class=\"chat-avatars\"><img src=\"../images/icon01.png\" alt=\"头像\" /></div> </div> </div>"
+                    );
+                    //发送后关闭表情框
+                    $(".biaoqing-photo").toggle();
+                    //聊天框默认最底部
+                    $(document).ready(function () {
+                        $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[
+                            0].scrollHeight);
+                    });
+                })
+            });
+
+            //      发送图片
+            function selectImg(pic) {
+                if (!pic.files || !pic.files[0]) {
+                    return;
+                }
+                var reader = new FileReader();
+                reader.onload = function (evt) {
+                    var images = evt.target.result;
+                    $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                        "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                        "<div class=\"right\"> <div class=\"chat-message\"><img src=" + images +
+                        "></div> " +
+                        "<div class=\"chat-avatars\"><img src=\"../images/icon01.png\" alt=\"头像\" /></div> </div> </div>"
+                    );
+                    //聊天框默认最底部
+                    $(document).ready(function () {
+                        $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+                    });
+                };
+                reader.readAsDataURL(pic.files[0]);
+
+            }
+        })
   </script>
 </body>
 </html>

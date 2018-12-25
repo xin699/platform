@@ -1,12 +1,292 @@
-
-    <div class="central-1 qq">
-
+<div class="qq sk">
+    <div class="central-1" style="width: 100%">
         <div class="input-1">
-             <b style="font-size:20px;">互动课堂</b>  <b style="font-size:20px;margin-left:20px">运输管理</b>  
-             <span style="margin-left:20px;margin-right:10px">第一单元</span> | <span style="margin-left:10px">课时1</span>   <span style="margin-left:20px">【张老师】</span>
+            <span style="font-size:20px;">互动课堂</span> <span style="font-size:20px;margin:0 15px 0 15px;">运输管理</span> |
+            <span style="margin:0 15px 0 15px;">第一单元</span> | <span style="margin:0 15px 0 15px;">第二课时</span>
+            <!-- 开发的时候请删除下面3个按钮 -->
+            <a data-toggle="modal"  data-target="#mygood-three" class="btn btn-primary">签到</a>
+            <a data-toggle="modal"  data-target=".myModal2" class="btn btn-primary">签到成功</a>
+            <a data-toggle="modal"  data-target=".lianxi" class="btn btn-primary">练习窗口</a>
         </div>
-        <div class="play">
-            
+        
+        <div class="play_one">
+            <div class="play_side">
+                
+            </div>
         </div>
+        <div class="chatContainer">
+            <div class="chatBtn" data-toggle="tooltip" data-placement="bottom" title="讨论区">
+                <i class="iconfont icon2-xiaoxi1"></i>
+            </div>
+            <!-- <div class="chat-message-num">10</div> -->
+            <div class="chatBox" ref="chatBox">
+                <div class="chatBox-head">
+                    <h3 class="talk_title">讨论区</h3>
+                    <ul class="nav nav-tabs nav-justified borderNo" id="talk-nav" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                                data-toggle="tab">我的发言</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">全部信息</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="chatBox-info">
+                            <div class="chatBox-kuang" ref="chatBoxkuang" style="display: block">
+                                <div class="chatBox-content">
+                                    <div class="chatBox-content-demo" id="chatBox-content-demo">
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
+                                            <div class="left">
+                                                <div class="chat-avatars"><img src="../images/icon01.png" alt="头像" /></div>
+                                                <div class="left-msg">
+                                                    <div class="left-title">李刚</div>
+                                                    <div class="chat-message">
+                                                        给你看张图
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
 
+                                            <div class="left">
+                                                <div class="chat-avatars"><img src="../images/icon01.png" alt="头像" /></div>
+                                                <div class="left-msg">
+                                                    <div class="left-title">布鲁斯</div>
+                                                    <div class="chat-message">
+                                                        <img src="../images/1.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
+                                            <div class="right">
+                                                <div class="chat-message">嗯，适合做壁纸</div>
+                                                <div class="chat-avatars"><img src="../images/icon02.png" alt="头像" /></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="chatBox-send">
+                                    <div class="div-textarea" id="myTalk" contenteditable="true"></div>
+                                    <div>
+                                        <button id="chat-biaoqing" class="btn-default-styles" title="表情">
+                                            <i class="iconfont icon2-biaoqing"></i>
+                                        </button>
+                                        <button id="chat-fasong" class="btn-default-styles chat-fasong" title="发送"><i class="iconfont icon2-fasong"></i>
+                                        </button>
+                                    </div>
+                                    <!-- 表情包 -->
+                                    <div class="biaoqing-photo">
+                                        <ul>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -154px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -154px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -154px;"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="chatBox-info">
+                            <div class="chatBox-kuang" ref="chatBoxkuang" style="display: block">
+                                <div class="chatBox-content">
+                                    <div class="chatBox-content-demo" id="chatBox-content-demo2">
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
+                                            <div class="left">
+                                                <div class="chat-avatars"><img src="../images/icon01.png" alt="头像" /></div>
+                                                <div class="left-msg">
+                                                    <div class="left-title">李刚</div>
+                                                    <div class="chat-message">
+                                                        给你看张图
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfloat">
+                                            <div class="author-name">
+                                                <small class="chat-date">2017-12-02 14:26:58</small>
+                                            </div>
+                                            <div class="right">
+                                                <div class="chat-message">嗯，适合做壁纸</div>
+                                                <div class="chat-avatars"><img src="../images/icon02.png" alt="头像" /></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="chatBox-send">
+                                    <div class="div-textarea" id="allTalk" contenteditable="true"></div>
+                                    <div>
+                                        <button id="chat-biaoqing" class="btn-default-styles" title="表情">
+                                            <i class="iconfont icon2-biaoqing"></i>
+                                        </button>
+                                        <label id="chat-tuxiang" title="学生禁言" for="inputImage" class="btn-default-styles">
+                                            <!-- <input type="file" onchange="selectImg(this)" accept="image/jpg,image/jpeg,image/png"
+                                    name="file" id="inputImage" class="hidden">
+                                <i class="iconfont icon2-tuxiang"></i> -->
+                                            <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>
+                                        </label>
+                                        <button id="chat-fasong2" class="btn-default-styles chat-fasong" title="发送"><i class="iconfont icon2-fasong"></i>
+                                        </button>
+                                    </div>
+                                    <!-- 表情包 -->
+                                    <div class="biaoqing-photo">
+                                        <ul>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -18px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -52px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -86px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -120px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -120px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -9px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -40px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -71px -154px;"></span></li>
+                                            <li><span class="emoji-picker-image" style="background-position: -102px -154px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -133px -154px;"></span>
+                                            </li>
+                                            <li><span class="emoji-picker-image" style="background-position: -164px -154px;"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <!-- 弹框 -->
+
+    <!-- 系统提示 签到成功 -->
+    <div class="modal fade myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="analog" style="width:400px;">
+            <div class="analog-one">
+                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                <b>课堂签到</b>
+            </div>
+            <div class="analog-three " style="width:100%;height: 110px;">
+                <h3 class="text-center p">已签到</h3>
+                <p class="text-center p" style="line-height: 3;">2018-06-12  05:13:36</p>
+                <div class="text-center">
+                    <button style="color:white" type="button" data-dismiss="modal">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- 系统提示 签到 -->
+    <div class="update_modal">
+        <div class="modal fade xin-model" id="mygood-three" tabindex="-1" role="dialog" aria-labelledby="mygood-three">
+            <div class="analog-seven" style="width:400px">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>课堂签到</b>
+                </div>
+                <div class="analog-seven-in text-center" style="line-height: 40px;width: 220px;">
+                    <h3>运输管理　<span style="font-size: 16px;">【张老师】</span></h3>
+                    <div>第一单元 课时1</div>
+                    <div>结束时间：2018-06-12　05:13:36</div>
+                </div>
+                <div class="xin-model-footer">
+                    <button type="button" id="makeSubmit" >签到</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 练习窗口 -->
+    <div class="update_modal">
+        <div class="modal fade lianxi" tabindex="-1" role="dialog" aria-labelledby="lianxi">
+            <div class="analog-seven" style="width:600px">
+                <div class="analog-one">
+                    <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                    <b>课堂练习</b>
+                </div>
+                <div class="analog-seven-in" style="line-height: 40px;width: 500px;">
+                    <h3>练习题123456</h3>
+                    <div><span>集装箱码头</span>　　<span>第一单元</span>　　<span>课时1</span></div>
+                    <div>
+                        <span class="pull-left">开始时间：2018:07:13  00:00:00</span>
+                        <span class="pull-right">结束时间：2018:07:13  00:00:00</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a target="_blank" href="jobInfo.html"><button class="btn btn-primary" style="width: 100px;margin-top: 20px" type="button" >做练习</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
