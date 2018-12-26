@@ -3,6 +3,8 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var path = require('path')
 
+var watchFolder = ""
+
 gulp.task('html',function(){
 　　 // 适配page中所有文件夹下的所有html，排除page下的include文件夹中html
     return gulp.src(['src/**/*.html','!src/include/**/*.html'])
@@ -117,6 +119,28 @@ gulp.task('html2',['css','html'], function() {
     });
     // 两层遍历
     gulp.watch(['src/**/**/*.css','src/**/**/*.scss'],['html','css']);
+});
+
+gulp.task('connect',function(){
+    plugins.connect.server({
+        root:'./dist/',
+        port:3000,
+        livereload:true
+    });
+})
+
+gulp.task('watch',function(){
+
+    // var path = "student";
+
+    // 检测 三层遍历
+    gulp.watch(['src/**/*.html'],['html']).on('change',function(event){
+        // 检测删除文件
+        if (event.type === 'deleted'){
+            gulp.src(event.path.replace('\\src\\','\\dist\\'))
+            .pipe(plugins.clean())
+        }
+    });
 });
 
 // 整理整体结构，方便开发模块
