@@ -3,7 +3,8 @@ requirejs.config({
         "jquery" : "/js/jquery.min",
         "bootstrap": "/js/bootstrap.min",
         "cxCalendar": "/js/jquery.cxcalendar.min",
-        "myPagination":"/js/myPagination"
+        "myPagination":"/js/myPagination",
+        "icheck":"/js/icheck.min"
     },
     shim: {
         jquery: {
@@ -13,6 +14,9 @@ requirejs.config({
             deps: ['jquery']
         },
         myPagination:{
+            deps: ['jquery']
+        },
+        icheck:{
             deps: ['jquery']
         }
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="/css/icheck.css">
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"首页",
+            "link":"#"
+          },
+          "back":{
+            "title":"返回列表",
+            "link":"javascript:history.back();"
+          },
+          "nav":[
+          ],
+          "template": "学生端/作业中心/作业详情-待批阅.html"
+        })
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    require(['jquery','icheck'],function($) {
+      
+      // 倒计时
+      $(function($) {
+          	// 结束时间
+            var endTime = 1545907030829;
+            // 现在时间
+            var nowTime;
+
+            // 计时器
+            var t = setInterval(function(){
+              var lastTime = endTime - +new Date()
+              // 计时结束
+              if(lastTime <= 0){
+                clearInterval(t);
+                return false
+              }
+
+              var time = new Date(lastTime);
+              // 1970 1-1
+              var endDate = time.getDate() - 1;
+              // GMT+8
+              var endHours = time.getHours() - 8;
+
+              var endMinutes = time.getMinutes();
+
+              var endSeconds = time.getSeconds();
+
+              $('#endTime').text(
+                endDate + "天" +
+                endHours + "时" +
+                endMinutes + "分" +
+                endSeconds + "秒"
+              )
+
+
+          }, 1000);
+
+      })
+
+      // 单选按钮，多选按钮插件
+      $(function($) {
+        // $('[type=checkbox],[type=radio]')
+        // .iCheck({
+        //       checkboxClass: 'icheckbox_square-blue',
+        //       radioClass: 'iradio_square-blue',
+        //       increaseArea: '20%'
+        //     });
+
+            $('.answer input').iCheck({
+              checkboxClass: 'icheckbox_square-blue',
+              radioClass: 'iradio_square-blue',
+              increaseArea: '20%' // optional
+            });
+      })
+
+    })
+  </script>
+</body>
+</html>
