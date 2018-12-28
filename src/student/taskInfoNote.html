@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/hover-min.css">
 <link rel="stylesheet" href="css/common.css">
   <!-- endbuild -->
-
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
   <title>首页</title>
 </head>
 <body class="nav-md">
@@ -38,12 +38,16 @@
           ],
           "template": "学生端/笔记查询/笔记.html"
         })
-    </div>
+    </div> 
   </div>
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    @@include('include/layout/header.js')
+    require(['jquery','/js/jquery.cxcalendar.languages.js','/js/linkage.js'],function($){
+
+   linkage('#date_first','#date_last');
+
+  })
   </script>
 </body>
 </html>

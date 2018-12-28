@@ -17,7 +17,7 @@
     <script src="/js/html5.polyfill.js"></script>
     <![endif]-->
   <link rel="stylesheet" href="/css/all.css">
-
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
   <title>首页</title>
 </head>
 <body class="nav-md">
@@ -138,26 +138,67 @@
                 <option value="">历史</option>
             </select>
             关键词：<input type="text" placeholder="请输入名称关键字">
-            开始时间：<input type="time" value="--:--"/ style="width:115px;margin-right:0px;"> 至 
-                     <input type="time" value="--:--"/ style="width:115px;">
+            开始时间：<input type="text" id="date_first" value="" style="width:150px;margin-right:0px;"> 至 
+                     <input type="text" id="date_last" value="" style="width:150px;">
              <button style="color:white" id="bu">搜索</button>
         </div>
-              <table class="picture-in">
-            <tr style="height:120px">
-                <td><span class="left center"><img src="/images/w5.jpg" alt=""><br>小明同学</span>
-                    <b>这是学习重点</b> <span class="pull-right">发布于：2018-06-26 10:16:28</span>
-                    <br>来自：<span style="color:#10859d">市场营销实务 | 第1单元 | 第一课时 | 苏教版语文二上《孔繁森》.ppt</span></td>
+
+        <table class="picture-in">
+
+            <tr style="height:auto;">
+                <td class="row" style="padding:15px 0">
+                        <div class="col-md-1 text-center">
+                            <img style="width: 50px;" src="/images/w5.jpg" alt="">
+                            <p>小明同学</p>
+                        </div>
+                        <div class="col-md-8">
+                            <b>这是学习重点</b>
+                            <div>来自：<span style="color:#10859d">市场营销实务 | 第1单元 | 第一课时 | 苏教版语文二上《孔繁森》.ppt</span></div>
+                        </div>
+                        <div class="col-md-3 text-right">
+                                发布于：2018-06-26 10:16:28
+                        </div>
+                </td>
             </tr>
-            <tr>
-                <td><span class="left center"><img src="/images/w5.jpg" alt=""><br>小明同学</span>
-                    <b>这是学习重点</b> <span class="pull-right">发布于：2018-06-26 10:16:28</span>
-                    <br>来自：<span style="color:#10859d">市场营销实务 | 第1单元 | 第一课时 | 苏教版语文二上《孔繁森》.ppt</span></td>
+            <tr style="height:auto;">
+                <td class="row" style="padding:15px 0">
+                        <div class="col-md-1 text-center">
+                            <img style="width: 50px;" src="/images/w5.jpg" alt="">
+                            <p>小明同学</p>
+                        </div>
+                        <div class="col-md-8">
+                            <b>这是学习重点</b>
+                            <div>来自：<span style="color:#10859d">市场营销实务 | 第1单元 | 第一课时 | 苏教版语文二上《孔繁森》.ppt</span></div>
+                        </div>
+                        <div class="col-md-3 text-right">
+                                发布于：2018-06-26 10:16:28
+                        </div>
+                </td>
             </tr>
+            <tr style="height:auto;">
+                <td class="row" style="padding:15px 0">
+                        <div class="col-md-1 text-center">
+                            <img style="width: 50px;" src="/images/w5.jpg" alt="">
+                            <p>小明同学</p>
+                        </div>
+                        <div class="col-md-8">
+                            <b>这是学习重点</b>
+                            <div>来自：<span style="color:#10859d">市场营销实务 | 第1单元 | 第一课时 | 苏教版语文二上《孔繁森》.ppt</span></div>
+                        </div>
+                        <div class="col-md-3 text-right">
+                                发布于：2018-06-26 10:16:28
+                        </div>
+                </td>
+            </tr>
+
         </table>
+
+
+        <div id="pagination" class="pagination2"></div>
     </div>
     </div>
   </div>
-    </div>
+    </div> 
   </div>
   <script  src="/js/require.js"></script>
   <script>
@@ -210,14 +251,11 @@ require(["jquery","bootstrap","myPagination"],function($){
 
  
 })
-    // 这里只写 调用参数方法，所有组件js全部弄进去 全局js目录
+    require(['jquery','/js/jquery.cxcalendar.languages.js','/js/linkage.js'],function($){
 
-require(['jquery'],function(){
-    $(function(){
-        console.log(12312)
-    })
-})
+   linkage('#date_first','#date_last');
 
+  })
   </script>
 </body>
 </html>
