@@ -71,7 +71,7 @@
                             <p>敲黑板，划重点，就是这里啦。</p>
                             <div class="list-footer" style="margin-top: 40px;">
                                 <span class="date-time">2018年06月26日 08:30:28</span>
-                                <a href="javascript:void(0);" class="red">删除</a>
+                                <a data-toggle="modal" data-target=".myModal3" href="javascript:void(0);" class="red">删除</a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                 <p>敲黑板，划重点，就是这里啦。</p>
                                 <div class="list-footer" style="margin-top: 40px;">
                                     <span class="date-time">2018年06月26日 08:30:28</span>
-                                    <a href="javascript:void(0);" class="red">删除</a>
+                                    <a data-toggle="modal" data-target=".myModal3" href="javascript:void(0);" class="red">删除</a>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                             <p>就是这里啦。</p>
                             <div class="list-footer" style="margin-top: 40px;">
                                 <span class="date-time">2018年06月26日 08:30:28</span>
-                                <a href="javascript:void(0);" class="red">删除</a>
+                                <a data-toggle="modal" data-target=".myModal3" href="javascript:void(0);" class="red">删除</a>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                             <p>make</p>
                             <div class="list-footer" style="margin-top: 40px;">
                                 <span class="date-time">2018年06月26日 08:30:28</span>
-                                <a href="javascript:void(0);" class="red">删除</a>
+                                <a data-toggle="modal" data-target=".myModal3" href="javascript:void(0);" class="red">删除</a>
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                 <div class="analog-three-in-biger" style="width:80%;">
                     <table class="table biger-table2">
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <td>课程名称：</td>
                                 <td>
                                     <select class="form-control inl-bl" style="width: 110px;" name="" id="">
@@ -163,7 +163,7 @@
                                     </select>
                                     <span>教师：张老师</span>
                                 </td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>问题描述：</td>
                                 <td>
@@ -195,7 +195,7 @@
                 <div class="analog-three-in-biger" style="width:80%;">
                     <table class="table biger-table2">
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <td class="text-right">课程名称：</td>
                                 <td>
                                     <select class="form-control inl-bl" style="width: 170px;" name="" id="">
@@ -226,7 +226,7 @@
                                         <option value="0">理论课程</option>
                                     </select>
                                 </td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td class="text-right">记录：</td>
                                 <td>
@@ -244,4 +244,22 @@
             </div>
         </div>
     </div>
+</div>
+<!-- 删除 -->
+<div class="qq">
+    <div class="modal fade myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3" style="display: none;">
+            <div class="analog" style="width:400px;">
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>删除笔记</b>
+                    </div>
+                    <div class="analog-three " style="width:100%;height: 110px;">
+                        <p class="text-center p">是否确认删除该笔记？</p>
+                        <div class="text-center">
+                            <button style="color:white" class="submit" type="button" data-dismiss="modal">确认</button>
+                            <button style="color:white" type="button" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
 </div>
