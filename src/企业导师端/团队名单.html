@@ -1,0 +1,183 @@
+<div class="qq">
+        <div class="teaching" style="width:100%;">
+            <div class="input-3" style="width: 1040px;line-height:50px;height: auto;">
+                <div>
+                        学届/专业/班级：
+                        <select name="city">
+                            <option value="">选择课程</option>
+                            <option value="">理论课程</option>
+                            <option value="">实习课程</option>
+                            <option value="">企业课程</option>
+                        </select>
+                        <select name="city">
+                            <option value="">选择单元</option>
+                            <option value="">第一单元</option>
+                            <option value="">第二单元</option>
+                            <option value="">第三单元</option>
+                            <option value="">第四单元</option>
+                        </select>
+                        <select name="city">
+                            <option value="">选择单元</option>
+                            <option value="">第一单元</option>
+                            <option value="">第二单元</option>
+                            <option value="">第三单元</option>
+                            <option value="">第四单元</option>
+                        </select>
+                </div>
+                <div>
+                    学校名称：
+                    <input type="text" placeholder="输入练习名称">
+                    团队名称：
+                    <input type="text" placeholder="输入练习名称">
+                    <button style="color:white">查询</button>
+                    <a href="teamEdit.html"><button style="color:white">组建团队</button></a>
+                </div>
+            </div>
+            <table>
+                <th>序号</th>
+                <th>学校名称</th>
+                <th>学届</th>
+                <th>专业</th>
+                <th>班级</th>
+                <th>团队名称</th>
+                <th>团队成员</th>
+                <tr>
+                    <td>1</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td>
+                        <a data-target=".myModal2" data-toggle="modal" href="#" href="#">查看成员</a> &nbsp;&nbsp;
+                        <a href="teamEdit.html">编辑成员</a> &nbsp;&nbsp;
+                        <a data-target=".myModal3" data-toggle="modal" href="#">删除团队</a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td>
+                        <a href="taskCenter2-3.html">查看成员</a> &nbsp;&nbsp;
+                        <a href="taskCenter2-3.html">编辑成员</a> &nbsp;&nbsp;
+                        <a data-target=".myModal3" data-toggle="modal" href="#">删除团队</a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td>
+                        <a href="taskCenter2-3.html">查看成员</a> &nbsp;&nbsp;
+                        <a href="taskCenter2-3.html">编辑成员</a> &nbsp;&nbsp;
+                        <a data-target=".myModal3" data-toggle="modal" href="#">删除团队</a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>广州大学</td>
+                    <td>2016届</td>
+                    <td>市场营销</td>
+                    <td>2016届市场营销一班</td>
+                    <td>电商1队</td>
+                    <td>
+                        <a href="taskCenter2-3.html">查看成员</a> &nbsp;&nbsp;
+                        <a href="taskCenter2-3.html">编辑成员</a> &nbsp;&nbsp;
+                        <a data-target=".myModal3" data-toggle="modal" href="#">删除团队</a> 
+                    </td>
+                </tr>
+
+            </table>
+
+            <div>
+                @@include('include/page/paging.html')
+            </div>
+        </div>
+
+            <!-- 删除弹窗 -->
+            <div class="modal fade myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3">
+                    <div class="analog" style="width:400px;" >
+                            <div class="analog-one">
+                                <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                                <b>删除团队</b>
+                            </div>
+                            <div class="analog-three " style="width:100%;height: 110px;" >
+                                <p class="text-center p">是否确认删除团队？（删除团队不可恢复）</p>
+                                <div class="text-center">
+                                    <button style="color:white" class="submit" type="button"  data-dismiss="modal" >确认</button>
+                                    <button style="color:white" type="button"  data-dismiss="modal" >取消</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+    </div>
+
+
+<div class="qq">
+    <!-- 成员 -->
+    <div class="modal fade myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
+            <div class="analog" style="width:1000px;" >
+                    <div class="analog-one">
+                        <button type="button" class="close close-one" data-dismiss="modal">x</button>
+                        <b>查看名单</b>
+                    </div>
+                    <div class="analog-three " style="width:100%;height: auto;" >
+                            <div style="margin-left:46px;">
+                                学生姓名：<input type="text" class="form-control checkbox inl-bl" style="width:100px;" > 
+                                <button style="color:white">查询</button>
+                            </div>
+                            <table style="line-height: 2">
+                                    <th>序号</th>
+                                    <th>学生姓名</th>
+                                    <th>学校名称</th>
+                                    <th>学届</th>
+                                    <th>专业</th>
+                                    <th>班级</th>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>张同学</td>
+                                        <td>广州大学</td>
+                                        <td>2016届</td>
+                                        <td>市场营销</td>
+                                        <td>2016届市场营销一班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>张同学</td>
+                                        <td>广州大学</td>
+                                        <td>2016届</td>
+                                        <td>市场营销</td>
+                                        <td>2016届市场营销一班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>张同学</td>
+                                        <td>广州大学</td>
+                                        <td>2016届</td>
+                                        <td>市场营销</td>
+                                        <td>2016届市场营销一班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>张同学</td>
+                                        <td>广州大学</td>
+                                        <td>2016届</td>
+                                        <td>市场营销</td>
+                                        <td>2016届市场营销一班</td>
+                                    </tr>
+
+                                </table>
+                        <div class="text-center">
+                            <div id="pagination2" class="pagination2"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+</div>

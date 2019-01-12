@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"课程简介",
+            "link":"courseInfo.html"
+          },
+          "nav":[
+            {
+                "title":"课程设计",
+                "link":"courseDesign.html"
+            }
+          ],
+          "template": "企业导师端/课程简介.html"
+        })
+
+    </div>
+  </div>
+  <script  src="/js/require.js"></script>
+  <script>
+    @@include('@@webRoot/src/js/config.js')
+    require(['jquery'],function (e) {
+
+      $('#label-input').on('click','.label',function(e){
+        $(this).toggleClass('label-primary')
+      })
+
+      $('#label-submit').click(function(){
+        $('#label-output').siblings().remove()
+        $('#label-output').before($('#label-input .label-primary').clone())
+      })
+
+      function getFileUrl(sourceId) {
+        var url;
+        if (navigator.userAgent.indexOf("MSIE")>=1) { // IE
+          url = document.getElementById(sourceId).value;
+        } else if(navigator.userAgent.indexOf("Firefox")>0) { // Firefox
+          url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        } else if(navigator.userAgent.indexOf("Chrome")>0) { // Chrome
+          url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        }
+        return url;
+      }
+      
+      $('.upload-image').click(function(e){
+        $('#image')[0].click()
+      })
+
+      $('#image').change(function(e) {
+        var f = e.target.files[0];
+        var suffix = f.name.split('.')[1].toLowerCase();
+        var fileSize = f.size;
+
+        if (['jpg','png','gif','jpeg'].indexOf(suffix)=== -1) {
+          alert('当前不支持该类型！')
+           return false
+        }
+
+        if(fileSize > 2097152){
+          alert('当前不支持2M以上文件！')
+           return false
+        }
+
+        $('#photo').attr('src',getFileUrl('image'))
+
+      })
+
+
+    })
+  </script>
+</body>
+</html>

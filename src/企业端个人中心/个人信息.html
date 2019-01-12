@@ -1,0 +1,84 @@
+<div class="box-w600">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="col-sm-12 textCenter">
+                <div class="headImg">
+                    <img src="" alt="头像" title="头像">
+                </div>        
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">登陆账号：</label>
+            <div class="col-sm-10 pt6">
+                 1255455854
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">姓名：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="请输入姓名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">性别：</label>
+            <div class="col-sm-10">
+                <label class="radio-inline">
+                    <input type="radio" name="sex" checked> 男
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="sex"> 女
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label check-input">手机号：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="请输入手机号">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label check-input">邮箱：</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" placeholder="请输入邮箱">
+                <span class="color999">绑定邮箱以便于找回密码和修改绑定账号</span>
+            </div>
+            <div class="col-sm-2">
+                <a href="./bindingEmaill.html">
+                    <button type="button" class="btn btn-default">绑定邮箱</button>
+                </a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">个人介绍：</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10 textCenter mt20">
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">保存提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header myModal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title textCenter" id="myModalLabel">提示提示</h4>
+            </div>
+            <div class="myModal-content">
+                保存成功
+            </div>
+            <div class="modal-footer textCenter myModal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>

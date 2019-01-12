@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+        @@include('include/layout/header.html',{
+          "index":{
+            "title":"张志峰 老师"
+          },
+          "menu":[
+            {"title":"简历中心","link":"#"},
+            {"title":"我的企业任务","link":"#"}
+          ]
+        })
+    </div> 
+    <!-- content -->
+    <div class="main">
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"修改邮箱",
+            "link":"#"
+          },
+          "nav":[
+            
+          ],
+          "template": "企业端个人中心/验证新绑定邮箱.html"
+        })
+
+    </div>
+  </div>
+  <script src="/js/require.js"></script>
+  <script>
+     @@include('../src/js/config.js') 
+    require(['jquery', '/js/bootstrap-slider.min.js', '/js/vue.min.js'], function ($, Slider, Vue) {
+
+      $(window).load(function () {
+
+        // 切换
+        $('.biger-tab-jd').on('click', '.btn', function (e) {
+          $(this).addClass('btn-primary').siblings().removeClass('btn-primary')
+        })
+
+        var myslider = $.map($('input.span2').get(), function (item) {
+          return (new Slider(item, {}))
+        })
+
+        $('.span2').on('slide', function (e) {
+          var name = $(this).data('object')
+          vm.mylist[name].range = $(this).val()
+        })
+
+        $("#mygood").on('show.bs.modal', function (e) {
+
+          var value = [];
+
+          $.each(vm.mylist, function (i) {
+            if (typeof vm.mylist[i] !== typeof true) {
+              value.push(vm.mylist[i].range)
+            }
+          })
+
+          $(myslider).each(function (i) {
+            var val = $.map(value[i].split(','), function (i) { return parseFloat(i) })
+            this.setValue(val)
+          })
+
+        })
+        $("#mygood").on('hide.bs.modal', function (e) {
+          $(myslider).each(function () { this.refresh() })
+          vm.cancel()
+        })
+
+      })
+
+      // 初始化
+
+      var oldobj = {
+        active: false,
+        radio: { range: "0,1" },
+        checkbox: { range: "0,1" },
+        judge: { range: "0,1" },
+        sort: { range: "0,1" },
+        pack: { range: "0,1" },
+        question: { range: "0,1" }
+      }
+
+      var data = {
+        mylist: JSON.parse(JSON.stringify(oldobj)),
+        updateState: "",
+        delobjIndex: null,
+        table: [
+          {
+            active: true,
+            radio: {
+              num: "2",
+              score: "1",
+              range: "0.1,0.5"
+            },
+            checkbox: {
+              num: "0",
+              score: "1",
+              range: "0.1,0.5"
+            },
+            judge: {
+              num: "0",
+              score: "1",
+              range: "0.1,0.2"
+            },
+            sort: {
+              num: "0",
+              score: "1",
+              range: "0.1,0.5"
+            },
+            pack: {
+              num: "0",
+              score: "1",
+              range: "0.1,1"
+            },
+            question: {
+              num: "0",
+              score: "1",
+              range: "0.1,0.5"
+            }
+          }
+        ],
+        // 单元提交
+        arr: [
+          "一.建筑装饰构造概述",
+          "二.建筑装饰造设计适用范围",
+          "三.楼地面装饰构造"
+        ],
+        selectArr: [],
+        selectAll: false,
+        arrSubmit: false
+      }
+
+      var vm = new Vue({
+        el: '.app',
+        data: data,
+        methods: {
+          edit: function (index) {
+            this.updateState = index
+            this.mylist = JSON.parse(JSON.stringify(this.table[index]))
+            // this.$nextTick(function(){
+            //   $('input.range_speed').trigger('input')
+            // })            
+          },
+          del: function () {
+            this.table.splice(this.delobjIndex, 1)
+          },
+          update: function (obj) {
+
+            console.log(obj.radio)
+
+            if (this.updateState !== "") {
+              vm.$set(vm.table, this.updateState, obj)
+            } else {
+              this.table.push(obj)
+            }
+
+            this.updateState = ""
+
+            this.mylist = JSON.parse(JSON.stringify(oldobj))
+
+
+          },
+          toggle: function (index) {
+            this.table.forEach(function (item) {
+              item.active = false
+            })
+            this.table[index].active = true
+          },
+          delopen: function (index) {
+            this.delobjIndex = index
+          },
+          arrToggle: function (index, item) {
+            var len = this.arr.length
+
+            this.selectArr[index] ? vm.$set(vm.selectArr, index, false) : vm.$set(vm.selectArr, index, true);
+
+          },
+          arrToggleAll: function () {
+
+            if (!this.selectAll) {
+              this.selectArr = this.arr.map(function () { return true })
+              this.selectAll = true
+            } else {
+              this.selectArr = []
+              this.selectAll = false
+            }
+          },
+          cancel: function () {
+            this.mylist = JSON.parse(JSON.stringify(oldobj))
+          }
+        }
+      })
+
+    })
+  </script>
+</body>
+</html>
