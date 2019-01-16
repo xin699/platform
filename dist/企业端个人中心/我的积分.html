@@ -1,0 +1,141 @@
+<div class="box-w900">
+  <div class="Jifen">
+    <h3 class="allJifen">积分总额：<span>120</span>分</h3>
+    <p><a href="javascript: void(0)" data-toggle="modal" data-target="#myModal"><span>？</span>积分规则说明</a></p>
+    <div class="form-group color333" style="width: 580px">
+      <label class="col-sm-2 control-label">积分明细：</label>
+      <div class="col-sm-10">
+        <label class="radio-inline">
+          <input type="radio" name="public" checked> 公开
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="public"> 不公开
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="qq">
+    <div class="teaching" style="width:100%;">
+      <!-- top -->
+      <div class="input-3" style="width:90%;">
+        积分：
+        <select name="jifen">
+          <option value="">全部</option>
+          <option value="">积分减少</option>
+          <option value="">积分增加</option>
+        </select>
+        日期：
+        <input type="text" id="date_first" value="" style="width:150px;margin-right:0px;">
+        至
+        <input type="text" id="date_last" value="" style="width:150px;">
+        <button style="color:white;">查询</button>
+      </div>
+      <!-- main -->
+      <table class="table table-border table-hover">
+        <tr>
+          <th>积分类型</th>
+          <th>积分变化</th>
+          <th>日期</th>
+          <th>积分来源</th>
+        </tr>
+        <tr>
+          <td>任务积分</td>
+          <td class="jfAdd">+100</td>
+          <td>2018-08-30 18:53</td>
+          <td>完善个人资料</td>
+        </tr>
+        <tr>
+          <td>基础积分</td>
+          <td class="jfAdd">+50</td>
+          <td>2018-08-30 18:53</td>
+          <td>完善简历</td>
+        </tr>
+        <tr>
+          <td>任务积分</td>
+          <td class="jfReduce">-10</td>
+          <td>2018-08-30 18:53</td>
+          <td>累计投诉次数满5次</td>
+        </tr>
+        <tr>
+          <td>任务积分</td>
+          <td class="jfAdd">+10</td>
+          <td>2018-08-30 18:53</td>
+          <td>提交任务作品1次</td>
+        </tr>
+        <tr>
+          <td>任务积分</td>
+          <td class="jfAdd">+100</td>
+          <td>2018-08-30 18:53</td>
+          <td>完善个人资料</td>
+        </tr>
+        <tr>
+          <td>基础积分</td>
+          <td class="jfAdd">+50</td>
+          <td>2018-08-30 18:53</td>
+          <td>完善简历</td>
+        </tr>
+        <tr>
+          <td>任务积分</td>
+          <td class="jfReduce">-10</td>
+          <td>2018-08-30 18:53</td>
+          <td>累计投诉次数满5次</td>
+        </tr>
+        <tr>
+          <td>基础积分</td>
+          <td class="jfAdd">+10</td>
+          <td>2018-08-30 18:53</td>
+          <td>提交任务作品1次</td>
+        </tr>
+      </table>
+      <!-- page -->
+      <div>
+        <div id="pagination" class="pagination2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header myModal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title textCenter" id="myModalLabel">积分规则</h4>
+      </div>
+      <div style="padding: 20px 50px;" class="jifen-modal">
+        <p style="font-size: 16px;"><span>1.积分的作用</span></p>
+        <p style="font-size: 13px;"><span>企业积分可在企业课程、实习招聘、企业任务外包等页面显示，主要通过积分形式对企业各方面的活跃度进行全方位考量，可凸显企业良好形象，能够增加客户对产品质量的信心，增加对企业的信赖，有利于吸引更多人才，创造更多经济效益。</span></p>
+        <p style="font-size: 13px;"><span><br></span></p>
+        <p style="font-size: 13px;"><span>个人积分可在投递简历、任务外包等页面显示，主要通过积分形式对学生的考试成绩、课外任务和实习表现全方位量化考核并记录，以此来衡量每位学生的综合成绩，更全面、更系统化的展示学生个人综合表现。</span></p>
+        <p style="font-size: 13px;"><span><br></span></p>
+        <p style="font-size: 16px;"><span>2.如何获得积分？</span></p>
+        <p style="font-size: 13px;"><span>积分主要由基础分和任务积分、处罚扣分三大类型分值组成。具体的积分规则及获得方式如下：</span></p>
+        <p style="font-size: 13px;"><span><br></span></p>
+        <p style="font-size: 13px;"><span>基础积分：</span></p>
+        <p style="font-size: 13px;"><span>• 企业/个人完善基础信息、个人简历。</span></p>
+        <p style="font-size: 13px;"><span><br></span></p>
+        <p style="font-size: 13px;"><span>任务积分：</span></p>
+        <p style="font-size: 13px;"><span>• 企业发布招聘信息。</span></p>
+        <p style="font-size: 13px;"><span>• 企业与学生签订协议，按时完成入职手续。</span></p>
+        <p style="font-size: 13px;"><span>• 企业给学生实习报告进行评分。</span></p>
+        <p style="font-size: 13px;"><span>• 学生根据实习分数获得对应比例分值。</span></p>
+        <p style="font-size: 13px;"><span>• 企业发布外包任务，并审核通过。</span></p>
+        <p style="font-size: 13px;"><span>• 学生提交任务作品。</span></p>
+        <p style="font-size: 13px;"><span>• 企业与学生完成任务结算可获得相应比例分值。</span></p>
+        <p style="font-size: 13px;"><span>• 学生根据考试成绩获得相应比例分值。</span></p>
+        <p style="font-size: 13px;"><span><br></span></p>
+        <p style="font-size: 13px;"><span>处罚扣分：</span></p>
+        <p style="font-size: 13px;"><span>• 根据投诉次数，扣取相应分值。</span></p>
+        <p style="font-size: 13px;"><span><br></span></p>
+        <p style="font-size: 16px;"><span>3.规则解释权</span></p>
+        <p style="font-size: 13px;"><span>积分规则由益达（广州）教育科技有限公司制定，并依据国家相关法律法规予以解释和修改。规则以网站公布为准，益达（广州）教育科技有限公司保留解释权。</span></p>
+      </div>
+      <div class="modal-footer textCenter myModal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal -->
+</div>

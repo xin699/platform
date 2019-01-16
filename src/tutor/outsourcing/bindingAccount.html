@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+  @@include('include/layout/meta.html')
+  <!-- build:css /css/all.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover-min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <!-- endbuild -->
+
+  <title>首页</title>
+</head>
+
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+      @@include('include/layout/header.html',{
+      "index":{
+      "title":"张志峰 老师"
+      },
+      "menu":[
+      {"title":"简历中心","link":"#"},
+      {"title":"我的企业任务","link":"#"}
+      ]
+      })
+    </div>
+    <!-- content -->
+    <div class="main">
+      @@include('include/layout/layout.html',{
+      "index":{
+      "title":"我的任务",
+      "link":"mytask.html",
+      "active":"false"
+      },
+      "nav":[
+      {
+      "title":"团队通知",
+      "link":"teaminform.html",
+      "active":"false"
+      },
+      {
+      "title":"绑定账户",
+      "link":"#",
+      "active":"active"
+      }
+      ],
+      "template": "企业端个人中心/绑定账户.html"
+      })
+
+    </div>
+  </div>
+  <script src="/js/require.js"></script>
+  <script>
+    @@include('../src/js/config.js')
+    require(['jquery'], function (e) {
+        $("#head a").click(function () {
+          $('#head .btn-primary').removeClass('btn-primary')
+          $(this).find('.btn').addClass('btn-primary').siblings().addClass('btn-default')
+          $(".main-content form").hide(800).eq($(this).index()).show(800);
+        });
+      })
+  </script>
+</body>
+
+</html>

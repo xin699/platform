@@ -37,6 +37,10 @@
             {
                 "title":"修改密码",
                 "link":"changepwd.html"
+            },
+            {
+            "title":"我的积分",
+            "link":"myJifen.html"
             }
           ],
           "template": "企业端个人中心/个人信息.html"
@@ -47,6 +51,45 @@
   <script  src="/js/require.js"></script>
   <script>
    @@include('../src/js/config.js') 
+
+   require(['jquery'], function (e) {
+
+      function getFileUrl(sourceId) {
+        var url;
+        if (navigator.userAgent.indexOf("MSIE") >= 1) { // IE
+          url = document.getElementById(sourceId).value;
+        } else if (navigator.userAgent.indexOf("Firefox") > 0) { // Firefox
+          url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        } else if (navigator.userAgent.indexOf("Chrome") > 0) { // Chrome
+          url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        }
+        return url;
+      }
+
+      $('.upload-image').click(function (e) {
+        $('#image').click()
+      })
+
+      $('#image').change(function (e) {
+        var f = e.target.files[0];
+        var suffix = f.name.split('.')[1].toLowerCase();
+        var fileSize = f.size;
+
+        if (['jpg', 'png', 'gif', 'jpeg'].indexOf(suffix) === -1) {
+          alert('当前不支持该类型！')
+          return false
+        }
+
+        if (fileSize > 2097152) {
+          alert('当前不支持2M以上文件！')
+          return false
+        }
+
+        $('#photo').attr('src', getFileUrl('image'))
+
+      })
+
+    })
   </script>
 </body>
 </html>
