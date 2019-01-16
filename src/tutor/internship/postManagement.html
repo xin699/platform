@@ -23,8 +23,9 @@
       "title":"张志峰 老师"
       },
       "menu":[
-      {"title":"简历中心","link":"#"},
-      {"title":"我的企业任务","link":"#"}
+      {"title":"企业课程","link":"#"},
+      {"title":"实习管理","link":"#"},
+      {"title":"企业任务","link":"#"}
       ]
       })
     </div>
@@ -32,34 +33,29 @@
     <div class="main">
       @@include('include/layout/layout.html',{
       "index":{
-      "title":"任务列表",
+      "title":"岗位管理",
       "link":"#"
       },
       "nav":[
       {
-      "title":"发布任务",
-      "link":"publishTask.html",
-      "active":"false"
+      "title":"处理申请",
+      "link":"processingApplication.html"
       },
       {
-      "title":"任务审核",
-      "link":"taskAudit.html",
-      "active":false
+      "title":"人才搜索",
+      "link":"talentSearch.html"
       },
       {
-      "title":"草稿箱",
-      "link":"drafts.html",
-      "active":false
+      "title":"入职记录",
+      "link":"entryRecord.html"
       },
       {
-      "title":"账号绑定",
-      "link":"bindingAccount.html",
-      "active":false
+      "title":"实习评分",
+      "link":"practiceScore.html"
       }
       ],
-      "template": "企业端个人中心/我的任务.html"
+      "template": "企业端个人中心/岗位管理.html"
       })
-
     </div>
   </div>
   <script src="/js/require.js"></script>

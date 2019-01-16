@@ -1,0 +1,307 @@
+<div class="qq box-w980">
+  <div class="mb20" id="head">
+    <a href="#">
+      <button class="btn btn-primary" type="button">个人申请</button>
+    </a>
+    <a href="#">
+      <button class="btn btn-default" type="button">学校申请(实习岗位)</button>
+    </a>
+  </div>
+  <div class="tab-box showActive">
+    <form class="form-inline mb20">
+      <div class="form-group">
+        <label>岗位类型：</label>
+        <select class="form-control" name="work">
+          <option>实习岗位</option>
+          <option>正式岗位</option>
+        </select>
+      </div>
+      <div class="form-group ml10">
+        <label>申请时间：</label>
+        <input type="text" id="date_first" value="" class="form-control">
+        至
+        <input type="text" id="date_last" value="" class="form-control">
+      </div>
+      <div class="form-group ml10">
+        <input type="text" class="form-control" id="classname" placeholder="搜索岗位与申请人">
+      </div>
+      <div class="form-group mt20">
+        <label>处理阶段：</label>
+        <select class="form-control" name="work">
+          <option>待处理</option>
+          <option>实习协议</option>
+          <option>待雇员确定</option>
+          <option>同意入职</option>
+          <option>已结束</option>
+        </select>
+      </div>
+    <button type="button" class="btn btn-primary mb0 ml5 mt20">搜索</button>
+    <button type="button" class="btn btn-primary mb0 mt20">批量处理</button>
+    </form>
+    <table class="table table-border table-hover mb0 colorType">
+      <thead style="border-top: 1px solid #ddd;">
+        <tr>
+          <th><input type="checkbox" id="theadInp"></th>
+          <th>申请岗位</th>
+          <th>申请人</th>
+          <th>申请人学校</th>
+          <th>岗位类型</th>
+          <th>申请时间</th>
+          <th>处理阶段</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>收派员</td>
+          <td>张三三</td>
+          <td>漳州学院</td>
+          <td>实习岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>待处理</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>电商客服</td>
+          <td>李思思</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>待处理</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>人力资源实习生</td>
+          <td>陈舞</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>实习协议</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>人力资源实习生</td>
+          <td>吴六</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>待雇员确认</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>人力资源实习生</td>
+          <td>吴六</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>同意入职</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>人力资源实习生</td>
+          <td>吴六</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>已结束</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-box disshow">
+    <form class="form-inline mb20">
+      <div class="form-group">
+        <label>处理结果：</label>
+        <select class="form-control" name="adress">
+          <option>杭州</option>
+          <option>广州</option>
+        </select>
+      </div>
+      <div class="form-group ml10">
+        <label>申请时间：</label>
+        <input type="text" id="date_first" value="" class="form-control">
+        至
+        <input type="text" id="date_last" value="" class="form-control">
+      </div>
+      <div class="form-group ml10">
+        <input type="text" class="form-control" placeholder="请输入岗位与申请人">
+      </div>
+      <button type="button" class="btn btn-primary mb0 ml5">搜索</button>
+    </form>
+    <table class="table table-border table-hover mb0 colorType">
+      <thead style="border-top: 1px solid #ddd;">
+        <tr>
+          <th>序号</th>
+          <th>申请岗位</th>
+          <th>申请人学校</th>
+          <th>申请人</th>
+          <th>在校职务</th>
+          <th>联系方式</th>
+          <th>岗位类型</th>
+          <th>申请时间</th>
+          <th>处理阶段</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td>1</td>
+          <td>收派员</td>
+          <td>漳州学院</td>
+          <td>张三三</td>
+          <td>招生办主任</td>
+          <td>13545585458</td>
+          <td>实习岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>未处理</td>
+          <td class="table-operation">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">
+              <button type="button" class="btn btn-primary btn-sm">联系方式</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理查看名单</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>电商客服</td>
+          <td>广州大学</td>
+          <td>李思思</td>
+          <td>招生办主任</td>
+          <td>13545585458</td>
+          <td>实习岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>已处理</td>
+          <td class="table-operation">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">
+              <button type="button" class="btn btn-primary btn-sm">联系方式</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理查看名单</button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <div id="pagination" class="pagination2"></div>
+  </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header myModal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title textCenter" id="myModalLabel">学校联系方式</h4>
+      </div>
+      <div class="modal-row">
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            联系人姓名：
+          </div>
+          <div class="col-sm-6">
+            赵红
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            在校职务：
+          </div>
+          <div class="col-sm-6">
+            教务处招生办主任
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            在校职务：
+          </div>
+          <div class="col-sm-6">
+            教务处招生办主任
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            联系方式（手机）：
+          </div>
+          <div class="col-sm-6">
+            13455485455
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            联系方式（座机）：
+          </div>
+          <div class="col-sm-6">
+            020-32551254
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            邮箱：
+          </div>
+          <div class="col-sm-6">
+            zhaohongx@163.com
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer textCenter myModal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+    </div>
+</div>
+  <!-- /.modal -->

@@ -32,32 +32,23 @@
     <div class="main">
       @@include('include/layout/layout.html',{
       "index":{
-      "title":"任务列表",
-      "link":"#"
+      "title":"我的任务",
+      "link":"mytask.html",
+      "active":"false"
       },
       "nav":[
       {
-      "title":"发布任务",
-      "link":"publishTask.html",
+      "title":"团队通知",
+      "link":"teaminform.html",
       "active":"false"
       },
       {
-      "title":"任务审核",
-      "link":"taskAudit.html",
-      "active":false
-      },
-      {
-      "title":"草稿箱",
-      "link":"drafts.html",
-      "active":false
-      },
-      {
-      "title":"账号绑定",
-      "link":"bindingAccount.html",
-      "active":false
+      "title":"绑定账户",
+      "link":"#",
+      "active":"active"
       }
       ],
-      "template": "企业端个人中心/我的任务.html"
+      "template": "企业端个人中心/绑定账户.html"
       })
 
     </div>
@@ -65,6 +56,13 @@
   <script src="/js/require.js"></script>
   <script>
     @@include('../src/js/config.js')
+    require(['jquery'], function (e) {
+        $("#head a").click(function () {
+          $('#head .btn-primary').removeClass('btn-primary')
+          $(this).find('.btn').addClass('btn-primary').siblings().addClass('btn-default')
+          $(".main-content form").hide(800).eq($(this).index()).show(800);
+        });
+      })
   </script>
 </body>
 

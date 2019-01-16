@@ -33,18 +33,19 @@
       @@include('include/layout/layout.html',{
       "index":{
       "title":"任务列表",
-      "link":"#"
+      "link":"myTask.html",
+      "active":"false"
       },
       "nav":[
       {
       "title":"发布任务",
       "link":"publishTask.html",
-      "active":"false"
+      "active":false
       },
       {
       "title":"任务审核",
-      "link":"taskAudit.html",
-      "active":false
+      "link":"#",
+      "active":"active"
       },
       {
       "title":"草稿箱",
@@ -57,7 +58,7 @@
       "active":false
       }
       ],
-      "template": "企业端个人中心/我的任务.html"
+      "template": "企业端个人中心/任务审核.html"
       })
 
     </div>

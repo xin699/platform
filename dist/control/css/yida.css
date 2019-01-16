@@ -1842,6 +1842,14 @@
   width: 900px;
   margin: 0 auto; }
 
+.box-w980 {
+  width: 980px;
+  margin: 0 auto; }
+
+.modal-row .row {
+  line-height: 2;
+  font-size: 14px; }
+
 .jfAdd {
   color: #ff6600; }
 
@@ -2049,6 +2057,13 @@
 .col-60img {
   width: 100%; }
 
+.col-w134 {
+  width: 134px; }
+
+.col-w134 img {
+  width: 112px;
+  height: 112px; }
+
 .btn-active {
   color: #fff;
   background-color: #337ab7;
@@ -2059,19 +2074,28 @@
   margin-bottom: 10px;
   color: #000; }
 
+.col-operation2 a {
+  display: block;
+  margin-bottom: 15px;
+  color: #000; }
+
 .colorType th, .colorType td, .colorType td a {
   color: #333; }
 
 .isColor999 th, .isColor999 td, .isColor999 td a, .isColor999 td span {
   color: #999; }
 
-.col-operation a:hover, .table-operation a:hover {
+.col-operation a:hover, .col-operation2 a:hover, .table-operation a:hover {
   color: #ff6600; }
 
 .col-list .col-operation {
   padding: 0;
   position: relative;
   top: 5px; }
+
+.col-list .col-operation2 {
+  position: relative;
+  top: 20px; }
 
 .col-list:hover {
   background-color: #f5f5f5; }
@@ -2122,6 +2146,12 @@
 .table-operation a, .table-operation span {
   padding: 0 10px; }
 
+.parentM13 p {
+  margin: 13px 0; }
+
+.fontW {
+  font-weight: bold; }
+
 .mt20 {
   margin-top: 20px; }
 
@@ -2139,6 +2169,12 @@
 
 .mb0 {
   margin-bottom: 0; }
+
+.ml5 {
+  margin-left: 5px; }
+
+.ml10 {
+  margin-left: 10px; }
 
 .mb10 {
   margin-bottom: 10px; }

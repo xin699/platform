@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+      <meta charset="UTF-8" />
+    <!-- Render engine selection -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Friendly view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <!-- Disable chrome translation prompt -->
+    <meta name="google" value="notranslate">
+    <!-- Ignore identifying phone numbers, email addresses -->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="author" content="biger">
+    <!-- src -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.polyfill.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
+  <title>首页</title>
+</head>
+
+<body class="nav-md">
+  <div class="main_container">
+    <!-- header -->
+    <div class="top_nav clearfix">
+      <div class="nav_menu">
+    <nav class="clearfix">
+        <div class="nav pull-left logo-left">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="">
+            </a>
+            <a href="">
+                <i class="icon-教育云平台" style="font-size:20px;"></i>
+                
+                教育云平台
+                </a>
+            |
+            <a href="index.html">
+                <i class="icon-企业服务" style="font-size:20px;"></i>
+                企业服务</a>
+        </div>
+
+        <ul class="nav navbar-nav pull-right">
+            <li class="download">
+                <a href="javascript:;" style="font-weight: bold;margin: 0">下载APP</a>
+            </li>
+            <li style="margin-right: 10px">
+                <a href="javascript:;" class="dropdown-toggle info-number hvr-buzz-out">
+                    <i class="icon-提醒" style="font-size:20px;"></i>
+                    <span class="badge bg-red">6</span>
+                </a>
+            </li>
+            <li class="">
+                <!-- 头像 -->
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../../images/img.jpg" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li>
+                        <a class="role" style="padding:12px 20px 0 20px;color: black" href="javascript:;">张志峰 老师</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    
+                        <li>
+                            <a href="#">企业课程</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">实习管理</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">企业任务</a>
+                        </li>
+                    
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">修改密码</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="javascript:;">安全退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+    </div>
+    <!-- content -->
+    <div class="main">
+      <div class="biger-table" role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+      
+      <li role="presentation" class=""><a href="postManagement.html">岗位管理</a>
+      </li>
+      
+        <li role="presentation" class="active" ><a href="#" >处理申请</a></li>
+      
+        <li role="presentation" class="false" ><a href="talentSearch.html" >人才搜索</a></li>
+      
+        <li role="presentation" class="false" ><a href="entryRecord.html" >入职记录</a></li>
+      
+        <li role="presentation" class="false" ><a href="practiceScore.html" >实习评分</a></li>
+      
+      
+      
+
+      
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="qq box-w980">
+  <div class="mb20" id="head">
+    <a href="#">
+      <button class="btn btn-primary" type="button">个人申请</button>
+    </a>
+    <a href="#">
+      <button class="btn btn-default" type="button">学校申请(实习岗位)</button>
+    </a>
+  </div>
+  <div class="tab-box showActive">
+    <form class="form-inline mb20">
+      <div class="form-group">
+        <label>岗位类型：</label>
+        <select class="form-control" name="work">
+          <option>实习岗位</option>
+          <option>正式岗位</option>
+        </select>
+      </div>
+      <div class="form-group ml10">
+        <label>申请时间：</label>
+        <input type="text" id="date_first" value="" class="form-control">
+        至
+        <input type="text" id="date_last" value="" class="form-control">
+      </div>
+      <div class="form-group ml10">
+        <input type="text" class="form-control" id="classname" placeholder="搜索岗位与申请人">
+      </div>
+      <div class="form-group mt20">
+        <label>处理阶段：</label>
+        <select class="form-control" name="work">
+          <option>待处理</option>
+          <option>实习协议</option>
+          <option>待雇员确定</option>
+          <option>同意入职</option>
+          <option>已结束</option>
+        </select>
+      </div>
+    <button type="button" class="btn btn-primary mb0 ml5 mt20">搜索</button>
+    <button type="button" class="btn btn-primary mb0 mt20">批量处理</button>
+    </form>
+    <table class="table table-border table-hover mb0 colorType">
+      <thead style="border-top: 1px solid #ddd;">
+        <tr>
+          <th><input type="checkbox" id="theadInp"></th>
+          <th>申请岗位</th>
+          <th>申请人</th>
+          <th>申请人学校</th>
+          <th>岗位类型</th>
+          <th>申请时间</th>
+          <th>处理阶段</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>收派员</td>
+          <td>张三三</td>
+          <td>漳州学院</td>
+          <td>实习岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>待处理</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>电商客服</td>
+          <td>李思思</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>待处理</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>人力资源实习生</td>
+          <td>陈舞</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>实习协议</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>人力资源实习生</td>
+          <td>吴六</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>待雇员确认</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>人力资源实习生</td>
+          <td>吴六</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>同意入职</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th><input type="checkbox"></th>
+          <td>人力资源实习生</td>
+          <td>吴六</td>
+          <td>广州大学</td>
+          <td>正式岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>已结束</td>
+          <td class="table-operation">
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">简历</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理申请</button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-box disshow">
+    <form class="form-inline mb20">
+      <div class="form-group">
+        <label>处理结果：</label>
+        <select class="form-control" name="adress">
+          <option>杭州</option>
+          <option>广州</option>
+        </select>
+      </div>
+      <div class="form-group ml10">
+        <label>申请时间：</label>
+        <input type="text" id="date_first" value="" class="form-control">
+        至
+        <input type="text" id="date_last" value="" class="form-control">
+      </div>
+      <div class="form-group ml10">
+        <input type="text" class="form-control" placeholder="请输入岗位与申请人">
+      </div>
+      <button type="button" class="btn btn-primary mb0 ml5">搜索</button>
+    </form>
+    <table class="table table-border table-hover mb0 colorType">
+      <thead style="border-top: 1px solid #ddd;">
+        <tr>
+          <th>序号</th>
+          <th>申请岗位</th>
+          <th>申请人学校</th>
+          <th>申请人</th>
+          <th>在校职务</th>
+          <th>联系方式</th>
+          <th>岗位类型</th>
+          <th>申请时间</th>
+          <th>处理阶段</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td>1</td>
+          <td>收派员</td>
+          <td>漳州学院</td>
+          <td>张三三</td>
+          <td>招生办主任</td>
+          <td>13545585458</td>
+          <td>实习岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>未处理</td>
+          <td class="table-operation">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">
+              <button type="button" class="btn btn-primary btn-sm">联系方式</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理查看名单</button>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>电商客服</td>
+          <td>广州大学</td>
+          <td>李思思</td>
+          <td>招生办主任</td>
+          <td>13545585458</td>
+          <td>实习岗位</td>
+          <td>2017.3.6 10：00</td>
+          <td>已处理</td>
+          <td class="table-operation">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">
+              <button type="button" class="btn btn-primary btn-sm">联系方式</button>
+            </a>
+            <a href="#">
+              <button type="button" class="btn btn-primary btn-sm">处理查看名单</button>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <div id="pagination" class="pagination2"></div>
+  </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header myModal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title textCenter" id="myModalLabel">学校联系方式</h4>
+      </div>
+      <div class="modal-row">
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            联系人姓名：
+          </div>
+          <div class="col-sm-6">
+            赵红
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            在校职务：
+          </div>
+          <div class="col-sm-6">
+            教务处招生办主任
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            在校职务：
+          </div>
+          <div class="col-sm-6">
+            教务处招生办主任
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            联系方式（手机）：
+          </div>
+          <div class="col-sm-6">
+            13455485455
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            联系方式（座机）：
+          </div>
+          <div class="col-sm-6">
+            020-32551254
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6" style="text-align: right;padding-right: 0">
+            邮箱：
+          </div>
+          <div class="col-sm-6">
+            zhaohongx@163.com
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer textCenter myModal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+    </div>
+</div>
+  <!-- /.modal -->
+    </div>
+  </div>
+    </div>
+  </div>
+  <script src="/js/require.js"></script>
+  <script>
+    requirejs.config({
+    paths : {
+        "jquery" : "/js/jquery.min",
+        "bootstrap": "/js/bootstrap.min",
+        "cxCalendar": "/js/jquery.cxcalendar.min",
+        "myPagination":"/js/myPagination",
+        "icheck":"/js/icheck.min"
+    },
+    shim: {
+        jquery: {
+            exports: 'jquery'
+        },
+        bootstrap: {
+            deps: ['jquery']
+        },
+        myPagination:{
+            deps: ['jquery']
+        },
+        icheck:{
+            deps: ['jquery']
+        }
+
+    }
+})
+// base
+require(["jquery","bootstrap","myPagination"],function($){
+
+    $(function($){
+        if($('#pagination').length != 0){
+            new myPagination({
+                id: 'pagination',
+                curPage:1, //初始页码
+                pageTotal: 50, //总页数
+                pageAmount: 10,  //每页多少条
+                dataTotal: 500, //总共多少条数据
+                pageSize: 5, //可选,分页个数
+                showPageTotalFlag:true, //是否显示数据统计
+                showSkipInputFlag:true, //是否支持跳转
+                getPage: function (page) {
+                    //获取当前页数
+                    console.log(page);
+                }
+            })
+        }
+
+    })
+
+ 
+})
+    require(['jquery', '/js/jquery.cxcalendar.languages.js', '/js/linkage.js'], function (e) {
+        linkage('#date_first', '#date_last');
+        $("#head a").click(function () {
+          $('#head .btn-primary').removeClass('btn-primary')
+          $(this).find('.btn').addClass('btn-primary').siblings().addClass('btn-default')
+          $(".tab-box").hide(1000).eq($(this).index()).show(1000);
+        });
+
+        //实现全选反选
+        $("#theadInp").on('click', function () {
+          $("tbody input:checkbox").prop("checked", $(this).prop('checked'));
+        })
+        $("tbody input:checkbox").on('click', function () {
+          //当选中的长度等于checkbox的长度的时候,就让控制全选反选的checkbox设置为选中,否则就为未选中
+          if ($("tbody input:checkbox").length === $("tbody input:checked").length) {
+            $("#theadInp").prop("checked", true);
+          } else {
+            $("#theadInp").prop("checked", false);
+          }
+        })
+      })
+  </script>
+</body>
+
+</html>
