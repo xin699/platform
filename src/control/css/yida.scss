@@ -2003,6 +2003,11 @@
 .textRight {
   text-align: right;
 }
+.icon-x {
+  padding-left: 6px;
+  cursor: pointer;
+  font-style:normal
+}
 .headImg {
     width: 122px;
     height: 122px;
@@ -2209,7 +2214,7 @@
 }
 .col-operation2 a {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #000;
 }
 .colorType th,.colorType td,.colorType td a {
@@ -2218,8 +2223,24 @@
 .isColor999 th,.isColor999 td,.isColor999 td a, .isColor999 td span {
   color: #999;
 }
-.col-operation a:hover,.col-operation2 a:hover, .table-operation a:hover {
+.col-operation a:hover,.col-operation2 a:hover, .table-operation a:hover, .line-h1 a:hover {
   color: #ff6600;
+}
+.line-h1 {
+  height: 132px;
+  line-height: 132px;
+}
+.cover-img {
+    width: 300px;
+    height: 175px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 175px;
+    overflow: hidden;
+}
+.cover-img img {
+  width: 100%;
+  display: none;
 }
 .col-list .col-operation {
     padding: 0;
@@ -2238,6 +2259,19 @@
 }
 .showActive {
   display: block;
+}
+.fl-ul {
+  list-style: none;
+}
+.fl-ul li {
+  float: left;
+}
+.edit-ul li {
+  padding: 2px 10px;
+  color: #333;
+  border: 1px solid #333;
+  background-color: #eee;
+  margin-right: 10px;
 }
 .w100 {
   width: 100% !important;
@@ -2289,6 +2323,9 @@
 }
 .mt40 {
   margin-top: 40px;
+}
+.mt70 {
+  margin-top: 70px;
 }
 .mb40 {
   margin-bottom: 40px;
