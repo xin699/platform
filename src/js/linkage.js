@@ -85,3 +85,7 @@ function linkage2(first, last) {
     });
 
 }
+
+function linkage3(elem) {
+    $(elem).cxCalendar();
+}

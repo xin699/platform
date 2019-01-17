@@ -12353,12 +12353,33 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 .fl-ul li {
   float: left; }
 
+.edit-ul {
+  display: inline; }
+
+.add-industry {
+  display: inline-block;
+  text-decoration: underline;
+  color: #0000ff;
+  cursor: pointer; }
+
+.color0000cc {
+  color: #0000cc;
+  text-decoration: underline; }
+
+.task-date {
+  border: 1px solid #ccc;
+  padding: 10px; }
+
 .edit-ul li {
   padding: 2px 10px;
   color: #333;
   border: 1px solid #333;
   background-color: #eee;
   margin-right: 10px; }
+
+.h34 {
+  height: 34px;
+  line-height: 34px; }
 
 .w100 {
   width: 100% !important; }

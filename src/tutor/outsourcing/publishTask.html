@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/hover-min.css">
   <link rel="stylesheet" href="css/common.css">
   <!-- endbuild -->
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
 
   <title>首页</title>
 </head>
@@ -66,7 +67,8 @@
   <script src="/js/require.js"></script>
   <script>
     @@include('../src/js/config.js')
-    require(['jquery'], function (e) {
+    require(['jquery', '/js/jquery.cxcalendar.languages.js', '/js/linkage.js'], function (e) {
+         linkage3('#date_first');
          var url;
         function getFileUrl(sourceId) {
           if (navigator.userAgent.indexOf("MSIE") >= 1) { // IE
