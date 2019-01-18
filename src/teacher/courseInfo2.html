@@ -21,20 +21,35 @@
             "title":"张志峰 老师"
           },
           "menu":[
-            {"title":"简历中心","link":"/center/info.html"},
+            {"title":"简历中心","link":"#"},
             {"title":"我的企业任务","link":"#"}
           ]
         })
     </div> 
     <!-- content -->
     <div class="main">
-      @@include('include/page/tutor_index.html')
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"课程介绍",
+            "link":"courseInfo2.html"
+          },
+          "nav":[
+            {
+                "title":"在线设计",
+                "link":"courseDesign2.html"
+            }
+          ],
+          "template": "学生端/岗位实战-课程中心/课程介绍.html"
+        })
+
     </div>
   </div>
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    @@include('include/layout/header.js')
+    require(['jquery'],function (e) {
+    })
   </script>
 </body>
 </html>

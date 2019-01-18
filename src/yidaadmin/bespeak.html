@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/hover-min.css">
-<link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/common.css">     
+  <link rel="stylesheet" href="css/myPagination.css">
   <!-- endbuild -->
+  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
+
 
   <title>首页</title>
 </head>
@@ -32,26 +35,33 @@
         @@include('include/layout/layout.html',{
           "index":{
             "title":"平台设置",
-            "link":"#"
+            "link":"platformManage.html",
+            "active":false
           },
           "nav":[
             {
                 "title":"企业任务审核",
-                "link":"#"
+                "link":"enterpriseTask.html"
             },
             {
                 "title":"课程预约记录",
-                "link":"#"
+                "link":"#",
+                "active":"active"
             }
           ],
-          "template": "益达管理员端/平台设置/征集分类.html"
+          "template": "益达管理员端/课程预约记录.html"
         })
     </div>
   </div>
   <script  src="@@webRoot/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    @@include('include/layout/header.js')
+    require(['jquery','/js/jquery.cxcalendar.languages.js','/js/linkage.js'],function($){
+
+    linkage('#date_first','#date_last');
+
+    })
+
   </script>
 </body>
 </html>

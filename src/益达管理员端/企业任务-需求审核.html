@@ -1,0 +1,73 @@
+<div class="xs">
+    <div style="margin:0 35px;">
+
+        @@include('include/layout/tab1.html',{
+            "item":[
+                {
+                    "title":"需求审核",
+                    "link":"enterpriseTask.html",
+                    "active":"active"
+                },
+                {
+                    "title":"评论管理",
+                    "link":"enterpriseTask2.html"
+                },
+                {
+                    "title":"付款管理",
+                    "link":"enterpriseTask3.html"
+                },
+                {
+                    "title":"交易类型",
+                    "link":"enterpriseTask4.html"
+                },
+                {
+                    "title":"投诉管理",
+                    "link":"enterpriseTask5.html"
+                }
+            ]
+        })
+    </div>
+    <div class="qq">
+        <div class="input-1" style="padding-left: 20px;">
+                课程类型：
+                <input type="text" style="width:200px;" placeholder="输入任务编号或任务名称">
+        
+                状态：
+                <select name="city" style="margin-right:10px">
+                    <option value="">全部</option>
+                </select>
+        
+                <button style="color:white;margin: 0 ">搜索</button>  
+        </div>
+    </div>
+
+        <table class=" form-two">
+            <th>序号</th>
+            <th>任务编号</th>
+            <th>任务名称</th>
+            <th>企业导师</th>
+            <th>联系方式</th>
+            <th>领域</th>
+            <th>发布日期</th>
+            <th>状态</th>
+            <th>操作</th>
+            <tr>
+                <td>1</td>
+                <td>20336855</td>
+                <td>餐饮logo</td>
+                <td>张先生</td>
+                <td>13666666666</td>
+                <td>网站建设</td>
+                <td>2017-2-1</td>
+                <td>未审核</td>
+                <td>
+                    <a href="" style="margin-right:20px;" >处理</a>
+                    <a style="margin-right:20px;" href="">查看</a>
+                    <a href="">暂停</a>
+                </td>
+            </tr>
+            </table>
+            <div>
+                @@include('include/page/paging.html')
+            </div>
+    </div>

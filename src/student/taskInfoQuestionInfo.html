@@ -47,7 +47,29 @@
   <script  src="/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
-    @@include('include/layout/header.js')
+    require(['jquery'],function($) {
+
+      $(function($){
+        $("#cancel").click(function(){
+
+            // 清空引用
+            $('#quote').text('');
+            // 清空内容
+            $('#msg').val('');
+
+
+            })
+
+        $('.quote').click(function(){
+          $('#quote').text('引用：' + $(this).parents('.details_one').find('.quote-content').text());
+        })
+
+
+      })
+
+
+
+    })
   </script>
 </body>
 </html>

@@ -1,0 +1,71 @@
+<div class="xs">
+        <div style="margin:0 35px;">
+    
+            @@include('include/layout/tab1.html',{
+                "item":[
+                    {
+                        "title":"需求审核",
+                        "link":"enterpriseTask.html"
+                    },
+                    {
+                        "title":"评论管理",
+                        "link":"enterpriseTask2.html"
+                    },
+                    {
+                        "title":"付款管理",
+                        "link":"enterpriseTask3.html"
+                    },
+                    {
+                        "title":"交易类型",
+                        "link":"enterpriseTask4.html"
+                    },
+                    {
+                        "title":"投诉管理",
+                        "link":"enterpriseTask5.html",
+                        "active":"active"
+                    }
+                ]
+            })
+        </div>
+        <div class="qq">
+            <div class="input-1" style="padding-left: 20px;">
+                    课程类型：
+                    <input type="text" style="width:200px;" placeholder="输入任务编号或任务名称">
+            
+                    状态：
+                    <select>
+                        <option selected="" value="全部">全部</option>
+                        <option value="协商中">协商中</option>
+                        <option value="已处理">已处理</option>
+                    </select>
+            
+                    <button style="color:white;">搜索</button>  
+            </div>
+        </div>
+    
+            <table class=" form-two">
+                <th>序号</th>
+                <th>投诉者</th>
+                <th>被投诉者</th>
+                <th>联系方式</th>
+                <th>投诉任务</th>
+                <th width="300px">投诉内容</th>
+                <th>投诉日期</th>
+                <th>状态</th>
+                <th>操作</th>
+                <tr>
+                    <td>1</td>
+                    <td>张梁</td>
+                    <td>张**</td>
+                    <td>13666666666</td>
+                    <td>餐饮logo</td>
+                    <td>收到作品不合格</td>
+                    <td>2017-2-1</td>
+                    <td>协商中</td>
+                    <td>
+                        <a style="margin-right:20px;" href="">查看</a>
+                        <a style="margin-right:20px;" href="" >处理完成</a>
+                    </td>
+                </tr>
+                </table>
+        </div>

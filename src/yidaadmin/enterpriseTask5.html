@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/hover-min.css">
-<link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/common.css">     
+  <link rel="stylesheet" href="css/myPagination.css">
   <!-- endbuild -->
 
   <title>首页</title>
@@ -21,17 +22,36 @@
             "title":"张志峰 老师"
           },
           "menu":[
-            {"title":"简历中心","link":"/center/info.html"},
+            {"title":"简历中心","link":"#"},
             {"title":"我的企业任务","link":"#"}
           ]
         })
     </div> 
     <!-- content -->
     <div class="main">
-      @@include('include/page/tutor_index.html')
+
+        @@include('include/layout/layout.html',{
+          "index":{
+            "title":"平台设置",
+            "link":"platformManage.html",
+            "active":false
+          },
+          "nav":[
+            {
+                "title":"企业任务审核",
+                "link":"#",
+                "active":"active"
+            },
+            {
+                "title":"课程预约记录",
+                "link":"bespeak.html"
+            }
+          ],
+          "template": "益达管理员端/企业任务-投诉管理.html"
+        })
     </div>
   </div>
-  <script  src="/js/require.js"></script>
+  <script  src="@@webRoot/js/require.js"></script>
   <script>
     @@include('@@webRoot/src/js/config.js')
     @@include('include/layout/header.js')

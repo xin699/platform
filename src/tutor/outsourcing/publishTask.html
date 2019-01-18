@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/hover-min.css">
   <link rel="stylesheet" href="css/common.css">
   <!-- endbuild -->
-  <link rel="stylesheet" href="/css/jquery.cxcalendar.css">
 
   <title>首页</title>
 </head>
@@ -67,8 +66,7 @@
   <script src="/js/require.js"></script>
   <script>
     @@include('../src/js/config.js')
-    require(['jquery', '/js/jquery.cxcalendar.languages.js', '/js/linkage.js'], function (e) {
-         linkage3('#date_first');
+    require(['jquery'], function (e) {
          var url;
         function getFileUrl(sourceId) {
           if (navigator.userAgent.indexOf("MSIE") >= 1) { // IE
@@ -108,6 +106,32 @@
           $('#photo').attr('src', getFileUrl('image'))
 
         })
+      
+
+        //实现全选反选
+      $("#theadInp").on('click', function () {
+        $("#tbody input:checkbox").prop("checked", $(this).prop('checked'));
+      })
+      $("#tbody input:checkbox").on('click', function () {
+        //当选中的长度等于checkbox的长度的时候,就让控制全选反选的checkbox设置为选中,否则就为未选中
+        if ($("#tbody input:checkbox").length === $("#tbody input:checked").length) {
+          $("#theadInp").prop("checked", true);
+        } else {
+          $("#theadInp").prop("checked", false);
+        }
+      })
+        //实现全选反选2
+      $("#theadInp2").on('click', function () {
+        $("#tbody2 input:checkbox").prop("checked", $(this).prop('checked'));
+      })
+      $("#tbody2 input:checkbox").on('click', function () {
+        //当选中的长度等于checkbox的长度的时候,就让控制全选反选的checkbox设置为选中,否则就为未选中
+        if ($("#tbody2 input:checkbox").length === $("#tbody2 input:checked").length) {
+          $("#theadInp2").prop("checked", true);
+        } else {
+          $("#theadInp2").prop("checked", false);
+        }
+      })
 
       })
   </script>

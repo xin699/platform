@@ -86,6 +86,7 @@ function linkage2(first, last) {
 
 }
 
+// 单个日期初始化
 function linkage3(elem) {
-    $(elem).cxCalendar();
+  $(elem).cxCalendar();
 }

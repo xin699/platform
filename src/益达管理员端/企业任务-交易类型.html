@@ -1,0 +1,64 @@
+<div class="xs">
+        <div style="margin:0 35px;">
+    
+            @@include('include/layout/tab1.html',{
+                "item":[
+                    {
+                        "title":"需求审核",
+                        "link":"enterpriseTask.html"
+                    },
+                    {
+                        "title":"评论管理",
+                        "link":"enterpriseTask2.html"
+                    },
+                    {
+                        "title":"付款管理",
+                        "link":"enterpriseTask3.html"
+                    },
+                    {
+                        "title":"交易类型",
+                        "link":"enterpriseTask4.html",
+                        "active":"active"
+                    },
+                    {
+                        "title":"投诉管理",
+                        "link":"enterpriseTask5.html"
+                    }
+                ]
+            })
+        </div>
+        <div class="qq">
+            <div class="input-1" style="padding-left: 20px;">
+                    <button style="color:white;margin-left: 10px">新增</button>  
+                    <button style="color:white;margin:0 20px">批量删除</button>  
+            
+                    状态：
+                    <select >
+                        <option selected="" value="全部">全部</option>
+                        <option value="申退赏金">申退赏金</option>
+                        <option value="申退余款">申退余款</option>
+                        <option value="服务商投诉">服务商投诉</option>
+                        <option value="雇主投诉">雇主投诉</option>
+                    </select>
+            
+                    <button style="color:white;">搜索</button>  
+            </div>
+        </div>
+    
+            <table class=" form-two">
+                <th><input type="checkbox" name="" id=""></th>
+                <th>序号</th>
+                <th>类型</th>
+                <th>选项</th>
+                <th>操作</th>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>1</td>
+                    <td>申退赏金</td>
+                    <td>项目结束，我已不需要该需求</td>
+                    <td>
+                        <a href="" >删除</a>
+                    </td>
+                </tr>
+                </table>
+        </div>

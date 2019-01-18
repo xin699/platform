@@ -31,18 +31,18 @@
 
         @@include('include/layout/layout.html',{
           "index":{
-            "title":"课程简介",
-            "link":"courseInfo.html",
+            "title":"课程介绍",
+            "link":"courseInfo2.html",
             "active":false
           },
           "nav":[
             {
-                "title":"课程设计",
+                "title":"在线学习",
                 "link":"#",
                 "active":"active"
             }
           ],
-          "template": "企业导师端/课程设计.html"
+          "template": "学生端/岗位实战-课程中心/课程设计.html"
         })
 
     </div>
@@ -51,51 +51,29 @@
   <script>
     @@include('@@webRoot/src/js/config.js')
     require(['jquery','myPagination'],function($){
-      // 添加单元
-      $('#addList').click(function(){
-        var strVar = "";
-            strVar += "<div class=\"drop-down\" style=\"margin-top:20px;\">\n";
-            strVar += "	<div class=\"drop-down-one \">\n";
-            strVar += "	  <div class=\" text-left\">\n";
-            strVar += "		   <input style=\"height:35px;\" type=\"text\" placeholder=\"输入课时名称\">\n";
-            strVar += "		   <button type=\"button\" class=\"btn btn-primary big-submit\">确认<\/button>\n";
-            strVar += "	     <button type=\"button\" class=\"btn btn-default big-exit\">取消<\/button>\n";
-            strVar += "	   <\/div>\n";
-            strVar += "	<\/div>\n";
-            strVar += "	<!-- 列表 -->\n";
-            strVar += "	<div class=\"collapse\" style=\"display: block;\">\n";
-            strVar += "		<div class=\"wrap-list\">\n";
-            strVar += "		<\/div>\n";
-            // strVar += "		<div class=\"wrap-list\">\n";
-            // strVar += "			<div class=\"drop-down-two\">\n";
-            // strVar += "			<\/div>\n";
-            // strVar += "		<\/div>\n";
-            // strVar += "		<div class=\"drop-down-two text-center\">\n";
-            // strVar += "			<a class=\"list-add\" href=\"javascript:void(0);\">添加课时<\/a>\n";
-            // strVar += "		<\/div>\n";
-            strVar += "	<\/div>\n";
-            strVar += "<\/div>\n";
-            
-            $(this).parent().before(strVar)
+      // 按钮操作
+      $('.header-central').on('click','#edit',function(e){
+        $('input:checkbox').show()
+        $(this).parent().hide().siblings('.header-central').show()
       })
-
-      // 添加单元基本组件
-      $('.central').on('click','.big-submit',function(){
-          var text = $(this).prev().val();
-          var strVar = "";
-                strVar += "<div class=\"drop-down-two text-center\">\n";
-                strVar += "	<a class=\"list-add\" href=\"javascript:void(0);\">添加课时<\/a>\n";
-                strVar += "<\/div>\n";
-          $(this).parents('.drop-down').find('.collapse').append(strVar)
-          $(this).parent().html("<span style=\"font-size:16px;\"><a class=\"toggle-up\" href=\"javascript:void(0);\"><i class=\"glyphicon glyphicon-chevron-down\"><\/i> "+text+"<\/a><\/span>\n")
-          
+      // 确定
+      $('.header-central').on('click','#submit',function(e){
+        $('.mygood').modal('show')
       })
-      .on('click','.big-exit',function(){
-          $(this).parents('.drop-down').remove()
+      // 弹窗确认按钮
+      $('#submit2').click(function(e){
+        $('.header-central').hide().eq(0).show()
+        $('.central input:checkbox').hide()
+        $('.mygood').modal('hide')
+      })
+      // 取消
+      $('.header-central').on('click','#exit',function(e){
+        $('input:checkbox').hide()
+        $(this).parent().hide().siblings('.header-central').show()
       })
       
       // 滑动
-      $('.central').on('click','.toggle-up',function(e){
+      $('.toggle-up').click(function(e){
         var $self = $(this)
         $self.parents('.drop-down').children('.collapse').toggle("fast",function(e){
           $self.children().toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-right')
@@ -105,7 +83,8 @@
       $('.collapse').eq(0).toggle()
 
       // 列表滑动
-      $('.central').on('click','.drop-down .drop-down-two-header',function(e){
+
+      $('.drop-down').on('click','.drop-down-two-header',function(e){
         var $self = $(this)
         $self.parents('.drop-down-two').nextAll('.drop-down-two-list').toggle("fast",function(e){
           $self.children().toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-right')
@@ -114,11 +93,11 @@
 
       // 修改图文文件上传
 
-      $('.central').on('click','.fileUpload',function(e){
+      $('.fileUpload').click(function(e){
         $(this).next('.file').trigger('click')
       })
 
-      $('.central').on('change','.file',function(e) {
+      $('.file').change(function(e) {
         // 上传3个
         // 大小100M
         var $self = $(this);
@@ -163,7 +142,7 @@
 
 
       // 删除添加文件
-      $('.central').on('click','.fileName a',function(e){
+      $('.fileName').on('click','a',function(e){
         // 删除文件ajax
 
         // 可以在这里写成功然后执行下面代码
@@ -172,14 +151,14 @@
       })
 
       // 添加 课时
-      $('.central').on('click','.list-add',function(e){
+      $('.list-add').click(function(e){
         
         if($('.btnName').length == 0){
           var strVar = "<div class=\"wrap-list\">";
             strVar += "<div class=\"drop-down-two\">\n";
             strVar += "	<span class=\"glyphicon glyphicon-chevron-down\"><\/span>\n";
             strVar += "	<input type=\"text\" class=\"btnName\" placeholder=\"输入课时名称\">\n";
-            strVar += "	<button type=\"button\" class=\"btn btn-primary sub-submit\">确认<\/button>\n";
+            strVar += "	<button type=\"button\" class=\"btn btn-primary submit\">确认<\/button>\n";
             strVar += "	<button type=\"button\" class=\"btn btn-default exit\">取消<\/button>\n";
             strVar += " <\/div>\n";
             strVar += "<\/div>\n";
@@ -191,8 +170,7 @@
 
       //添加 课时并确认
 
-      $('.central').on('click','.sub-submit',function(e){
-
+      $('.collapse').on('click','.submit',function(e){
           var text = $(this).parent().find('.btnName').val();
 
           var strVar = "";
@@ -215,9 +193,6 @@
       .on('click','.exit',function(e) {
         $(this).parents('.wrap-list').remove()
       })
-
-
-
       // 删除课时
       $('.myModal2').on('show.bs.modal', function (e) {
         var el = $(e.relatedTarget).parents('.wrap-list');
